@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace dating_site
 {
@@ -17,7 +18,7 @@ namespace dating_site
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
-
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionStrings"].ConnectionString);
         }
     }
 }

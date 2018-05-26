@@ -38,7 +38,7 @@
             <tr>
                 <td class="auto-style3">&nbsp;</td>
                 <td class="auto-style5"><span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Not a member&nbsp;&nbsp;&nbsp; </span>
-                    <asp:ImageButton ID="ImageButton1" runat="server" CssClass="auto-style5" Height="35px" ImageUrl="~/images/signUp.png" Width="130px" />
+                    <asp:ImageButton ID="ImageButton_signup" runat="server" CssClass="auto-style5" Height="35px" ImageUrl="~/images/signUp.png" Width="130px" />
                 </td>
             </tr>
             <tr>
@@ -60,7 +60,7 @@
             <tr>
                 <td class="auto-style3">&nbsp;</td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:ImageButton ID="ImageButton2" runat="server" Height="51px" ImageUrl="~/images/login.jpg" Width="130px" OnClick="ImageButton2_Click" />
+                    <asp:ImageButton ID="ImageButton_login" runat="server" Height="51px" ImageUrl="~/images/login.jpg" Width="130px" OnClick="ImageButton2_Click" />
                 </td>
             </tr>
             <tr>
