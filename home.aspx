@@ -47,13 +47,13 @@
             <tr>
                 <td class="auto-style2">Email:&nbsp;&nbsp; </td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Height="38px" style="margin-right: 104px" Width="208px"></asp:TextBox>
+                    <asp:TextBox ID="textbox_email" runat="server" Height="38px" style="margin-right: 104px" Width="208px" BackColor="#E1E1E1" BorderStyle="None" TextMode="Email"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Password:&nbsp;&nbsp; </td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Height="36px" Width="208px"></asp:TextBox>
+                    <asp:TextBox ID="textbox_password" runat="server" Height="36px" Width="208px" BackColor="#E1E1E1" BorderStyle="None" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
