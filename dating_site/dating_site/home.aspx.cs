@@ -19,6 +19,14 @@ namespace dating_site
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionStrings"].ConnectionString);
+            conn.Open();
+            string checkemail= "select count(*) from usertable where email='"+ textbox_email .Text+ "'";
+            conn.Close();
+        }
+
+        protected void textbox_email_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

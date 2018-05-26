@@ -48,7 +48,7 @@
             <tr>
                 <td class="auto-style2">Email:&nbsp;&nbsp; </td>
                 <td>
-                    <asp:TextBox ID="textbox_email" runat="server" BackColor="#E1E1E1" BorderStyle="None" Height="38px" style="margin-right: 104px" TextMode="Email" Width="208px"></asp:TextBox>
+                    <asp:TextBox ID="textbox_email" runat="server" BackColor="#E1E1E1" BorderStyle="None" Height="38px" style="margin-right: 104px" TextMode="Email" Width="208px" OnTextChanged="textbox_email_TextChanged"></asp:TextBox>
                 </td>
             </tr>
             <tr>
