@@ -18,9 +18,31 @@ namespace dating_site
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionStrings"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
             conn.Open();
             string checkemail= "select count(*) from usertable where email='"+ textbox_email .Text+ "'";
+            SqlCommand com = new SqlCommand(checkemail, conn);
+
+            if (checkemail.ToString() != textbox_email.ToString())
+                {
+                 Response.Write("user doesnot exist");
+            }
+
+            else
+
+            {
+                string  checkpassword = "select password from usertable where email='" + checkemail + "'";
+                SqlCommand com1 = new SqlCommand(checkpassword, conn);
+                if (checkpassword.Equals(textbox_password))
+                {
+                    Response.Write("login successful");
+                }
+                else
+                {
+                    Response.Write("incorrect password");
+                }
+
+            }
             conn.Close();
         }
 
