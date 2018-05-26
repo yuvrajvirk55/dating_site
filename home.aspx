@@ -13,22 +13,31 @@
         .auto-style2 {
             text-align: right;
             width: 592px;
+            font-family: "Bradley Hand ITC";
+            font-weight: bold;
+            font-size: medium;
         }
         .auto-style3 {
             width: 592px;
+        }
+        .auto-style4 {
+            font-family: "Bradley Hand ITC";
+            font-size: xx-large;
+        }
+        .auto-style5 {
+            font-family: "Bradley Hand ITC";
+            font-size: medium;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style3">&nbsp;</td>
-                <td>Not a member&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:ImageButton ID="ImageButton1" runat="server" Height="35px" Width="130px" ImageUrl="~/images/signUp.png" />
+                <td class="auto-style5"><span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Not a member&nbsp;&nbsp;&nbsp; </span>
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="35px" Width="130px" CssClass="auto-style5" ImageUrl="~/images/signUp.png" />
                 </td>
             </tr>
             <tr>
@@ -59,9 +68,12 @@
             </tr>
             <tr>
                 <td class="auto-style3">&nbsp;</td>
-                <td>Let&#39;s date !</td>
+                <td>&nbsp;</td>
             </tr>
         </table>
+        <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style4"><strong>&nbsp; Let&#39;s date! </strong></span>
+        </p>
     </form>
 </body>
 </html>
