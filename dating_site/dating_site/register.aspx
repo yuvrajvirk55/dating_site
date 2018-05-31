@@ -49,6 +49,15 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style2">email</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="register_email" runat="server" OnTextChanged="email_check" TextMode="Email"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="register_email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
                 <td class="auto-style4">Date of Birth</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="register_dob" runat="server" TextMode="Date"></asp:TextBox>
@@ -60,7 +69,9 @@
                 <td class="auto-style3">
                     <asp:TextBox ID="register_password" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="register_password" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">conform paddword</td>
@@ -82,13 +93,11 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">email</td>
+                <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="register_email" runat="server" TextMode="Email"></asp:TextBox>
-                </td>
+                    &nbsp;</td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="register_email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
-                </td>
+                    &nbsp;</td>
             </tr>
         </table>
         <asp:Button ID="register_register" runat="server" Text="register" />
