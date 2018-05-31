@@ -61,8 +61,7 @@
 					</div>
 
 					<div class="container-login100-form-btn p-t-10">
-						  <asp:ImageButton ID="ImageButton_login" runat="server" Height="51px" ImageUrl="~/images/login.jpg" Width="130px" OnClick="ImageButton2_Click" />
-					
+						  <asp:ImageButton ID="ImageButton_login" runat="server" Height="51px" ImageUrl="~/images/login.jpg" OnClick="ImageButton2_Click" />
 					</div>
 
 					<div class="text-center w-full p-t-25 p-b-230">
@@ -72,9 +71,7 @@
 						
 						<br>
 						<br>
-						<br>
-						<br>
-						
+							
 						<a class="txt1" href="#">
 							<font color="black"><b>Create new account</b></font>
 							<i class="fa fa-long-arrow-right"></i>						
