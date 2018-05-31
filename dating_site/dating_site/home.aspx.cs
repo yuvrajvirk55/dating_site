@@ -21,7 +21,7 @@ namespace dating_site
           
            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
             conn.Open();
-            string checkemail= "select count(*) from usertable where email='"+ textbox_email+ "'";
+            string checkemail= "select count(*) from usertable where email='"+ textbox_email.Text+ "'";
             SqlCommand com = new SqlCommand(checkemail, conn);
 
             if (checkemail.ToString() != textbox_email.ToString())

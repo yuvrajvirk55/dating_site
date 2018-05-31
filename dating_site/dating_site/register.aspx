@@ -105,7 +105,7 @@
                     &nbsp;</td>
             </tr>
         </table>
-        <asp:Button ID="register_register" runat="server" Text="register" />
+        <asp:Button ID="register_register" runat="server" Text="register" OnClick="register_register_Click" />
     </form>
 </body>
 </html>

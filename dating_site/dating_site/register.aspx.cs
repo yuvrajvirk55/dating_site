@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,6 +16,22 @@ namespace dating_site
 
         }
 
-      
+        protected void register_register_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+            conn.Open();
+            string checkemail = "insert into usertable (email, password, first_name, last_name, sex, dob) values(register_email.Text, register_password.Text, register_fname.Text, register_lname.Text, register_gender.Text, register_dob.Text) ";
+            SqlCommand com = new SqlCommand(checkemail, conn);
+
+           
+            
+                Response.Write("Data inserted");
+
+            
+
+
+            conn.Close();
+        }
     }
 }
