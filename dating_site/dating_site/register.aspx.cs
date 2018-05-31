@@ -14,10 +14,6 @@ namespace dating_site
 
         }
 
-        protected void email_check(object sender, EventArgs e)
-        {
-            Response.Write("email check");
-
-        }
+      
     }
 }

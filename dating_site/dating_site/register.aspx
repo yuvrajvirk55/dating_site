@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <script>
+
+    
+    </script>
 <head runat="server">
     <title></title>
     <style type="text/css">
@@ -46,12 +51,12 @@
                 <td class="auto-style3">
                     <asp:TextBox ID="register_lname" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+              
             </tr>
             <tr>
                 <td class="auto-style2">email</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="register_email" runat="server" OnTextChanged="email_check" TextMode="Email"></asp:TextBox>
+                    <asp:TextBox ID="register_email" runat="server"  TextMode="Email"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="register_email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
