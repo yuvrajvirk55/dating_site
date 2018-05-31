@@ -3,78 +3,90 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
 
-        .auto-style1 {
-            width: 100%;
-            height: 368px;
-        }
-        .auto-style3 {
-            width: 592px;
-        }
-    .auto-style5 {
-        font-family: "Bradley Hand ITC";
-        font-size: medium;
-        font-weight: bold;
-    }
-        .auto-style2 {
-        text-align: right;
-        width: 592px;
-        font-family: "Bradley Hand ITC";
-        font-weight: bold;
-        font-size: medium;
-    }
-        .auto-style4 {
-        font-family: "Bradley Hand ITC";
-        font-size: xx-large;
-    }
-    </style>
+
+<style>
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+</style>
+<head runat="server">
+	<title>login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
-    <form id="form1" runat="server">
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style5"><span class="auto-style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Not a member&nbsp;&nbsp;&nbsp; </span>
-                    <asp:ImageButton ID="ImageButton_signup" runat="server" CssClass="auto-style5" Height="35px" ImageUrl="~/images/signUp.png" Width="130px" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">Email:&nbsp;&nbsp; </td>
-                <td>
-                    <asp:TextBox ID="textbox_email" runat="server" BackColor="#E1E1E1" BorderStyle="None" Height="38px" style="margin-right: 104px" TextMode="Email" Width="208px" OnTextChanged="textbox_email_TextChanged"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">Password:&nbsp;&nbsp; </td>
-                <td>
-                    <asp:TextBox ID="textbox_password" runat="server" BackColor="#E1E1E1" BorderStyle="None" Height="36px" TextMode="Password" Width="208px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:ImageButton ID="ImageButton_login" runat="server" Height="51px" ImageUrl="~/images/login.jpg" Width="130px" OnClick="ImageButton2_Click" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-        <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style4"><strong>&nbsp; Let&#39;s date! </strong></span>
-        </p>
-    </form>
+	
+	<div class="limiter" style="background-image: url('images/background.jpg');">
+
+	<div class="rainbow" style="font-size:100px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 1.3em;"><b>   &ensp;     &emsp;Let's date!</b></div>
+
+		<div class="container-login100" >		
+			
+			<div class="wrap-login100 p-t-190 p-b-30">
+			
+				<form class="login100-form validate-form" id="form1" runat="server">
+				
+						<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email" OnTextChanged="textbox_email_TextChanged" placeholder="Email"></asp:TextBox>
+						
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						 <asp:TextBox class="input100" ID="textbox_password" runat="server" BackColor="#E1E1E1" TextMode="Password"  placeholder="Password"></asp:TextBox>
+						
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+
+					<div class="container-login100-form-btn p-t-10">
+						  <asp:ImageButton ID="ImageButton_login" runat="server" Height="51px" ImageUrl="~/images/login.jpg" Width="130px" OnClick="ImageButton2_Click" />
+					
+					</div>
+
+					<div class="text-center w-full p-t-25 p-b-230">
+						<a href="#" class="txt1">
+							<font color="red">Forgot Username / Password?</font>
+						</a>
+						
+						<br>
+						<br>
+						<br>
+						<br>
+						
+						<a class="txt1" href="#">
+							<font color="black"><b>Create new account</b></font>
+							<i class="fa fa-long-arrow-right"></i>						
+						</a>
+					</div>
+
+					<div class="text-center w-full">
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
