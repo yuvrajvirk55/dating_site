@@ -53,7 +53,6 @@
 
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
 						 <asp:TextBox class="input100" ID="textbox_password" runat="server" BackColor="#E1E1E1" TextMode="Password"  placeholder="Password"></asp:TextBox>
-						
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock"></i>
