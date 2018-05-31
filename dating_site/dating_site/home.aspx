@@ -71,7 +71,7 @@
 						<br>
 						<br>
 							
-						<a class="txt1" href="#">
+						<a class="txt1" href="register.aspx">
 							<font color="black"><b>Create new account</b></font>
 							<i class="fa fa-long-arrow-right"></i>						
 						</a>
