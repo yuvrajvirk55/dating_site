@@ -20,12 +20,25 @@ namespace dating_site
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
 
-               SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
-               conn.Open();
+            string filtered_email = textbox_email.Text.ToString();
+            int index = filtered_email.IndexOf('@');
+            filtered_email = filtered_email.Substring(0, index);
 
-               string checkemail= "select email from usertable where email= "+ textbox_email.Text;
 
-     
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+
+            string checkemail= "select email from usertable WHERE email LIKE %uvnemk% ";
+
+            SqlCommand command = new SqlCommand(checkemail, connection);
+            connection.Open();
+
+            string tDate = (string)command.ExecuteScalar();
+
+            Response.Write(tDate);
+            connection.Close();
+
+
+
         }
 
         protected void textbox_email_TextChanged(object sender, EventArgs e)
