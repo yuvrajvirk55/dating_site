@@ -18,15 +18,22 @@ namespace dating_site
 
         protected void register_register_Click(object sender, EventArgs e)
         {
+            var a=0;
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
             conn.Open();
             string checkemail = "insert into usertable (email, password, first_name, last_name, sex, dob) values(register_email.Text, register_password.Text, register_fname.Text, register_lname.Text, register_gender.Text, register_dob.Text) ";
             SqlCommand com = new SqlCommand(checkemail, conn);
-
-            Response.Write("Data inserted");      
+      
 
             conn.Close();
+
+            if (a == 0)
+                Response.Write("Data not inserted");
+            else
+
+                Response.Write("Data inserted");
         }
-    }
+     
 }
+    }
