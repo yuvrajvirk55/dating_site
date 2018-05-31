@@ -24,12 +24,7 @@ namespace dating_site
             string checkemail = "insert into usertable (email, password, first_name, last_name, sex, dob) values(register_email.Text, register_password.Text, register_fname.Text, register_lname.Text, register_gender.Text, register_dob.Text) ";
             SqlCommand com = new SqlCommand(checkemail, conn);
 
-           
-            
-                Response.Write("Data inserted");
-
-            
-
+            Response.Write("Data inserted");      
 
             conn.Close();
         }

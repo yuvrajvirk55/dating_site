@@ -8,21 +8,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:SqlDataSource ID="SqlDataSourceuserdata" runat="server" ConnectionString="<%$ ConnectionStrings:userdataConnectionString %>" OnSelecting="SqlDataSourceuserdata_Selecting" SelectCommand="SELECT * FROM [Table]" SelectQuery="<%$ ConnectionStrings:userdataConnectionString %>"></asp:SqlDataSource>
     <div>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="email" DataSourceID="SqlDataSourceuserdata" Height="241px" Width="818px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="email" DataSourceID="usertablesql">
             <Columns>
                 <asp:BoundField DataField="email" HeaderText="email" ReadOnly="True" SortExpression="email" />
                 <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
                 <asp:BoundField DataField="first_name" HeaderText="first_name" SortExpression="first_name" />
                 <asp:BoundField DataField="last_name" HeaderText="last_name" SortExpression="last_name" />
-                <asp:BoundField DataField="age" HeaderText="age" SortExpression="age" />
                 <asp:BoundField DataField="sex" HeaderText="sex" SortExpression="sex" />
                 <asp:BoundField DataField="dob" HeaderText="dob" SortExpression="dob" />
             </Columns>
         </asp:GridView>
+        <asp:SqlDataSource ID="usertablesql" runat="server" ConnectionString="<%$ ConnectionStrings:userdataConnectionString %>" SelectCommand="SELECT * FROM [usertable]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
