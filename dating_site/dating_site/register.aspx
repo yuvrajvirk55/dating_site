@@ -61,41 +61,42 @@
 						</span>
 					</div>
 
-                            <table class="auto-style1">
+
+           <table>
             <tr>
                 <td class="auto-style2">firstname</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="register_fname" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Password"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">lastname</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="register_lname" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="register_lname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Password"></asp:TextBox>
                 </td>
               
             </tr>
             <tr>
                 <td class="auto-style2">email</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="register_email" runat="server"  TextMode="Email"></asp:TextBox>
+                    <asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1" runat="server"  TextMode="Email"  placeholder="Password"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="register_email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1"  runat="server" ControlToValidate="register_email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">Date of Birth</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="register_dob" runat="server" TextMode="Date"></asp:TextBox>
+                    <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Date"  placeholder="Password"></asp:TextBox>
                 </td>
                 <td class="auto-style6"></td>
             </tr>
             <tr>
                 <td class="auto-style2">password</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="register_password" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="register_password" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
@@ -104,7 +105,7 @@
             <tr>
                 <td class="auto-style2">conform paddword</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="register_cpassword" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
                 </td>
                 <td>
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="register_password" ControlToValidate="register_cpassword" ErrorMessage="Passwords doesn't match"></asp:CompareValidator>
@@ -113,7 +114,7 @@
             <tr>
                 <td class="auto-style2">gender</td>
                 <td class="auto-style3">
-                    <asp:RadioButtonList ID="register_gender" runat="server" Height="16px" Width="222px">
+                    <asp:RadioButtonList ID="register_gender" runat="server" BackColor="#E1E1E1" class="input100" Height="16px" Width="222px"  placeholder="Password">
                         <asp:ListItem>male</asp:ListItem>
                         <asp:ListItem>female</asp:ListItem>
                     </asp:RadioButtonList>
