@@ -39,7 +39,11 @@ namespace dating_site
 
             Response.Write(db_email+"    "+ db_password+"    "+ textbox_email.Text+"   "+textbox_password.Text);
 
-           
+            string[] lines = { db_email + "    " + db_password + "    " + textbox_email.Text + "   " + textbox_password.Text };
+            // WriteAllLines creates a file, writes a collection of strings to the file,
+            // and then closes the file.  You do NOT need to call Flush() or Close().
+            System.IO.File.WriteAllLines(@"C:\WriteLines.txt", lines);
+
 
             /*  if (db_email.Equals(textbox_email.Text))
               {
