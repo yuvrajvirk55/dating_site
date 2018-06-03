@@ -38,10 +38,9 @@ namespace dating_site
             //database values
             string db_email = (string)command_email.ExecuteScalar();
             string db_password = (string)command_password.ExecuteScalar();
-
             
 
-              if (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString()))
+              if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
               {
                   Response.Write("successfully logged in");
               }
