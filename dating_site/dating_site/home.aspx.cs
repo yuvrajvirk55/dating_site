@@ -24,27 +24,23 @@ namespace dating_site
             int index = filtered_email.IndexOf('@');
             filtered_email = filtered_email.Substring(0, index);
 
+            //queries
             string checkemail = "select email from usertable WHERE email LIKE '" + filtered_email + "%'";
-
             string checkpassword = "select password from usertable WHERE password = '" + textbox_password.Text + "' ";
 
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
 
             SqlCommand command_email = new SqlCommand(checkemail, connection);
-
             SqlCommand command_password = new SqlCommand(checkpassword, connection);
+
             connection.Open();
 
+            //database values
             string db_email = (string)command_email.ExecuteScalar();
             string db_password = (string)command_password.ExecuteScalar();
+            
 
-            Response.Write(db_password + "             " + db_email+ "           "+ filtered_email);
-
-
-
-
-
-            /*  if (db_email.Equals(textbox_email.Text))
+              if (db_email.Equals(textbox_email.Text))
               {
                   Response.Write("User exists");
               }
@@ -63,9 +59,8 @@ namespace dating_site
               {
                   Response.Write("successful");
               }
-              */
+              
             connection.Close();
-
             }
         
 
