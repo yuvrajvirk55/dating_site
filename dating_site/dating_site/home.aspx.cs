@@ -24,7 +24,7 @@ namespace dating_site
             int index = filtered_email.IndexOf('@');
             filtered_email = filtered_email.Substring(0, index);
 
-            string checkemail = "select email from usertable WHERE email LIKE %" + filtered_email + "%";
+            string checkemail = "select email from usertable WHERE email LIKE '" + filtered_email + "%'";
 
             string checkpassword = "select password from usertable WHERE password = '" + textbox_password.Text + "' ";
 
@@ -38,7 +38,7 @@ namespace dating_site
             string db_email = (string)command_email.ExecuteScalar();
             string db_password = (string)command_password.ExecuteScalar();
 
-
+            Response.Write(db_password + "             " + db_email+ "           "+ filtered_email);
 
 
 
@@ -67,7 +67,7 @@ namespace dating_site
             connection.Close();
 
             }
-        }
+        
 
         protected void textbox_email_TextChanged(object sender, EventArgs e)
         {
