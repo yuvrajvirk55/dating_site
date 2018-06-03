@@ -31,15 +31,6 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.TextBox textbox_email;
         
         /// <summary>
-        /// textbox_password control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textbox_password;
-        
-        /// <summary>
         /// register_fname control.
         /// </summary>
         /// <remarks>

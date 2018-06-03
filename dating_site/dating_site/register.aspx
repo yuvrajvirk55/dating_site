@@ -44,42 +44,31 @@
 
 
 				
-						<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+			<!--		<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
 						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email" OnTextChanged="textbox_email_TextChanged" placeholder="Email"></asp:TextBox>
 						
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user"></i>
 						</span>
-					</div>
-
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-						 <asp:TextBox class="input100" ID="textbox_password" runat="server" BackColor="#E1E1E1" TextMode="Password"  placeholder="Password"></asp:TextBox>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock"></i>
-						</span>
-					</div>
+					</div>  -->
 
 
            <table>
             <tr>
-                <td class="auto-style2">firstname</td>
-                <td class="auto-style3">
+                <td">
                     <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="First name"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">lastname</td>
-                <td class="auto-style3">
+                <td>
                     <asp:TextBox ID="register_lname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox>
                 </td>
               
             </tr>
             <tr>
-                <td class="auto-style2">email</td>
-                <td class="auto-style3">
+                <td>
                     <asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1" runat="server"  TextMode="Email"  placeholder="Email"></asp:TextBox>
                 </td>
                 <td>
@@ -87,15 +76,13 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style4">Date of Birth</td>
-                <td class="auto-style5">
+                <td>
                     <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox>
                 </td>
-                <td class="auto-style6"></td>
+                <td></td>
             </tr>
             <tr>
-                <td class="auto-style2">password</td>
-                <td class="auto-style3">
+                <td>
                     <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
                 </td>
                 <td>
@@ -103,8 +90,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">conform paddword</td>
-                <td class="auto-style3">
+                <td >
                     <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>
                 </td>
                 <td>
@@ -112,8 +98,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">gender</td>
-                <td class="auto-style3">
+                <td>
                     <asp:RadioButtonList ID="register_gender" runat="server" BackColor="#E1E1E1" class="input100" Height="16px" Width="222px"  placeholder="Gender">
                         <asp:ListItem>male</asp:ListItem>
                         <asp:ListItem>female</asp:ListItem>
@@ -121,25 +106,13 @@
                 </td>
                 <td>&nbsp;</td>
             </tr>
-            <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style3">
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
+
         </table>
-
-
-
-
 
 
 					<div class="container-login100-form-btn p-t-10">
                            <asp:Button ID="register_register" runat="server" Text="register" OnClick="register_register_Click" />
-					</div>
-
-		
+					</div>		
 				</form>
 			</div>
 		</div>
