@@ -22,15 +22,6 @@ namespace dating_site {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// textbox_email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textbox_email;
-        
-        /// <summary>
         /// register_fname control.
         /// </summary>
         /// <remarks>

@@ -43,15 +43,7 @@
 				<form class="login100-form validate-form" id="form1" runat="server">
 
 
-				
-			<!--		<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email" OnTextChanged="textbox_email_TextChanged" placeholder="Email"></asp:TextBox>
-						
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-user"></i>
-						</span>
-					</div>  -->
+	
 
 
            <table>
