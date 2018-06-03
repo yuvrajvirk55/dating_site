@@ -41,21 +41,6 @@ namespace dating_site
 
 
 
-            Response.Write(db_email+"    "+ db_password+"    "+ textbox_email.Text+"   "+textbox_password.Text);
-
-            string[] lines = { db_email + "    " + db_password + "    " + textbox_email.Text + "   " + textbox_password.Text };
-            // WriteAllLines creates a file, writes a collection of strings to the file,
-            // and then closes the file.  You do NOT need to call Flush() or Close().
-            System.IO.File.WriteAllLines(@"D:\WriteLines.txt", lines);
-
-
-
-
-
-
-
-
-
 
 
 
@@ -80,7 +65,8 @@ namespace dating_site
               }
               */
             connection.Close();
-            
+
+            }
         }
 
         protected void textbox_email_TextChanged(object sender, EventArgs e)
