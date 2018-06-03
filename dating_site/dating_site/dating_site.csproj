@@ -119,7 +119,6 @@
     <Content Include="register.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="signup.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -144,13 +143,6 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="signup.aspx.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="signup.aspx.designer.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
