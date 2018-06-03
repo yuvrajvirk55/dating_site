@@ -43,7 +43,74 @@
 				<form class="login100-form validate-form" id="form1" runat="server">
 				
 						<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email" OnTextChanged="textbox_email_TextChanged" placeholder="Email"></asp:TextBox>
+						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email"  placeholder="Email"></asp:TextBox>
+<table class="auto-style1">
+            <tr>
+                <td class="auto-style2">firstname</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="register_fname" runat="server"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">lastname</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="register_lname" runat="server"></asp:TextBox>
+                </td>
+              
+            </tr>
+            <tr>
+                <td class="auto-style2">email</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="register_email" runat="server"  TextMode="Email"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="register_email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">Date of Birth</td>
+                <td class="auto-style5">
+                    <asp:TextBox ID="register_dob" runat="server" TextMode="Date"></asp:TextBox>
+                </td>
+                <td class="auto-style6"></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">password</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="register_password" runat="server" TextMode="Password"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="register_password" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">conform paddword</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="register_cpassword" runat="server" TextMode="Password"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="register_password" ControlToValidate="register_cpassword" ErrorMessage="Passwords doesn't match"></asp:CompareValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">gender</td>
+                <td class="auto-style3">
+                    <asp:RadioButtonList ID="register_gender" runat="server" Height="16px" Width="222px">
+                        <asp:ListItem>male</asp:ListItem>
+                        <asp:ListItem>female</asp:ListItem>
+                    </asp:RadioButtonList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
 						
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -60,7 +127,7 @@
 					</div>
 
 					<div class="container-login100-form-btn p-t-10">
-						  <asp:ImageButton ID="ImageButton_login" runat="server" Height="51px" ImageUrl="~/images/login.jpg" OnClick="ImageButton2_Click" />
+						 
 					</div>
 
 					<div class="text-center w-full p-t-25 p-b-230">
