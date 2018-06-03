@@ -16,7 +16,7 @@
 }
 </style>
 <head runat="server">
-	<title>Register</title>
+	<title>login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -34,17 +34,34 @@
 	
 	<div class="limiter" style="background-image: url('images/background.jpg');">
 
-	<div class="rainbow" style="font-size:100px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 1.3em;"><b>   &ensp;     &emsp;Let's date!</b></div>
+	<div class="rainbow" style="font-size:50px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 1.3em;"><b>   &ensp;     &emsp;Register</b></div>
 
 		<div class="container-login100" >		
 			
 			<div class="wrap-login100 p-t-190 p-b-30">
 			
 				<form class="login100-form validate-form" id="form1" runat="server">
+
+
 				
 						<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email"  placeholder="Email"></asp:TextBox>
-<table class="auto-style1">
+						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email" OnTextChanged="textbox_email_TextChanged" placeholder="Email"></asp:TextBox>
+						
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						 <asp:TextBox class="input100" ID="textbox_password" runat="server" BackColor="#E1E1E1" TextMode="Password"  placeholder="Password"></asp:TextBox>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+
+                            <table class="auto-style1">
             <tr>
                 <td class="auto-style2">firstname</td>
                 <td class="auto-style3">
@@ -111,42 +128,17 @@
                     &nbsp;</td>
             </tr>
         </table>
-						
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-user"></i>
-						</span>
-					</div>
 
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-						 <asp:TextBox class="input100" ID="textbox_password" runat="server" BackColor="#E1E1E1" TextMode="Password"  placeholder="Password"></asp:TextBox>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock"></i>
-						</span>
-					</div>
+
+
+
+
 
 					<div class="container-login100-form-btn p-t-10">
-						 
+                           <asp:Button ID="register_register" runat="server" Text="register" OnClick="register_register_Click" />
 					</div>
 
-					<div class="text-center w-full p-t-25 p-b-230">
-						<a href="#" class="txt1">
-							<font color="red">Forgot Username / Password?</font>
-						</a>
-						
-						<br>
-						<br>
-							
-						<a class="txt1" href="register.aspx">
-							<font color="black"><b>Create new account</b></font>
-							<i class="fa fa-long-arrow-right"></i>						
-						</a>
-					</div>
-
-					<div class="text-center w-full">
-
-					</div>
+		
 				</form>
 			</div>
 		</div>
