@@ -38,26 +38,27 @@ namespace dating_site
             //database values
             string db_email = (string)command_email.ExecuteScalar();
             string db_password = (string)command_password.ExecuteScalar();
+
             
 
-              if (db_email.Equals(textbox_email.Text))
+              if (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString()))
               {
-                  Response.Write("User exists");
+                  Response.Write("successfully logged in");
               }
 
-              else if (!db_email.Equals(textbox_email.Text.ToString()))
+              else if (string.IsNullOrEmpty(db_email))
               {
                   Response.Write("User does not exists");
               }
 
-              else if (db_password != textbox_password.Text.ToString())
+              else if (string.IsNullOrEmpty(db_password))
               {
                   Response.Write("Invalid password");
               }
 
               else
               {
-                  Response.Write("successful");
+                  Response.Write("error");
               }
               
             connection.Close();
