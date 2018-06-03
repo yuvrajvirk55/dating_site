@@ -24,7 +24,8 @@ namespace dating_site
             int index = filtered_email.IndexOf('@');
             filtered_email = filtered_email.Substring(0, index);
 
-            string checkemail = "select email from usertable WHERE email LIKE '%" + filtered_email + "%' ";
+            string checkemail = "select email from usertable WHERE email LIKE %" + filtered_email + "%";
+
             string checkpassword = "select password from usertable WHERE password = '" + textbox_password.Text + "' ";
 
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
@@ -37,12 +38,25 @@ namespace dating_site
             string db_email = (string)command_email.ExecuteScalar();
             string db_password = (string)command_password.ExecuteScalar();
 
+
+
+
             Response.Write(db_email+"    "+ db_password+"    "+ textbox_email.Text+"   "+textbox_password.Text);
 
             string[] lines = { db_email + "    " + db_password + "    " + textbox_email.Text + "   " + textbox_password.Text };
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.  You do NOT need to call Flush() or Close().
-            System.IO.File.WriteAllLines(@"C:\WriteLines.txt", lines);
+            System.IO.File.WriteAllLines(@"D:\WriteLines.txt", lines);
+
+
+
+
+
+
+
+
+
+
 
 
             /*  if (db_email.Equals(textbox_email.Text))
