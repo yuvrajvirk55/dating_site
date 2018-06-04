@@ -48,6 +48,7 @@
 	
 <form id="form1" runat="server">
 
+ <div align="center">
  <table >
   <tr>
     <th><div class="rainbow" style="font-size:60px; text-align:left;font-family: Bradley Hand ITC;position: relative;"><b>   &ensp;     &emsp;Register</b></div></th>
@@ -81,18 +82,19 @@
 
   
   <tr>
-    <td> <asp:RadioButtonList ID="register_gender" runat="server" BackColor="#E1E1E1" class="input100" Height="16px" Width="222px"  placeholder="Gender"> <asp:ListItem>male</asp:ListItem><asp:ListItem>female</asp:ListItem> </asp:RadioButtonList></td>
-    <td> </td>
+    <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem>male</asp:ListItem><asp:ListItem>female</asp:ListItem> </asp:RadioButtonList></td>
+    <td></td>
     <td></td>
   </tr>
 
    <tr>
-    <td><asp:Button ID="register_register" runat="server" Text="register" OnClick="register_register_Click" /></td>
-    <td> </td>
+    <td></td>
+    <td  Width="250px"><asp:Button ID="register_register" runat="server" Text="register" OnClick="register_register_Click" /> </td>
     <td></td>
   </tr>
 
-</table>							
+</table>
+     </div>							
 </form>
 
 </body>
