@@ -46,36 +46,35 @@
 </head>
 <body class="bg">
 	
-		
-	<form id="form1" runat="server">
+<form id="form1" runat="server">
 
-        <table style="width:100%">
+ <table style="width:100%">
   <tr>
     <th>Firstname</th>
     <th>Lastname</th> 
     <th>Age</th>
   </tr>
   <tr>
-    <td>  <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="First name"></asp:TextBox></td>
-    <td> <asp:TextBox ID="register_lname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox></td>
+    <td>  <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" Width="50%" runat="server"  placeholder="First name"></asp:TextBox></td>
+    <td> <asp:TextBox ID="register_lname" class="input100" BackColor="#E1E1E1" Width="50%" runat="server"  placeholder="Last name"></asp:TextBox></td>
     <td>50</td>
   </tr>
 
   <tr>
-    <td><asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1" runat="server"  TextMode="Email"  placeholder="Email"></asp:TextBox></td>
+    <td><asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1" Width="50%" runat="server"  TextMode="Email"  placeholder="Email"></asp:TextBox></td>
     <td>Jackson</td>
     <td>94</td>
   </tr>
 
   <tr>
-    <td> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
+    <td> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1" Width="50%" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
     <td>Doe</td>
     <td>80</td>
   </tr>
 
    <tr>
-    <td>  <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </td>
-    <td> <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></td>
+    <td>  <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1" Width="50%" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </td>
+    <td> <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1" Width="50%" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></td>
     <td>80</td>
   </tr>
 
