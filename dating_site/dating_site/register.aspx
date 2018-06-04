@@ -14,6 +14,20 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+.bg { 
+    /* The image used */
+    background-image: url('images/background.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 </style>
 <head runat="server">
 	<title>login</title>
@@ -30,28 +44,32 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body>
+<body class="bg">
 	
-	<div class="limiter" style="background-image: url('images/background.jpg');">
+	<div class="limiter" ">
 
 	<div class="rainbow" style="font-size:50px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 1.3em;"><b>   &ensp;     &emsp;Register</b></div>
-
-		<div class="container-login100" >		
 			
-			<div class="wrap-login100 p-t-190 p-b-30">
-			
-				<form class="login100-form validate-form" id="form1" runat="server">
-
+	<form class="login100-form validate-form" id="form1" runat="server">
 
            <table>
-            <td>
-                <tr">
-                    <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="First name"></asp:TextBox>
-                </tr>
-                <tr>
-                    <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox>
-                </tr>
-            </td>
+            <tr>
+                <td">
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="First name"></asp:TextBox>
+
+					</div>
+               
+                </td>
+
+                <td>
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						 <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox>
+	
+					</div>
+                   
+                </td>
+            </tr>
 
 
         </table>
@@ -62,7 +80,5 @@
 					</div>		
 				</form>
 			</div>
-		</div>
-	</div>
 </body>
 </html>
