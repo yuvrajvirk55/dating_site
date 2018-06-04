@@ -97,7 +97,7 @@
     </tr>
   
   <tr">
-    <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem>male</asp:ListItem><asp:ListItem>female</asp:ListItem> </asp:RadioButtonList></td>
+    <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" ><div class="rainbow" <asp:ListItem>>male</asp:ListItem></div><asp:ListItem>female</asp:ListItem> </asp:RadioButtonList></td>
     <td></td>
     <td></td>
   </tr>
@@ -109,7 +109,7 @@
   </tr>
 </table>
 
-<asp:Button ID="register_register" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:50px;" Text="Submit" OnClick="register_register_Click" />						
+<asp:Button ID="register_register" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" OnClick="register_register_Click" />						
 </form>
    </div>
 
