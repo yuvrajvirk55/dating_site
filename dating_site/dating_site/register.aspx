@@ -28,6 +28,11 @@
     background-size: cover;
 }
 
+.img {
+     background: rgba(0, 0, 0, 0.3);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
 </style>
 <head runat="server">
 	<title>login</title>
@@ -46,9 +51,8 @@
 </head>
 <body class="bg">
 	
-<form id="form1" runat="server">
-
- <div align="center">
+ <div class="img" align="center">
+   <form id="form1" runat="server">
  <table >
   <tr>
     <th><div class="rainbow" style="font-size:60px; text-align:left;font-family: Bradley Hand ITC;position: relative;"><b>   &ensp;     &emsp;Register</b></div></th>
@@ -89,13 +93,14 @@
 
    <tr>
     <td></td>
-    <td  Width="250px"><asp:Button ID="register_register" runat="server" Text="register" OnClick="register_register_Click" /> </td>
+    <td  Width="250px"><asp:Button ID="register_register" runat="server" color="#E1E1E1" BackColor="Black"  Width="250px" class="input100"  Text="register" OnClick="register_register_Click" /> </td>
     <td></td>
   </tr>
 
 </table>
-     </div>							
+    							
 </form>
+   </div>
 
 </body>
 </html>
