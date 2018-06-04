@@ -18,7 +18,7 @@ namespace dating_site
 
         protected void register_register_Click(object sender, EventArgs e)
         {
-            string[] lines = { register_fname.Text+"     " + register_lname.Text+"   "+ register_email.Text+"    "+ register_password.Text+"    "+register_dob.Text+"    "+register_gender };
+            string[] lines = { register_fname.Text+"     " + register_lname.Text+"   "+ register_email.Text+"    "+ register_password.Text+"    "+register_dob.Text+"    "+register_gender.Text };
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.  You do NOT need to call Flush() or Close().
             System.IO.File.WriteAllLines(@"D:\WriteLines.txt", lines);
