@@ -43,61 +43,16 @@
 				<form class="login100-form validate-form" id="form1" runat="server">
 
 
-	
-
-
            <table>
-            <tr>
-                <td">
+            <td>
+                <tr">
                     <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="First name"></asp:TextBox>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:TextBox ID="register_lname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox>
-                </td>
-              
-            </tr>
-            <tr>
-                <td>
-                    <asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1" runat="server"  TextMode="Email"  placeholder="Email"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1"  runat="server" ControlToValidate="register_email" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="register_password" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td >
-                    <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="register_password" ControlToValidate="register_cpassword" ErrorMessage="Passwords doesn't match"></asp:CompareValidator>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:RadioButtonList ID="register_gender" runat="server" BackColor="#E1E1E1" class="input100" Height="16px" Width="222px"  placeholder="Gender">
-                        <asp:ListItem>male</asp:ListItem>
-                        <asp:ListItem>female</asp:ListItem>
-                    </asp:RadioButtonList>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
+                </tr>
+                <tr>
+                    <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox>
+                </tr>
+            </td>
+
 
         </table>
 
