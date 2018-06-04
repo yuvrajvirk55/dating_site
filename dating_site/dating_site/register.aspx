@@ -66,18 +66,20 @@
     <td></td>
   </tr>
 
-  <tr>
-    <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
-    <td></td>
-    <td></td>
-  </tr>
-
    <tr>
     <td Width="250px">  <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </td>
     <td  Width="250px"> <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></td>
     <td></td>
   </tr>
 
+
+  <tr>
+    <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  
   <tr>
     <td> <asp:RadioButtonList ID="register_gender" runat="server" BackColor="#E1E1E1" class="input100" Height="16px" Width="222px"  placeholder="Gender"> <asp:ListItem>male</asp:ListItem><asp:ListItem>female</asp:ListItem> </asp:RadioButtonList></td>
     <td> </td>
