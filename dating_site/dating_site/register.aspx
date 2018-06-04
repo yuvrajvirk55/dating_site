@@ -88,7 +88,7 @@
   <tr>
     <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
     <td></td>
-    <td></td>
+    <td><INPUT id="oFile" type="file" runat="server" NAME="oFile"></td>
   </tr>
 
      <tr style="height: 20px;" >
