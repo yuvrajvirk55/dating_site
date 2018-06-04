@@ -31,6 +31,10 @@
 .img {
      background: rgba(0, 0, 0, 0.3);
     filter: alpha(opacity=50); /* For IE8 and earlier */
+
+  
+    margin-top: 130px;
+ 
 }
 
 </style>
@@ -51,13 +55,15 @@
 </head>
 <body class="bg">
 	
- <div class="img" align="center">
+ <div class="img"  align="center"; >
    <form id="form1" runat="server">
+       <div  class="rainbow"  style="font-size:45px; text-align:center;font-family: Bradley Hand ITC;"><b>Register</b></div>
+
  <table >
-  <tr>
-    <th><div class="rainbow" style="font-size:60px; text-align:left;font-family: Bradley Hand ITC;position: relative;"><b>   &ensp;     &emsp;Register</b></div></th>
-    <th></th> 
-    <th></th>
+     <tr style="height: 30px;" >
+    <td></td>
+    <td></td> 
+    <td></td>
   </tr>
   <tr>
     <td width="250px"> <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" Width="250px" runat="server"  placeholder="First name"></asp:TextBox></td>
@@ -75,30 +81,35 @@
     <td Width="250px">  <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </td>
     <td  Width="250px"> <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></td>
     <td></td>
-  </tr>
+  </tr style="">
 
-
+ 
   <tr>
     <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
     <td></td>
     <td></td>
   </tr>
 
+     <tr style="height: 20px;" >
+    <td></td>
+    <td></td> 
+    <td></td>
+    </tr>
   
-  <tr>
+  <tr">
     <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem>male</asp:ListItem><asp:ListItem>female</asp:ListItem> </asp:RadioButtonList></td>
     <td></td>
     <td></td>
   </tr>
 
-   <tr>
+   <tr style="height: 30px;" >
     <td></td>
-    <td  Width="250px"><asp:Button ID="register_register" runat="server" color="#E1E1E1" BackColor="Black"  Width="250px" class="input100"  Text="register" OnClick="register_register_Click" /> </td>
+    <td></td> 
     <td></td>
   </tr>
-
 </table>
-    							
+
+<asp:Button ID="register_register" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:50px;" Text="Submit" OnClick="register_register_Click" />						
 </form>
    </div>
 
