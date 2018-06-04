@@ -13,6 +13,7 @@
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  font-family: Bradley Hand ITC;
 }
 
 .bg { 
@@ -57,7 +58,7 @@
 	
  <div class="img"  align="center"; >
    <form id="form1" runat="server">
-       <div  class="rainbow"  style="font-size:45px; text-align:center;font-family: Bradley Hand ITC;"><b>Register</b></div>
+       <div  class="rainbow"  style="font-size:45px; text-align:center;"><b>Register</b></div>
 
  <table >
      <tr style="height: 30px;" >
@@ -97,7 +98,7 @@
     </tr>
   
   <tr">
-    <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" ><div class="rainbow" <asp:ListItem>>male</asp:ListItem></div><asp:ListItem>female</asp:ListItem> </asp:RadioButtonList></td>
+    <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></td>
     <td></td>
     <td></td>
   </tr>
