@@ -18,21 +18,11 @@ namespace dating_site
 
         protected void register_register_Click(object sender, EventArgs e)
         {
-            var a=0;
+            string[] lines = { register_fname.Text+"     " + register_lname.Text+"   "+ register_email.Text+"    "+ register_password.Text+"    "+register_dob.Text+"    "+register_gender };
+            // WriteAllLines creates a file, writes a collection of strings to the file,
+            // and then closes the file.  You do NOT need to call Flush() or Close().
+            System.IO.File.WriteAllLines(@"D:\WriteLines.txt", lines);
 
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
-            conn.Open();
-            string checkemail = "insert into usertable (email, password, first_name, last_name, sex, dob) values(register_email.Text, register_password.Text, register_fname.Text, register_lname.Text, register_gender.Text, register_dob.Text) ";
-            SqlCommand com = new SqlCommand(checkemail, conn);
-      
-
-            conn.Close();
-
-            if (a == 0)
-                Response.Write("Data not inserted");
-            else
-
-                Response.Write("Data inserted");
         }
      
 }

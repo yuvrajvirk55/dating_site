@@ -82,7 +82,7 @@
     <td Width="250px">  <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </td>
     <td  Width="250px"> <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></td>
     <td></td>
-  </tr style="">
+  </tr >
 
  
   <tr>
