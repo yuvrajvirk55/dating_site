@@ -46,30 +46,46 @@
 </head>
 <body class="bg">
 	
-	<div class="limiter" ">
-
-	<div class="rainbow" style="font-size:50px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 1.3em;"><b>   &ensp;     &emsp;Register</b></div>
-			
-	<form class="login100-form validate-form" id="form1" runat="server">
+		
+	<form id="form1" runat="server">
 
            <table>
+
             <tr>
-                <td">
-                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-						<asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="First name"></asp:TextBox>
+                    <td>
+            		    <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="First name"></asp:TextBox>               
+                    </td>
 
-					</div>
-               
-                </td>
-
-                <td>
-                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-						 <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox>
-	
-					</div>
-                   
-                </td>
+                    <td> 
+						     <asp:TextBox ID="register_lname" class="input100" BackColor="#E1E1E1" runat="server"  placeholder="Last name"></asp:TextBox>       
+                    </td>
             </tr>
+
+             <tr>
+                  <asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1" runat="server"  TextMode="Email"  placeholder="Email"></asp:TextBox>
+             </tr>
+
+              <tr>
+                   <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox>
+              </tr>
+
+               <tr>
+                    <td>
+            		   <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>               
+                    </td>
+
+                    <td> 
+					   <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>      
+                    </td>
+            </tr>
+
+               <tr>
+
+                    <asp:RadioButtonList ID="register_gender" runat="server" BackColor="#E1E1E1" class="input100" Height="16px" Width="222px"  placeholder="Gender">
+                        <asp:ListItem>male</asp:ListItem>
+                        <asp:ListItem>female</asp:ListItem>
+                    </asp:RadioButtonList>
+               </tr>
 
 
         </table>
@@ -79,6 +95,6 @@
                            <asp:Button ID="register_register" runat="server" Text="register" OnClick="register_register_Click" />
 					</div>		
 				</form>
-			</div>
+
 </body>
 </html>
