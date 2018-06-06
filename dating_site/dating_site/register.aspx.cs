@@ -23,7 +23,7 @@ namespace dating_site
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex,pic) VALUES ('" + register_email.Text + "','" + register_password.Text + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text +"','"+oFile.+"')";
+            cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex) VALUES ('" + register_email.Text + "','" + register_password.Text + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text +"')";
             cmd.Connection = sqlConnection1;
 
             sqlConnection1.Open();

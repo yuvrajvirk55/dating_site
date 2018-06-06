@@ -94,15 +94,6 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.TextBox register_dob;
         
         /// <summary>
-        /// oFile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile oFile;
-        
-        /// <summary>
         /// register_gender control.
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace dating_site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList register_gender;
+        
+        /// <summary>
+        /// FileUpload1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
         /// register_register control.

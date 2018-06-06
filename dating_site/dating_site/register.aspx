@@ -88,7 +88,7 @@
   <tr>
     <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
     <td></td>
-    <td><INPUT id="oFile" type="file" runat="server" NAME="oFile"></td>
+    <td></td>
   </tr>
 
      <tr style="height: 20px;" >
@@ -99,8 +99,10 @@
   
   <tr">
     <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem Value="male"><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem Value="female"><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></td>
-    <td></td>
-    <td></td>
+    <td>
+        
+     </td>
+    <td><asp:FileUpload ID="FileUpload1" runat="server" /></td>
   </tr>
 
    <tr style="height: 30px;" >
