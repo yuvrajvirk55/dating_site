@@ -40,6 +40,9 @@ namespace dating_site
                 sqlConnection1.Close();
             }
 
+            Session["email"] = register_email.Text;
+            Response.Redirect("form.aspx");
+
         }
      
 }
