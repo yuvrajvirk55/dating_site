@@ -62,13 +62,37 @@
 
  <table >
     
-     <asp:Wizard ID="Wizard1" runat="server">
+     <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="2">
          <WizardSteps>
              <asp:WizardStep runat="server" title="10%">
+                 Interested in: 
+                 <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                     <asp:ListItem>men</asp:ListItem>
+                     <asp:ListItem>women</asp:ListItem>
+                 </asp:RadioButtonList>
              </asp:WizardStep>
              <asp:WizardStep runat="server" title="23%">
+                 Age group: 
+                 <asp:ListBox ID="ListBox1" runat="server">
+                     <asp:ListItem>18-25</asp:ListItem>
+                     <asp:ListItem>26-30</asp:ListItem>
+                     <asp:ListItem>31-45</asp:ListItem>
+                     <asp:ListItem>45-60</asp:ListItem>
+                     <asp:ListItem>60 +</asp:ListItem>
+                 </asp:ListBox>
              </asp:WizardStep>
              <asp:WizardStep runat="server" Title="35%">
+                 Nationality:
+                  <asp:ListBox ID="ListBox2" runat="server">
+                      <asp:ListItem>canada</asp:ListItem>
+                      <asp:ListItem>america</asp:ListItem>
+                      <asp:ListItem>india</asp:ListItem>
+                      <asp:ListItem>australia</asp:ListItem>
+                      <asp:ListItem>new zealand</asp:ListItem>
+                      <asp:ListItem>china</asp:ListItem>
+                      <asp:ListItem>japan</asp:ListItem>
+                      <asp:ListItem>uk</asp:ListItem>
+                 </asp:ListBox>
              </asp:WizardStep>
              <asp:WizardStep runat="server" Title="49%">
              </asp:WizardStep>
