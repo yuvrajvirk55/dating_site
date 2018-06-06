@@ -62,6 +62,27 @@
 
  <table >
     
+     <asp:Wizard ID="Wizard1" runat="server">
+         <WizardSteps>
+             <asp:WizardStep runat="server" title="10%">
+             </asp:WizardStep>
+             <asp:WizardStep runat="server" title="23%">
+             </asp:WizardStep>
+             <asp:WizardStep runat="server" Title="35%">
+             </asp:WizardStep>
+             <asp:WizardStep runat="server" Title="49%">
+             </asp:WizardStep>
+             <asp:WizardStep runat="server" Title="65%">
+             </asp:WizardStep>
+             <asp:WizardStep runat="server" Title="78%">
+             </asp:WizardStep>
+             <asp:WizardStep runat="server" Title="89%">
+             </asp:WizardStep>
+             <asp:WizardStep runat="server" Title="100%">
+             </asp:WizardStep>
+         </WizardSteps>
+     </asp:Wizard>
+    
 </table>
 
 <asp:Button ID="register_register" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />						
