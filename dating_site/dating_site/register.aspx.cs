@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -33,11 +34,13 @@ namespace dating_site
             if (FileUpload1.HasFile)
             {
 
-                int length = FileUpload1.PostedFile.ContentLength;
-                byte[] pic = new byte[length];
-                FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
+                Stream photoStream = FileUpload1.PostedFile.InputStream;
+                int photoLength = FileUpload1.PostedFile.ContentLength;
+                string photoMime = FileUpload1.PostedFile.ContentType;
+                string photoName = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                byte[] photoData = new byte[photoLength - 1];
+                photoStream.Read(photoData, 0, photoLength);
 
-              //  string str = FileUpload1.FileName.ToString();
 
 
 

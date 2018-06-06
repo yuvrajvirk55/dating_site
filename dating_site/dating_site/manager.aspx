@@ -19,6 +19,12 @@
                 <asp:BoundField DataField="last_name" HeaderText="last_name" SortExpression="last_name" />
                 <asp:BoundField DataField="sex" HeaderText="sex" SortExpression="sex" />
                 <asp:BoundField DataField="dob" HeaderText="dob" SortExpression="dob" />
+                <asp:TemplateField HeaderText="uer image">
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" />
+                    </ItemTemplate>
+
+                </asp:TemplateField>
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="usertablesql" runat="server" ConnectionString="<%$ ConnectionStrings:userdataConnectionString %>" SelectCommand="SELECT * FROM [usertable]"></asp:SqlDataSource>
