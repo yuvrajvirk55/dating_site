@@ -55,7 +55,7 @@
 <!--===============================================================================================-->
 </head>
 <body class="bg">
-	
+	<div class="rainbow" style="font-size:35px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 0.8em;left:1.3em;"><b>   &ensp;     &emsp;Let's date!</b></div>
  <div class="img"  align="center"; >
    <form id="form1" runat="server">
        <div  class="rainbow"  style="font-size:45px; text-align:center;"><b>Register</b></div>

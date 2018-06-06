@@ -3,14 +3,70 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<style>
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: Bradley Hand ITC;
+}
+
+.bg { 
+    /* The image used */
+    background-image: url('images/background.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img {
+     background: rgba(0, 0, 0, 0.3);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+
+  
+    margin-top: 130px;
+ 
+}
+
+</style>
 <head runat="server">
-    <title></title>
+	<title>login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+<body class="bg">
+	<div class="rainbow" style="font-size:35px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 0.8em;left:1.3em;"><b>   &ensp;     &emsp;Let's date!</b></div>
+ <div class="img"  align="center"; >
+   <form id="form1" runat="server">
+       <div  class="rainbow"  style="font-size:45px; text-align:center;"><b>Just a moment </b></div>
+
+ <table >
     
-    </div>
-    </form>
+</table>
+
+<asp:Button ID="register_register" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />						
+</form>
+   </div>
+
 </body>
 </html>
