@@ -36,14 +36,14 @@ namespace dating_site
 
                 int length = FileUpload1.PostedFile.ContentLength;
                 byte[] pic = new byte[length];
-                FileUpload1.PostedFile.InputStream.Read();
+                FileUpload1.PostedFile.InputStream.Read(pic, 0 , length);
 
 
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
 
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex) VALUES ('" + register_email.Text + "','" + register_password.Text + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text +  "')";
+                cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex,pic) VALUES ('" + register_email.Text + "','" + register_password.Text + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text + "','" +pic+ "')";
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();
