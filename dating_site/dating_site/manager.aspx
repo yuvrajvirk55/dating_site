@@ -20,8 +20,8 @@
                 <asp:BoundField DataField="sex" HeaderText="sex" SortExpression="sex" />
                 <asp:BoundField DataField="dob" HeaderText="dob" SortExpression="dob" />
                 <asp:TemplateField HeaderText="uer image">
-                    <ItemTemplate>
-                        <asp:Image ID="Image1" runat="server" Width="300px" height="300px" ImageUrl='<%#"data:Image/png;base64," + Convert.ToBase64String((byte[])Eval("pic")) %>' />
+                    <%--<ItemTemplate>--%>
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#"data:Image/png;base64," + Convert.ToBase64String((byte[])Eval("pic")) %>' />
                     </ItemTemplate>
 
                 </asp:TemplateField>

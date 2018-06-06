@@ -35,7 +35,7 @@ namespace dating_site
                 {
                     byte[] imagedata = (byte[])dr["pic"];
                     string img = Convert.ToBase64String(imagedata, 0, imagedata.Length);
-                    Image1.ImageUrl = "data:image/jpg;base64," + "images/background.jpg";
+                    Image1.ImageUrl = "data:image/png;base64," +img;
                 } 
             }
 
