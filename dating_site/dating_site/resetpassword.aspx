@@ -173,7 +173,7 @@ button:hover {
         </div>
      <br />
          <div align="center"> 
-        <asp:Button ID="resetpassword_button" runat="server" OnClick="Button1_Click" BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />
+        <asp:Button ID="resetpassword_button" runat="server" OnClick="resetpassword_button_click" BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />
    
               </div>
     

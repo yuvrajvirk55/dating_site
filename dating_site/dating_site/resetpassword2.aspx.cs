@@ -13,5 +13,10 @@ namespace dating_site
         {
 
         }
+
+        protected void resetpassword_button_click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
