@@ -144,37 +144,30 @@ button:hover {
 
     <br />
     <br />
+      <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="resetpassword_password" ControlToValidate="register_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator>
 
     <div>
-        <b><span style="font-size:large;">Enter your email. . . . .</span></b><br />
+        <b><span style="font-size:large;">Enter Password. . . . .</span></b><br />
         <br />
         <p>
-  <asp:TextBox ID="resetpassword_email" class="input100" BackColor="#E1E1E1"  runat="server"  TextMode="Email"  placeholder="Enter your email address ..."></asp:TextBox>
+  <asp:TextBox ID="resetpassword_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
     </p>
-            </div>
+  </div>
 
     <br />
-    <br /> 
+    <br />  
 
-    <div ><b><span style="font-size:large;">Nationality. . . . .</span></b><br />
+    <div ><b><span style="font-size:large;">Enter your password again. . . . .</span></b><br />
         <br />     
      <p>
-             <asp:DropDownList ID="resetpassword_nationality" BackColor="#E1E1E1"  class="input100" runat="server">
-            <asp:ListItem Value="india">india</asp:ListItem>
-            <asp:ListItem Value="america">america</asp:ListItem>
-            <asp:ListItem Value="canada">canada</asp:ListItem>
-            <asp:ListItem Value="china">china</asp:ListItem>
-            <asp:ListItem Value="japan">japan</asp:ListItem>
-            <asp:ListItem Value="australia">australia</asp:ListItem>
-            <asp:ListItem Value="new_zealand">new zealand</asp:ListItem>
-        </asp:DropDownList>
+             <asp:TextBox ID="resetpassword_cpassword" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>
         </p>
         </div>
      <br />
          <div align="center"> 
-        <asp:Button ID="resetpassword_button" runat="server" OnClick="Button1_Click" BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />
+        <asp:Button ID="resetpassword_button" runat="server" OnClick="resetpassword_button_click" BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />
    
-              </div>
+          </div>
     
    
     <!-- Circles which indicates the steps of the form: --> 

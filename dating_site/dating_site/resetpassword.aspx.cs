@@ -14,7 +14,7 @@ namespace dating_site
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void resetpassword_button_click(object sender, EventArgs e)
         {
 
         }

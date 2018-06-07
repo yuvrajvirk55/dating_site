@@ -22,22 +22,31 @@ namespace dating_site {
         protected global::System.Web.UI.HtmlControls.HtmlForm regForm;
         
         /// <summary>
-        /// resetpassword_email control.
+        /// CompareValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox resetpassword_email;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
-        /// resetpassword_nationality control.
+        /// resetpassword_password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList resetpassword_nationality;
+        protected global::System.Web.UI.WebControls.TextBox resetpassword_password;
+        
+        /// <summary>
+        /// resetpassword_cpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox resetpassword_cpassword;
         
         /// <summary>
         /// resetpassword_button control.
