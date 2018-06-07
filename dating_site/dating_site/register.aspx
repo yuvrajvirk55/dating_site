@@ -32,10 +32,8 @@
 .img {
      background: rgba(0, 0, 0, 0.3);
     filter: alpha(opacity=50); /* For IE8 and earlier */
-    color:white;
-
-  
-    margin-top: 130px;
+    color:white; 
+    margin-top: 70px;
  
 }
 
@@ -115,7 +113,8 @@
   </tr>
 </table>
 
-<asp:Button ID="register_register" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" OnClick="register_register_Click" />						
+<asp:Button ID="register_register" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" OnClick="register_register_Click" />	
+       <p> <br /></p>					
 </form>
    </div>
 
