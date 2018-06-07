@@ -1,5 +1,10 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="form.aspx.cs" Inherits="form.register" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <style>
@@ -34,12 +39,14 @@ body {
 
 
 #regForm {
-  background-color: #ffffff;
+ background: rgba(0, 0, 0, 0.3);
+    filter: alpha(opacity=50);
   margin: 100px auto;
   font-family: Raleway;
   padding: 40px;
   width: 70%;
   min-width: 300px;
+  color: white;
 }
 
 h1 {
@@ -118,28 +125,40 @@ button:hover {
 <form id="regForm" action="/action_page.php">
   <h1 <div class="rainbow" style="font-size:25px;font-family: Bradley Hand ITC;position: relative;"><b>Just a moment . . .</b></div></h1>
   <!-- One "tab" for each step in the form: -->
+
+
   <div class="tab">Name:
     <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
     <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
   </div>
+
+
   <div class="tab">Contact Info:
     <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
     <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
   </div>
+
+
   <div class="tab">Birthday:
     <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
     <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
     <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
   </div>
+
+
   <div class="tab">Login Info:
     <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
     <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
   </div>
+
+
   <div style="overflow:auto;">
     <div style="float:right;">
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
       <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
     </div>
+
+
   </div>
   <!-- Circles which indicates the steps of the form: -->
   <div style="text-align:center;margin-top:40px;">
@@ -148,6 +167,8 @@ button:hover {
     <span class="step"></span>
     <span class="step"></span>
   </div>
+
+
 </form>
 
 <script>
