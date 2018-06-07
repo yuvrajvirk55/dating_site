@@ -170,10 +170,14 @@ button:hover {
             <asp:ListItem Value="new_zealand">new zealand</asp:ListItem>
         </asp:DropDownList>
         </p>
+        </div>
      <br />
-    </div>
+         <div align="center"> 
+        <asp:Button ID="resetpassword_button" runat="server" OnClick="Button1_Click" BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />
+   
+              </div>
     
-       
+   
     <!-- Circles which indicates the steps of the form: --> 
     
     <div style="text-align:center;margin-top:40px;">  
