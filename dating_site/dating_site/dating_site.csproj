@@ -122,6 +122,7 @@
     <Content Include="images\signUp.png" />
     <Content Include="register.aspx" />
     <Content Include="resetpassword.aspx" />
+    <Content Include="resetpassword2.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -169,6 +170,13 @@
     </Compile>
     <Compile Include="resetpassword.aspx.designer.cs">
       <DependentUpon>resetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resetpassword2.aspx.cs">
+      <DependentUpon>resetpassword2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resetpassword2.aspx.designer.cs">
+      <DependentUpon>resetpassword2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
