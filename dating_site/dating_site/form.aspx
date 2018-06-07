@@ -155,12 +155,12 @@ button:hover {
 
 
   <div class="tab">Nationality:
-     <p<asp:ListBox ID="form_agegroup" runat="server"></asp:ListBox></p>
+     <p<asp:ListBox ID="form_nationality" runat="server"></asp:ListBox></p>
   </div>
 
 
   <div class="tab">Hobbies:
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+    <p> <asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1"  class="input100"  placeholder="Seprate hobbies with comma.."></asp:TextBox></p>
   </div>
 
 
