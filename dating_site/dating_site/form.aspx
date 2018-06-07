@@ -157,13 +157,13 @@ button:hover {
 
 
   <div class="tab"><b><span style="font-size:large;"> &ensp; &ensp;&ensp;   &emsp; &emsp;  &emsp;Age group . . . . .</span></b><br />
-    <div  align="center"> <p> <asp:ListBox ID="form_agegroup"  width="40px" BackColor="#E1E1E1"  class="input100" runat="server">
-        <asp:ListItem Value="18">18 - 27</asp:ListItem>
-        <asp:ListItem Value="28">28 - 37</asp:ListItem>
-        <asp:ListItem Value="38">38 - 45</asp:ListItem>
-        <asp:ListItem Value="46">46 - 59</asp:ListItem>
-        <asp:ListItem Value="60 ">60 +</asp:ListItem>
-    </asp:ListBox></p>
+    <div  align="center"> <p>  <asp:DropDownList ID="form_agegroup" runat="server">
+            <asp:ListItem Value="18">18-25</asp:ListItem>
+            <asp:ListItem Value="26">26-38</asp:ListItem>
+            <asp:ListItem Value="39">39-50</asp:ListItem>
+            <asp:ListItem Value="50">50-60</asp:ListItem>
+            <asp:ListItem Value="60 ">60 +</asp:ListItem>
+        </asp:DropDownList></p>
         </div>
        <br />
   </div> 
@@ -172,19 +172,16 @@ button:hover {
     <div class="tab">Nationality:<br />  
         <br />      
      <p>
-         <asp:DropDownList ID="DropDownList1"  BackColor="#E1E1E1"  class="input100"  runat="server">
-          <asp:ListItem>sd</asp:ListItem>
-          <asp:ListItem>sdas</asp:ListItem>
-      </asp:DropDownList>
-         <!--<asp:ListBox ID="form_nationality"  runat="server">
-        <asp:ListItem>america</asp:ListItem>
-        <asp:ListItem>canada</asp:ListItem>
-        <asp:ListItem>australia</asp:ListItem>
-        <asp:ListItem>new zealand</asp:ListItem>
-        <asp:ListItem>japan</asp:ListItem>
-        <asp:ListItem>china</asp:ListItem>
-        <asp:ListItem>india</asp:ListItem>
-    </asp:ListBox>--></p>
+             <asp:DropDownList ID="form_nationality" runat="server">
+            <asp:ListItem>india</asp:ListItem>
+            <asp:ListItem>america</asp:ListItem>
+            <asp:ListItem>canada</asp:ListItem>
+            <asp:ListItem>china</asp:ListItem>
+            <asp:ListItem>japan</asp:ListItem>
+            <asp:ListItem>australia</asp:ListItem>
+            <asp:ListItem Value="new_zealand">new zealand</asp:ListItem>
+        </asp:DropDownList>
+        </p>
      <br />
     </div>
     
@@ -192,7 +189,11 @@ button:hover {
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
       <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> 
       
-    </div> </div> <!-- Circles which indicates the steps of the form: --> <div style="text-align:center;margin-top:40px;"> <span class="step"></span> <span class="step"></span> </div> </form> <script>
+    </div> </div> <!-- Circles which indicates the steps of the form: --> <div style="text-align:center;margin-top:40px;"> 
+   
+        <span class="step">
+       
+        </span> </div> </form> <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
 

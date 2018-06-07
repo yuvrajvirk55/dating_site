@@ -37,16 +37,7 @@ namespace dating_site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox form_agegroup;
-        
-        /// <summary>
-        /// DropDownList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList form_agegroup;
         
         /// <summary>
         /// form_nationality control.
@@ -55,7 +46,7 @@ namespace dating_site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox form_nationality;
+        protected global::System.Web.UI.WebControls.DropDownList form_nationality;
         
         /// <summary>
         /// form_hobbies control.
