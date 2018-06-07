@@ -8,6 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        Usertable:
+        <br />
+        <br />
     <div>
     
     </div>
@@ -19,15 +22,28 @@
                 <asp:BoundField DataField="last_name" HeaderText="last_name" SortExpression="last_name" />
                 <asp:BoundField DataField="sex" HeaderText="sex" SortExpression="sex" />
                 <asp:BoundField DataField="dob" HeaderText="dob" SortExpression="dob" />
-                <asp:TemplateField HeaderText="uer image">
-                    <%--<ItemTemplate>--%>
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#"data:Image/png;base64," + Convert.ToBase64String((byte[])Eval("pic")) %>' />
-                    </ItemTemplate>
-
-                </asp:TemplateField>
+                
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="usertablesql" runat="server" ConnectionString="<%$ ConnectionStrings:userdataConnectionString %>" SelectCommand="SELECT * FROM [usertable]"></asp:SqlDataSource>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        Userinterests:
+        <br />
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="email" DataSourceID="userinterestsql">
+            <Columns>
+                <asp:BoundField DataField="email" HeaderText="email" ReadOnly="True" SortExpression="email" />
+                <asp:BoundField DataField="int_sex" HeaderText="int_sex" SortExpression="int_sex" />
+                <asp:BoundField DataField="int_nationality" HeaderText="int_nationality" SortExpression="int_nationality" />
+                <asp:BoundField DataField="int_agegroup" HeaderText="int_agegroup" SortExpression="int_agegroup" />
+                <asp:BoundField DataField="in_hobbies" HeaderText="in_hobbies" SortExpression="in_hobbies" />
+            </Columns>
+        </asp:GridView>
+        <br />
+        <asp:SqlDataSource ID="userinterestsql" runat="server" ConnectionString="<%$ ConnectionStrings:userdataConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT * FROM [userinterest]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
