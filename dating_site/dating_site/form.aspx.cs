@@ -16,7 +16,7 @@ namespace dating_site
 
         protected void form_form_click(object sender, EventArgs e)
         {
-            Response.Write(form_gender.Text+"   "+ form_agegroup.Text+"    "+ form_nationality.Text+"     "+ form_hobbies.Text);
+            Response.Write(form_gender.Text+"   "+ form_agegroup.Text+"    "+ form_nationality.Text+"     "+ form_hobbies.Text+"   " + Session["email"]);
 
         }
     }
