@@ -41,7 +41,8 @@
 			<div class="wrap-login100 p-t-190 p-b-30">
 			
 				<form class="login100-form validate-form" id="form1" runat="server">
-                    <asp:Label ID="Label1" runat="server" class="input100"Text="Label"></asp:Label>
+                   <div align="centre" style="color:red; font-weight:bold;font-size:17px;"> <asp:Label ID="Label1" runat="server"></asp:Label></div>
+                    <br />
                     <br />
 						<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
 						 <asp:TextBox class="input100" ID="textbox_email" runat="server" BackColor="#E1E1E1" TextMode="Email" OnTextChanged="textbox_email_TextChanged" placeholder="Email"></asp:TextBox>
