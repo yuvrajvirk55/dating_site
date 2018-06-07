@@ -142,48 +142,47 @@ button:hover {
 <form id="regForm" runat="server">
   <h1 <div class="rainbow" style="font-size:25px;font-family: Bradley Hand ITC;position: relative;"><b>Just a moment . . .</b></div></h1>
   <!-- One "tab" for each step in the form: -->
+    <br />
+    <br />
 
 
-  <div class="tab">Interested In:
-    <p><asp:RadioButtonList ID="form_gender" runat="server" > <asp:ListItem Value="male"><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem Value="female"><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></p>
+  <div class="tab">Interested In:<br />  &ensp;     &emsp;
+    <p><asp:RadioButtonList ID="form_gender" runat="server" >
+       <asp:ListItem Value="male">male</asp:ListItem>        <asp:ListItem Value="female">female</asp:ListItem>
+        </asp:RadioButtonList></p>
+    <br />
   </div>
 
 
-  <div class="tab">Age group:
-    <p<asp:ListBox ID="form_agegroup" runat="server"></asp:ListBox></p>
-  </div>
-
-
-  <div class="tab">Nationality:
-     <p<asp:ListBox ID="form_nationality" runat="server"></asp:ListBox></p>
-  </div>
-
-
-  <div class="tab">Hobbies:
-    <p> <asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1"  class="input100"  placeholder="Seprate hobbies with comma.."></asp:TextBox></p>
-  </div>
-
-
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  <div class="tab">Age group:<br />
+    <p> <asp:ListBox ID="form_agegroup" runat="server">
+        <asp:ListItem Value="18">18 - 27</asp:ListItem>
+        <asp:ListItem Value="28">28 - 37</asp:ListItem>
+        <asp:ListItem Value="38">38 - 45</asp:ListItem>
+        <asp:ListItem Value="46">46 - 59</asp:ListItem>
+        <asp:ListItem Value="60 ">60 +</asp:ListItem>
+    </asp:ListBox></p>
+       <br />
+  </div> 
+    
+    
+    <div class="tab">Nationality:<br />  
+        <br />      
+     <p><asp:ListBox ID="form_nationality"  BackColor="#E1E1E1"  class="input100"  runat="server">
+        <asp:ListItem>america</asp:ListItem>
+        <asp:ListItem>canada</asp:ListItem>
+        <asp:ListItem>australia</asp:ListItem>
+        <asp:ListItem>new zealand</asp:ListItem>
+        <asp:ListItem>japan</asp:ListItem>
+        <asp:ListItem>china</asp:ListItem>
+        <asp:ListItem>india</asp:ListItem>
+    </asp:ListBox></p>
+     <br />
     </div>
-
-
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-  </div>
-
-
-</form>
-
-<script>
+    
+     <div class="tab">Hobbies:<br /> <p> </p><asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1"  class="input100"  placeholder="Seprate hobbies with comma.."></asp:TextBox><xxxxelmt></xxxxelmt> <br /> </div> <div style="overflow:auto;"> <div style="float:right;"> 
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> </div> </div> <!-- Circles which indicates the steps of the form: --> <div style="text-align:center;margin-top:40px;"> <span class="step"></span> <span class="step"></span> <span class="step"></span> <span class="step"></span> </div> </form> <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
 
@@ -256,7 +255,6 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
-</script>
+</script> </body> </html> </div>
 
-</body>
-</html>
+
