@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="form.aspx.cs" Inherits="form.register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="form.aspx.cs" Inherits="dating_site.form" %>
 
 <!DOCTYPE html>
 

@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace form {
+namespace dating_site {
     
     
-    public partial class register {
+    public partial class form {
     }
 }

@@ -32,6 +32,7 @@
 .img {
      background: rgba(0, 0, 0, 0.3);
     filter: alpha(opacity=50); /* For IE8 and earlier */
+    color:white;
 
   
     margin-top: 130px;
