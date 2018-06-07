@@ -192,7 +192,9 @@ button:hover {
          <br />
       <p><asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1"  class="input100"  placeholder="Seprate hobbies with comma..">
        </asp:TextBox></p> <br /> 
-         <asp:Button ID="form_form" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" />						
+         <br />
+        <div align="center"> <asp:Button ID="form_form" OnClick="form_form_click" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" />			
+            </div>			
 
      </div> 
     
@@ -201,6 +203,8 @@ button:hover {
         
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+   
+        
    
      </div> 
     
