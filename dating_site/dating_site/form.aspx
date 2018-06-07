@@ -145,17 +145,17 @@ button:hover {
 
 
   <div class="tab">Interested In:
-    <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+    <p><asp:RadioButtonList ID="form_gender" runat="server" > <asp:ListItem Value="male"><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem Value="female"><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></p>
   </div>
 
 
   <div class="tab">Age group:
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <p<asp:ListBox ID="form_agegroup" runat="server"></asp:ListBox></p>
   </div>
 
 
   <div class="tab">Nationality:
-    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+     <p<asp:ListBox ID="form_agegroup" runat="server"></asp:ListBox></p>
   </div>
 
 
