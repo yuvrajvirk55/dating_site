@@ -142,13 +142,14 @@ button:hover {
 <form id="regForm" runat="server">
   <h1 <div class="rainbow" style="font-size:25px;font-family: Bradley Hand ITC;position: relative;"><b>Just a moment . . .</b></div></h1>
   <!-- One "tab" for each step in the form: -->
+
     <br />
     <br />
 
 
-  <div class="tab">Interested In:<br />  &ensp;     &emsp;
-    <p><asp:RadioButtonList ID="form_gender" runat="server" >
-       <asp:ListItem Value="male">male</asp:ListItem>        <asp:ListItem Value="female">female</asp:ListItem>
+  <div class="tab" ><b><span style="font-size:large;">Interested In:</span></b><br />  &ensp;     &emsp;
+    <p align="center"><asp:RadioButtonList ID="form_gender"  Font-Bold="True" width="150px"  RepeatDirection="Horizontal" runat="server" >
+       <asp:ListItem Value="male">male</asp:ListItem>         <asp:ListItem Value="female">female</asp:ListItem>
         </asp:RadioButtonList></p>
     <br />
   </div>
@@ -168,7 +169,7 @@ button:hover {
     
     <div class="tab">Nationality:<br />  
         <br />      
-     <p><asp:ListBox ID="form_nationality"  BackColor="#E1E1E1"  class="input100"  runat="server">
+     <p><asp:ListBox ID="form_nationality" width="40px" BackColor="#E1E1E1"  class="input100"  runat="server">
         <asp:ListItem>america</asp:ListItem>
         <asp:ListItem>canada</asp:ListItem>
         <asp:ListItem>australia</asp:ListItem>
@@ -182,7 +183,7 @@ button:hover {
     
      <div class="tab">Hobbies:<br /> <p> </p><asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1"  class="input100"  placeholder="Seprate hobbies with comma.."></asp:TextBox><xxxxelmt></xxxxelmt> <br /> </div> <div style="overflow:auto;"> <div style="float:right;"> 
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> </div> </div> <!-- Circles which indicates the steps of the form: --> <div style="text-align:center;margin-top:40px;"> <span class="step"></span> <span class="step"></span> <span class="step"></span> <span class="step"></span> </div> </form> <script>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> </div> </div> <!-- Circles which indicates the steps of the form: --> <div style="text-align:center;margin-top:40px;"> <span class="step"></span> <span class="step"></span> </div> </form> <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
 
