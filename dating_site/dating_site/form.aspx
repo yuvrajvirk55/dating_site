@@ -156,8 +156,10 @@ button:hover {
   </div>
 
 
-  <div class="tab"><b><span style="font-size:large;"> &ensp; &ensp;&ensp;   &emsp; &emsp;  &emsp;Age group . . . . .</span></b><br />
-    <div  align="center"> <p>  <asp:DropDownList ID="form_agegroup" runat="server">
+  <div class="tab"><b><span style="font-size:large;">Age group . . . . .</span></b><br />
+    <div align="center">
+         <p> 
+              <asp:DropDownList BackColor="#E1E1E1" align="center" class="input100" ID="form_agegroup" runat="server">
             <asp:ListItem Value="18">18-25</asp:ListItem>
             <asp:ListItem Value="26">26-38</asp:ListItem>
             <asp:ListItem Value="39">39-50</asp:ListItem>
@@ -169,10 +171,10 @@ button:hover {
   </div> 
     
     
-    <div class="tab">Nationality:<br />  
-        <br />      
+    <div class="tab"><b><span style="font-size:large;">Nationality. . . . .</span></b><br />
+       <div align="center">   
      <p>
-             <asp:DropDownList ID="form_nationality" runat="server">
+             <asp:DropDownList ID="form_nationality" BackColor="#E1E1E1"  class="input100" runat="server">
             <asp:ListItem>india</asp:ListItem>
             <asp:ListItem>america</asp:ListItem>
             <asp:ListItem>canada</asp:ListItem>
@@ -182,6 +184,7 @@ button:hover {
             <asp:ListItem Value="new_zealand">new zealand</asp:ListItem>
         </asp:DropDownList>
         </p>
+           </div> 
      <br />
     </div>
     
@@ -189,11 +192,21 @@ button:hover {
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
       <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> 
       
-    </div> </div> <!-- Circles which indicates the steps of the form: --> <div style="text-align:center;margin-top:40px;"> 
+    </div> </div> <!-- Circles which indicates the steps of the form: --> 
+    
+    <div style="text-align:center;margin-top:40px;"> 
    
         <span class="step">
+        </span> 
+        <span class="step">   
+        </span>
+        <span class="step">
        
-        </span> </div> </form> <script>
+        </span>
+        <span class="step">
+       
+        </span>
+    </div> </form> <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
 
