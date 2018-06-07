@@ -7,6 +7,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
-    <_PublishTargetUrl>ftp://www.uvdates.somee.com/uvdates.somee.com</_PublishTargetUrl>
+    <_PublishTargetUrl>ftp://www.uvdates.somee.com</_PublishTargetUrl>
   </PropertyGroup>
 </Project>
