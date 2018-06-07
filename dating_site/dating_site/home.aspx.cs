@@ -42,23 +42,27 @@ namespace dating_site
 
               if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
               {
-                  Response.Write("successfully logged in");
+                 
+                Label1.Text = "successfully logged in";
               }
 
               else if (string.IsNullOrEmpty(db_email))
               {
-                  Response.Write("User does not exists");
-              }
+                 
+                Label1.Text = "User does not exists";
+            }
 
               else if (string.IsNullOrEmpty(db_password))
               {
-                  Response.Write("Invalid password");
-              }
+                  
+                Label1.Text = "Invalid password";
+            }
 
               else
               {
-                  Response.Write("error");
-              }
+                 
+                Label1.Text = "error";
+            }
               
             connection.Close();
             }
