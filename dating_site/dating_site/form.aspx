@@ -176,12 +176,12 @@ button:hover {
         <br />     
      <p>
              <asp:DropDownList ID="form_nationality" BackColor="#E1E1E1"  class="input100" runat="server">
-            <asp:ListItem>india</asp:ListItem>
-            <asp:ListItem>america</asp:ListItem>
-            <asp:ListItem>canada</asp:ListItem>
-            <asp:ListItem>china</asp:ListItem>
-            <asp:ListItem>japan</asp:ListItem>
-            <asp:ListItem>australia</asp:ListItem>
+            <asp:ListItem Value="india">india</asp:ListItem>
+            <asp:ListItem Value="america">america</asp:ListItem>
+            <asp:ListItem Value="canada">canada</asp:ListItem>
+            <asp:ListItem Value="china">china</asp:ListItem>
+            <asp:ListItem Value="japan">japan</asp:ListItem>
+            <asp:ListItem Value="australia">australia</asp:ListItem>
             <asp:ListItem Value="new_zealand">new zealand</asp:ListItem>
         </asp:DropDownList>
         </p>
@@ -236,9 +236,10 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+      //document.getElementById("nextBtn").innerHTML = "Submit";
+      document.getElementById("nextBtn").style.display = "none";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+      document.getElementById("nextBtn").style.display = "inline";
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
