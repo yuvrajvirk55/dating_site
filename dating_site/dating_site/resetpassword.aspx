@@ -157,7 +157,7 @@ button:hover {
     <br />
     <br /> 
 
-    <div ><b><span style="font-size:large;">Nationality. . . . .</span></b><br />
+    <div ><b><span style="font-size:large;">What is your Nationality ?</span></b><br />
         <br />     
      <p>
              <asp:DropDownList ID="resetpassword_nationality" BackColor="#E1E1E1"  class="input100" runat="server">
