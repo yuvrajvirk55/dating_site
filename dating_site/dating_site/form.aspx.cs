@@ -29,6 +29,8 @@ namespace dating_site
             sqlConnection2.Open();
             cmd.ExecuteNonQuery();
             sqlConnection2.Close();
+
+            Response.Redirect("welcome.aspx");
         }
     }
 }

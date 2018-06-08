@@ -104,6 +104,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="welcome.aspx" />
     <None Include="Properties\PublishProfiles\lets_date.pubxml" />
     <None Include="Properties\PublishProfiles\uv_dates.pubxml" />
     <None Include="Web.Debug.config">
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="resetpassword3.aspx.designer.cs">
       <DependentUpon>resetpassword3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.aspx.cs">
+      <DependentUpon>welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="welcome.aspx.designer.cs">
+      <DependentUpon>welcome.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
