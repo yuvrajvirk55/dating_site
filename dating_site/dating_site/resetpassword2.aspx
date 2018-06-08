@@ -144,7 +144,7 @@ button:hover {
 
     <br />
     <br />
-      <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="resetpassword_password" ControlToValidate="resetpassword_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator>
+       <div align="center" style="color:red;"><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="resetpassword_password" ControlToValidate="resetpassword_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator></div>
 
     <div>
         <b><span style="font-size:large;">Enter Password. . . . .</span></b><br />
