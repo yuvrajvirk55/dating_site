@@ -66,7 +66,7 @@
 					</div>
 
 					<div class="text-center w-full p-t-25 p-b-230">
-						<a href="#" class="txt1">
+						<a href="resetpassword.aspx" class="txt1">
 							<font color="red">Forgot Username / Password?</font>
 						</a>
 						
