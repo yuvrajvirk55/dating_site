@@ -149,12 +149,15 @@ button:hover {
     
     <b><span style="font-size:50px;">password reset successfully.</span></b>
         
+        <br />
+        <br />
+    <span style="font-size:25px;">   Click here to login</span>&ensp;     &emsp;
     </div>
     
     <br />
     <br />
 
-</form> 
+ </form> 
 
 </body>
 </html> 
