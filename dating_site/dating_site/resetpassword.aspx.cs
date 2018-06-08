@@ -39,6 +39,7 @@ namespace dating_site
 
             if (!(db_nation == null) && (db_nation.Equals(resetpassword_nationality.Text)))
             {
+                Session["reset_email"] = resetpassword_email.Text;
                 Response.Redirect("resetpassword2.aspx");
             }
 

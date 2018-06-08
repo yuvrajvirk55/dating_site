@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,6 +17,20 @@ namespace dating_site
 
         protected void resetpassword_button_click(object sender, EventArgs e)
         {
+            string filtered_email = Session["reset_email"].ToString();
+            int index = filtered_email.IndexOf('@');
+            filtered_email = filtered_email.Substring(0, index);
+
+            System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET password = '"+resetpassword_password+ "' WHERE email LIKE '" + filtered_email + "%'";
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection1.Close();
 
         }
     }
