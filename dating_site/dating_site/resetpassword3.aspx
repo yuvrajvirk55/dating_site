@@ -151,7 +151,7 @@ button:hover {
         
         <br />
         <br />
-    <span style="font-size:25px;">   Click here to login</span>&ensp;     &emsp;
+        <asp:Button ID="Button1" runat="server" Height="47px" OnClick="Button1_Click" Text="Click here to login    " Width="188px" />
     </div>
     
     <br />

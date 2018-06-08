@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="form.aspx" />
+    <Content Include="images\arrow.png" />
     <Content Include="images\background.jpg" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="imagetest.aspx" />

@@ -12,10 +12,13 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //System.Threading.Thread.Sleep(10000);
+         
 
-          //  Response.Redirect("home.aspx");
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("home.aspx");
         }
     }
 }
