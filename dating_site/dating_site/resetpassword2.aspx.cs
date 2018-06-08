@@ -32,6 +32,8 @@ namespace dating_site
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
 
+
+
         }
     }
 }
