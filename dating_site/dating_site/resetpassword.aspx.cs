@@ -45,7 +45,7 @@ namespace dating_site
 
             else
             {
-                Response.Write("else");
+                Label1.Text = "Incorrect answer ! ! !  ";
 
             }
         }
