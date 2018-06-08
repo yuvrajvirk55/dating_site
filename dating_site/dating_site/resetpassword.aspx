@@ -145,7 +145,7 @@ button:hover {
 
     <br />
     <br />
-     <div align="centre" style="color:red; font-weight:bold;font-size:17px;"> <asp:Label ID="Label1" runat="server"></asp:Label></div>
+     <div align="center" style="color:red; font-weight:bold;font-size:17px;"> <asp:Label ID="Label1" runat="server"></asp:Label></div>
     <br />
     <br />
     <div>
