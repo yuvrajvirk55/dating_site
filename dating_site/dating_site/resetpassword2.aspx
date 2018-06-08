@@ -144,13 +144,13 @@ button:hover {
 
     <br />
     <br />
-      <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="resetpassword_password" ControlToValidate="register_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator>
+      <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="resetpassword_password" ControlToValidate="resetpassword_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator>
 
     <div>
         <b><span style="font-size:large;">Enter Password. . . . .</span></b><br />
         <br />
         <p>
-  <asp:TextBox ID="resetpassword_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
+  <asp:TextBox ID="resetpassword_password" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
     </p>
   </div>
 
@@ -160,7 +160,7 @@ button:hover {
     <div ><b><span style="font-size:large;">Enter your password again. . . . .</span></b><br />
         <br />     
      <p>
-             <asp:TextBox ID="resetpassword_cpassword" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>
+             <asp:TextBox ID="resetpassword_cpassword" runat="server" BackColor="#E1E1E1"  class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>
         </p>
         </div>
      <br />
