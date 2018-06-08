@@ -118,7 +118,7 @@ button:hover {
 
 
     <head runat="server">
-	<title>Reset Password</title>
+	<title>Form</title>
         <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -140,45 +140,20 @@ button:hover {
 <div class="rainbow" style="font-size:35px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 0.8em;left:1.3em;"><b>   &ensp;     &emsp;Let's date!</b></div>
 
 <form id="regForm" runat="server">
-  <h1 <div class="rainbow" style="font-size:25px;font-family: Bradley Hand ITC;position: relative;"><b>Few moments . . .</b></div></h1>
-  <!-- One "tab" for each step in the form: -->
 
     <br />
     <br />
-       <div align="center" style="color:red;"><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="resetpassword_password" ControlToValidate="resetpassword_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator></div>
 
-    <div>
-        <b><span style="font-size:large;">Enter Password. . . . .</span></b><br />
-        <br />
-        <p>
-  <asp:TextBox ID="resetpassword_password" runat="server" BackColor="#E1E1E1" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
-    </p>
-  </div>
-
-    <br />
-    <br />  
-
-    <div ><b><span style="font-size:large;">Enter your password again. . . . .</span></b><br />
-        <br />     
-     <p>
-             <asp:TextBox ID="resetpassword_cpassword" runat="server" BackColor="#E1E1E1"  class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>
-        </p>
-        </div>
-     <br />
-         <div align="center"> 
-        <asp:Button ID="resetpassword_button" runat="server" OnClick="resetpassword_button_click" BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit"  />
-   
-          </div>
     
-   
-    <!-- Circles which indicates the steps of the form: --> 
+    <div >
     
-    <div style="text-align:center;margin-top:40px;">  
-        <span class="step">
-        </span> 
-    </div> 
+    <b><span style="font-size:50px;">password reset successfully.</span></b>
+        
+    </div>
+    
+    <br />
+    <br />
 
 </form> 
-  </body> </html> 
-
+</body> </html> 
 
