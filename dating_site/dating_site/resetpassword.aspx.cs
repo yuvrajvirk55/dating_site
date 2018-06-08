@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -17,6 +19,35 @@ namespace dating_site
         protected void resetpassword_button_click(object sender, EventArgs e)
         {
 
+            string filtered_email = resetpassword_email.Text.ToString();
+            int index = filtered_email.IndexOf('@');
+            filtered_email = filtered_email.Substring(0, index);
+
+            //queries
+            string checknation = "select int_nationality from userinterest WHERE email LIKE '" + filtered_email + "%'";
+           
+
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+
+            SqlCommand command_nation = new SqlCommand(checknation, connection);
+         
+
+            connection.Open();
+
+            //database values
+            string db_nation = (string)command_nation.ExecuteScalar();
+
+            if (!(db_nation == null) && (db_nation.Equals(resetpassword_nationality.Text)))
+            {
+                Response.Redirect("resetpassword2.aspx");
+            }
+
+
+            else
+            {
+                Response.Write("else");
+
+            }
         }
     }
 }
