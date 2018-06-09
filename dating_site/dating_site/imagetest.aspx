@@ -10,11 +10,11 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-    
     </div>
-        <asp:Image ID="Image1" runat="server" Height="298px" Width="321px" />
+        <asp:FileUpload ID="FileUpload1" runat="server" Height="70px" Width="333px" />
+        <p>
+            <asp:Button ID="Button1" runat="server" Height="84px" OnClick="Button1_Click1" Text="Button" Width="156px" />
+        </p>
     </form>
 </body>
 </html>

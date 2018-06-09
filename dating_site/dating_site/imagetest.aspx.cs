@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-
+using System.IO;
 
 namespace dating_site
 {
@@ -18,32 +18,29 @@ namespace dating_site
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+   
+        protected void Button1_Click1(object sender, EventArgs e)
         {
 
-            SqlConnection sqlConnection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
-            sqlConnection1.Open();
+            byte img = null;
 
-            SqlCommand cmd = new SqlCommand("select pic from usertable",sqlConnection1);
+            FileStream fs = new FileStream(FileUpload1, FileMode.Open, FileAccess.Read);
 
-            SqlDataReader dr = cmd.ExecuteReader();
 
-            if (dr.HasRows)
-            {
 
-                while (dr.Read())
-                {
-                    byte[] imagedata = (byte[])dr["pic"];
-                    string img = Convert.ToBase64String(imagedata, 0, imagedata.Length);
-                    Image1.ImageUrl = "data:image/png;base64," +img;
-                } 
-            }
 
-            else
-                Response.Write("failed");
 
-            sqlConnection1.Close();
 
+            System.Data.SqlClient.SqlConnection sqlConnection2 = new System.Data.SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "INSERT Table (pic) VALUES ('" + form_hobbies.Text + "')";
+            cmd.Connection = sqlConnection2;
+
+            sqlConnection2.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection2.Close();
 
         }
     }

@@ -39,8 +39,7 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
                 sqlConnection1.Close();
 
-
-                FileUpload1.SaveAs(Server.MapPath("~/images/" + FileUpload1.FileName));
+                
             }
 
             Session["email"] = register_email.Text;

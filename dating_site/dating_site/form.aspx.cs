@@ -18,8 +18,7 @@ namespace dating_site
         protected void form_form_click(object sender, EventArgs e)
         {
 
-            Response.Write( Session["email"] + "', '" + form_gender.Text + "', '" + form_nationality.Text + "', '" + form_agegroup.Text + "', '" + form_hobbies.Text );
-            System.Data.SqlClient.SqlConnection sqlConnection2 = new System.Data.SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+           System.Data.SqlClient.SqlConnection sqlConnection2 = new System.Data.SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
