@@ -20,7 +20,7 @@ namespace dating_site
 
    
         protected void Button1_Click1(object sender, EventArgs e)
-        {
+        {/*
 
             byte img = null;
 
@@ -40,7 +40,7 @@ namespace dating_site
 
             sqlConnection2.Open();
             cmd.ExecuteNonQuery();
-            sqlConnection2.Close();
+            sqlConnection2.Close(); */
 
         }
     }
