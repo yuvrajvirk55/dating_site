@@ -26,7 +26,9 @@ namespace dating_site
 
             //queries
             string checkemail = "select email from usertable WHERE email LIKE '" + filtered_email + "%'";
-            string checkpassword = "select password from usertable WHERE password = '" + textbox_password.Text + "' ";
+            string checkpassword = "select password from usertable WHERE email LIKE '" + filtered_email + "%'";
+
+           
 
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
 
@@ -38,9 +40,13 @@ namespace dating_site
             //database values
             string db_email = (string)command_email.ExecuteScalar();
             string db_password = (string)command_password.ExecuteScalar();
-            
 
-              if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
+            //decrypt
+
+            db_password = Encrypt.DecryptString(db_password);
+
+
+            if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
               {
                  
                 Label1.Text = "successfully logged in";
