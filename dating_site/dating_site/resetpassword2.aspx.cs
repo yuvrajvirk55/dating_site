@@ -21,11 +21,14 @@ namespace dating_site
             int index = filtered_email.IndexOf('@');
             filtered_email = filtered_email.Substring(0, index);
 
+
             System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET password = '"+resetpassword_password.Text+ "' WHERE email LIKE '" + filtered_email + "%'";
+
+            string pass = Encrypt.EncryptString(resetpassword_password.Text);
+            cmd.CommandText = "UPDATE usertable SET password = '"+pass+ "' WHERE email LIKE '" + filtered_email + "%'";
             cmd.Connection = sqlConnection1;
 
             sqlConnection1.Open();
