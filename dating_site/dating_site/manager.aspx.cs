@@ -14,12 +14,14 @@ namespace dating_site
 
         }
 
-        protected void SqlDataSourceuserdata_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+   
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }
 
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        protected void usertablesql_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }

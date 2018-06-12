@@ -25,7 +25,7 @@
                 
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="usertablesql" runat="server" ConnectionString="<%$ ConnectionStrings:uvuserdataConnectionString %>" SelectCommand="SELECT * FROM [usertable]" ProviderName="<%$ ConnectionStrings:uvuserdataConnectionString.ProviderName %>"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="usertablesql" runat="server" ConnectionString="<%$ ConnectionStrings:uvuserdataConnectionString %>" SelectCommand="SELECT * FROM [usertable]" OnSelecting="usertablesql_Selecting" ProviderName="<%$ ConnectionStrings:uvuserdataConnectionString.ProviderName %>"></asp:SqlDataSource>
         <br />
         <br />
         <br />
