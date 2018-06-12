@@ -25,7 +25,7 @@
                 
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="usertablesql" runat="server" ConnectionString="<%$ ConnectionStrings:uvuserdataConnectionString %>" SelectCommand="SELECT * FROM [usertable]" OnSelecting="usertablesql_Selecting" ProviderName="<%$ ConnectionStrings:uvuserdataConnectionString.ProviderName %>"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="usertablesql" runat="server" ConnectionString="Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8" SelectCommand="SELECT * FROM [usertable]" OnSelecting="usertablesql_Selecting" ProviderName="<%$ ConnectionStrings:uvuserdataConnectionString.ProviderName %>"></asp:SqlDataSource>
         <br />
         <br />
         <br />
@@ -43,7 +43,7 @@
             </Columns>
         </asp:GridView>
         <br />
-        <asp:SqlDataSource ID="userinterestsql" runat="server" ConnectionString="<%$ ConnectionStrings:uvuserdataConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT * FROM [userinterest]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="userinterestsql" runat="server" ConnectionString="Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT * FROM [userinterest]"></asp:SqlDataSource>
         <br />
         <br />
     </form>
