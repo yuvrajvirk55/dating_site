@@ -129,6 +129,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encrypt.cs" />
     <Compile Include="form.aspx.cs">
       <DependentUpon>form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
