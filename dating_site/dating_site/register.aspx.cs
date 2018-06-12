@@ -28,7 +28,7 @@ namespace dating_site
                 FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
 
 
-                System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+                System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings["workstation id=uvuserdata.mssql.somee.com;packet size=4096;user id=yuvrajvirk55_SQLLogin_1;pwd=nm6ecevlt8;data source=uvuserdata.mssql.somee.com;persist security info=False;initial catalog=uvuserdata"].ConnectionString);
 
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
