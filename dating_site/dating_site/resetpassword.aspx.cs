@@ -27,7 +27,7 @@ namespace dating_site
             string checknation = "select int_nationality from userinterest WHERE email LIKE '" + filtered_email + "%'";
            
 
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
 
             SqlCommand command_nation = new SqlCommand(checknation, connection);
          
