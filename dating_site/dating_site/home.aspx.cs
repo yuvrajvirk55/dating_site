@@ -28,7 +28,7 @@ namespace dating_site
             string checkemail = "select email from usertable WHERE email LIKE '" + filtered_email + "%'";
             string checkpassword = "select password from usertable WHERE password = '" + textbox_password.Text + "' ";
 
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["userdataConnectionString"].ConnectionString);
+            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
 
             SqlCommand command_email = new SqlCommand(checkemail, connection);
             SqlCommand command_password = new SqlCommand(checkpassword, connection);
