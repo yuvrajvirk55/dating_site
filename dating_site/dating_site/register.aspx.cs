@@ -54,7 +54,7 @@ namespace dating_site
                 Session["email"] = register_email.Text;
                 Session["fname"] = register_fname.Text;
                 Session["lname"] = register_lname.Text;
-                Session["img"] = strname;
+                Session["img"] = filtered_email + "-" + strname;
                 Response.Redirect("form.aspx");
             }
             
