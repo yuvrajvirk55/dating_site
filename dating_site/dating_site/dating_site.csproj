@@ -98,7 +98,6 @@
     <Content Include="images\background.jpg" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="images\profile_pic.png" />
-    <Content Include="images\profile_pic2.png" />
     <Content Include="manager.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
