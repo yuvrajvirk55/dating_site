@@ -19,14 +19,9 @@ namespace dating_site
 
         protected void register_register_Click(object sender, EventArgs e)
         {
-
-           
-
-               
-
-            string strname = register_fname.Text+"_"+ register_lname.Text+".png";
-
-            FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+           string strname = FileUpload1.FileName.ToString();
+          
+           FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
 
                 //encrpting pass
 
