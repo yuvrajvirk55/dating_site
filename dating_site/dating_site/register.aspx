@@ -52,6 +52,19 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+ <script type="text/javascript">
+
+  function chooseFile() {
+  document.getElementById("FileUpload1").click();
+  }
+
+ </script>
+
+
+
+
+
 </head>
 <body class="bg">
 	<div class="rainbow" style="font-size:35px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 0.8em;left:1.3em;"><b>   &ensp;     &emsp;Let's date!</b></div>
@@ -99,7 +112,7 @@
   <tr">
     <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem Value="male"><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem Value="female"><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></td>
     <td>
-         
+         <asp:ImageButton ID="ImageButton1" OnClientClick="chooseFile();"  runat="server" Height="176px" Width="231px" />
      </td>
     <td>&nbsp;</td>
   </tr>

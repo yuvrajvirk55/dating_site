@@ -103,6 +103,15 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.RadioButtonList register_gender;
         
         /// <summary>
+        /// ImageButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        
+        /// <summary>
         /// FileUpload1 control.
         /// </summary>
         /// <remarks>
