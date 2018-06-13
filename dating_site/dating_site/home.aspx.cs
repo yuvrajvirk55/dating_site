@@ -43,7 +43,7 @@ namespace dating_site
 
             //decrypt
 
-            db_password = Encrypt.DecryptString(db_password, db_password);
+            db_password = Encrypt.DecryptString(db_password,textbox_password.Text);
 
 
             if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
