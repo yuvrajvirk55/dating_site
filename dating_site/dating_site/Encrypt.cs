@@ -17,7 +17,7 @@ namespace dating_site
         // This constant is used to determine the keysize of the encryption algorithm
         private const int keysize = 256;
         //Encrypt
-        public static string EncryptString(string plainText, string passPhrase = "code")
+        public static string EncryptString(string plainText, string passPhrase)
         {
             byte[] initVectorBytes = Encoding.UTF8.GetBytes(initVector);
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
@@ -36,7 +36,7 @@ namespace dating_site
             return Convert.ToBase64String(cipherTextBytes);
         }
         //Decrypt
-        public static string DecryptString(string cipherText, string passPhrase = "code")
+        public static string DecryptString(string cipherText, string passPhrase)
         {
             byte[] initVectorBytes = Encoding.UTF8.GetBytes(initVector);
             byte[] cipherTextBytes = Convert.FromBase64String(cipherText);
