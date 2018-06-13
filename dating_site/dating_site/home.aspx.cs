@@ -41,9 +41,18 @@ namespace dating_site
             string db_email = (string)command_email.ExecuteScalar();
             string db_password = (string)command_password.ExecuteScalar();
 
-            //decrypt
+            connection.Close();
 
-            db_password = Encrypt.DecryptString(db_password,textbox_password.Text);
+            //decrypt
+            try
+            {
+                db_password = Encrypt.DecryptString(db_password, textbox_password.Text);
+            }
+
+            catch
+            {
+                Label1.Text = "Invalid password";
+            }
 
 
             if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
@@ -58,7 +67,7 @@ namespace dating_site
                 Label1.Text = "User does not exists";
             }
 
-              else if (string.IsNullOrEmpty(db_password))
+              else if (string.IsNullOrEmpty(db_password) || !db_password.Equals(textbox_password.Text.ToString()))
               {
                   
                 Label1.Text = "Invalid password";
@@ -70,7 +79,7 @@ namespace dating_site
                 Label1.Text = "error";
             }
               
-            connection.Close();
+            
             }
         
 
