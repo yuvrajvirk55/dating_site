@@ -33,7 +33,7 @@
      background: rgba(0, 0, 0, 0.3);
     filter: alpha(opacity=50); /* For IE8 and earlier */
     color:white; 
-    margin-top: 70px;
+    margin-top: 50px;
  
 }
 
@@ -105,7 +105,7 @@
 
      <tr style="height: 20px;" >
     <td></td>
-    <td></td> 
+    <td>&nbsp;</td> 
     <td></td>
     </tr>
   
@@ -114,12 +114,17 @@
     <td>
          <asp:ImageButton ID="ImageButton1" OnClientClick="chooseFile();"  runat="server" Height="87px" Width="127px" ImageUrl="~/images/profile_pic.png" />
      </td>
-    <td>&nbsp;</td>
+    <td><div style="height: 0px; overflow: hidden">        <asp:FileUpload ID="FileUpload1" runat="server" />    </div></td>
   </tr>
 
    <tr style="height: 30px;" >
     <td></td>
-    <td><div style="height: 0px; overflow: hidden">        <asp:FileUpload ID="FileUpload1" runat="server" />    </div></td> 
+    <td>Upload Image</td> 
+    <td></td>
+  </tr>
+    <tr style="height: 30px;" >
+    <td></td>
+    <td></td> 
     <td></td>
   </tr>
 </table>
