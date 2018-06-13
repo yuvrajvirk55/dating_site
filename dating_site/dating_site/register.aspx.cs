@@ -23,7 +23,8 @@ namespace dating_site
            
 
                 string strname = FileUpload1.FileName.ToString();
-              FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+           
+                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
 
                 //encrpting pass
 
@@ -45,7 +46,7 @@ namespace dating_site
             Session["email"] = register_email.Text;
             Session["fname"] = register_fname.Text;
             Session["lname"] = register_lname.Text;
-            Response.Redirect("form.aspx");
+           // Response.Redirect("form.aspx");
             
         }
 
