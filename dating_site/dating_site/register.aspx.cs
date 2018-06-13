@@ -37,13 +37,10 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
                 sqlConnection1.Close();
 
-                
-           
-
             Session["email"] = register_email.Text;
             Session["fname"] = register_fname.Text;
             Session["lname"] = register_lname.Text;
-           // Response.Redirect("form.aspx");
+            Response.Redirect("form.aspx");
             
         }
 
