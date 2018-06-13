@@ -19,9 +19,9 @@ namespace dating_site
 
         protected void register_register_Click(object sender, EventArgs e)
         {
-           string strname = FileUpload1.FileName.ToString();
+             string strname = FileUpload1.FileName.ToString();
           
-           FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+             FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
 
                 //encrpting pass
 
@@ -40,6 +40,7 @@ namespace dating_site
             Session["email"] = register_email.Text;
             Session["fname"] = register_fname.Text;
             Session["lname"] = register_lname.Text;
+            Session["img"] = strname;
             Response.Redirect("form.aspx");
             
         }
