@@ -12,9 +12,9 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            // Label1.Text = Session["fname"] + " " + Session["lname"];
+            Label1.Text = Session["fname"] + " " + Session["lname"];
+            Image1.ImageUrl= "~/upload/"+ Session["img"];
 
-            Label1.Text = "Yuvraj Singh";
         }
     }
 }

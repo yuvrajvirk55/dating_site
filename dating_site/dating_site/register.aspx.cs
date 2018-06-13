@@ -21,7 +21,7 @@ namespace dating_site
         {
              string strname = FileUpload1.FileName.ToString();
           
-             FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+             FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + register_fname.Text+"_"+ register_lname.Text +"-"+strname);
 
                 //encrpting pass
 

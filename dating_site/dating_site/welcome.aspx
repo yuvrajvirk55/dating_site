@@ -46,7 +46,7 @@ body, html {height: 100%}
 
     <div class="w3-display-middle">
 
-         <asp:Image ID="Image1" runat="server" class="center"  style="width:200px; border-radius: 50%;" ImageUrl="~/images/background.jpg" />
+    <asp:Image ID="Image1" runat="server" class="center"  style="width:200px; border-radius: 50%;" />
 
     <h1 class="w3-jumbo w3-animate-top"><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
 
