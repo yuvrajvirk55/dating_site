@@ -49,6 +49,11 @@ namespace dating_site
             Response.Redirect("form.aspx");
             */
         }
-     
-}
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+           
+                HttpPostedFile postedFile = FileUpload1.ValidateRequestMode.Files["Filedata"];
+        }
+    }
     }
