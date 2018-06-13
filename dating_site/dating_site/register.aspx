@@ -108,7 +108,7 @@
     <td>
          <asp:ImageButton ID="ImageButton1" runat="server" Height="87px" Width="127px" ImageUrl="~/images/profile_pic.png" OnClientClick="browse()" />
      </td>
-    <td><asp:FileUpload ID="FileUpload1" runat="server"   /></td>
+    <td><div hidden><asp:FileUpload ID="FileUpload1" runat="server"   /></div></td>
   </tr>
 
    <tr style="height: 30px;" >
