@@ -20,11 +20,11 @@ namespace dating_site
         protected void register_register_Click(object sender, EventArgs e)
         {
 
-            if (FileUpload1.HasFile)
-            {
+           
 
                 string strname = FileUpload1.FileName.ToString();
-                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+            Response.Write("FDgdfgfdg" +  strname+"   "+ "FDGDF");
+            /*    FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
 
                 //encrpting pass
 
@@ -41,13 +41,13 @@ namespace dating_site
                 sqlConnection1.Close();
 
                 
-            }
+           
 
             Session["email"] = register_email.Text;
             Session["fname"] = register_fname.Text;
             Session["lname"] = register_lname.Text;
             Response.Redirect("form.aspx");
-
+            */
         }
      
 }

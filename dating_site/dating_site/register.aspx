@@ -53,17 +53,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 
- <script type="text/javascript">
-
-  function chooseFile() {
-  document.getElementById("FileUpload1").click();
-  }
-
- </script>
-
-
-
-
+<script type="text/javascript">
+function OpenFiledialog() {
+    document.getElementById('FileUpload1').focus() / click();
+}
+</script>
 
 </head>
 <body class="bg">
@@ -112,9 +106,9 @@
   <tr">
     <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem Value="male"><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem Value="female"><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></td>
     <td>
-         <asp:ImageButton ID="ImageButton1" OnClientClick="chooseFile();"  runat="server" Height="87px" Width="127px" ImageUrl="~/images/profile_pic.png" />
+         <asp:ImageButton ID="ImageButton1" OnClick="OpenFiledialog();"  runat="server" Height="87px" Width="127px" ImageUrl="~/images/profile_pic.png" />
      </td>
-    <td><div style="height: 0px; overflow: hidden">        <asp:FileUpload ID="FileUpload1" runat="server" />    </div></td>
+    <td><asp:FileUpload ID="FileUpload1" runat="server" style="display: none;" /></td>
   </tr>
 
    <tr style="height: 30px;" >
