@@ -23,9 +23,8 @@ namespace dating_site
             if (FileUpload1.HasFile)
             {
 
-                int length = FileUpload1.PostedFile.ContentLength;
-                byte[] pic = new byte[length];
-                FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
+                string strname = FileUpload1.FileName.ToString();
+                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
 
                 //encrpting pass
 

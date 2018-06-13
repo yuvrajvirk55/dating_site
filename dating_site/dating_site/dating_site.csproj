@@ -192,6 +192,7 @@
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="fonts\" />
+    <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
