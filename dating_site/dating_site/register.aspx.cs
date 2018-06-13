@@ -23,8 +23,7 @@ namespace dating_site
            
 
                 string strname = FileUpload1.FileName.ToString();
-            Response.Write("FDgdfgfdg" +  strname+"   "+ "FDGDF");
-            /*    FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
+              FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + strname);
 
                 //encrpting pass
 
@@ -47,13 +46,9 @@ namespace dating_site
             Session["fname"] = register_fname.Text;
             Session["lname"] = register_lname.Text;
             Response.Redirect("form.aspx");
-            */
+            
         }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-           
-                HttpPostedFile postedFile = FileUpload1.ValidateRequestMode.Files["Filedata"];
-        }
+
     }
     }
