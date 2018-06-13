@@ -28,6 +28,12 @@ body, html {height: 100%}
     background-size: cover;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 </style>
 <body>
@@ -35,10 +41,17 @@ body, html {height: 100%}
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
 
     <div class="rainbow" style="font-size:35px; text-align:left;font-family: Bradley Hand ITC;position: relative; top: 0.8em;left:1.3em;"><b>   &ensp;     &emsp;Let's date!</b></div>
-  <div class="w3-display-middle">
-   <asp:Image ID="Image1" runat="server" style="width:150px;border-radius: 50%;" ImageUrl="~/images/background.jpg" />
+  
+   
+
+    <div class="w3-display-middle">
+
+         <asp:Image ID="Image1" runat="server" class="center"  style="width:200px; border-radius: 50%;" ImageUrl="~/images/background.jpg" />
+
     <h1 class="w3-jumbo w3-animate-top"><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
+
     <hr class="w3-border-grey" style="margin:auto;width:40%">
+
     <p class="w3-large w3-center">Your account is ready. . .</p>
   </div>
  
