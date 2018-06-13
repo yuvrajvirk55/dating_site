@@ -29,7 +29,7 @@ namespace dating_site
 
                 //encrpting pass
 
-                string pass = Encrypt.EncryptString(register_password.Text);
+                string pass = Encrypt.EncryptString(register_password.Text, register_password.Text);
 
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();

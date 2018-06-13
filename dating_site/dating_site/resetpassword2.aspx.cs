@@ -27,7 +27,7 @@ namespace dating_site
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
 
-            string pass = Encrypt.EncryptString(resetpassword_password.Text);
+            string pass = Encrypt.EncryptString(resetpassword_password.Text, resetpassword_password.Text);
             cmd.CommandText = "UPDATE usertable SET password = '"+pass+ "' WHERE email LIKE '" + filtered_email + "%'";
             cmd.Connection = sqlConnection1;
 
