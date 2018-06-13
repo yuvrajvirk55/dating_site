@@ -99,16 +99,14 @@
   <tr">
     <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem Value="male"><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem Value="female"><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></td>
     <td>
-        
-        <asp:FileUpload ID="FileUpload1" runat="server" />
-        
+         
      </td>
     <td>&nbsp;</td>
   </tr>
 
    <tr style="height: 30px;" >
     <td></td>
-    <td></td> 
+    <td><div style="height: 0px; overflow: hidden">        <asp:FileUpload ID="FileUpload1" runat="server" />    </div></td> 
     <td></td>
   </tr>
 </table>
