@@ -47,19 +47,23 @@
     Opacity:         .8;
   }
 </style>
-
-
-
 </head>
+
+  <script src="./GaugeMeter.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".GaugeMeter").gaugeMeter();
+  });
+</script>
+
+
 <body>
+
+    <div class="GaugeMeter" id="GaugeMeter_1" data-percent="10"></div>
     <form id="form1" runat="server">
     <div>
-    
-
-        <div class="GaugeMeter" id="GaugeMeter_1"></div>
-
-
-    </div>
+        </div>
     </form>
 </body>
+
 </html>
