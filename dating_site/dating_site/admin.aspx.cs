@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,22 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = "10%";
+            string checkuser = "select Count(*) from usertable";
+
+            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+
+            SqlCommand command_email = new SqlCommand(checkuser, connection);
+
+            connection.Open();
+
+            //database values
+           int db_user = (int)command_email.ExecuteScalar();
+
+            connection.Close();
+
+            Label1.Text = db_user.ToString();
+
+            
         }
     }
 }
