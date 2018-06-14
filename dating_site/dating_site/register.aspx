@@ -79,7 +79,7 @@
   </tr>
 
   <tr>
-    <td Width="250px"><asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email"  placeholder="Email"></asp:TextBox></td>
+    <td Width="250px"><asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" onInput="register_register_Click" placeholder="Email"></asp:TextBox></td>
     <td> <div style="color:red;"><asp:RequiredFieldValidator ID="RequiredFieldValidator1"  runat="server" ControlToValidate="register_email" ErrorMessage=" Email is required"></asp:RequiredFieldValidator></div></td>
     <td></td>
   </tr>

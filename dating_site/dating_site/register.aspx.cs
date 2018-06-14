@@ -17,6 +17,11 @@ namespace dating_site
 
         }
 
+        protected void check_email(object sender, EventArgs e)
+        {
+            Response.Redirect("form.aspx");
+        }
+
         protected void register_register_Click(object sender, EventArgs e)
         {
             if (!FileUpload1.HasFile)
@@ -29,7 +34,7 @@ namespace dating_site
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
-                //checking
+                //checking if the email already exists
 
                 // saving image
                 string strname = FileUpload1.FileName.ToString();
