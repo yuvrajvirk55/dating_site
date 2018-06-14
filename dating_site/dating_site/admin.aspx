@@ -45,9 +45,9 @@ span {
 
 <body>
 
-    <div class="chart" id="graph" data-percent="88"></div>
+    <div class="chart" id="graph" data-percent="geta();"> <asp:Label ID="Label1" runat="server" ></asp:Label></div>
 
-
+   
     <form id="form1" runat="server">
     <div>
     
@@ -55,10 +55,10 @@ span {
     </form>
 
     <script>
-        var el = document.getElementById('graph'); // get canvas
+        var el = document.getElementById('Label1'); // get canvas
 
         var options = {
-            percent: el.getAttribute('data-percent') || 25,
+            percent: el.getAttribute('text') || 25,
             size: el.getAttribute('data-size') || 220,
             lineWidth: el.getAttribute('data-line') || 15,
             rotate: el.getAttribute('data-rotate') || 0
