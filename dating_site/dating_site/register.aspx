@@ -79,9 +79,11 @@
   </tr>
 
   <tr>
-    <td Width="250px"><asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" onInput="register_register_Click" placeholder="Email"></asp:TextBox></td>
+    <td Width="250px"><asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" onchange="UserOrEmailAvailability()" placeholder="Email"></asp:TextBox></td>
     <td> <div style="color:red;"><asp:RequiredFieldValidator ID="RequiredFieldValidator1"  runat="server" ControlToValidate="register_email" ErrorMessage=" Email is required"></asp:RequiredFieldValidator></div></td>
-    <td></td>
+    <td><div id="checkusernameoremail" runat="server">                             
+                            <asp:Label ID="lblStatus" runat="server"></asp:Label>  
+                        </div></td>
   </tr>
 
    <tr>
@@ -126,6 +128,46 @@
        <p> <br /></p>					
 </form>
    </div>
+
+
+
+    <script src="Scripts/jquery-1.7.1.min.js"></script>  
+  
+    <script type="text/javascript">  
+  
+        function UserOrEmailAvailability() { //This function call on text change.             
+            $.ajax({  
+                type: "POST",  
+                url: "registration.aspx/CheckEmail", // this for calling the web method function in cs code.  
+                data: '{useroremail: "' + $("#<%=register_email.ClientID%>")[0].value + '" }',// user name or email value  
+                contentType: "application/json; charset=utf-8",  
+                dataType: "json",  
+                success: OnSuccess,  
+                failure: function (response) {  
+                    alert(response);  
+                }  
+            });  
+        }  
+  
+        // function OnSuccess  
+        function OnSuccess(response) {  
+            var msg = $("#<%=lblStatus.ClientID%>")[0];  
+            switch (response.d) {  
+                case "true":  
+                    msg.style.display = "block";  
+                    msg.style.color = "red";  
+                    msg.innerHTML = "User Name Or Email already exists.";  
+                    break;  
+                case "false":  
+                    msg.style.display = "block";  
+                    msg.style.color = "green";  
+                    msg.innerHTML = "User Name Or Email Available";  
+                    break;  
+            }  
+        }  
+  
+    </script>  
+
 
 </body>
 </html>

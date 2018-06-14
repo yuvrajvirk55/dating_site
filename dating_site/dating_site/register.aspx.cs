@@ -17,10 +17,27 @@ namespace dating_site
 
         }
 
-        protected void check_email(object sender, EventArgs e)
+        [System.Web.Services.WebMethod]
+        public static string CheckEmail(string useroremail)
         {
-            Response.Redirect("form.aspx");
+            string retval = "";
+            SqlConnection con = new SqlConnection("data source=LENOVO;initial catalog=Test;UID=sa;PWD=connect");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select UserNameorEmail from tbl_User where UserNameorEmail=@UserNameorEmail", con);
+            cmd.Parameters.AddWithValue("@UserNameorEmail", useroremail);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                retval = "true";
+            }
+            else
+            {
+                retval = "false";
+            }
+
+            return retval;
         }
+
 
         protected void register_register_Click(object sender, EventArgs e)
         {
