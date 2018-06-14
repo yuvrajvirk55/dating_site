@@ -96,7 +96,6 @@
   <ItemGroup>
     <Content Include="admin.aspx" />
     <Content Include="form.aspx" />
-    <Content Include="GaugeMeter.js" />
     <Content Include="images\background.jpg" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="images\profile_pic.png" />
