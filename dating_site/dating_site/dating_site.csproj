@@ -103,6 +103,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="scripts\jquery-1.7.1.js" />
+    <Content Include="scripts\jquery-1.7.1.min.js" />
+    <Content Include="scripts\jquery-ui-1.8.20.js" />
+    <Content Include="scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="scripts\modernizr-2.5.3.js" />
+    <None Include="scripts\_references.js" />
     <Content Include="welcome.aspx" />
     <None Include="Properties\PublishProfiles\lets_date.pubxml" />
     <None Include="Properties\PublishProfiles\uv_dates.pubxml" />
@@ -192,6 +199,7 @@
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="fonts\" />
+    <Folder Include="scripts\WebForms\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>

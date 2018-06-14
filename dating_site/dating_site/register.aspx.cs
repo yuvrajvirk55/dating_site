@@ -21,9 +21,9 @@ namespace dating_site
         public static string CheckEmail(string useroremail)
         {
             string retval = "";
-            SqlConnection con = new SqlConnection("data source=LENOVO;initial catalog=Test;UID=sa;PWD=connect");
+            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select UserNameorEmail from tbl_User where UserNameorEmail=@UserNameorEmail", con);
+            SqlCommand cmd = new SqlCommand("select email from usertable WHERE email=@UserNameorEmail", con);
             cmd.Parameters.AddWithValue("@UserNameorEmail", useroremail);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)

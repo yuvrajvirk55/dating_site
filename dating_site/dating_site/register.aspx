@@ -131,14 +131,14 @@
 
 
 
-    <script src="Scripts/jquery-1.7.1.min.js"></script>  
+    <script src="scripts/jquery-1.7.1.min.js"></script>  
   
     <script type="text/javascript">  
   
         function UserOrEmailAvailability() { //This function call on text change.             
             $.ajax({  
                 type: "POST",  
-                url: "registration.aspx/CheckEmail", // this for calling the web method function in cs code.  
+                url: "register.aspx/CheckEmail", // this for calling the web method function in cs code.  
                 data: '{useroremail: "' + $("#<%=register_email.ClientID%>")[0].value + '" }',// user name or email value  
                 contentType: "application/json; charset=utf-8",  
                 dataType: "json",  
