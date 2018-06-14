@@ -20,22 +20,27 @@ namespace dating_site
         [System.Web.Services.WebMethod]
         public static string CheckEmail(string useroremail)
         {
-            string retval = "";
-            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select email from usertable WHERE email=@UserNameorEmail", con);
-            cmd.Parameters.AddWithValue("@UserNameorEmail", useroremail);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+            if (useroremail.Length >0)
             {
-                retval = "true";
-            }
-            else
-            {
-                retval = "false";
+                string retval = "";
+                SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select email from usertable WHERE email=@UserNameorEmail", con);
+                cmd.Parameters.AddWithValue("@UserNameorEmail", useroremail);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    retval = "true";
+                }
+                else
+                {
+                    retval = "false";
+                }
+
+                return retval;
             }
 
-            return retval;
+            return "none";
         }
 
 

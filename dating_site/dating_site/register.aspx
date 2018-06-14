@@ -154,13 +154,17 @@
                 case "true":  
                     msg.style.display = "block";  
                     msg.style.color = "red";  
-                    msg.innerHTML = "User Name Or Email already exists.";  
+                    msg.innerHTML = "Email already exists.";  
                     break;  
                 case "false":  
                     msg.style.display = "block";  
                     msg.style.color = "green";  
-                    msg.innerHTML = "User Name Or Email Available";  
-                    break;  
+                    msg.innerHTML = "Email Available";  
+                    break;
+                case "none":
+                    msg.style.display = "none";
+                    
+                    break;
             }  
         }  
   
