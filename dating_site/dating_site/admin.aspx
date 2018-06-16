@@ -21,21 +21,31 @@
 <asp:Label ID="Label1" runat="server" ></asp:Label>
 </div>
 
- 
+<div class="w3-container">
+  <p>Database capacity:</p>
+
+  <div class="w3-light-grey">
+    <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
+    </div>
+  </div>
+
+  <p id="myP"><span id="demo">0</span> of 50 users</p>
+    </div>
 
 
 
 
 <script>
 function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 0;
-  var id = setInterval(frame, 50);
+    var elem = document.getElementById("myBar");
+    //var users = document.getElementById("Label1").innerText;
+    var width = 0;
+   // elem.style.width=users+'%'
   function frame() {
-    if (width >= 100) {
+    if (width >= 50) {
       clearInterval(id);
       document.getElementById("myP").className = "w3-text-green w3-animate-opacity";
-      document.getElementById("myP").innerHTML = "Successfully uploaded 10 photos!";
+      document.getElementById("myP").innerHTML = "Database is Full";
     } else {
       width++; 
       elem.style.width = width + '%'; 
@@ -45,6 +55,7 @@ function move() {
     }
   }
 }
+window.onload = move;
 </script>
 
 </body>
