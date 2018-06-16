@@ -5,49 +5,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
+  
 
     <style>
 
-        div {
-    position:relative;
-    margin:80px;
-    width:220px; height:220px;
-}
-canvas {
-    display: block;
-    position:absolute;
-    top:0;
-    left:0;
-}
-span {
-    color:#555;
-    display:block;
-    line-height:220px;
-    text-align:center;
-    width:220px;
-    font-family:sans-serif;
-    font-size:40px;
-    font-weight:100;
-    margin-left:5px;
+
+   .numberCircle {
+  border-radius: 50%;
+  behavior: url(PIE.htc);
+  /* remove if you don't care about IE8 */
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  background: #fff;
+  border: 2px solid ;
+  color: #666;
+  text-align: center;
+  font: 32px Arial, sans-serif;
 }
 
-input {
-    width: 200px;
-}
-
-span {
-  
-}
 
     </style>
 </head>
 
 <body>
 
-    <asp:Label ID="Label1" runat="server" ></asp:Label>
 
-   
+ 
+<div class="numberCircle">30</div>
+
 </body>
 
 </html>
