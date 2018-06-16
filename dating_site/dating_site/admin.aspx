@@ -55,8 +55,7 @@ function move() {
   }
 }
 </script>
-    }
-</script>
+
 
 </body>
 
