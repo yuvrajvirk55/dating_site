@@ -28,24 +28,23 @@
     <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
     </div>
   </div>
+  <p id="myP"><span id="demo">0</span> of 50 users</p> 
+    <button class="w3-button w3-light-grey" onclick="move();this.disabled='true'">Check</button> 
 
-  <p id="myP"><span id="demo">0</span> of 50 users</p>
-    </div>
-
-
+   </div>
 
 
 <script>
+
 function move() {
-    var elem = document.getElementById("myBar");
-    //var users = document.getElementById("Label1").innerText;
-    var width = 0;
-   // elem.style.width=users+'%'
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 50);
   function frame() {
-    if (width >= 50) {
+    if (width >= 100) {
       clearInterval(id);
       document.getElementById("myP").className = "w3-text-green w3-animate-opacity";
-      document.getElementById("myP").innerHTML = "Database is Full";
+      document.getElementById("myP").innerHTML = "Successfully uploaded 10 photos!";
     } else {
       width++; 
       elem.style.width = width + '%'; 
@@ -55,7 +54,8 @@ function move() {
     }
   }
 }
-window.onload = move;
+</script>
+    }
 </script>
 
 </body>
