@@ -55,20 +55,13 @@
 
 <body>
 
+ <asp:Label ID="Label1" runat="server" ></asp:Label>
 
-
-<button class="button button1">Green</button>
+<button class="button button1"></button>
 
 <button class="button button3">Red</button>
 
- <asp:Button ID="Button1" runat="server" Text="Button" />
-
-<div>
-<asp:Label ID="Label1" runat="server" ></asp:Label>
-</div>
-
-
-
+ <asp:Button ID="Button1" runat="server" CssClass="button3" Text="Button" />
 
 <div class="w3-container">
   <p>Database capacity:</p>
