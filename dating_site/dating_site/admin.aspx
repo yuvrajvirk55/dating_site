@@ -38,17 +38,6 @@
     color: white;
 }
 
-.button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-
-.button2:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
 .button3 {
     background-color: white; 
     color: black; 
@@ -60,24 +49,6 @@
     color: white;
 }
 
-.button4 {
-    background-color: white;
-    color: black;
-    border: 2px solid #e7e7e7;
-}
-
-.button4:hover {background-color: #e7e7e7;}
-
-.button5 {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
-}
-
-.button5:hover {
-    background-color: #555555;
-    color: white;
-}
 </style>
 
 </head>
@@ -85,6 +56,12 @@
 <body>
 
 
+
+<button class="button button1">Green</button>
+
+<button class="button button3">Red</button>
+
+ <asp:Button ID="Button1" runat="server" Text="Button" />
 
 <div>
 <asp:Label ID="Label1" runat="server" ></asp:Label>
