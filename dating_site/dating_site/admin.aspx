@@ -103,15 +103,17 @@
 
     function move() {
         var elem = document.getElementById("myBar");
-        var elem = document.getElementById("Label2"");
+        
         var width = 0;
         var id = setInterval(frame, 50);
         function frame() {
+            var ext = document.getElementById("Label2").innerText;
+            ext = ext * 10;
             if (width >= 100) {
                 clearInterval(id);
                 document.getElementById("myP").className = "w3-text-red w3-animate-opacity";
                 document.getElementById("myP").innerHTML = "Datadase full";
-            } if (width < 10) {
+            } if (width <= ext) {
                 width++;
                 elem.style.width = width + '%';
                 var num = width * 1 / 10;
