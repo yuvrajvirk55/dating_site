@@ -71,10 +71,10 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="#about"">Centered paragraph.</a>
-  <a href="#news"><i class="material-icons">explore</i></a>
-  <a href="#contact"><i class="material-icons">public</i></a>
-   <a href="#home" ><i class="material-icons">group_add</i></a>
+    <a href="#about""><asp:Label ID="Label1" runat="server" style="font-size:25px;" Text="Label"></asp:Label></a>
+  <a href="#news"><i class="material-icons" style="font-size:25px;">explore</i></a>
+  <a href="#contact"><i class="material-icons" style="font-size:25px;">public</i></a>
+   <a href="#home" ><i class="material-icons" style="font-size:25px;">group_add</i></a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
