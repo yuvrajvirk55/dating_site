@@ -93,7 +93,7 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#about"" class="extra"><asp:Image ID="Image1" runat="server" style="width:200px; border-radius: 50%;" /></a>
+  <a href="#about"" class="extra"><asp:Image ID="Image1" runat="server" style="width:40px; border-radius: 20%;" /></a>
   <a href="#about"" class="extra"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a href="#news" class="extra"><i class="material-icons" style="font-size:20px;">explore</i></a>
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:20px;">public</i></a>

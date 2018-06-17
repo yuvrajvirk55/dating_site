@@ -27,9 +27,10 @@ namespace dating_site
 
             //Label1.Text = db_user.ToString();
             Label1.Text = "Yuvraj Singh";
-            image1
+            Image1.ImageUrl = "~/images/login.jpg";
 
-            
+
+
         }
     }
 }
