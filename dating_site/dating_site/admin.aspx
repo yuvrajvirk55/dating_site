@@ -173,17 +173,25 @@
 </div>
 
 
-    <div>
-        <asp:Label ID="percent" runat="server" ></asp:Label>
-    </div>
-
-    <div>
+    <div class="row"> 
+  <div class="column">
+     <asp:Label ID="percent" runat="server" ></asp:Label>
+    
+  </div>
+  <div class="column">
     <span> Database usage: </span>
     <div id="circle"></div>
     <br />
     <br />
     <span id="submit">Check</span>
-    </div>
+    
+  </div>  
+  <div class="column">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    
+  </div>
+  
+</div>
 
     <script>
 ( function( $ ){
