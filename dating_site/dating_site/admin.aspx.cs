@@ -69,24 +69,22 @@ namespace dating_site
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            String connectionString = "Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
+            string selectCommand = "SELECT * FROM usertable";
+           
+           SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
 
+           
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
-            string constring = @"Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
-            using (SqlConnection con = new SqlConnection(constring))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM usertable", con))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        using (DataSet ds = new DataSet())
-                        {
-                            sda.Fill(ds);
-                            GridView1.DataSource = ds.Tables[0];
+            // Populate a new data table and bind it to the BindingSource.
+            DataTable table = new DataTable();
+            table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+            dataAdapter.Fill(table);
+            GridView1.DataSource = table;
+        }
+        
                         }
                     }
-                }
-            }
-        }
-    }
-}
+                
+            
