@@ -72,9 +72,9 @@ body {
 
 <div class="topnav" id="myTopnav">
     <a href="#about"">Centered paragraph.</a>
-  <a href="#news">Places</a>
-  <a href="#contact"><i class="material-icons">cloud</i></a>
-   <a href="#home" ><i class="material-icons">android</i></a>
+  <a href="#news"><i class="material-icons">explore</i></a>
+  <a href="#contact"><i class="material-icons">public</i></a>
+   <a href="#home" ><i class="material-icons">group_add</i></a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
