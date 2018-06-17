@@ -238,6 +238,18 @@ input[type=range] {
 </style>
 
 </head>
+       
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>
 
 <body>
 
@@ -257,101 +269,6 @@ input[type=range] {
 
 
  
- <!-- JJ -->
-<div id="page" class="page">
-  <div class="progress-bar">
-	  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
-    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
-    <p>0%</p>
-  </div>
-  <div id="progressControllerContainer">
-    <input type="range" id="progressController" min="0" max="100" value="19" />
-  </div
-</div>
-<!-- SDG -->
-
-
-
-    
-<script>
-    $(document).ready(function () {
-        var $pc = $('#progressController');
-        var $pCaption = $('.progress-bar p');
-        var iProgress = document.getElementById('inactiveProgress');
-        var aProgress = document.getElementById('activeProgress');
-        var iProgressCTX = iProgress.getContext('2d');
-
-
-        drawInactive(iProgressCTX);
-
-        $pc.on('change', function () {
-            var percentage = $(this).val() / 100;
-            drawProgress(aProgress, percentage, $pCaption);
-        });
-
-        function drawInactive(iProgressCTX) {
-            iProgressCTX.lineCap = 'square';
-
-            //outer ring
-            iProgressCTX.beginPath();
-            iProgressCTX.lineWidth = 15;
-            iProgressCTX.strokeStyle = '#e1e1e1';
-            iProgressCTX.arc(137.5, 137.5, 129, 0, 2 * Math.PI);
-            iProgressCTX.stroke();
-
-            //progress bar
-            iProgressCTX.beginPath();
-            iProgressCTX.lineWidth = 0;
-            iProgressCTX.fillStyle = '#e6e6e6';
-            iProgressCTX.arc(137.5, 137.5, 121, 0, 2 * Math.PI);
-            iProgressCTX.fill();
-
-            //progressbar caption
-            iProgressCTX.beginPath();
-            iProgressCTX.lineWidth = 0;
-            iProgressCTX.fillStyle = '#fff';
-            iProgressCTX.arc(137.5, 137.5, 100, 0, 2 * Math.PI);
-            iProgressCTX.fill();
-
-        }
-        function drawProgress(bar, percentage, $pCaption) {
-            var barCTX = bar.getContext("2d");
-            var quarterTurn = Math.PI / 2;
-            var endingAngle = ((2 * percentage) * Math.PI) - quarterTurn;
-            var startingAngle = 0 - quarterTurn;
-
-            bar.width = bar.width;
-            barCTX.lineCap = 'square';
-
-            barCTX.beginPath();
-            barCTX.lineWidth = 20;
-            barCTX.strokeStyle = '#00B4FF';
-            barCTX.arc(137.5, 137.5, 111, startingAngle, endingAngle);
-            barCTX.stroke();
-
-            $pCaption.text((parseInt(percentage * 100, 10)) + '%');
-        }
-
-        var percentage = $pc.val() / 100;
-        drawProgress(aProgress, percentage, $pCaption);
-
-
-    });
-
-
-
-
-
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-    </script>
-
 </body>
 
 </html>
