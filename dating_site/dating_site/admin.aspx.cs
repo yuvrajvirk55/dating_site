@@ -12,6 +12,10 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+           
+
+
             string checkuser = "select Count(*) from usertable";
 
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
@@ -35,6 +39,11 @@ namespace dating_site
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+
+            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('All the data from database will be removed')", true);
+
+
             System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
