@@ -80,7 +80,7 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-    <div class="rainbow" style="font-size:20px; text-align:left;font-family: Bradley Hand ITC;position: relative;"><b>&emsp;Let's date!</b></div>
+    <span style="font-size:20px; text-align:left;">Let's date!</span>
   <a href="#about""><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a href="#news"><i class="material-icons" style="font-size:20px;">explore</i></a>
   <a href="#contact"><i class="material-icons" style="font-size:20px;">public</i></a>
