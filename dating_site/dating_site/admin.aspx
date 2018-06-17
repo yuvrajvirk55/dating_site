@@ -5,8 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <title>Admin page</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body {
   margin: 0;
@@ -16,11 +15,11 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
-  background: linear-gradient(to right,rgba(250,150,252,1),rgba(249,174,153,1), rgba(199,253,149,1), rgba(152,244,250,1));
+  background: linear-gradient(to left,rgba(250,150,252,1),rgba(249,174,153,1), rgba(199,253,149,1), rgba(152,244,250,1));
 }
 
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -58,14 +57,10 @@ body {
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
-  }
-
-  .rightal{
-   float: none;
-    display: block;
     text-align: right;
   }
+
+
 }
 </style>
 
@@ -74,10 +69,10 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
+    <a href="#about"">Centered paragraph.</a>
   <a href="#news">Places</a>
   <a href="#contact">Friends</a>
- <span class="rightal"> <a href="#about"">Centered paragraph.</a></span>
+   <a href="#home" class="active">Home</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
