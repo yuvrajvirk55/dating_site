@@ -171,6 +171,10 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
+  
+    <br />
+    <br />
+    <br />
 
 
     <div class="row"> 
@@ -178,16 +182,18 @@
      <asp:Label ID="percent" runat="server" ></asp:Label>
     
   </div>
-  <div class="column">
-    <span> Database usage: </span>
-    <div id="circle"></div>
+  <div class="column" style="background-color:antiquewhite;">
+    <span style="text-align:center"> Database usage: </span>
+      <br />
+    <div id="circle" style="text-align:center"></div>
     <br />
     <br />
-    <span id="submit">Check</span>
+    <span id="submit" style="text-align:center">Check</span>
     
   </div>  
+
   <div class="column">
-    <img src="/w3images/wedding.jpg" style="width:100%">
+    
     
   </div>
   
