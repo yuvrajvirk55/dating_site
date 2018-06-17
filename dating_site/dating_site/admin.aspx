@@ -63,12 +63,13 @@ body {
   }
 
   .rainbow {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-family: Bradley Hand ITC;
+
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;;
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;;
+  color:transparent !important;;
+  -webkit-background-clip: text !important;;
+  background-clip: text !important;;
+  font-family: Bradley Hand ITC !important;;
 }
 
 
@@ -80,7 +81,7 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a><span class="rainbow" style="font-size:20px; text-align:left;">Let's date!</span></a>
+  <a><span class="rainbow" style="font-size:20px; text-align:left ">Let's date!</span></a>
   <a href="#about""><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a href="#news"><i class="material-icons" style="font-size:20px;">explore</i></a>
   <a href="#contact"><i class="material-icons" style="font-size:20px;">public</i></a>
