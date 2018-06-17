@@ -29,15 +29,15 @@ body {
 
 .extra_left{
      float: left;
-      color: #f2f2f2;
+     color: #f2f2f2;
 }
 
 
 .topnav a {
  
   display: block;
-  text-align: center;
-  padding: 14px 16px;
+  text-align:center;
+  padding: 7px 16px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -95,9 +95,9 @@ body {
 <div class="topnav" id="myTopnav">
   <a href="#about"" class="extra"><asp:Image ID="Image1" runat="server" style="width:40px; border-radius: 20%;" /></a>
   <a href="#about"" class="extra"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
-  <a href="#news" class="extra"><i class="material-icons" style="font-size:20px;">explore</i></a>
-  <a href="#contact" class="extra"><i class="material-icons" style="font-size:20px;">public</i></a>
-   <a href="#home"  class="extra"><i class="material-icons" style="font-size:20px;">group_add</i></a>
+  <a href="#news" class="extra"><i class="material-icons" style="font-size:25px;">explore</i></a>
+  <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;">public</i></a>
+   <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;">group_add</i></a>
    <a class="extra_left" >Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
