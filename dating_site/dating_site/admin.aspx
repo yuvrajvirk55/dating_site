@@ -80,10 +80,11 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#about""><asp:Label ID="Label1" runat="server" style="font-size:25px;" Text="Label"></asp:Label></a>
-  <a href="#news"><i class="material-icons" style="font-size:25px;">explore</i></a>
-  <a href="#contact"><i class="material-icons" style="font-size:25px;">public</i></a>
-   <a href="#home" ><i class="material-icons" style="font-size:25px;">group_add</i></a>
+    <div class="rainbow" style="font-size:20px; text-align:left;font-family: Bradley Hand ITC;position: relative;"><b>&emsp;Let's date!</b></div>
+  <a href="#about""><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
+  <a href="#news"><i class="material-icons" style="font-size:20px;">explore</i></a>
+  <a href="#contact"><i class="material-icons" style="font-size:20px;">public</i></a>
+   <a href="#home" ><i class="material-icons" style="font-size:20px;">group_add</i></a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
