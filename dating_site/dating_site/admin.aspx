@@ -96,8 +96,8 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#about"" class="extra"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
-  <a href="#about"" class="extra"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
+  <a href="#about"" class="extra" style="padding:5px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
+  <a href="#about"" class="extra" style="padding-right:2px;padding-left:16px"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a href="#news" class="extra"><i class="material-icons" style="font-size:25px;">explore</i></a>
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;">public</i></a>
    <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;">group_add</i></a>
