@@ -67,11 +67,14 @@ body {
 
 <body>
 
- <div class="rainbow">
-  <span onclick="this.parentElement.style.display='none'"
-  class="w3-button w3-display-topright">X</span>
-  <p>Click on the X to close this panel.</p>
-  <p>Click on the X to close this panel.</p>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 </body>
 
