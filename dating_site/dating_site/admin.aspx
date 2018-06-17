@@ -21,10 +21,21 @@ body {
   background: linear-gradient(to left,rgba(250,150,252,1),rgba(249,174,153,1), rgba(199,253,149,1), rgba(152,244,250,1));
 }
 
+.extra{
+     float: right;
+      color: #f2f2f2;
+}
+
+
+.extra_left{
+     float: left;
+      color: #f2f2f2;
+}
+
+
 .topnav a {
-  float: right;
+ 
   display: block;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -32,7 +43,6 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
   color: #00ffff;
 }
 
@@ -71,6 +81,7 @@ body {
   background-clip: text !important;
   font-family: Bradley Hand ITC !important;
   text-align:left !important;
+   float: left;
 }
 
 
@@ -82,11 +93,11 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#about""><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
-  <a href="#news"><i class="material-icons" style="font-size:20px;">explore</i></a>
-  <a href="#contact"><i class="material-icons" style="font-size:20px;">public</i></a>
-   <a href="#home" ><i class="material-icons" style="font-size:20px;">group_add</i></a>
-     <a class="rainbow">Let's date!</a>
+  <a href="#about"" class="extra"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
+  <a href="#news" class="extra"><i class="material-icons" style="font-size:20px;">explore</i></a>
+  <a href="#contact" class="extra"><i class="material-icons" style="font-size:20px;">public</i></a>
+   <a href="#home"  class="extra"><i class="material-icons" style="font-size:20px;">group_add</i></a>
+   <a class="extra_left" >Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
