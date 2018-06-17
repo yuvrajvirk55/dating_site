@@ -7,8 +7,11 @@
 <title>Admin page</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="css/circle.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="progress-circle.js"></script>
 
 <style>
     body {
@@ -85,6 +88,16 @@
         margin: auto;
         border: 3px solid #73AD21;
     }
+
+    #circle {
+  margin: 10px;
+}
+#submit {
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+  color: #90c844;
+}
 </style>
 
 </head>
@@ -101,27 +114,6 @@
     }
 
 
-    function move() {
-        var elem = document.getElementById("myBar");
-        
-        var width = 0;
-        var id = setInterval(frame, 50);
-        function frame() {
-            var ext = document.getElementById("Label2").innerText;
-            ext = ext * 10;
-            if (width >= 100) {
-                clearInterval(id);
-                document.getElementById("myP").className = "w3-text-red w3-animate-opacity";
-                document.getElementById("myP").innerHTML = "Datadase full";
-            } if (width < ext) {
-                width++;
-                elem.style.width = width + '%';
-                var num = width ;
-                num = num.toFixed(0)
-                document.getElementById("demo").innerHTML = num;
-            }
-        }
-    }
     </script>
 
 <body>
@@ -143,20 +135,62 @@
         <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     </div>
 
+    <div id="inputs">
+            <table>
+                <tr>
+                    <td>Percent:</td>
+                    <td><input type="text" name="size" id="percent" value="50"></td>
+                    <td>(1-100)</td>
+                </tr>
+              
+             
+                <tr>
+                    <td></td>
+                    <td><span id="submit">Check</a></td>
+                </tr>
+            </table>
+            <br />
+</div>
+
+        <div id="circle">
+        </div>
 
 
-<div class="w3-container">
-  <p>Database capacity:</p>
+    <script>
+( function( $ ){
+	$( '#circle' ).progressCircle();
 
-  <div class="w3-light-grey">
-    <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
-    </div>
-  </div>
-  <p id="myP"><span id="demo">0</span>% Full</p> 
-    <button class="w3-button w3-light-grey" onclick="move();">Check</button> 
-   </div>
+	$( '#submit' ).click( function() {
+		var nPercent        = $( '#percent' ).val() ? $( '#percent' ).val() : 50;
+		var showPercentText = $( '#percentOn' ).prop( 'checked' );
+		var thickness       = $( '#thickness' ).val() ? $( '#thickness' ).val() : 3;
+		var circleSize      = $( '#circle-size' ).val() ? $( '#circle-size' ).val() : 100;
 
- 
+		$( '#circle' ).progressCircle({
+			nPercent        : nPercent,
+			showPercentText : showPercentText,
+			thickness       : thickness,
+			circleSize      : circleSize
+		});
+	})
+})( jQuery );
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
 </body>
 
 </html>
