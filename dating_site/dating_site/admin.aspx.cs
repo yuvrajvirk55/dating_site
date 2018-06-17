@@ -62,8 +62,27 @@ namespace dating_site
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
 
+           
 
+        }
 
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            GridView1.DataSource= null;
+
+            using (SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8"))
+            {
+                SqlCommand cmd = new SqlCommand("sp_Expert_person", con);
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@takhasos", SqlDbType.VarChar).Value = comboBox1.SelectedText;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(da);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                this.dataGridView1.Visible = true;
+                dataGridView1.DataSource = dt;
+            }
         }
     }
 }
