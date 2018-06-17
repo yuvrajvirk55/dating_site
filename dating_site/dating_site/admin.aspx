@@ -60,6 +60,12 @@ body {
     display: block;
     text-align: left;
   }
+
+  .rightal{
+   float: none;
+    display: block;
+    text-align: right;
+  }
 }
 </style>
 
@@ -71,7 +77,7 @@ body {
   <a href="#home" class="active">Home</a>
   <a href="#news">Places</a>
   <a href="#contact">Friends</a>
-  <a href="#about" style="text-align: right;">Name</a>
+ <span class="rightal"> <a href="#about"">Centered paragraph.</a></span>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
