@@ -64,12 +64,13 @@ body {
 
   .rainbow {
 
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;;
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;;
-  color:transparent !important;;
-  -webkit-background-clip: text !important;;
-  background-clip: text !important;;
-  font-family: Bradley Hand ITC !important;;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;
+  color:transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  font-family: Bradley Hand ITC !important;
+  text-align:left !important;
 }
 
 
@@ -81,11 +82,11 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a><span class="rainbow" style="font-size:20px; text-align:left ">Let's date!</span></a>
   <a href="#about""><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a href="#news"><i class="material-icons" style="font-size:20px;">explore</i></a>
   <a href="#contact"><i class="material-icons" style="font-size:20px;">public</i></a>
    <a href="#home" ><i class="material-icons" style="font-size:20px;">group_add</i></a>
+     <a class="rainbow">Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
