@@ -14,7 +14,7 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
+
 
 
             string checkuser = "select Count(*) from usertable";
@@ -26,7 +26,7 @@ namespace dating_site
             connection.Open();
 
             //database values
-           int db_user = (int)command_email.ExecuteScalar();
+            int db_user = (int)command_email.ExecuteScalar();
 
             connection.Close();
 
@@ -63,7 +63,7 @@ namespace dating_site
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
 
-           
+
 
         }
 
@@ -79,11 +79,14 @@ namespace dating_site
                     cmd.CommandType = CommandType.Text;
                     using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                     {
-                        using (DataTable dt = new DataTable())
+                        using (DataSet ds = new DataSet())
                         {
-                            sda.Fill(dt);
-                            GridView1.DataSource = dt;
-                            Response.Write("dgfdgf");            }
+                            sda.Fill(ds);
+                            GridView1.DataSource = ds.Tables[0];
+                        }
+                    }
+                }
+            }
         }
     }
 }
