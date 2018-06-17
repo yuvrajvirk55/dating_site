@@ -103,6 +103,7 @@
 
     function move() {
         var elem = document.getElementById("myBar");
+        var elem = document.getElementById("Label2"");
         var width = 0;
         var id = setInterval(frame, 50);
         function frame() {
@@ -137,10 +138,9 @@
 
 
     <div>
-
-<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     </div>
-    
+
 
 
 <div class="w3-container">
@@ -150,7 +150,7 @@
     <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
     </div>
   </div>
-  <p id="myP"><span id="demo">0</span> of 50 users</p> 
+  <p id="myP"><span id="demo">0</span> of 10 users</p> 
     <button class="w3-button w3-light-grey" onclick="move();this.disabled='true'">Check</button> 
    </div>
 

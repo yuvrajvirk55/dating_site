@@ -25,7 +25,7 @@ namespace dating_site
 
             connection.Close();
 
-            //Label1.Text = db_user.ToString();
+            Label2.Text = db_user.ToString();
             Label1.Text = "Yuvraj Singh";
             Image1.ImageUrl = "~/images/login.jpg";
 
