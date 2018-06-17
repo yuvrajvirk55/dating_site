@@ -113,10 +113,10 @@
                 clearInterval(id);
                 document.getElementById("myP").className = "w3-text-red w3-animate-opacity";
                 document.getElementById("myP").innerHTML = "Datadase full";
-            } if (width <= ext) {
+            } if (width < ext) {
                 width++;
                 elem.style.width = width + '%';
-                var num = width * 1 / 10;
+                var num = width ;
                 num = num.toFixed(0)
                 document.getElementById("demo").innerHTML = num;
             }
@@ -152,8 +152,8 @@
     <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
     </div>
   </div>
-  <p id="myP"><span id="demo">0</span> of 10 users</p> 
-    <button class="w3-button w3-light-grey" onclick="move();this.disabled='true'">Check</button> 
+  <p id="myP"><span id="demo">0</span>% Full</p> 
+    <button class="w3-button w3-light-grey" onclick="move();">Check</button> 
    </div>
 
  
