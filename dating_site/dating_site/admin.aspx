@@ -97,6 +97,32 @@
   color: #90c844;
 }
 
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+.button3:hover {
+    background-color: #f44336;
+    color: white;
+}
+
 </style>
 
 </head>
@@ -133,32 +159,22 @@
     <br />
     <br />
 
-<div class="grid">
-  <header>
+
    <span style="text-align:left"> Database usage: </span>
       <br />
     <div id="circle" style="text-align:center"></div>
     <br />
     <br />
     <span id="submit" style="text-align:center">Check</span>
-  </header>
 
-  <aside class="sidebar-left">
+
+  <br />
+
     <asp:Label ID="percent" runat="server" ></asp:Label>
-  </aside>
 
-  <article>
-    Article
-  </article>
+<br />
+          <asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Button" />
 
-  <aside class="sidebar-right">
-    Right Sidebar
-  </aside>
-  
-  <footer>
-    Footer
-  </footer>
-</div>
 
 
     <script>
@@ -194,7 +210,6 @@
   })();
 
 </script>
-
 
 </body>
 
