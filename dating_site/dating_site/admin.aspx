@@ -173,7 +173,7 @@
     <asp:Label ID="percent" runat="server" ></asp:Label>
 
 <br />
-          <asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Button" />
+          <asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Button" OnClick="Button1_Click" />
 
 
 
