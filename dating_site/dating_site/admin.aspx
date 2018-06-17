@@ -78,16 +78,7 @@
                 text-align: right;
             }
 
-        .rainbow {
-            background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;
-            background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ) !important;
-            color: transparent !important;
-            -webkit-background-clip: text !important;
-            background-clip: text !important;
-            font-family: Bradley Hand ITC !important;
-            text-align: left !important;
-            float: left;
-        }
+        
     }
 </style>
 
@@ -101,7 +92,7 @@
   <a href="#news" class="extra"><i class="material-icons" style="font-size:25px;">explore</i></a>
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;">public</i></a>
    <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;">group_add</i></a>
-   <a class="extra_left" >Let's date!</a>
+   <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
