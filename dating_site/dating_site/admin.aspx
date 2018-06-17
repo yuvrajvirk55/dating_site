@@ -6,6 +6,9 @@
 <head runat="server">
 <title>Admin page</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 <style>
 body {
   margin: 0;
@@ -30,8 +33,7 @@ body {
 
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
-  
+  color: #00ffff;
 }
 
 
@@ -71,8 +73,8 @@ body {
 <div class="topnav" id="myTopnav">
     <a href="#about"">Centered paragraph.</a>
   <a href="#news">Places</a>
-  <a href="#contact">Friends</a>
-   <a href="#home" class="active">Home</a>
+  <a href="#contact"><i class="material-icons">cloud</i></a>
+   <a href="#home" ><i class="material-icons">android</i></a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
