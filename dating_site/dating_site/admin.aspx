@@ -7,7 +7,8 @@
 <title>Admin page</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 
 <style>
     body {
@@ -79,162 +80,11 @@
             }
     }
 
-  @xxsUnit: 0.25rem;
-@xsUnit: 12px;
-@sUnit: 20px;
-@mUnit: 22px; 
-@lUnit: 24px;
-@xlUnit: 38px;
-@xxlUnit: 75px;
-
-@track-color: #ffffff;
-@thumb-color: #e1e1e1;
-
-@thumb-radius: 5px;
-@thumb-height: @xlUnit;
-@thumb-width: @sUnit;
-
-@thumb-border-width: 1px;
-@thumb-border-color: #d6d6d6;
-
-@track-width: 100%;
-@track-height: @sUnit;
-
-@track-border-width: 1px;
-@track-border-color: #e6e6e6;
-
-@track-radius: 0px;
-@contrast: 5%;
-html,body{
-  height: 100%;
-  width: 100%;
-}
-html,
-button,
-input,
-select,
-textarea {
-	color: #5e5e5e;
-	-webkit-font-smoothing: antialiased;
-}
-body {
-	background-color: #f0f1f1;
-	font: 1rem/1.2 Montserrat, Helvetica, Helvetica Neue, Arial;
-}
-.page{
-  display: flex;
-  align-items: center;
-  align-content: center;
-  width: 275px;
-  margin: 20px auto;
-}
-.progress-bar{
-	display: inline-block;
-	width: 275px;
-	height: 275px;
-	margin: 7px;
-	padding: 0;
-}
-.progress-bar .progress-active{
-	position: relative;
-	top: -279px;
-}
-.progress-bar p{
-	position: relative;
-	margin: 0;
-	padding: 0;
-	width: 275px;
-	top: -460px;
-	font-size: 54px;
-	font-weight: 900;
-	text-align: center;
-}
-#progressControllerContainer{
-  position: absolute;
-  top: 320px;
-  padding: 10px 80px;
-}
-
-.track() {
-  width: @track-width;
-  height: @track-height;
-  cursor: pointer;
-  animate: 0.2s;
-}
-
-.thumb() {
-  border: @thumb-border-width solid @thumb-border-color;
-  height: @thumb-height;
-  width: @thumb-width;
-  border-radius: @thumb-radius;
-  background: @thumb-color;
-  cursor: pointer;
-}
-
-input[type=range] {
-  -webkit-appearance: none;
-  margin: @thumb-height 0;
-  width: @track-width;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-webkit-slider-runnable-track {
-    .track();
-    background: @track-color;
-    border-radius: @track-radius;
-    border: @track-border-width solid @track-border-color;
-  }
-  
-  &::-webkit-slider-thumb {
-    .thumb();
-    -webkit-appearance: none;
-    margin-top: ((-@track-border-width * 2 + @track-height) / 2) - (@thumb-height / 2);
-  }
-
-  &:focus::-webkit-slider-runnable-track {
-    background: lighten(@track-color, @contrast);
-  }
-
-  &::-moz-range-track {
-    .track();
-    background: @track-color;
-    border-radius: @track-radius;
-    border: @track-border-width solid @track-border-color;
-  }
-  &::-moz-range-thumb {
-     .thumb();
-  }
-
-  &::-ms-track {
-    .track(); 
-    background: transparent;
-    border-color: transparent;
-    border-width: @thumb-width 0;
-    color: transparent;
-  }
-
-  &::-ms-fill-lower {
-    background: darken(@track-color, @contrast);
-    border: @track-border-width solid @track-border-color;
-    border-radius: @track-radius*2;
-  }
-  &::-ms-fill-upper {
-    background: @track-color;
-    border: @track-border-width solid @track-border-color;
-    border-radius: @track-radius*2;
-  }
-  &::-ms-thumb {
-    .thumb();
-  }
-  &:focus::-ms-fill-lower {
-    background: @track-color;
-  }
-  &:focus::-ms-fill-upper {
-    background: lighten(@track-color, @contrast);
-  }
-}
+    div.ex1 {
+        width: 56px;
+        margin: auto;
+        border: 3px solid #73AD21;
+    }
 </style>
 
 </head>
@@ -247,6 +97,26 @@ input[type=range] {
             x.className += " responsive";
         } else {
             x.className = "topnav";
+        }
+    }
+
+
+    function move() {
+        var elem = document.getElementById("myBar");
+        var width = 0;
+        var id = setInterval(frame, 50);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                document.getElementById("myP").className = "w3-text-red w3-animate-opacity";
+                document.getElementById("myP").innerHTML = "Datadase full";
+            } if (width < 10) {
+                width++;
+                elem.style.width = width + '%';
+                var num = width * 1 / 10;
+                num = num.toFixed(0)
+                document.getElementById("demo").innerHTML = num;
+            }
         }
     }
     </script>
@@ -266,7 +136,23 @@ input[type=range] {
 </div>
 
 
+    <div>
 
+<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    </div>
+    
+
+
+<div class="w3-container">
+  <p>Database capacity:</p>
+
+  <div class="w3-light-grey">
+    <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
+    </div>
+  </div>
+  <p id="myP"><span id="demo">0</span> of 50 users</p> 
+    <button class="w3-button w3-light-grey" onclick="move();this.disabled='true'">Check</button> 
+   </div>
 
  
 </body>
