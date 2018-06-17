@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -68,21 +69,21 @@ namespace dating_site
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            GridView1.DataSource= null;
 
-            using (SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8"))
+
+            string constring = @"Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
+            using (SqlConnection con = new SqlConnection(constring))
             {
-                SqlCommand cmd = new SqlCommand("sp_Expert_person", con);
-                con.Open();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@takhasos", SqlDbType.VarChar).Value = comboBox1.SelectedText;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(da);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                this.dataGridView1.Visible = true;
-                dataGridView1.DataSource = dt;
-            }
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM usertable", con))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            GridView1.DataSource = dt;
+                            Response.Write("dgfdgf");            }
         }
     }
 }
