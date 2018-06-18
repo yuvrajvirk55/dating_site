@@ -151,7 +151,7 @@
         background: rgba(0, 0, 0, 0.7);
     filter: alpha(opacity=50); /* For IE8 and earlier */
     color:white; 
-    text-align:center;
+    text-align:center !important;
     
    font-family: 'Indie Flower', cursive;
  
