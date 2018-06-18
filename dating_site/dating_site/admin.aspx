@@ -138,6 +138,22 @@
    font-family: 'Indie Flower', cursive;
 }
 
+.left2{ float:left;
+        padding: 5px;
+        margin: 8px;
+       
+        width: 30% !important;
+        height: 200px !important;
+        display:block;
+        opacity:0.4;
+        background: rgba(0, 0, 0, 0.7);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    color:white; 
+    text-align:center;
+    
+   font-family: 'Indie Flower', cursive;
+}
+
 .right{ float:right;
         padding: 5px;
         margin: 8px;
@@ -203,6 +219,12 @@
      <h1>Database load: </h1>
           <span id="circle"></span>
           <span id="submit">Check</span>
+     </div>
+
+
+      <div class="left2">
+     <h1>Clean Database: </h1>
+    <asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Button" OnClick="Button1_Click" />
      </div>
 
 
