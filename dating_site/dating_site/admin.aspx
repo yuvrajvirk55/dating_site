@@ -123,6 +123,24 @@
     color: white;
 }
 
+.left{ float:left;
+        padding: 5px;
+        margin: 8px;
+       
+        width: 40% !important;
+        height: 200px !important;
+        display:block;
+        opacity:0.4;
+        background: rgba(0, 0, 0, 0.7);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    color:white; 
+    text-align:center;
+    
+        
+
+
+}
+
 </style>
 
 </head>
@@ -156,6 +174,17 @@
 </div>
  <form runat="server" > 
   
+ <div class="left">
+
+     <h1>Number of Users: </h1>
+     <br />
+     <asp:Label ID="percent" runat="server" ></asp:Label>
+
+
+
+     </div>
+
+
     <script>
 ( function( $ ){
 	$( '#circle' ).progressCircle();

@@ -30,7 +30,7 @@ namespace dating_site
 
             connection.Close();
 
-           // percent.Text = db_user.ToString();
+           percent.Text = db_user.ToString();
             Label1.Text = "Yuvraj Singh";
             Image1.ImageUrl = "~/images/login.jpg";
 
