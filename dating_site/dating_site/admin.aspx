@@ -158,7 +158,7 @@
         padding: 5px;
         margin: 8px;
        
-        width: 40% !important;
+        width: 55% !important;
         height: 200px !important;
         display:block;
         opacity:0.4;

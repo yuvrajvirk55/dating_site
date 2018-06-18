@@ -30,7 +30,7 @@ namespace dating_site
 
             connection.Close();
 
-           percent.Text = db_user.ToString();
+            percent.Text = db_user.ToString();
             Label1.Text = "Yuvraj Singh";
             Image1.ImageUrl = "~/images/login.jpg";
 
@@ -41,7 +41,7 @@ namespace dating_site
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-
+            /*
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('All the data from database will be removed')", true);
 
 
@@ -62,7 +62,7 @@ namespace dating_site
 
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
-
+            */
 
 
         }
