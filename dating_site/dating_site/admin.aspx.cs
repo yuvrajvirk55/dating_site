@@ -41,6 +41,8 @@ namespace dating_site
         protected void Button1_Click(object sender, EventArgs e)
         {
 
+
+
             /*
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('All the data from database will be removed')", true);
 
