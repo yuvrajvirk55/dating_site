@@ -70,7 +70,7 @@ namespace dating_site
         protected void Button3_Click(object sender, EventArgs e)
         {
             String connectionString = "Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
-            string selectCommand = "SELECT * FROM usertable";
+            string selectCommand = "select * from usertable";
            
            SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
 
@@ -81,10 +81,11 @@ namespace dating_site
             DataTable table = new DataTable();
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             dataAdapter.Fill(table);
+            Response.Write(table);
             GridView1.DataSource = table;
         }
         
-                        }
-                    }
+          }
+         }
                 
             
