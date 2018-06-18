@@ -30,7 +30,7 @@ namespace dating_site
 
             connection.Close();
 
-            percent.Text = db_user.ToString();
+           // percent.Text = db_user.ToString();
             Label1.Text = "Yuvraj Singh";
             Image1.ImageUrl = "~/images/login.jpg";
 
@@ -82,7 +82,7 @@ namespace dating_site
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             dataAdapter.Fill(table);
             Response.Write(table);
-            GridView1.DataSource = table;
+          //  GridView1.DataSource = table;
         }
         
           }

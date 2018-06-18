@@ -141,7 +141,7 @@
 
     </script>
 
-<body>
+<body style="background-color:#FFE4FF;">
 
 <div class="topnav" id="myTopnav">
   <a href="#about"" class="extra" style="padding:5px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
@@ -154,7 +154,7 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
- <form runat="server"> 
+ <form runat="server" > 
   
     <script>
 ( function( $ ){
