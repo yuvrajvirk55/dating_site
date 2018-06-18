@@ -91,8 +91,8 @@
     }
 
     #circle {
-  margin: 10px;
 }
+
 #submit {
   font-weight: bold;
   color: #90c844;
@@ -201,9 +201,9 @@
 
       <div class="right">
 
-     <h1>Number of Users: </h1>
-     <asp:Label ID="Label2" style="font-size:40px;" runat="server" ></asp:Label>
-
+     <h1>Database load: </h1>
+          <span id="circle"></span>
+          <span id="submit">Check</span>
      </div>
 
 
