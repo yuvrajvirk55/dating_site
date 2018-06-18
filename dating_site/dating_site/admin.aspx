@@ -90,8 +90,6 @@
         border: 3px solid #73AD21;
     }
 
-    #circle {
-}
 
 #submit {
   font-weight: bold;
@@ -157,6 +155,7 @@
  
 
 }
+
 
 </style>
 
