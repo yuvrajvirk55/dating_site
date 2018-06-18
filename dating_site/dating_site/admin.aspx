@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link href="css/circle.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="progress-circle.js"></script>
 
@@ -136,8 +137,24 @@
     color:white; 
     text-align:center;
     
-        
+   font-family: 'Indie Flower', cursive;
+}
 
+.right{ float:right;
+        padding: 5px;
+        margin: 8px;
+       
+        width: 40% !important;
+        height: 200px !important;
+        display:block;
+        opacity:0.4;
+        background: rgba(0, 0, 0, 0.7);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    color:white; 
+    text-align:center;
+    
+   font-family: 'Indie Flower', cursive;
+ 
 
 }
 
@@ -177,10 +194,15 @@
  <div class="left">
 
      <h1>Number of Users: </h1>
-     <br />
-     <asp:Label ID="percent" runat="server" ></asp:Label>
+     <asp:Label ID="percent" style="font-size:40px;" runat="server" ></asp:Label>
+
+     </div>
 
 
+      <div class="right">
+
+     <h1>Number of Users: </h1>
+     <asp:Label ID="Label2" style="font-size:40px;" runat="server" ></asp:Label>
 
      </div>
 
