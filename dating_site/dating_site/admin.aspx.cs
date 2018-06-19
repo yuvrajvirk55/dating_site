@@ -40,34 +40,32 @@ namespace dating_site
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
+                
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('All the data from database will be removed')", true);
 
 
+                System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
-            /*
-            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('All the data from database will be removed')", true);
-
-
-            System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
-
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "delete from usertable";
-            cmd.Connection = sqlConnection1;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "delete from usertable";
+                cmd.Connection = sqlConnection1;
 
 
-            sqlConnection1.Open();
-            cmd.ExecuteNonQuery();
+                sqlConnection1.Open();
+                cmd.ExecuteNonQuery();
 
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "delete from userinterest";
-            cmd.Connection = sqlConnection1;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "delete from userinterest";
+                cmd.Connection = sqlConnection1;
 
-            cmd.ExecuteNonQuery();
-            sqlConnection1.Close();
-            */
+                cmd.ExecuteNonQuery();
+                sqlConnection1.Close();
+                
 
 
-        }
+            }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
