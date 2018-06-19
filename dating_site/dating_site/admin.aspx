@@ -22,8 +22,9 @@
 
     .topnav {
         overflow: hidden;
-        background-color: #333;
-        background: linear-gradient(to left,rgba(250,150,252,1),rgba(249,174,153,1), rgba(199,253,149,1), rgba(152,244,250,1));
+        background-color: black;
+        color:white;
+       
     }
 
     .extra {
@@ -191,7 +192,7 @@
 
     </script>
 
-<body style="background-color:#FFE4FF;">
+<body style="background-color:white;">
 
 <div class="topnav" id="myTopnav">
   <a href="#about"" class="extra" style="padding:5px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
