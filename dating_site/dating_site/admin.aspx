@@ -104,54 +104,6 @@
         border: 3px solid #73AD21;
     }
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-
-.button2:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-.button3 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #f44336;
-}
-
-.button3:hover {
-    background-color: #f44336;
-    color: white;
-}
-
 .left{ float:left;
         padding: 5px;
         margin: 8px;
@@ -242,16 +194,14 @@
 
      <h1>Number of Users: </h1>
      <asp:Label ID="percent" style="font-size:40px;" runat="server" ></asp:Label>
-
      </div>
 
 
       <div class="left2">
-
      <h1>Database load: </h1>
           <span id="circle"></span>
           <br />
-          <div align="center"><asp:Button ID="submit" runat="server" CssClass="button button1" Text="Check" /></div>
+          <div align="center"><asp:Button ID="submit" runat="server" Text="Check" /></div>
      </div>
 
 
@@ -266,7 +216,7 @@
     <br />
    <div align="center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
     <br />
-          <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase" onClick="Button1_Click" /></div>
+          <div style="align-content:center"><asp:Button ID="myBtn" runat="server" Text="Erase" onClick="Button1_Click" /></div>
     </div>
 
 
@@ -322,6 +272,8 @@
   })();
 
 </script>
+            
+     <asp:Button ID="Button1" runat="server" Height="69px" OnClick="Button1_Click1" Text="Button" Width="310px" />
             
 </form>
 </body>

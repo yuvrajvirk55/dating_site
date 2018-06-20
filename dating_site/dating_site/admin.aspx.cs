@@ -85,6 +85,11 @@ namespace dating_site
              else
                  Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Enter credientials !')", true);
         }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Response.Write("sf");
+        }
     }
   }
                 
