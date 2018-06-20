@@ -30,7 +30,7 @@
 <style>
     body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Indie Flower', cursive;
     }
 
     .topnav {
@@ -163,9 +163,8 @@
         background: rgba(0, 0, 0, 0.7);
     filter: alpha(opacity=50); /* For IE8 and earlier */
     color:white; 
-    text-align:center;
-    
-   font-family: 'Indie Flower', cursive;
+    text-align:center;   
+  
 }
 
 .left2{ float:left;
@@ -180,8 +179,6 @@
     filter: alpha(opacity=50); /* For IE8 and earlier */
     color:white; 
     text-align:center;
-    
-   font-family: 'Indie Flower', cursive;
 }
 
 .right{ float:right;
@@ -195,9 +192,6 @@
     filter: alpha(opacity=50); /* For IE8 and earlier */
     color:white; 
     text-align:center !important;
-    
-   font-family: 'Indie Flower', cursive;
- 
 }
 
 .down{ float:left;
