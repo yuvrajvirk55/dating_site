@@ -156,7 +156,7 @@
         padding: 5px;
         margin: 8px;
        
-        width: 30% !important;
+        width: 32% !important;
         height: 200px !important;
         display:block;
         opacity:0.4;
@@ -186,8 +186,8 @@
 
 .down{ float:left;
         padding:5px;
-        margin:8px 50px;
-        width: 90% !important;
+        margin:8px;
+        width: 73% !important;
         height: 330px !important;
         display:block;
         opacity:0.4;
@@ -291,6 +291,8 @@
 
       <div class="right">
     <h1>Clean Database: </h1>
+      <br />
+          <h3>Enter admin credentials. . .</h3>
 
     <div align="center"><asp:TextBox ID="erase_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox></div>
     <br />
