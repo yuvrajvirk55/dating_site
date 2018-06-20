@@ -38,7 +38,7 @@ namespace dating_site
             }
             else
             {
-                cmd = new SqlCommand("select " + Session["radio_query"] + " from userinterest", con);
+                cmd = new SqlCommand("select " + Session["text_query"] + " from userinterest", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 try

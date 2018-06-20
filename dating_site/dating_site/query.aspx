@@ -114,7 +114,7 @@
 <body style="background-color:	#BEBEBE;">
 
 <div class="topnav" id="myTopnav">
-   <a href="#about"" class="extra" style="padding-right:2px;padding-left:16px">Go Back</a>
+   <a href="admin.aspx"" class="extra" style="padding-right:2px;padding-left:16px">Go Back</a>
    <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -123,15 +123,8 @@
  <form runat="server" > 
 
       <asp:GridView ID="GridView1" runat="server">
-    <HeaderStyle Width="10%" />
-    <RowStyle Width="10%" />
-    <FooterStyle Width="10%" />
+    
 </asp:GridView>    
-         
-     </div>
-
-
-
             
 </form>
 </body>
