@@ -40,7 +40,7 @@ namespace dating_site
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (erase_email.Text != null && erase_password.Text != null)
+            if (!string.IsNullOrEmpty(erase_email.Text) && !string.IsNullOrEmpty(erase_password.Text))
             {
 
                 string filtered_email = erase_email.Text.ToString();
@@ -64,8 +64,14 @@ namespace dating_site
                 string db_email = (string)command_email.ExecuteScalar();
                 string db_password = (string)command_password.ExecuteScalar();
 
-                db_password = Encrypt.DecryptString(db_password, erase_password.Text);
-
+                try
+                {
+                    db_password = Encrypt.DecryptString(db_password, erase_password.Text);
+                }
+                catch
+                {
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Incorrect credentials !')", true);
+                }
 
                 if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(erase_email.Text.ToString()) & db_password.Equals(erase_password.Text.ToString())))
                 {
