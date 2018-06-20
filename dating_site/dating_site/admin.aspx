@@ -255,8 +255,7 @@
       <br />
           <h3>Enter admin credentials. . .</h3>
           <br />
-          <div style="color:red;"><asp:RequiredFieldValidator ID="RequiredFieldValidator1"  runat="server" ControlToValidate="erase_email" ErrorMessage=" Email is required"></asp:RequiredFieldValidator></div>
-
+          
     <div align="center"><asp:TextBox ID="erase_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox></div>
     <br />
    <div align="center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
@@ -269,7 +268,7 @@
      <h1>Query Database: </h1><br />
   
         <div  align="center"><asp:RadioButtonList ID="RadioButtonList1" width="150px" runat="server">
-        <asp:ListItem Value="usertable"><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>    <asp:ListItem Value="userinterest"><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
+        <asp:ListItem Value="usertable"><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>     <asp:ListItem Value="userinterest"><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
          </asp:RadioButtonList></div>
        <br />
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
