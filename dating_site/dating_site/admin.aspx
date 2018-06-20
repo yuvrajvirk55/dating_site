@@ -169,6 +169,22 @@
     
    font-family: 'Indie Flower', cursive;
  
+}
+
+.down{ float:left;
+        padding: 5px;
+        margin:8px;
+        width: 100% !important;
+        height: 350px !important;
+        display:block;
+        opacity:0.4;
+        background: rgba(0, 0, 0, 0.7);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    color:white; 
+    text-align:center !important;
+    
+   font-family: 'Indie Flower', cursive;
+ 
 
 }
 
@@ -225,6 +241,11 @@
       <div class="left2">
      <h1>Clean Database: </h1>
     <asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Button" OnClick="Button1_Click" />
+     </div>
+
+     <div class="down">
+     <h1>Clean Database: </h1>
+    
      </div>
 
 
