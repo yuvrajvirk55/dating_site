@@ -6,6 +6,19 @@
 <head runat="server">
 <title>Admin page</title>
 
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
@@ -186,7 +199,48 @@
 }
 
 
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 </style>
+
 
 </head>
        
@@ -237,8 +291,12 @@
 
       <div class="left2">
      <h1>Clean Database: </h1>
-    <asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Button" OnClick="Button1_Click" />
-     </div>
+
+    <asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox>
+<asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
+    <asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase"  />
+       </div>
+
 
      <div class="down">
      <h1>Clean Database: </h1>
@@ -266,34 +324,35 @@
 	})
 })( jQuery );
 </script>
-     <script>
 
-         var modal = document.getElementById('myModal');
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
 
-         // Get the button that opens the modal
-         var btn = document.getElementById("myBtn");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
-         // Get the <span> element that closes the modal
-         var span = document.getElementsByClassName("close")[0];
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-         // When the user clicks the button, open the modal 
-         btn.onclick = function () {
-             modal.style.display = "block";
-         }
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
 
-         // When the user clicks on <span> (x), close the modal
-         span.onclick = function () {
-             modal.style.display = "none";
-         }
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
-         // When the user clicks anywhere outside of the modal, close it
-         window.onclick = function (event) {
-             if (event.target == modal) {
-                 modal.style.display = "none";
-             }
-         }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
-     </script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
