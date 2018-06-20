@@ -85,22 +85,6 @@ namespace dating_site
              else
                  Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Enter credientials !')", true);
         }
-
-
-
-        protected void Button1_Click1(object sender, EventArgs e)
-        {
-           
-        }
-
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            Session["radio_query"] = RadioButtonList1.Text;
-            Session["text_query"] = TextBox1.Text.ToString();
-            Response.Redirect("query.aspx");
-
-
-        }
     }
   }
                 
