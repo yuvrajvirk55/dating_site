@@ -125,6 +125,17 @@
     cursor: pointer;
 }
 
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
 .button3 {
     background-color: white; 
     color: black; 
@@ -318,7 +329,7 @@
          <SortedDescendingCellStyle BackColor="#CAC9C9" />
          <SortedDescendingHeaderStyle BackColor="#00547E" />
      </asp:GridView>
-     <asp:Button ID="Button3" runat="server" CssClass="button button3" OnClick="Button3_Click" Text="Query" />
+     <asp:Button ID="Button3" runat="server" CssClass="button button2" OnClick="Button3_Click" Text="Query" />
 
      </div>
 
