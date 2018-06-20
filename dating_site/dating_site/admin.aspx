@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link href="css/circle.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="progress-circle.js"></script>
 
@@ -213,48 +213,6 @@
     text-align:center !important;   
    font-family: 'Indie Flower', cursive;
 }
-
-
-
-
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 </style>
 
 
@@ -327,7 +285,7 @@
         <div  align="center"><asp:RadioButtonList ID="RadioButtonList1" width="150px" runat="server">
         <asp:ListItem Value="usertable"><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem Value="userinterest"><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
          </asp:RadioButtonList></div>
- <br />
+       <br />
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
         
@@ -359,35 +317,6 @@
 	})
 })( jQuery );
 </script>
-
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -405,5 +334,4 @@ window.onclick = function(event) {
             
 </form>
 </body>
-
 </html>
