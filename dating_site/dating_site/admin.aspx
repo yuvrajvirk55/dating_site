@@ -268,7 +268,7 @@
      <h1>Database load: </h1>
           <span id="circle"></span>
           <br />
-          <div align="center"><asp:Button ID="submit" runat="server" Text="Check" /></div>
+          <div align="center"><asp:Button ID="submit" runat="server" class="button button1" Text="Check" /></div>
      </div>
 
       <div class="right">
@@ -282,7 +282,7 @@
     <br />
    <div align="center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
     <br />
-          <div style="align-content:center"><asp:Button ID="myBtn" runat="server" Text="Erase" onClick="Button1_Click" /></div>
+          <div style="align-content:center"><asp:Button ID="myBtn" class="button button3" runat="server" Text="Erase" onClick="Button1_Click" /></div>
     </div>
 
 
@@ -295,7 +295,7 @@
        <br />
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
-          <asp:Button ID="Button1" runat="server" Height="69px" OnClick="Button1_Click1" Text="Query" Width="310px" />
+          <asp:Button ID="Button1" runat="server" Height="69px" class="button button2" OnClick="Button1_Click1" Text="Query" Width="310px" />
         
      </div>
 
