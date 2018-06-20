@@ -317,7 +317,7 @@
     <br />
    <div align="center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
     <br />
-          <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase" onClick="Button1_Click1" /></div>
+          <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase" onClick="Button1_Click" /></div>
     </div>
 
 
@@ -327,10 +327,10 @@
         <div  align="center"><asp:RadioButtonList ID="RadioButtonList1" width="150px" runat="server">
         <asp:ListItem Value="usertable"><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem Value="userinterest"><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
          </asp:RadioButtonList></div>
- 
+ <br />
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
-         <asp:Button ID="query_button" runat="server" CssClass="button button3" OnClick="Button1_Click1" Text="Query" />
+        <div style="align-content:center"><asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Erase" onClick="Button1_Click1" /></div>
      </div>
 
 
