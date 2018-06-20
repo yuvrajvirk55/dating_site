@@ -30,7 +30,7 @@ namespace dating_site
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            /* if (!string.IsNullOrEmpty(erase_email.Text) && !string.IsNullOrEmpty(erase_password.Text))
+             if (!string.IsNullOrEmpty(erase_email.Text) && !string.IsNullOrEmpty(erase_password.Text))
              {
                  string filtered_email = erase_email.Text.ToString();
                  int index = filtered_email.IndexOf('@');
@@ -88,44 +88,11 @@ namespace dating_site
              }
              else
                  Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Enter credientials !')", true);
-
-     */
-
-
-
-            string connectionString = "Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
-
-
-            var select = "select * from usertable";
-            var c = new SqlConnection(connectionString);
-            var dataAdapter = new SqlDataAdapter(select, c);
-
-            var commandBuilder = new SqlCommandBuilder(dataAdapter);
-            var ds = new DataSet();
-            dataAdapter.Fill(ds);
-            //GridView1. = true;
-            GridView1.DataSource = ds.Tables[0];
-
         }
 
 
         protected void Button3_Click1(object sender, EventArgs e)
         {
-            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Incorrect credentials !')", true);
-
-            string connectionString = "Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
-           
-
-            var select = "select * from usertable";
-            var c = new SqlConnection(connectionString); 
-            var dataAdapter = new SqlDataAdapter(select, c);
-
-            var commandBuilder = new SqlCommandBuilder(dataAdapter);
-            var ds = new DataSet();
-            dataAdapter.Fill(ds);
-            //GridView1. = true;
-            GridView1.DataSource = ds.Tables[0];
-            
         }
     }
   }
