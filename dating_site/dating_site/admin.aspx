@@ -330,7 +330,7 @@
  <br />
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
-        <div style="align-content:center"><asp:Button ID="Button1" CssClass="button button3" runat="server" Text="Erase" onClick="Button1_Click1" /></div>
+        
      </div>
 
 
