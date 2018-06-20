@@ -18,7 +18,7 @@ namespace dating_site
 
             SqlCommand cmd;
 
-            if (Session["radio_query"] == "usertable")
+            if (Session["radio_query"].ToString() == "usertable")
             {
 
                 cmd = new SqlCommand("select " + Session["radio_query"] + " from usertable", con);
@@ -38,7 +38,7 @@ namespace dating_site
             }
             else
             {
-                cmd = new SqlCommand("select " + Session["text_query"] + " from userinterest", con);
+                cmd = new SqlCommand("select " + Session["text_query"].ToString() + " from userinterest", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 try
