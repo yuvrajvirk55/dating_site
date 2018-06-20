@@ -325,19 +325,19 @@
      <h1>Query Database: </h1><br />
   
         <div  align="center"><asp:RadioButtonList ID="RadioButtonList1" width="150px" runat="server">
-        <asp:ListItem><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
+        <asp:ListItem Value="usertable"><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem Value="userinterest"><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
          </asp:RadioButtonList></div>
  
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
          <asp:Button ID="query_button" runat="server" CssClass="button button3" OnClick="Button1_Click1" Text="Query" />
 
-         <asp:GridView ID="GridView1" runat="server" style="position: relative; top: 0px; left: 0px; height: 209px; width: 352px">
-        </asp:GridView>
+         <asp:GridView ID="GridView1" runat="server">
+    <HeaderStyle Width="10%" />
+    <RowStyle Width="10%" />
+    <FooterStyle Width="10%" />
+</asp:GridView>    
          
-        
-        
-
      </div>
 
 
