@@ -40,22 +40,22 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.Label percent;
         
         /// <summary>
-        /// register_email control.
+        /// erase_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox register_email;
+        protected global::System.Web.UI.WebControls.TextBox erase_email;
         
         /// <summary>
-        /// register_password control.
+        /// erase_password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox register_password;
+        protected global::System.Web.UI.WebControls.TextBox erase_password;
         
         /// <summary>
         /// myBtn control.

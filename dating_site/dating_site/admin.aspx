@@ -292,10 +292,10 @@
       <div class="left2">
     <h1>Clean Database: </h1>
 
-    <asp:TextBox ID="register_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox>
+    <div style="align-content:center"><asp:TextBox ID="erase_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox></div>
     <br />
-    <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox>
-    <asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase"  />
+    <div style="align-content:center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
+    <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase"  /></div>
     </div>
 
 
