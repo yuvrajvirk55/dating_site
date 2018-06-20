@@ -90,47 +90,8 @@ namespace dating_site
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-            con.Open();
-
-            SqlCommand cmd;
-
-            if (RadioButtonList1.Text == "usertable")
-            {
-
-                cmd = new SqlCommand("select " + TextBox1.Text.ToString() + " from usertable", con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                try
-                {
-                    da.Fill(ds);
-                    cmd.ExecuteNonQuery();
-                    GridView1.DataSource = ds;
-                    GridView1.DataBind();
-                }
-                catch
-                {
-                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
-                }
-            }
-            else
-            {
-                cmd = new SqlCommand("select " + TextBox1.Text.ToString() + " from userinterest", con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                try
-                {
-                    da.Fill(ds);
-                    cmd.ExecuteNonQuery();
-                    GridView1.DataSource = ds;
-                    GridView1.DataBind();
-                    
-                }
-                catch
-                {
-                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
-                }
-            }
+            Session["radio_query"]= RadioButtonList1.Text;
+            Session["text_query"] = TextBox1.Text.ToString();
         }
     }
   }

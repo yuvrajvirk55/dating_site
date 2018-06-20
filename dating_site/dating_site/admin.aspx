@@ -331,13 +331,6 @@
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
          <asp:Button ID="query_button" runat="server" CssClass="button button3" OnClick="Button1_Click1" Text="Query" />
-
-         <asp:GridView ID="GridView1" runat="server">
-    <HeaderStyle Width="10%" />
-    <RowStyle Width="10%" />
-    <FooterStyle Width="10%" />
-</asp:GridView>    
-         
      </div>
 
 
