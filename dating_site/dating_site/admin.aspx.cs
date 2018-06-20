@@ -76,14 +76,6 @@ namespace dating_site
                 if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(erase_email.Text.ToString()) & db_password.Equals(erase_password.Text.ToString())))
                 {
 
-                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('uv !')", true);
-
-                }
-
-                else
-                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Incorrect credentials !')", true);
-
-                /*
                     System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                     System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
@@ -100,7 +92,14 @@ namespace dating_site
                     cmd.Connection = sqlConnection1;
 
                     cmd.ExecuteNonQuery();
-                    sqlConnection1.Close();*/
+                    sqlConnection1.Close();
+
+                }
+
+                else
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Incorrect credentials !')", true);
+
+              
             }
             else
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Enter credientials !')", true);
