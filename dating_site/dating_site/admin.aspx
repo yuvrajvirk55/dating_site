@@ -293,6 +293,8 @@
     <h1>Clean Database: </h1>
       <br />
           <h3>Enter admin credentials. . .</h3>
+          <br />
+          <div style="color:red;"><asp:RequiredFieldValidator ID="RequiredFieldValidator1"  runat="server" ControlToValidate="erase_email" ErrorMessage=" Email is required"></asp:RequiredFieldValidator></div>
 
     <div align="center"><asp:TextBox ID="erase_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox></div>
     <br />
