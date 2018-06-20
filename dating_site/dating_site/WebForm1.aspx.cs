@@ -18,6 +18,7 @@ namespace dating_site
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
@@ -25,7 +26,8 @@ namespace dating_site
 
             if (RadioButtonList1.Text == "usertable")
             {
-                 cmd = new SqlCommand('select ' + TextBox1.Text.ToString() + ' from usertable where '+TextBox2.Text.ToString()+'/', con);
+
+                 cmd = new SqlCommand("select " + TextBox1.Text.ToString() + " from usertable", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 try

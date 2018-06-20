@@ -324,7 +324,9 @@
      <div class="down">
      <h1>Query Database: </h1>
     <br />
-     <asp:Button ID="Button3" CssClass="button button2" runat="server"  Text="Query" OnClick="Button3_Click1" />
+         <asp:GridView ID="GridView1" runat="server" style="position: relative; top: 0px; left: 0px; height: 209px; width: 352px">
+        </asp:GridView>
+     <asp:Button ID="Button4" CssClass="button button2" runat="server"  Text="Query" />
 
      </div>
 

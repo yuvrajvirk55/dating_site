@@ -14,10 +14,24 @@
             <asp:ListItem>usertable</asp:ListItem>
             <asp:ListItem>userinterest</asp:ListItem>
         </asp:RadioButtonList>
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" Width="280px">
+            <asp:ListItem>email</asp:ListItem>
+            <asp:ListItem>password</asp:ListItem>
+            <asp:ListItem>first_name</asp:ListItem>
+            <asp:ListItem>last_name</asp:ListItem>
+            <asp:ListItem>sex</asp:ListItem>
+            <asp:ListItem>dob</asp:ListItem>
+        </asp:CheckBoxList>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" style="position: relative; top: 0px; left: 0px; height: 209px; width: 352px">
-        </asp:GridView>
+        <asp:CheckBoxList ID="CheckBoxList2" runat="server" style="position: relative">
+            <asp:ListItem>email</asp:ListItem>
+            <asp:ListItem>int_sex</asp:ListItem>
+            <asp:ListItem>int_nationality</asp:ListItem>
+            <asp:ListItem>int_agegroup</asp:ListItem>
+            <asp:ListItem>in_hobbies</asp:ListItem>
+        </asp:CheckBoxList>
+        
         <p>
             <asp:TextBox ID="TextBox1" runat="server" Height="29px" Width="167px"></asp:TextBox>
 &nbsp; where
