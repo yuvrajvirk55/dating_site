@@ -110,9 +110,7 @@ namespace dating_site
             String connectionString = "Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
             string selectCommand = "select * from usertable";
            
-           SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
-
-           
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);         
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
             // Populate a new data table and bind it to the BindingSource.
@@ -120,7 +118,7 @@ namespace dating_site
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             dataAdapter.Fill(table);
             Response.Write(table);
-          //  GridView1.DataSource = table;
+            GridView1.DataSource = table;
         }
         
           }
