@@ -25,19 +25,41 @@ namespace dating_site
 
             if (RadioButtonList1.Text == "usertable")
             {
-                 cmd = new SqlCommand("select " + TextBox1.Text.ToString() + " from usertable", con);
-            }
+                 cmd = new SqlCommand('select ' + TextBox1.Text.ToString() + ' from usertable where '+TextBox2.Text.ToString()+'/', con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                try
+                {
+                    da.Fill(ds);
+                    cmd.ExecuteNonQuery();
+                    GridView1.DataSource = ds;
+                    GridView1.DataBind();
+                }
+                catch
+                {
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
+                }
+                }
             else
             {
-                 //cmd = new SqlCommand("select " + TextBox1.Text.ToString() + " from usertable", con);
+                cmd = new SqlCommand("select " + TextBox1.Text.ToString() + " from userinterest", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                try
+                {
+                    da.Fill(ds);
+                    cmd.ExecuteNonQuery();
+                    GridView1.DataSource = ds;
+                    GridView1.DataBind();
+                }
+                catch
+                {
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
+                }
             }
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            cmd.ExecuteNonQuery();
-            GridView1.DataSource = ds;
-            GridView1.DataBind();
+            
+           
 
 
         }
