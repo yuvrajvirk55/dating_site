@@ -172,20 +172,17 @@
 }
 
 .down{ float:left;
-        padding: 5px;
-        margin:8px;
-        width: 100% !important;
-        height: 350px !important;
+        padding:5px;
+        margin:8px 50px;
+        width: 90% !important;
+        height: 330px !important;
         display:block;
         opacity:0.4;
         background: rgba(0, 0, 0, 0.7);
     filter: alpha(opacity=50); /* For IE8 and earlier */
     color:white; 
-    text-align:center !important;
-    
+    text-align:center !important;   
    font-family: 'Indie Flower', cursive;
- 
-
 }
 
 
@@ -269,6 +266,34 @@
 	})
 })( jQuery );
 </script>
+     <script>
+
+         var modal = document.getElementById('myModal');
+
+         // Get the button that opens the modal
+         var btn = document.getElementById("myBtn");
+
+         // Get the <span> element that closes the modal
+         var span = document.getElementsByClassName("close")[0];
+
+         // When the user clicks the button, open the modal 
+         btn.onclick = function () {
+             modal.style.display = "block";
+         }
+
+         // When the user clicks on <span> (x), close the modal
+         span.onclick = function () {
+             modal.style.display = "none";
+         }
+
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function (event) {
+             if (event.target == modal) {
+                 modal.style.display = "none";
+             }
+         }
+
+     </script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
