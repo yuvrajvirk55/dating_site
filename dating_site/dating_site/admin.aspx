@@ -302,7 +302,7 @@
      <h1>Database load: </h1>
           <span id="circle"></span>
           <br />
-         <div style="align-content:center"> <asp:Button ID="submit" runat="server" CssClass="button button1" Text="Check" /></div>
+          <div align="center"><asp:Button ID="submit" runat="server" CssClass="button button1" Text="Check" /></div>
      </div>
 
 
