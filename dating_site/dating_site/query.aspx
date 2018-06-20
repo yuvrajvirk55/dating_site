@@ -92,6 +92,19 @@
     }
 
 
+    .new {
+        font-size:16px;
+        text-align:center;
+        align-content:center;
+        margin: 12px;
+        padding: 5px;
+        width:auto;
+        height:auto;
+        float:none;
+        position:center;
+    }
+
+
 </style>
 
 
@@ -121,11 +134,10 @@
   </a>
 </div>
  <form runat="server" > 
-
-      <asp:GridView ID="GridView1" runat="server">
-    
+     <div class="new">
+      <asp:GridView ID="GridView1" runat="server"> 
 </asp:GridView>    
-            
+            </div>
 </form>
 </body>
 

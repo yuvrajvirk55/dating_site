@@ -13,15 +13,16 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-            con.Open();
+           
+              SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+              con.Open();
 
-            SqlCommand cmd;
+              SqlCommand cmd;
 
-            if (Session["radio_query"].ToString() == "usertable")
+            if (Session["radio_query"].ToString().Equals("usertable"))
             {
 
-                cmd = new SqlCommand("select " + Session["radio_query"] + " from usertable", con);
+                cmd = new SqlCommand("select " + Session["text_query"] + " from usertable", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 try

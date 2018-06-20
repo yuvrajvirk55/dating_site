@@ -92,7 +92,9 @@ namespace dating_site
         {
             Session["radio_query"]= RadioButtonList1.Text;
             Session["text_query"] = TextBox1.Text.ToString();
-            Response.Redirect("query.aspx");
+              Response.Redirect("query.aspx");
+
+           
         }
     }
   }
