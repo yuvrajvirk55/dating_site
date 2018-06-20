@@ -340,7 +340,12 @@
      </div>
 
 
-    <script>
+  <script type="text/javascript">
+        window.onload = function callButtonClickEvent() {
+            document.getElementById('submit').click();
+        }
+</script>
+<script>
 ( function( $ ){
 	$( '#circle' ).progressCircle();
 

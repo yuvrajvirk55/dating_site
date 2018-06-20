@@ -29,7 +29,6 @@ namespace dating_site
             int db_user = (int)command_email.ExecuteScalar();
             connection.Close();
 
-            submit.Click;
             percent.Text = db_user.ToString();
             Label1.Text = "Yuvraj Singh";
             Image1.ImageUrl = "~/images/login.jpg";
