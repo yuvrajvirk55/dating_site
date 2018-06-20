@@ -317,15 +317,15 @@
     <br />
    <div align="center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
     <br />
-          <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase" onClick="Button1_Click" /></div>
+          <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase" onClick="Button1_Click1" /></div>
     </div>
 
 
      <div class="down">
      <h1>Query Database: </h1><br />
   
-        <div  align="left"><asp:RadioButtonList ID="RadioButtonList1" RepeatDirection="Horizontal" width="150px" runat="server">
-        <asp:ListItem><span style="font-size:24px;font-weight:bold;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem><span style="font-size:24px;font-family:Arial;font-weight:bold;" >userinterest</span></asp:ListItem>
+        <div  align="center"><asp:RadioButtonList ID="RadioButtonList1" width="150px" runat="server">
+        <asp:ListItem><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
          </asp:RadioButtonList></div>
  
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
