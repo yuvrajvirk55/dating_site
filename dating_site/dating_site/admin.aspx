@@ -158,8 +158,7 @@
 .right{ float:right;
         padding: 5px;
         margin: 8px;
-       
-        width: 55% !important;
+        width: 24% !important;
         height: 200px !important;
         display:block;
         opacity:0.4;
@@ -219,7 +218,7 @@
 
      <h1>Database load: </h1>
           <span id="circle"></span>
-          <span id="submit">Check</span>
+          <h2 id="submit">Check</h2>
      </div>
 
 
