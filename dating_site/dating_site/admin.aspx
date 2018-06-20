@@ -402,10 +402,6 @@ window.onclick = function(event) {
   })();
 
 </script>
-       
-            
-     <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" Width="16px" />
-       
             
 </form>
 </body>
