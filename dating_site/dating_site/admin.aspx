@@ -322,11 +322,21 @@
 
 
      <div class="down">
-     <h1>Query Database: </h1>
-    <br />
+     <h1>Query Database: </h1><br />
+  
+        <div  align="left"><asp:RadioButtonList ID="RadioButtonList1" RepeatDirection="Horizontal" width="150px" runat="server">
+        <asp:ListItem><span style="font-size:24px;font-weight:bold;" >usertable</span></asp:ListItem>       <asp:ListItem><span style="font-size:24px;font-weight:bold;" >userinterest</span></asp:ListItem>
+         </asp:RadioButtonList></div>
+ 
+         <div align="right"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
+         <br />
+         <asp:Button ID="query_button" runat="server" CssClass="button button3" OnClick="Button1_Click1" Text="Query" />
+
          <asp:GridView ID="GridView1" runat="server" style="position: relative; top: 0px; left: 0px; height: 209px; width: 352px">
         </asp:GridView>
-     <asp:Button ID="Button4" CssClass="button button2" runat="server"  Text="Query" />
+         
+        
+        
 
      </div>
 
@@ -399,7 +409,8 @@ window.onclick = function(event) {
   })();
 
 </script>
-    
+       
+            
 </form>
 </body>
 
