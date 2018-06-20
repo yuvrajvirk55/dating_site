@@ -116,7 +116,6 @@
     filter: alpha(opacity=50); /* For IE8 and earlier */
     color:white; 
     text-align:center;   
-  
 }
 
 .left2{ float:left;
@@ -188,14 +187,12 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
- <form runat="server" > 
-  
+  <form runat="server" >
  <div class="left">
 
      <h1>Number of Users: </h1>
      <asp:Label ID="percent" style="font-size:40px;" runat="server" ></asp:Label>
      </div>
-
 
       <div class="left2">
      <h1>Database load: </h1>
@@ -203,7 +200,6 @@
           <br />
           <div align="center"><asp:Button ID="submit" runat="server" Text="Check" /></div>
      </div>
-
 
       <div class="right">
     <h1>Clean Database: </h1>
@@ -229,15 +225,10 @@
        <br />
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
+          <asp:Button ID="Button1" runat="server" Height="69px" OnClick="Button1_Click1" Text="Query" Width="310px" />
         
      </div>
 
-
-  <script type="text/javascript">
-        window.onload = function callButtonClickEvent() {
-            document.getElementById('submit').click();
-        }
-</script>
 <script>
 ( function( $ ){
 	$( '#circle' ).progressCircle();
@@ -272,9 +263,7 @@
   })();
 
 </script>
-            
-     <asp:Button ID="Button1" runat="server" Height="69px" OnClick="Button1_Click1" Text="Button" Width="310px" />
-            
+                      
 </form>
 </body>
 </html>

@@ -88,7 +88,9 @@ namespace dating_site
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            Response.Write("sf");
+            Session["radio_query"] = RadioButtonList1.Text.ToString();
+            Session["text_query"] = TextBox1.Text.ToString();
+            Response.Redirect("query.aspx");
         }
     }
   }
