@@ -209,24 +209,6 @@
     color: white;
 }
 
-.button4 {
-    background-color: white;
-    color: black;
-    border: 2px solid #e7e7e7;
-}
-
-.button4:hover {background-color: #e7e7e7;}
-
-.button5 {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
-}
-
-.button5:hover {
-    background-color: #555555;
-    color: white;
-}
 
 </style>
 
@@ -234,7 +216,6 @@
 </head>
        
 <script>
-
     function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
@@ -243,8 +224,6 @@
             x.className = "topnav";
         }
     }
-
-
     </script>
 
 <body style="background-color:	#BEBEBE;">
@@ -290,12 +269,12 @@
      <h1>Query Database: </h1><br />
   
         <div  align="center"><asp:RadioButtonList ID="RadioButtonList1" width="150px" runat="server">
-        <asp:ListItem Value="usertable"><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem Value="userinterest"><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
+        <asp:ListItem Value="usertable"><span style="font-size:20px;font-family:Arial;" >usertable</span></asp:ListItem>    <asp:ListItem Value="userinterest"><span style="font-size:20px;font-family:Arial;" >userinterest</span></asp:ListItem>
          </asp:RadioButtonList></div>
        <br />
          <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
-          <asp:Button ID="Button1" runat="server" Height="69px" class="button button2" OnClick="Button1_Click1" Text="Query" Width="310px" />
+          <asp:Button ID="Button1" runat="server" class="button button2" OnClick="Button1_Click1" Text="Query" />
         
      </div>
 
