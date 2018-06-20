@@ -32,13 +32,9 @@ namespace dating_site
         {
              if (!string.IsNullOrEmpty(erase_email.Text) && !string.IsNullOrEmpty(erase_password.Text))
              {
-                 string filtered_email = erase_email.Text.ToString();
-                 int index = filtered_email.IndexOf('@');
-                 filtered_email = filtered_email.Substring(0, index);
-
                  //queries
-                 string checkemail = "select email from usertable WHERE email LIKE '" + filtered_email + "%'";
-                 string checkpassword = "select password from usertable WHERE email LIKE '" + filtered_email + "%'";
+                 string checkemail = "select email from usertable WHERE email LIKE 'admin%'";
+                 string checkpassword = "select password from usertable WHERE email LIKE 'admin%'";
 
                  SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                  SqlCommand command_email = new SqlCommand(checkemail, connection);
