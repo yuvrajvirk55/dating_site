@@ -172,7 +172,7 @@
         padding: 5px;
         margin:8px;
         width: 24% !important;
-        height: 200px !important;
+        height: 400px !important;
         display:block;
         opacity:0.4;
         background: rgba(0, 0, 0, 0.7);
@@ -281,7 +281,7 @@
      </div>
 
 
-      <div class="right">
+      <div class="left2">
 
      <h1>Database load: </h1>
           <span id="circle"></span>
@@ -289,13 +289,14 @@
      </div>
 
 
-      <div class="left2">
+      <div class="right">
     <h1>Clean Database: </h1>
 
-    <div style="align-content:center"><asp:TextBox ID="erase_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox></div>
+    <div align="center"><asp:TextBox ID="erase_email" class="input100" BackColor="#E1E1E1"  Width="250px" runat="server"  TextMode="Email" placeholder="Email"></asp:TextBox></div>
     <br />
-    <div style="align-content:center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
-    <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase"  /></div>
+   <div align="center"><asp:TextBox ID="erase_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox></div>
+    <br />
+          <div style="align-content:center"><asp:Button ID="myBtn" CssClass="button button3" runat="server" Text="Erase"  /></div>
     </div>
 
 
