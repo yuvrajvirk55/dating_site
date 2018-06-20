@@ -105,22 +105,24 @@ namespace dating_site
 
         }
 
-        protected void Button3_Click(object sender, EventArgs e)
+
+        protected void Button3_Click1(object sender, EventArgs e)
         {
-            Response.Write("hh");
-             String connectionString = "Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
-           /*  string selectCommand = "select * from usertable";
+            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Incorrect credentials !')", true);
+/*
+            String connectionString = "Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8";
+            /*  string selectCommand = "select * from usertable";
 
-             SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);         
-             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+              SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCommand, connectionString);         
+              SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
-             // Populate a new data table and bind it to the BindingSource.
-             DataTable table = new DataTable();
-             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
-             dataAdapter.Fill(table);
-             Response.Write(table);
-             GridView1.DataSource = table;*/
-
+              // Populate a new data table and bind it to the BindingSource.
+              DataTable table = new DataTable();
+              table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+              dataAdapter.Fill(table);
+              Response.Write(table);
+              GridView1.DataSource = table;*/
+/*
             var select = "select * from usertable";
             var c = new SqlConnection(connectionString); // Your Connection String here
             var dataAdapter = new SqlDataAdapter(select, c);
@@ -130,9 +132,9 @@ namespace dating_site
             dataAdapter.Fill(ds);
             //GridView1. = true;
             GridView1.DataSource = ds.Tables[0];
+            */
         }
-        
-          }
+    }
          }
                 
             

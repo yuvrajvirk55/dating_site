@@ -335,7 +335,7 @@
          <SortedDescendingCellStyle BackColor="#CAC9C9" />
          <SortedDescendingHeaderStyle BackColor="#00547E" />
      </asp:GridView>
-     <asp:Button ID="Button3" runat="server" CssClass="button button2" Text="Query" />
+     <asp:Button ID="Button3" CssClass="button button2" runat="server"  Text="Query" OnClick="Button3_Click1" />
 
      </div>
 
