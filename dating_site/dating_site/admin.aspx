@@ -157,7 +157,7 @@
 
 .right{ float:right;
         padding: 5px;
-        margin: 8px;
+        margin:8px;
         width: 24% !important;
         height: 200px !important;
         display:block;
