@@ -36,8 +36,7 @@
     .topnav {
         overflow: hidden;
         background-color: black;
-        color:white;
-       
+        color:white;   
     }
 
     .extra {
@@ -55,7 +54,7 @@
     .topnav a {
         display: block;
         text-align: center;
-        padding: 7px 16px;
+        padding: 3px 16px;
         text-decoration: none;
         font-size: 17px;
     }
@@ -236,6 +235,8 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
+
+
   <form runat="server" >
  <div class="left">
 

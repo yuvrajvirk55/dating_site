@@ -54,7 +54,7 @@
     .topnav a {
         display: block;
         text-align: center;
-        padding: 7px 16px;
+        padding: 3px 16px;
         text-decoration: none;
         font-size: 17px;
     }
@@ -122,16 +122,17 @@
 <body style="background-color:	#BEBEBE;">
 
 <div class="topnav" id="myTopnav">
-  <a href="#about"" class="extra" style="padding:5px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
-  <a href="#about"" class="extra" style="padding-right:2px;padding-left:16px"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
-  <a href="#news" class="extra"><i class="material-icons" style="font-size:25px;">explore</i></a>
-  <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;">public</i></a>
-   <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;">group_add</i></a>
+  <a href="#about"" class="extra" style="padding:3px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
+  <a href="#about"" class="extra" style="padding-right:2px;padding-left:16px;border-left: 1px groove white;"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
+  <a href="#news" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
+  <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
+   <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>
    <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
+
  <form runat="server" > 
      
 </form>
