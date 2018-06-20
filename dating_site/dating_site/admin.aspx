@@ -104,12 +104,6 @@
         border: 3px solid #73AD21;
     }
 
-
-#submit {
-  font-weight: bold;
-  color: #90c844;
-}
-
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -123,6 +117,17 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .button2 {
@@ -296,7 +301,8 @@
 
      <h1>Database load: </h1>
           <span id="circle"></span>
-          <h2 id="submit">Check</h2>
+          <br />
+         <div style="align-content:center"> <asp:Button ID="submit" runat="server" CssClass="button button1" Text="Check" /></div>
      </div>
 
 
