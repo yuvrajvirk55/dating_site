@@ -325,10 +325,10 @@
      <h1>Query Database: </h1><br />
   
         <div  align="left"><asp:RadioButtonList ID="RadioButtonList1" RepeatDirection="Horizontal" width="150px" runat="server">
-        <asp:ListItem><span style="font-size:24px;font-weight:bold;" >usertable</span></asp:ListItem>       <asp:ListItem><span style="font-size:24px;font-weight:bold;" >userinterest</span></asp:ListItem>
+        <asp:ListItem><span style="font-size:24px;font-weight:bold;font-family:Arial;" >usertable</span></asp:ListItem>       <asp:ListItem><span style="font-size:24px;font-family:Arial;font-weight:bold;" >userinterest</span></asp:ListItem>
          </asp:RadioButtonList></div>
  
-         <div align="right"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
+         <div align="center"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" placeholder="Input required columns.." Width="250px" runat="server"></asp:TextBox></div>
          <br />
          <asp:Button ID="query_button" runat="server" CssClass="button button3" OnClick="Button1_Click1" Text="Query" />
 
