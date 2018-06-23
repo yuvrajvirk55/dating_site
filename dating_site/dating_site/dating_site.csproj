@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="admin.aspx" />
     <Content Include="css\circle.css" />
+    <Content Include="css\style.css" />
     <Content Include="form.aspx" />
     <Content Include="images\background.jpg" />
     <Content Include="images\icons\favicon.ico" />
