@@ -23,6 +23,13 @@
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link href="css/circle.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
+
+   <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
+  <link rel="icon" href="http://designshack.net/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="style.css">
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+  <script type="text/javascript" src="js/currency-autocomplete.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="progress-circle.js"></script>
 
@@ -133,6 +140,8 @@
   </a>
 </div>
 
+
+
  <form runat="server" > 
      
 </form>
@@ -140,31 +149,3 @@
 
 </html>
 
-<?php
-mysql_connect("localhost","root","") or die("could not connect");
-mysql_select_db("test") or die("could not find database");
-$output = '';
-
-//collect
-if (isset($_POST['searchVal']) && trim($_POST['searchVal'])!='') {
-
-	$searchq = $_POST['searchVal'];
-	$searchq = preg_replace("#[^0-9a-z]#i","",$searchq);
-	
-	$query = mysql_query("SELECT * FROM authors WHERE fname LIKE '%$searchq%' OR lname LIKE '%$searchq%'") or die("could not search");
-	$count = mysql_num_rows($query);
-	if($count == 0){
-		 $output = 'there was no search result!';
-		}else{
-			while($row = mysql_fetch_array($query)){
-			   $firstname = $row['fname'];
-			   $lastname  = $row['lname'];
-			
-			    $output .= '<div> '.$firstname.' '.$lastname.' </div>';
-		   }
-		
-	   }
-	}
-echo($output);	
-
-?>
