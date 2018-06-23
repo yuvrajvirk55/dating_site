@@ -24,12 +24,6 @@
 <link href="css/circle.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
 
-   <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
-  <link rel="icon" href="http://designshack.net/favicon.ico">
-  <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
-  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
-  <script type="text/javascript" src="js/currency-autocomplete.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="progress-circle.js"></script>
 
@@ -139,17 +133,6 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
-
-    <div id="searchfield">
-        <form><input type="text" name="currency" class="biginput" id="autocomplete"></form>
-      </div><!-- @end #searchfield -->
-      
-      <div id="outputbox">
-        <p id="outputcontent">Choose a currency and the results will display here.</p>
-      </div>
-
-
 
 
 
