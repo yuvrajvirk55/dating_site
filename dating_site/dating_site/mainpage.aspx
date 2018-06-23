@@ -121,6 +121,7 @@
     </script>
 
 <body style="background-color:	#BEBEBE;">
+<form runat="server">
 
 <div class="topnav" id="myTopnav">
   <a href="#about"" class="extra" style="padding:3px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
@@ -128,7 +129,7 @@
   <a href="#news" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
    <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>
-   <a class="extra_left" >Let's date!</a>
+   <a class="extra_left" ><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Button" /></a>   
    <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -136,8 +137,6 @@
 </div>
 
 
-
- <form runat="server" > 
      
 </form>
 </body>
