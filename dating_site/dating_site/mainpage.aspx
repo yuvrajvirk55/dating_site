@@ -22,7 +22,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link href="css/circle.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="progress-circle.js"></script>
@@ -129,8 +130,8 @@
   <a href="#news" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
    <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>
-   <a class="extra_left" ><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Button" /></a>   
-   <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
+    <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
+   <a class="extra_left" ><asp:TextBox ID="searchbar_text" runat="server"></asp:TextBox><asp:Button ID="searchbar_button" text="click" runat="server" /></a>   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
