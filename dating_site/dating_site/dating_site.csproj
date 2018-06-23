@@ -101,6 +101,9 @@
     <Content Include="images\background.jpg" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="images\profile_pic.png" />
+    <Content Include="js\currency-autocomplete.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
+    <Content Include="js\jquery.autocomplete.min.js" />
     <Content Include="mainpage.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
