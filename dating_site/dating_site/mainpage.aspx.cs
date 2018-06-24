@@ -13,5 +13,10 @@ namespace dating_site
         {
 
         }
+
+        protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
+        {
+            searchbar_text.Text = "dfdsf";
+        }
     }
 }

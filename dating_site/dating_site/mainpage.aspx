@@ -187,14 +187,15 @@
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
    <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>
     <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
-   <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" /></a>   
+   <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png"  Width="42px" OnClick="searchbar_button_Click" /></a>   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
-
-
+     
+</form>
+<form runat="server">
+<asp:ImageButton ID="ImageButton1" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png"  Width="42px" />
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -208,7 +209,6 @@
 </div>
 
 
-     
 </form>
 
 
@@ -217,7 +217,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("searchbar_button");
+var btn = document.getElementById("searchbar_button2");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
