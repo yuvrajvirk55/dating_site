@@ -13,18 +13,24 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            searchbar_button.Attributes.Add("onclick", "popWin();return false;");
+            searchbar_button.Attributes.Add("onclick", "popWin();searchbar_button_Click;return false;");
 
 
+        }
 
 
-            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+        protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Write("dfg");
+            /*SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
             SqlCommand cmd;
 
+            if (!(searchbar_text == null))
+            {
 
-                cmd = new SqlCommand("select * from usertable", con);
+                cmd = new SqlCommand("select " + searchbar_text.Text.ToString() + " from usertable", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 try
@@ -36,15 +42,15 @@ namespace dating_site
                 }
                 catch
                 {
-                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
                 }
-           
             }
-        
+            else
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
 
-        protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
-        {
-            
+            }*/
         }
+
     }
 }
