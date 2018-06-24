@@ -79,17 +79,20 @@ button:hover, a:hover {
                     &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
                 </ItemTemplate>
             </asp:TemplateField>
-                        <asp:TemplateField>
+
+             <asp:TemplateField>
                 <ItemTemplate>
                     <asp:Image ID="Image1" runat="server" ImageUrl='upload/<%#Eval("pic").ToString() %>' />
                     <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
+
             <asp:TemplateField>
                 <ItemTemplate>
                     <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
+
             <asp:TemplateField >
                 <ItemTemplate>
                     <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
