@@ -28,5 +28,24 @@ namespace dating_site
                 GridView1.DataBind();
             
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string Selected = "";
+            foreach (GridViewRow gr in GridView1.Rows)
+            {
+                CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
+                Label lblName = (Label)gr.FindControl("lblStudentName");
+                // You can get other value same way               
+
+                if (cb != null && cb.Checked)
+                {
+                    string StdID = GridView1.DataKeys[gr.DataItemIndex].Values["StudentID"].ToString();
+                    Selected += "Student ID : " + StdID + ", Name : " + lblName.Text.Trim() + "<br/>";
+                }
+            }
+
+            Label1.Text = Selected;
+        }
     }
 }

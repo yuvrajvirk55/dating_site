@@ -44,7 +44,7 @@
     <div>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="StudentID" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
 
 
              <Columns>
@@ -56,19 +56,19 @@
                 &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:TemplateField HeaderText="Student Name">
+        <asp:TemplateField HeaderText="name">
             <ItemTemplate>
-                <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
+                <asp:Label ID="name" runat="server" Text='<%#Eval("name") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:TemplateField  HeaderText="Class">
+        <asp:TemplateField  HeaderText="gender">
             <ItemTemplate>
-                <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
+                <asp:Label ID="gender" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:TemplateField  HeaderText="Class">
+        <asp:TemplateField  HeaderText="pic">
             <ItemTemplate>
-                <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
+                <asp:Label ID="pic" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
@@ -85,6 +85,10 @@
 
 
         </asp:GridView>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <p>
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </p>
     </form>
 </body>
 </html>
