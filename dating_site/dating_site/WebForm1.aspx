@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="dating_site.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="ASPGridviewCheckbox.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,6 @@
 <head runat="server">
     <title></title>
 </head>
-<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <script src="scripts/jquery-1.7.1.js"></script>
     <script language="javascript" type="text/javascript">
         function SelectAllCheckboxes(chk) {
@@ -39,10 +38,9 @@
         }
         
     </script>
+
 <body>
     <form runat="server">
-</asp:Content>
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h3>Gridview With Checkbox</h3>
     <hr />
     <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
@@ -84,8 +82,6 @@
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />
     <br />
     <asp:Label ID="lblResult" runat="server" />
-   </asp:Content>
-
-    </form>
+</form>
 </body>
 </html>

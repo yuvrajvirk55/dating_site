@@ -7,12 +7,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace dating_site
+namespace ASPGridviewCheckbox
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                populateData();
+            }
+        }
+
+        private void populateData()
+        {
+
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
@@ -22,11 +31,10 @@ namespace dating_site
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
 
-                da.Fill(ds);
-                cmd.ExecuteNonQuery();
-                GridView1.DataSource = ds;
-                GridView1.DataBind();
-            
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
