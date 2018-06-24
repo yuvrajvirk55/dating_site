@@ -213,13 +213,22 @@
 </form>
 <script>
 
-            function UserOrEmailAvailability() {              
-            $.ajax({  
-                type: "POST",  
-                url: "mainpage.aspx/searchbar_button_Click",
-                contentType: "application/json; charset=utf-8",    
-            });
-                modal.style.display = "block";
+    function UserOrEmailAvailability() {
+         $.ajax({
+                    type: 'POST',
+                    url: "mainpage.aspx/searchbar_button_Click",
+               data: '{useroremail: "' + $("#<%=searchbar_text.Text%>")[0].value + '" }',// user name or email value  
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (response) {
+                        alert("success");
+                    },
+                    error: function(response) {
+                        alert("Error");
+                    }
+                    
+                });
+               modal.style.display = "block";
             }
 
     function popWin() {

@@ -19,7 +19,7 @@ namespace dating_site
         }
 
         [System.Web.Services.WebMethod]
-        protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
+        protected void searchbar_button_Click(string useroremail)
         {
           SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
