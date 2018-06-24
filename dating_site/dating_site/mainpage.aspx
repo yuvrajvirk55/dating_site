@@ -192,8 +192,7 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
-     
-</form>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -202,10 +201,16 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>Some text in the Modal..</p>
+      <div class="new">
+      <asp:GridView ID="GridView1" runat="server"> 
+     </asp:GridView>    
+      </div>
   </div>
 
 </div>
 
+         
+</form>
 <script>
     function popWin(){
         modal.style.display = "block";
@@ -220,11 +225,6 @@ var btn = document.getElementById("searchbar_button");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-//btn.onclick = function() {
-//    modal.style.display = "block";
-//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
