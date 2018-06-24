@@ -212,25 +212,6 @@
          
 </form>
 <script>
-
-    function UserOrEmailAvailability() {
-         $.ajax({
-                    type: 'POST',
-                    url: "mainpage.aspx/searchbar_button_Click",
-               data: '{useroremail: "' + $("#<%=searchbar_text.Text%>")[0].value + '" }',// user name or email value  
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    success: function (response) {
-                        modal.style.display = "block";
-                    },
-                    error: function(response) {
-                        alert("Error");
-                    }
-                    
-                });
-               
-            }
-
     function popWin() {
 
         modal.style.display = "block";
