@@ -14,14 +14,18 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            searchbar_button.Attributes.Add("onclick", "searchbar_button_Click1;");
+         
+        }
+
+        protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
+        {
 
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
             SqlCommand cmd;
 
-            cmd = new SqlCommand("select * from usertable", con);
+            cmd = new SqlCommand("SELECT first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%admin%'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -35,15 +39,9 @@ namespace dating_site
             {
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
             }
-
-
-        }
-
-        protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
-        {
             
-
- 
+              ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+        }
     }
     }
-    }
+     
