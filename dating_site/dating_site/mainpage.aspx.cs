@@ -25,7 +25,7 @@ namespace dating_site
 
             SqlCommand cmd;
 
-            cmd = new SqlCommand("SELECT first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '" + searchbar_text.Text.ToString() + "%'", con);
+            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '" + searchbar_text.Text.ToString() + "%'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -41,6 +41,26 @@ namespace dating_site
             }
             
               ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string Selected = "";
+            foreach (GridViewRow gr in GridView1.Rows)
+            {
+                CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
+                Label lblName = (Label)gr.FindControl("lblStudentName");
+                // You can get other value same way                
+
+                if (cb != null && cb.Checked)
+                {
+                    string StdID = GridView1.DataKeys[gr.DataItemIndex].Values["email"].ToString();
+                    Selected += "Student ID : " + StdID + "<br/>";
+                }
+            }
+
+            lblResult.Text = Selected;
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
     }
     }
