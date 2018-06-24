@@ -25,7 +25,7 @@ namespace dating_site
 
             SqlCommand cmd;
 
-            cmd = new SqlCommand("SELECT first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%admin%'", con);
+            cmd = new SqlCommand("SELECT first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '" + searchbar_text.Text.ToString() + "%'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
