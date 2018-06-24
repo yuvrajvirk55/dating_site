@@ -35,14 +35,16 @@ namespace dating_site
             foreach (GridViewRow gr in GridView1.Rows)
             {
                 CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
-                Label lblName = (Label)gr.FindControl("lblStudentName");
-                // You can get other value same way               
+                Label name = (Label)gr.FindControl("name");
+                Label gender = (Label)gr.FindControl("gender");
+                Label pic = (Label)gr.FindControl("pic");
+                //  You can get other value same way               
 
-                if (cb != null && cb.Checked)
-                {
-                    string StdID = GridView1.DataKeys[gr.DataItemIndex].Values["StudentID"].ToString();
-                    Selected += "Student ID : " + StdID + ", Name : " + lblName.Text.Trim() + "<br/>";
-                }
+                //  if (cb != null && cb.Checked)
+                //  {
+                string StdID = GridView1.DataKeys[gr.DataItemIndex].Values["email"].ToString();
+                    Selected += "email : " + StdID + ", Name : " + lblName.Text.Trim() + "<br/>";
+               // }
             }
 
             Label1.Text = Selected;

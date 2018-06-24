@@ -58,17 +58,17 @@
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Student Name">
             <ItemTemplate>
-                <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
+                <asp:Label ID="name" runat="server" Text='<%#Eval("name") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField  HeaderText="Class">
             <ItemTemplate>
-                <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
+                <asp:Label ID="gender" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField  HeaderText="Class">
             <ItemTemplate>
-                <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("email") %>'></asp:Label>
+                <asp:Label ID="pic" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
