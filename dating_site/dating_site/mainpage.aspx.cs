@@ -11,12 +11,12 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           searchbar_button.Attributes.Add("onclick", "popWin();return false;");
         }
 
         protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
         {
-            searchbar_text.Text = "dfdsf";
+            
         }
     }
 }

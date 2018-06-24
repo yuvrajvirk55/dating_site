@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mainpage.aspx.cs" Inherits="dating_site.mainpage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mainpage.aspx.cs" MaintainScrollPositionOnPostBack="true" Inherits="dating_site.mainpage" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -194,8 +194,6 @@
 </div>
      
 </form>
-<form runat="server">
-<asp:ImageButton ID="ImageButton1" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png"  Width="42px" />
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -208,24 +206,25 @@
 
 </div>
 
-
-</form>
-
-
 <script>
+    function popWin(){
+        modal.style.display = "block";
+    }
+
+
 // Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("searchbar_button2");
+var btn = document.getElementById("searchbar_button");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+//btn.onclick = function() {
+//    modal.style.display = "block";
+//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
