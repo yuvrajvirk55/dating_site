@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace dating_site
 {
@@ -13,7 +14,7 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            searchbar_button.Attributes.Add("onclick", "popWin();return false;");
+            searchbar_button.Attributes.Add("onclick", "searchbar_button_Click1;");
 
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
@@ -38,11 +39,11 @@ namespace dating_site
 
         }
 
-        [System.Web.Services.WebMethod]
-        protected void searchbar_button_Click(object sender, EventArgs e)
+        protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
         {
+            
 
-        }
-
+ 
+    }
     }
     }
