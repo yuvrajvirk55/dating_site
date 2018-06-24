@@ -210,7 +210,6 @@
 </div>
 
          
-</form>
 <script>
     function popWin() {
         document.getElementById('myModal').style.display = "block";
@@ -231,6 +230,9 @@ window.onclick = function(event) {
     }
 }
 </script>
+
+         
+</form>
 
 </body>
 
