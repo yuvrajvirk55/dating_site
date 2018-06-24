@@ -21,6 +21,7 @@ namespace dating_site
         [System.Web.Services.WebMethod]
         protected void searchbar_button_Click(string useroremail)
         {
+            Response.Write("df");
           SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
@@ -40,7 +41,9 @@ namespace dating_site
                 {
                     Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
                 }
-            }
+          
+        }
+
          
         }
 

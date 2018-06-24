@@ -221,14 +221,14 @@
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
                     success: function (response) {
-                        alert("success");
+                        modal.style.display = "block";
                     },
                     error: function(response) {
                         alert("Error");
                     }
                     
                 });
-               modal.style.display = "block";
+               
             }
 
     function popWin() {
