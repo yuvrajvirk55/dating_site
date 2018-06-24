@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASPGridviewCheckbox {
+namespace dating_site {
     
     
     public partial class WebForm1 {
