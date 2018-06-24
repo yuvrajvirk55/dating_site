@@ -81,7 +81,8 @@ button:hover, a:hover {
             </asp:TemplateField>
                         <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
+                    <asp:Image ID="Image1" runat="server" ImageUrl='upload/<%#Eval("pic").ToString() %>' />
+                    <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField>
@@ -95,14 +96,6 @@ button:hover, a:hover {
                 </ItemTemplate>
             </asp:TemplateField>
 
-
-            <div class="card_card">
-            <asp:Image ID="Image1" ImageUrl="/upload/'<%#Eval("pic") %>'" runat="server" style="width:100%" />
-  <h1>  <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></h1>
-  <p class="title_card">CEO & Founder, Example</p>
-  <p> <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label></p>
- <p><button>check</button></p>
-</div>
         </Columns>
     </asp:GridView>
     <br />

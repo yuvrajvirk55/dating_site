@@ -22,24 +22,6 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// lblStudentName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStudentName;
-        
-        /// <summary>
-        /// lblClass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblClass;
-        
-        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
