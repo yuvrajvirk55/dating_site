@@ -5,6 +5,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
+    
+    <style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+</style>
+
 </head>
     <script src="scripts/jquery-1.7.1.js"></script>
     <script language="javascript" type="text/javascript">
@@ -39,6 +57,7 @@
         
     </script>
 
+
 <body>
     <form runat="server">
 
@@ -52,15 +71,21 @@
 
              <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("pic") %>' width="120px" Height="100px"/>
+                      <h2 style="text-align:center">User Profile Card</h2>
+                    <div class="card">
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("pic") %>' width="100%"/>
+                        <h1><asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></h1>
+                        <p class="title"><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label></p>
+                    </div>
+                    
                     <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
 
             <asp:TemplateField>
                 <ItemTemplate>
-                    <h2><asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></h2>
-                       <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
+                    <h2></h2>
+                       
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -69,6 +94,8 @@
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />
     <br />
     <asp:Label ID="lblResult" runat="server" />
+
+
 </form>
 </body>
 </html>
