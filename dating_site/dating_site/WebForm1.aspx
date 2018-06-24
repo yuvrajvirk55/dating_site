@@ -52,7 +52,7 @@
 
              <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:Image ID="Image1" runat="server" ImageUrl='upload/amitojsingh073-675320-579342-varun-dhawan-052917.jpg' width="120px" Height="100px"/>
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("pic") %>' width="120px" Height="100px"/>
                     <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
