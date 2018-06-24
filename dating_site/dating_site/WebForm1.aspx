@@ -44,7 +44,7 @@
     <div>
     
     </div>
-     <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="StudentID" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+     <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
 
 
             <Columns>
@@ -58,17 +58,17 @@
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Student Name">
             <ItemTemplate>
-                <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("StudentName") %>'></asp:Label>
+                <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField  HeaderText="Class">
             <ItemTemplate>
-                <asp:Label ID="lblClass" runat="server" Text='<%#Eval("Class") %>'></asp:Label>
+                <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField  HeaderText="Class">
             <ItemTemplate>
-                <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("RollNo") %>'></asp:Label>
+                <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("email") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
