@@ -81,7 +81,7 @@ namespace dating_site
                 Session["email"] = register_email.Text;
                 Session["fname"] = register_fname.Text;
                 Session["lname"] = register_lname.Text;
-                Session["img"] = filtered_name + "-" + strname;
+                Session["img"] = filtered_name.ToString();
                 Response.Redirect("form.aspx");
             }
             

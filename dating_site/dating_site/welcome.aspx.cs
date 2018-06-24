@@ -13,7 +13,7 @@ namespace dating_site
         {
 
             Label1.Text = Session["fname"] + " " + Session["lname"];
-            Image1.ImageUrl=Session["img"].ToString();
+            Image1.ImageUrl=Session["img"]+"";
 
         }
     }
