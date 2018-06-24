@@ -6,6 +6,39 @@
 <head runat="server">
     <title></title>
 </head>
+
+<script src="Scripts/jquery-1.7.1.js"></script>
+<script language="javascript" type="text/javascript">
+    function SelectAllCheckboxes(chk) {
+        var totalRows = $("#<%=GridView1.ClientID %> tr").length;
+        var selected = 0;
+        $('#<%=GridView1.ClientID %>').find("input:checkbox").each(function () {
+            if (this != chk) {
+                this.checked = chk.checked;
+                selected += 1;
+            }
+        });
+    }
+ 
+    function CheckedCheckboxes(chk) {
+        if (chk.checked) {
+            var totalRows = $('#<%=GridView1.ClientID %> :checkbox').length;
+            var checked = $('#<%=GridView1.ClientID %> :checkbox:checked').length
+            if (checked == (totalRows - 1)) {
+                $('#<%=GridView1.ClientID %>').find("input:checkbox").each(function () {
+                    this.checked = true;
+                });
+            }
+            else {
+                $('#<%=GridView1.ClientID %>').find('input:checkbox:first').removeAttr('checked');
+            }
+        }
+        else {
+            $('#<%=GridView1.ClientID %>').find('input:checkbox:first').removeAttr('checked');
+        }
+    }       
+</script>
+
 <body>
     <form id="form1" runat="server">
     <div>
