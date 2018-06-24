@@ -59,8 +59,16 @@ namespace dating_site
                 //checking if the email already exists
 
                 // saving image
+
+                string filtered_email = register_email.Text.ToString();
+                int index = filtered_email.IndexOf('@');
+                filtered_email = filtered_email.Substring(0, index);
+
+
                 string strname = FileUpload1.FileName.ToString();
-                string filtered_name = register_fname.Text + "_" + register_lname.Text+"-"+strname;
+                var result = strname.Substring(strname.Length - 4);
+
+                string filtered_name = filtered_email + result; ;
 
                 FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + filtered_name);
 
