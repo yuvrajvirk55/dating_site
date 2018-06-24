@@ -100,6 +100,8 @@
     <Content Include="images\background.jpg" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="images\profile_pic.png" />
+    <Content Include="images\searchbutton.png" />
+    <Content Include="images\searchbutton2.png" />
     <Content Include="mainpage.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">

@@ -40,12 +40,12 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.TextBox searchbar_text;
         
         /// <summary>
-        /// searchbar_button control.
+        /// ImageButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchbar_button;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
     }
 }
