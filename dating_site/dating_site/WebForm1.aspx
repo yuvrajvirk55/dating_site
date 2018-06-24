@@ -14,9 +14,11 @@
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
                 <table>
-                    <tr><td><img src="<%#Eval("pic")%>" /></td></tr>
-                     <tr><td><%#Eval("pic")%></td></tr>
-                     <tr><td><%#Eval("pic")%></td></tr>
+                    <tr><td><img src="~/upload/<%#Eval("pic")%>" /></td></tr>
+                     <tr><td><%#Eval("name")%></td></tr>
+                     <tr><td><%#Eval("gender")%></td></tr>
+                    <tr><asp:Button ID="Button1" runat="server" Text="Button" /></tr>
+                    
 
                 </table>
 

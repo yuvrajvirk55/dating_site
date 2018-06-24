@@ -121,6 +121,13 @@
     <Content Include="scripts\jquery-ui-1.8.20.min.js" />
     <Content Include="scripts\modernizr-2.5.3.js" />
     <None Include="scripts\_references.js" />
+    <Content Include="upload\amitojsingh073-675320-579342-varun-dhawan-052917.jpg" />
+    <Content Include="upload\amritpal.singh0047-IMG_1555.JPG" />
+    <Content Include="upload\anmol-ComputerDesktopWallpapersCollection510_084.jpg" />
+    <Content Include="upload\arshandeep22-Image__8031-2018-04-04.jpg" />
+    <Content Include="upload\arshdeep.kaur2-WhatsApp Image 2018-05-04 at 11.15.50 AM.jpeg" />
+    <Content Include="upload\arvind-group.jpg" />
+    <Content Include="upload\arvindvirk2-ComputerDesktopWallpapersCollection437_040.jpg" />
     <Content Include="WebForm1.aspx" />
     <Content Include="welcome.aspx" />
     <None Include="Properties\PublishProfiles\lets_date.pubxml" />
@@ -232,7 +239,6 @@
   <ItemGroup>
     <Folder Include="fonts\" />
     <Folder Include="scripts\WebForms\" />
-    <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

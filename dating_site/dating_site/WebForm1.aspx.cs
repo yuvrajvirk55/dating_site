@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +13,20 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            con.Open();
 
+            SqlCommand cmd;
+
+            cmd = new SqlCommand("SELECT first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+
+                da.Fill(ds);
+                cmd.ExecuteNonQuery();
+                ListView1.DataSource = ds;
+                ListView1.DataBind();
+            
         }
     }
 }
