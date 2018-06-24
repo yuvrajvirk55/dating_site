@@ -72,7 +72,7 @@ namespace dating_site
 
                 FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + filtered_name);
 
-                filtered_name = "/upload/" + filtered_name.Trim(); ;
+                filtered_name = "~/upload/" + filtered_name.Trim(); ;
 
                 //encrpting pass
                 string pass = Encrypt.EncryptString(register_password.Text, register_password.Text);
