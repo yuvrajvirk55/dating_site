@@ -44,10 +44,10 @@
     <div>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+     <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="StudentID" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
 
 
-             <Columns>
+            <Columns>
         <asp:TemplateField >
             <HeaderTemplate>                   
                     &nbsp;&nbsp; <asp:CheckBox ID="chkCheckAll" runat="server" onclick="javascript:SelectAllCheckboxes(this)" />
@@ -56,19 +56,19 @@
                 &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:TemplateField HeaderText="name">
+        <asp:TemplateField HeaderText="Student Name">
             <ItemTemplate>
-                <asp:Label ID="name" runat="server" Text='<%#Eval("name") %>'></asp:Label>
+                <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("StudentName") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:TemplateField  HeaderText="gender">
+        <asp:TemplateField  HeaderText="Class">
             <ItemTemplate>
-                <asp:Label ID="gender" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
+                <asp:Label ID="lblClass" runat="server" Text='<%#Eval("Class") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:TemplateField  HeaderText="pic">
+        <asp:TemplateField  HeaderText="Class">
             <ItemTemplate>
-                <asp:Label ID="pic" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
+                <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("RollNo") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
@@ -80,9 +80,6 @@
     <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
     <SortedDescendingCellStyle BackColor="#E5E5E5" />
     <SortedDescendingHeaderStyle BackColor="#242121" />
-
-
-
 
         </asp:GridView>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
