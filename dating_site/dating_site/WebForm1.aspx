@@ -38,37 +38,7 @@
         }
         
     </script>
-    <style>
-.card_card{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
 
-.title_card {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-</style>
 <body>
     <form runat="server">
 
@@ -82,23 +52,17 @@ button:hover, a:hover {
 
              <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:Image ID="Image1" runat="server" ImageUrl='upload/<%#Eval("pic").ToString() %>' />
+                    <asp:Image ID="Image1" runat="server" ImageUrl='upload/amitojsingh073-675320-579342-varun-dhawan-052917.jpg' width="120px" Height="100px"/>
                     <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
 
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
+                    <h2><asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></h2>
+                       <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-
-            <asp:TemplateField >
-                <ItemTemplate>
-                    <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-
         </Columns>
     </asp:GridView>
     <br />
