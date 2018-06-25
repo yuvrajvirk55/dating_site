@@ -81,21 +81,12 @@
                     <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <h2></h2>
-                       
-                </ItemTemplate>
-            </asp:TemplateField>
         </Columns>
     </asp:GridView>
     <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />
     <br />
     <asp:Label ID="lblResult" runat="server" />
-
-
 </form>
 </body>
 </html>
