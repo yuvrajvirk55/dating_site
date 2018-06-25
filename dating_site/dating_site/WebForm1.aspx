@@ -63,12 +63,11 @@
 
     <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
         <Columns>
-            <asp:TemplateField >
-                <ItemTemplate>
-                    &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
+              <asp:TemplateField >
+                <ItemTemplate>             
                 </ItemTemplate>
             </asp:TemplateField>
-
+         
              <asp:TemplateField>
                 <ItemTemplate>
                       <h2 style="text-align:center">User Profile Card</h2>
@@ -76,17 +75,24 @@
                         <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("pic") %>' width="100%"/>
                         <h1><asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></h1>
                         <p class="title"><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label></p>
+                        <br />
+                         &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
                     </div>
                     
                     <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
                 </ItemTemplate>
             </asp:TemplateField>
+         
         </Columns>
     </asp:GridView>
     <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />
     <br />
     <asp:Label ID="lblResult" runat="server" />
+
 </form>
 </body>
 </html>
