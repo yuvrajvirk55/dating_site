@@ -1,98 +1,101 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="dating_site.WebForm1" %>
+﻿<%@ Page language="C#" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+<script runat="server">
 
-    
-    <style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
+    protected void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        MessageLabel.Text = "The key value is " +
+          DepartmentsListView.SelectedValue.ToString() + ".";
+       }
 
-.title {
-  color: grey;
-  font-size: 18px;
-}
+</script>
 
-</style>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head id="Head1" runat="server">
+    <title>ListView SelectedValue Example</title>
+    <style type="text/css">
+      .header
+      {
+        border: 1px solid #008080;
+        background-color: #008080;
+        color: White;
+      }
+      .item td { border: 1px solid #008080; }
+      .selection td  
+      {
+        border: 1px solid #008080; 
+        background-color: #7FFF00;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form1" runat="server">
 
-</head>
-    <script src="scripts/jquery-1.7.1.js"></script>
-    <script language="javascript" type="text/javascript">
-        function SelectAllCheckboxes(chk) {
-            var totalRows = $("#<%=GridView1.ClientID %> tr").length;
-            var selected = 0;
-            $('#<%=GridView1.ClientID %>').find("input:checkbox").each(function () {
-                if (this != chk) {
-                    this.checked = chk.checked;
-                    selected += 1;
-                }
-            });
-        }
+      <h3>ListView SelectedValue Example</h3>
 
-        function CheckedCheckboxes(chk) {
-            if (chk.checked) {
-                var totalRows = $('#<%=GridView1.ClientID %> :checkbox').length;
-                var checked = $('#<%=GridView1.ClientID %> :checkbox:checked').length
-                if (checked == (totalRows - 1)) {
-                    $('#<%=GridView1.ClientID %>').find("input:checkbox").each(function () {
-                        this.checked = true;
-                    });
-                }
-                else {
-                    $('#<%=GridView1.ClientID %>').find('input:checkbox:first').removeAttr('checked');
-                }
-            }
-            else {
-                $('#<%=GridView1.ClientID %>').find('input:checkbox:first').removeAttr('checked');
-            }
-        }
-        
-    </script>
+      <asp:ListView runat="server" 
+        ID="DepartmentsListView"
+        DataSourceID="DepartmentDataSource" 
+        DataKeyNames="email" 
+        OnSelectedIndexChanged="DepartmentsListView_SelectedIndexChanged">
+        <LayoutTemplate>
+          <b>Department List</b>
+          <br />
+          <table width="500px" runat="server" id="tblDepartments">
+            <tr class="header" runat="server">
+              <th runat="server">&nbsp;</th>
+              <th runat="server">Department Name</th>
+              <th runat="server">Group Name</th>
+            </tr>
+            <tr runat="server" id="itemPlaceholder" />
+          </table>
+        </LayoutTemplate>
+        <ItemTemplate>
+          <tr class="item" runat="server">
+            <td>
+              <asp:LinkButton runat="server" 
+                ID="SelectButton" 
+                Text="Add Friend"
+                CommandName="Select" />
+            </td>
+            <td>
+              <asp:Label runat="server" ID="NameLabel" Text='<%#Eval("name") %>' />
+            </td>
+            <td>
+              <asp:Label runat="server" ID="GroupNameLabel" Text='<%#Eval("gender") %>' />
+            </td>
+          </tr>
+        </ItemTemplate>
+        <SelectedItemTemplate>
+          <tr class="selection" runat="server">
+            <td>&nbsp;</td>
+            <td>
+              <asp:Label runat="server" ID="NameLabel" Text='<%#Eval("name") %>' />
+            </td>
+            <td>
+              <asp:Label runat="server" ID="GroupNameLabel" Text='<%#Eval("gender") %>' />
+            </td>
+          </tr>
+        </SelectedItemTemplate>
+      </asp:ListView>
+      <br/>
 
+      <asp:Label ID="MessageLabel"
+        ForeColor="Red"
+        runat="server"/>
 
-<body>
-    <form runat="server">
+      <!-- This example uses Microsoft SQL Server and connects      -->
+      <!-- to the AdventureWorks sample database. Use an ASP.NET    -->
+      <!-- expression to retrieve the connection string value       -->
+      <!-- from the Web.config file.                                -->
+      <asp:SqlDataSource ID="DepartmentDataSource" runat="server" 
+        ConnectionString="Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8"
+        SelectCommand="SELECT userinterest.email as email,first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email">
+      </asp:SqlDataSource>
 
-    <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
-        <Columns>
-              <asp:TemplateField >
-                <ItemTemplate>             
-                </ItemTemplate>
-            </asp:TemplateField>
-         
-             <asp:TemplateField>
-                <ItemTemplate>
-                      <h2 style="text-align:center">User Profile Card</h2>
-                    <div class="card">
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("pic") %>' width="100%"/>
-                        <h1><asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></h1>
-                        <p class="title"><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label></p>
-                        <br />
-                         &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
-                    </div>
-                    
-                    <asp:Label ID="lblRollNo" runat="server" Text=''></asp:Label>
-                                </td>
-                            </tr>
-                        </table>
-                </ItemTemplate>
-            </asp:TemplateField>
-         
-        </Columns>
-    </asp:GridView>
-    <br />
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />
-    <br />
-    <asp:Label ID="lblResult" runat="server" />
-
-</form>
-</body>
+    </form>
+  </body>
 </html>

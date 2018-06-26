@@ -18,6 +18,11 @@ namespace dating_site
                 populateData();
             }
         }
+        protected void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageLabel.Text = "The key value is " +
+              DepartmentsListView.SelectedValue.ToString() + ".";
+        }
 
         private void populateData()
         {
@@ -33,14 +38,14 @@ namespace dating_site
 
             da.Fill(ds);
             cmd.ExecuteNonQuery();
-            GridView1.DataSource = ds;
-            GridView1.DataBind();
+           // GridView1.DataSource = ds;
+           // GridView1.DataBind();
   
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string Selected = "";
+           /* string Selected = "";
             foreach (GridViewRow gr in GridView1.Rows)
             {
                 CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
@@ -54,7 +59,7 @@ namespace dating_site
                 }
             }
 
-            lblResult.Text = Selected;
+            lblResult.Text = Selected;*/
         }
     }
 }
