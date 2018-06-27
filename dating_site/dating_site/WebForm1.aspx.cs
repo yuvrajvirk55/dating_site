@@ -33,8 +33,8 @@ namespace dating_site
 
             da.Fill(ds);
             cmd.ExecuteNonQuery();
-         ListView1.DataSource = ds;
-           ListView1.DataBind();
+        // ListView1.DataSource = ds;
+         //  ListView1.DataBind();
   
         }
        
