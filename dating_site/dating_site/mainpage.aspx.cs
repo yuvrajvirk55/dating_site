@@ -49,7 +49,7 @@ namespace dating_site
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
 
-       public void sendrequest()
+       public void sendrequest(string name)
         {
             string email = "uvnemk@gmail.com";
 
@@ -61,10 +61,16 @@ namespace dating_site
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE Customers SET sendrequests = 'Frankfurt' where email LIKE '" + filtered_email + "%'";
+                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, ',"+name+"') where email LIKE '" + filtered_email + "%'";
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();
+                cmd.ExecuteNonQuery();
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, ',"+name+"') where email LIKE '" + filtered_email + "%'";
+                cmd.Connection = sqlConnection1;
+
                 cmd.ExecuteNonQuery();
                 sqlConnection1.Close();
             }
