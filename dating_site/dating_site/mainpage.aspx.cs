@@ -19,7 +19,12 @@ namespace dating_site
 
         protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
         {
+            loaddata();
+       
+        }
 
+        public void loaddata()
+        {
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
@@ -34,16 +39,15 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
                 GridView1.DataSource = ds;
                 GridView1.DataBind();
-           
+
             }
             catch
             {
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
             }
-            
-              ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
-        }
 
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+        }
 
     }
     }
