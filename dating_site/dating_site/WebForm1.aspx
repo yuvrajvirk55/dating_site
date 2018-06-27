@@ -27,7 +27,7 @@
       <asp:ListView runat="server" 
         ID="DepartmentsListView"
         DataKeyNames="email" 
-     onselectedindexchanging="ListView1_SelectedIndexChanging">
+        onselectedindexchanging="ListView1_SelectedIndexChanging">
         <LayoutTemplate>
           <b>Department List</b>
           <br />

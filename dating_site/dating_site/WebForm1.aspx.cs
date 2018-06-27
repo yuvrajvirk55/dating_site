@@ -31,10 +31,9 @@ namespace dating_site
         }
 
 
-        protected void ListView1_SelectedIndexChanging(object sender, ListViewSelectEventArgs e)
+        protected void ListView1_SelectedIndexChanging(object sender, EventArgs e)
         {
-            MessageLabel.Text = "The key value is " +
-        DepartmentsListView.SelectedValue.ToString() + ".";
+            MessageLabel.Text = "The key value is " + DepartmentsListView.SelectedValue.ToString() + ".";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
