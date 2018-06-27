@@ -33,6 +33,7 @@
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+        background: #f1f1f1;
     }
 
     .topnav {
@@ -202,6 +203,8 @@ li {
 
 
 
+
+
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
@@ -246,7 +249,41 @@ li {
         padding: 0;
     }
 }
- 
+
+
+/*Adding for profile grid */
+
+.card_profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title_profile {
+  color: grey;
+  font-size: 18px;
+}
+
+.button_profile {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+.button_profile:hover{
+  opacity: 0.7;
+}
+
 </style>
 
 
@@ -324,8 +361,7 @@ li {
       <h2>About Me</h2>
       <div class="fakeimg" style="height:100px;">Image</div>
       <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    
+    </div>  
   </div>
 </div>
 
