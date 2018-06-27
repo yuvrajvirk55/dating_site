@@ -33,11 +33,11 @@ namespace dating_site
 
             da.Fill(ds);
             cmd.ExecuteNonQuery();
-           // GridView1.DataSource = ds;
-           // GridView1.DataBind();
+         ListView1.DataSource = ds;
+           ListView1.DataBind();
   
         }
-
+       
         protected void Button1_Click(object sender, EventArgs e)
         {
            /* string Selected = "";
