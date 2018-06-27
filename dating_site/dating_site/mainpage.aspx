@@ -194,11 +194,6 @@
             lblResult.Text = Selected;
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
           
-
-          
-              (row.Cells[0].FindControl("btnSold") as Button).Text ="edf";
-         row.
-
         }
 </script>
 
@@ -225,14 +220,18 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <h2>People</h2>
+      <br />
       <div class="new">
          <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand">
         <columns>
-                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>
+
+                <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>
+            <asp:Image runat="server"></asp:Image>
                 <asp:boundfield datafield="name" headertext="Contact ID"/>
                 <asp:boundfield datafield="gender" headertext="First Name"/> 
                 <asp:boundfield datafield="pic"  headertext="Last Name"/>
+
               </columns>
     </asp:GridView>
     <br />
