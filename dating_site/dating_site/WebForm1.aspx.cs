@@ -11,15 +11,12 @@ namespace dating_site
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        int x = 1;
 
         protected void Page_Load(object sender, EventArgs e)
         { 
       
-            if (x==1)
             {
                 populateData();
-                x++;
             }
         }
 
@@ -41,11 +38,7 @@ namespace dating_site
             DepartmentsListView.DataBind();
   
         }
-        protected void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MessageLabel.Text = "The key value is " +
-              DepartmentsListView.SelectedValue.ToString() + ".";
-        }
+      
         protected void Button1_Click(object sender, EventArgs e)
         {
            /* string Selected = "";
