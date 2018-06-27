@@ -162,6 +162,19 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {font-size: 16px;}
 </style>
 
 
@@ -230,7 +243,7 @@
          <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
 
               <Columns>  
-                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>  
+                 <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
                     
                 <asp:TemplateField >
                 <ItemTemplate>  
