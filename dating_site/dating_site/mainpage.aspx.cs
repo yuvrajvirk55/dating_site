@@ -49,6 +49,11 @@ namespace dating_site
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
 
+       public void sendrequest()
+        {
+
+
+        }
     }
     }
      
