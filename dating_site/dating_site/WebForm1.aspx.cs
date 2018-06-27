@@ -18,11 +18,6 @@ namespace dating_site
                 populateData();
             }
         }
-        protected void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*MessageLabel.Text = "The key value is " +
-              DepartmentsListView.SelectedValue.ToString() + ".";*/
-        }
 
         private void populateData()
         {
