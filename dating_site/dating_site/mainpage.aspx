@@ -217,6 +217,7 @@
 </div>
 
 
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -227,15 +228,34 @@
       <br />
       <div class="new">
          <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
-        <columns>
-           <br />
-                <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>
-               <asp:ImageField DataImageUrlField="pic" ></asp:ImageField>
-                <asp:boundfield datafield="name" headertext="Contact ID"/>
-                <asp:boundfield datafield="gender" headertext="First Name"/> 
-                <asp:boundfield datafield="pic"  headertext="Last Name"/>             
-            <br />
-              </columns>
+
+              <Columns>      
+                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>   
+            <asp:TemplateField >
+                <ItemTemplate>
+                    <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+
+             <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Label ID="lblClass" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+
+
+        </Columns>
     </asp:GridView>
     <br />
   
