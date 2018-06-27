@@ -125,7 +125,7 @@
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -223,14 +223,17 @@
     <h2>People</h2>
       <br />
       <div class="new">
-         <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand">
+         <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
         <columns>
 
                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>
-            <asp:Image runat="server"></asp:Image>
+              
                 <asp:boundfield datafield="name" headertext="Contact ID"/>
                 <asp:boundfield datafield="gender" headertext="First Name"/> 
                 <asp:boundfield datafield="pic"  headertext="Last Name"/>
+
+                <asp:ImageField>
+                </asp:ImageField>
 
               </columns>
     </asp:GridView>
