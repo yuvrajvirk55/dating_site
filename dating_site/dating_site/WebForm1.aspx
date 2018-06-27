@@ -1,4 +1,4 @@
-﻿<%@ Page language="C#" CodeBehind="WebForm1.aspx.cs" Inherits="dating_site.WebForm1" %>
+﻿<%@ Page language="C#" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -36,8 +36,23 @@
 
       <h3>ListView SelectedValue Example</h3>
 
-      <asp:ListView runat="server"  ID="DepartmentsListView"   DataKeyNames="email"  OnSelectedIndexChanged="DepartmentsListView_SelectedIndexChanged">
-
+      <asp:ListView runat="server" 
+        ID="DepartmentsListView"
+        DataSourceID="DepartmentDataSource" 
+        DataKeyNames="email" 
+        OnSelectedIndexChanged="DepartmentsListView_SelectedIndexChanged">
+        <LayoutTemplate>
+          <b>Department List</b>
+          <br />
+          <table width="500px" runat="server" id="tblDepartments">
+            <tr class="header" runat="server">
+              <th runat="server">&nbsp;</th>
+              <th runat="server">Department Name</th>
+              <th runat="server">Group Name</th>
+            </tr>
+            <tr runat="server" id="itemPlaceholder" />
+          </table>
+        </LayoutTemplate>
         <ItemTemplate>
           <tr class="item" runat="server">
             <td>
@@ -68,7 +83,18 @@
       </asp:ListView>
       <br/>
 
-      <asp:Label ID="MessageLabel" ForeColor="Red"  runat="server"/>
+      <asp:Label ID="MessageLabel"
+        ForeColor="Red"
+        runat="server"/>
+
+      <!-- This example uses Microsoft SQL Server and connects      -->
+      <!-- to the AdventureWorks sample database. Use an ASP.NET    -->
+      <!-- expression to retrieve the connection string value       -->
+      <!-- from the Web.config file.                                -->
+      <asp:SqlDataSource ID="DepartmentDataSource" runat="server" 
+        ConnectionString="Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8"
+        SelectCommand="SELECT userinterest.email as email,first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email">
+      </asp:SqlDataSource>
 
     </form>
   </body>
