@@ -194,6 +194,11 @@
             lblResult.Text = Selected;
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
           
+
+          
+              (row.Cells[0].FindControl("btnSold") as Button).Text ="edf";
+         row.
+
         }
 </script>
 
