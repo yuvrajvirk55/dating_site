@@ -38,7 +38,13 @@ namespace dating_site
             DepartmentsListView.DataBind();
   
         }
-      
+
+        public void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageLabel.Text = "The key value is " +
+              DepartmentsListView.SelectedValue.ToString() + ".";
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
            /* string Selected = "";
