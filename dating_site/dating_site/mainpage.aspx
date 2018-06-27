@@ -125,7 +125,7 @@
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -237,9 +237,8 @@
     <span class="close">&times;</span>
     <p>Some text in the Modal..</p>
       <div class="new">
-         <asp:GridView ID="GridView2"  Width="500px" runat="server" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+         <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <Columns>
-              <asp:ButtonField Text="Button" />
             <asp:TemplateField >
                 <HeaderTemplate>                    
                        &nbsp;&nbsp; <asp:CheckBox ID="chkCheckAll" runat="server" onclick="javascript:SelectAllCheckboxes(this)" />
@@ -263,6 +262,8 @@
                     <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
+              <asp:ImageField>
+              </asp:ImageField>
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -274,7 +275,8 @@
         <SortedDescendingHeaderStyle BackColor="#242121" />
     </asp:GridView>
     <br />
-   
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />
+    <br />
     <asp:Label ID="lblResult" runat="server" />  
       </div>
   </div>
@@ -302,9 +304,6 @@ window.onclick = function(event) {
     }
 }
 </script>
-
-
-
          
 </form>
 
