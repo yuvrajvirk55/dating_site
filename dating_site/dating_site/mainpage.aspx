@@ -193,9 +193,7 @@
 
             lblResult.Text = Selected;
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
-            Button btn = (Button)sender;
-            btn.Text = "Added";
-
+          
         }
 </script>
 
@@ -226,7 +224,7 @@
       <div class="new">
          <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand">
         <columns>
-                 <asp:buttonfield buttontype="Link" commandname="Add"  text="Add Friend"/>
+                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>
                 <asp:boundfield datafield="name" headertext="Contact ID"/>
                 <asp:boundfield datafield="gender" headertext="First Name"/> 
                 <asp:boundfield datafield="pic"  headertext="Last Name"/>
