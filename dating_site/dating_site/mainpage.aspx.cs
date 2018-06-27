@@ -32,8 +32,7 @@ namespace dating_site
             {
                 da.Fill(ds);
                 cmd.ExecuteNonQuery();
-                GridView1.DataSource = ds;
-                GridView1.DataBind();
+              
                 GridView2.DataSource = ds;
                 GridView2.DataBind();
             }
@@ -46,10 +45,10 @@ namespace dating_site
         }
 
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
         {
             string Selected = "";
-            foreach (GridViewRow gr in GridView1.Rows)
+            foreach (GridViewRow gr in GridView2.Rows)
             {
                 CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
                 Label lblName = (Label)gr.FindControl("lblStudentName");
@@ -57,7 +56,7 @@ namespace dating_site
 
                 if (cb != null && cb.Checked)
                 {
-                    string StdID = GridView1.DataKeys[gr.DataItemIndex].Values["email"].ToString();
+                    string StdID = GridView2.DataKeys[gr.DataItemIndex].Values["email"].ToString();
                     Selected += "Student ID : " + StdID + "<br/>";
                 }
             }

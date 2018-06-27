@@ -237,8 +237,9 @@
     <span class="close">&times;</span>
     <p>Some text in the Modal..</p>
       <div class="new">
-         <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+         <asp:GridView ID="GridView2"  Width="500px" runat="server" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
         <Columns>
+              <asp:ButtonField Text="Button" />
             <asp:TemplateField >
                 <HeaderTemplate>                    
                        &nbsp;&nbsp; <asp:CheckBox ID="chkCheckAll" runat="server" onclick="javascript:SelectAllCheckboxes(this)" />
@@ -273,8 +274,7 @@
         <SortedDescendingHeaderStyle BackColor="#242121" />
     </asp:GridView>
     <br />
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />
-    <br />
+   
     <asp:Label ID="lblResult" runat="server" />  
       </div>
   </div>
@@ -303,9 +303,7 @@ window.onclick = function(event) {
 }
 </script>
 
-         
-    <asp:GridView ID="GridView2" runat="server">
-    </asp:GridView>
+
 
          
 </form>
