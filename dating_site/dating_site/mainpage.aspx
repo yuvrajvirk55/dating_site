@@ -224,23 +224,10 @@
       <div class="new">
          <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand">
         <columns>
-            <asp:TemplateField >
-                <HeaderTemplate>                    
-                       &nbsp;&nbsp; <asp:CheckBox ID="chkCheckAll" runat="server" onclick="javascript:SelectAllCheckboxes(this)" />
-                </HeaderTemplate>
-                <ItemTemplate>
-                    &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
-                </ItemTemplate>
-            </asp:TemplateField>
-                <asp:buttonfield buttontype="Link" 
-                  commandname="Add" 
-                  text="Add Friend"/>
-                <asp:boundfield datafield="name" 
-                  headertext="Contact ID"/>
-                <asp:boundfield datafield="gender" 
-                  headertext="First Name"/> 
-                <asp:boundfield datafield="pic" 
-                  headertext="Last Name"/>
+                 <asp:buttonfield buttontype="Link"  commandname="Add"  text="Add Friend"/>
+                <asp:boundfield datafield="name" headertext="Contact ID"/>
+                <asp:boundfield datafield="gender" headertext="First Name"/> 
+                <asp:boundfield datafield="pic"  headertext="Last Name"/>
               </columns>
     </asp:GridView>
     <br />
