@@ -175,6 +175,31 @@
 }
 
 .button1 {font-size: 16px;}
+
+
+.friendlist {
+  margin: 20px;
+}
+ 
+ul {
+  list-style-type: none;
+  width: 500px;
+}
+ 
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+ 
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+ 
+li {
+  padding: 10px;
+  overflow: auto;
+}
+ 
 </style>
 
 
@@ -247,14 +272,15 @@
                     
                 <asp:TemplateField >
                 <ItemTemplate>  
-                <div class="container">
-              <div class="panel-group">
-                <div class="panel panel-default">
-                  <div class="panel-heading"><asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></div>
-                  <div class="panel-body"> <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />  <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label> <asp:Label ID="Label2" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></div>
-                </div>
-              </div>
-            </div>  
+                    <div>
+                      <ul>
+                        <li>
+                         <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />
+                          <h2><asp:Label ID="Label3" runat="server" Text='<%#Eval("name") %>'></asp:Label></h2>
+                          <p><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label><br />Hobbies: <asp:Label ID="Label2" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></p>
+                        </li>
+                      </ul>
+                    </div>
             </ItemTemplate>
             </asp:TemplateField>
          
