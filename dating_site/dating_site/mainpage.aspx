@@ -215,17 +215,15 @@
 
         void ContactsGridView_RowCommand(Object sender, GridViewCommandEventArgs e)
         {
-            
+
             string Selected = "";
-            foreach (GridViewRow gr in GridView1.Rows)
-            {
-                CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
-                    if (cb != null && cb.Checked)
-                {
-                    string StdID = GridView1.DataKeys[gr.DataItemIndex].Values["email"].ToString();
-                    Selected += "email : " + StdID + "<br/>";
-                }
-            }
+
+
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = GridView1.Rows[index];
+
+            string StdID = GridView1.DataKeys[row.DataItemIndex].Values["email"].ToString();
+            Selected += "email : " + StdID + "<br/>";
 
             lblResult.Text = Selected;
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
