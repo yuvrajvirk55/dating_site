@@ -193,6 +193,8 @@
 
             lblResult.Text = Selected;
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+
+            sendrequest();
           
         }
 </script>
