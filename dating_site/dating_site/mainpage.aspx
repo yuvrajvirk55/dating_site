@@ -215,7 +215,21 @@
 
         void ContactsGridView_RowCommand(Object sender, GridViewCommandEventArgs e)
         {
-            lblResult.Text = "dfdfsdf";
+            
+            string Selected = "";
+            foreach (GridViewRow gr in GridView1.Rows)
+            {
+                CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
+                    if (cb != null && cb.Checked)
+                {
+                    string StdID = GridView1.DataKeys[gr.DataItemIndex].Values["email"].ToString();
+                    Selected += "email : " + StdID + "<br/>";
+                }
+            }
+
+            lblResult.Text = Selected;
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+
         }
 </script>
 
@@ -246,9 +260,17 @@
       <div class="new">
          <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand">
         <columns>
+            <asp:TemplateField >
+                <HeaderTemplate>                    
+                       &nbsp;&nbsp; <asp:CheckBox ID="chkCheckAll" runat="server" onclick="javascript:SelectAllCheckboxes(this)" />
+                </HeaderTemplate>
+                <ItemTemplate>
+                    &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
+                </ItemTemplate>
+            </asp:TemplateField>
                 <asp:buttonfield buttontype="Link" 
                   commandname="Add" 
-                  text="Add"/>
+                  text="Add Friend"/>
                 <asp:boundfield datafield="name" 
                   headertext="Contact ID"/>
                 <asp:boundfield datafield="gender" 
