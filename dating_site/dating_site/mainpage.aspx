@@ -230,9 +230,7 @@
               <asp:ImageField DataImageUrlField="pic"></asp:ImageField>
                 <asp:boundfield datafield="name" headertext="Contact ID"/>
                 <asp:boundfield datafield="gender" headertext="First Name"/> 
-                <asp:boundfield datafield="pic"  headertext="Last Name"/>             
-
-              
+                <asp:boundfield datafield="pic"  headertext="Last Name"/>                           
     </asp:GridView>
     <br />
   
