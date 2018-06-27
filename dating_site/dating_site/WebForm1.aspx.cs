@@ -15,7 +15,7 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+           /* SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
             SqlCommand cmd;
@@ -27,15 +27,10 @@ namespace dating_site
             da.Fill(ds);
             cmd.ExecuteNonQuery();
             DepartmentsListView.DataSource = ds;
-            DepartmentsListView.DataBind();
+            DepartmentsListView.DataBind();*/
         }
 
-
-        protected void ListView1_SelectedIndexChanging(object sender, EventArgs e)
-        {
-            MessageLabel.Text = "The key value is " + DepartmentsListView.SelectedValue.ToString() + ".";
-        }
-
+       
         protected void Button1_Click(object sender, EventArgs e)
         {
            /* string Selected = "";

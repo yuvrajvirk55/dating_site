@@ -1,78 +1,84 @@
-﻿<%@ Page language="C#" CodeBehind="WebForm1.aspx.cs" AutoEventWireup="true" Inherits="dating_site.WebForm1" %>
+﻿<%@ Page language="C#" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script src="Scripts/jquery-1.7.1.js"></script>
+<script language="javascript" type="text/javascript">
+    function SelectAllCheckboxes(chk) {
+        var totalRows = $("#<%=GridView1.ClientID %> tr").length;
+        var selected = 0;
+        $('#<%=GridView1.ClientID %>').find("input:checkbox").each(function () {
+            if (this != chk) {
+                this.checked = chk.checked;
+                selected += 1;
+            }
+        });
+    }
+ 
+    function CheckedCheckboxes(chk) {
+        if (chk.checked) {
+            var totalRows = $('#<%=GridView1.ClientID %> :checkbox').length;
+            var checked = $('#<%=GridView1.ClientID %> :checkbox:checked').length
+            if (checked == (totalRows - 1)) {
+                $('#<%=GridView1.ClientID %>').find("input:checkbox").each(function () {
+                    this.checked = true;
+                });
+            }
+            else {
+                $('#<%=GridView1.ClientID %>').find('input:checkbox:first').removeAttr('checked');
+            }
+        }
+        else {
+            $('#<%=GridView1.ClientID %>').find('input:checkbox:first').removeAttr('checked');
+        }
+    }       
+</script>
 <html xmlns="http://www.w3.org/1999/xhtml" >
   <head id="Head1" runat="server">
-    <title>ListView SelectedValue Example</title>
-    <style type="text/css">
-      .header
-      {
-        border: 1px solid #008080;
-        background-color: #008080;
-        color: White;
-      }
-      .item td { border: 1px solid #008080; }
-      .selection td  
-      {
-        border: 1px solid #008080; 
-        background-color: #7FFF00;
-      }
-    </style>
+    <title>ListView</title>
   </head>
   <body>
     <form id="form1" runat="server">
-
-      <asp:ListView runat="server" 
-        ID="DepartmentsListView"
-        DataKeyNames="email" 
-        onselectedindexchanging="ListView1_SelectedIndexChanging">
+        <asp:Label runat="server" ID="aa" Text="Label"></asp:Label>
+      <asp:ListView ID="ContactsListView" DataSourceID="ContactsDataSource"  DataKeyNames="email" OnSelectedIndexChanged="ContactsListView_SelectedIndexChanged" runat="server">
         <LayoutTemplate>
-          <b>Department List</b>
-          <br />
-          <table width="500px" runat="server" id="tblDepartments">
-            <tr class="header" runat="server">
-              <th runat="server">&nbsp;</th>
-              <th runat="server">Department Name</th>
-              <th runat="server">Group Name</th>
-            </tr>
+        
+          <table cellpadding="2" border="1" runat="server" id="tblContacts" width="640px">
             <tr runat="server" id="itemPlaceholder" />
           </table>
         </LayoutTemplate>
         <ItemTemplate>
-          <tr class="item" runat="server">
-            <td>
-              <asp:LinkButton runat="server" 
-                ID="SelectButton" 
-                Text="Add Friend"
-                CommandName="Select" />
+          <tr runat="server">
+            <td valign="top">
+              <asp:Label ID="FirstNameLabel" runat="server" Text='<%#Eval("name") %>' />
+              <asp:Label ID="LastNameLabel" runat="server" Text='<%#Eval("gender") %>' />
             </td>
             <td>
-              <asp:Label runat="server" ID="NameLabel" Text='<%#Eval("name") %>' />
+              <asp:Label ID="EmailLabel" runat="server" Text='<%#Eval("hobbies") %>' />
             </td>
             <td>
-              <asp:Label runat="server" ID="GroupNameLabel" Text='<%#Eval("gender") %>' />
+              <asp:LinkButton ID="SelectButton" runat="server" CommandName="Select" Text="Select" />
             </td>
           </tr>
         </ItemTemplate>
         <SelectedItemTemplate>
-          <tr class="selection" runat="server">
+          <tr runat="server" style="background-color:#B0C4DE">
+            <td valign="top">
+              <asp:Label ID="FirstNameLabel" runat="server" Text='<%#Eval("name") %>' />
+              <asp:Label ID="LastNameLabel" runat="server" Text='<%#Eval("gender") %>' />
+            </td>
+            <td>
+              <asp:Label ID="EmailLabel" runat="server" Text='<%#Eval("hobbies") %>' />
+            </td>
             <td>&nbsp;</td>
-            <td>
-              <asp:Label runat="server" ID="NameLabel" Text='<%#Eval("name") %>' />
-            </td>
-            <td>
-              <asp:Label runat="server" ID="GroupNameLabel" Text='<%#Eval("gender") %>' />
-            </td>
           </tr>
         </SelectedItemTemplate>
       </asp:ListView>
-      <br/>
 
-      <asp:Label ID="MessageLabel"
-        ForeColor="Red"
-        runat="server"/>
+      <asp:SqlDataSource ID="ContactsDataSource" runat="server" 
+        ConnectionString="Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8"
+        SelectCommand="SELECT userinterest.email as email,first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email">
+      </asp:SqlDataSource>
 
     </form>
   </body>
