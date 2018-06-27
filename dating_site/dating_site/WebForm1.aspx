@@ -1,4 +1,4 @@
-﻿<%@ Page language="C#" %>
+﻿<%@ Page language="C#"  CodeBehind="WebForm1.aspx.cs" Inherits="dating_site.WebForm1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -39,46 +39,46 @@
   </head>
   <body>
     <form id="form1" runat="server">
-        <asp:Label runat="server" ID="aa" Text="Label"></asp:Label>
-      <asp:ListView ID="ContactsListView" DataSourceID="ContactsDataSource"  DataKeyNames="email" OnSelectedIndexChanged="ContactsListView_SelectedIndexChanged" runat="server">
-        <LayoutTemplate>
-        
-          <table cellpadding="2" border="1" runat="server" id="tblContacts" width="640px">
-            <tr runat="server" id="itemPlaceholder" />
-          </table>
-        </LayoutTemplate>
-        <ItemTemplate>
-          <tr runat="server">
-            <td valign="top">
-              <asp:Label ID="FirstNameLabel" runat="server" Text='<%#Eval("name") %>' />
-              <asp:Label ID="LastNameLabel" runat="server" Text='<%#Eval("gender") %>' />
-            </td>
-            <td>
-              <asp:Label ID="EmailLabel" runat="server" Text='<%#Eval("hobbies") %>' />
-            </td>
-            <td>
-              <asp:LinkButton ID="SelectButton" runat="server" CommandName="Select" Text="Select" />
-            </td>
-          </tr>
-        </ItemTemplate>
-        <SelectedItemTemplate>
-          <tr runat="server" style="background-color:#B0C4DE">
-            <td valign="top">
-              <asp:Label ID="FirstNameLabel" runat="server" Text='<%#Eval("name") %>' />
-              <asp:Label ID="LastNameLabel" runat="server" Text='<%#Eval("gender") %>' />
-            </td>
-            <td>
-              <asp:Label ID="EmailLabel" runat="server" Text='<%#Eval("hobbies") %>' />
-            </td>
-            <td>&nbsp;</td>
-          </tr>
-        </SelectedItemTemplate>
-      </asp:ListView>
+      <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+    <Columns>
+        <asp:TemplateField >
+            <HeaderTemplate>                   
+                    &nbsp;&nbsp; <asp:CheckBox ID="chkCheckAll" runat="server" onclick="javascript:SelectAllCheckboxes(this)" />
+            </HeaderTemplate>
+            <ItemTemplate>
+                &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField HeaderText="Student Name">
+            <ItemTemplate>
+                <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField  HeaderText="Class">
+            <ItemTemplate>
+                <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField  HeaderText="Class">
+            <ItemTemplate>
+                <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+    </Columns>
+    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+    <SortedDescendingHeaderStyle BackColor="#242121" />
+</asp:GridView>
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click1" />
 
-      <asp:SqlDataSource ID="ContactsDataSource" runat="server" 
-        ConnectionString="Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8"
-        SelectCommand="SELECT userinterest.email as email,first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email">
-      </asp:SqlDataSource>
+        <p>
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </p>
 
     </form>
   </body>

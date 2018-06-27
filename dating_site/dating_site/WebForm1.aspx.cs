@@ -15,7 +15,7 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           /* SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
             SqlCommand cmd;
@@ -26,19 +26,17 @@ namespace dating_site
 
             da.Fill(ds);
             cmd.ExecuteNonQuery();
-            DepartmentsListView.DataSource = ds;
-            DepartmentsListView.DataBind();*/
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
         }
 
-       
-        protected void Button1_Click(object sender, EventArgs e)
+ 
+        protected void Button1_Click1(object sender, EventArgs e)
         {
-           /* string Selected = "";
+            string Selected = "";
             foreach (GridViewRow gr in GridView1.Rows)
             {
                 CheckBox cb = (CheckBox)gr.FindControl("chkCheck");
-                Label lblName = (Label)gr.FindControl("lblStudentName");
-                // You can get other value same way                
 
                 if (cb != null && cb.Checked)
                 {
@@ -47,7 +45,7 @@ namespace dating_site
                 }
             }
 
-            lblResult.Text = Selected;*/
+               Label1.Text = Selected;
         }
     }
 }
