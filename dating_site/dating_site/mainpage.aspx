@@ -25,6 +25,13 @@
 <link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="progress-circle.js"></script>
 
@@ -217,7 +224,6 @@
 </div>
 
 
-
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -229,32 +235,22 @@
       <div class="new">
          <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
 
-              <Columns>      
-                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>   
-            <asp:TemplateField >
-                <ItemTemplate>
-                    <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />
-                </ItemTemplate>
+              <Columns>  
+                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>  
+                    
+                <asp:TemplateField >
+                <ItemTemplate>  
+                <div class="container">
+              <div class="panel-group">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label></div>
+                  <div class="panel-body"> <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />  <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label> <asp:Label ID="Label2" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></div>
+                </div>
+              </div>
+            </div>  
+            </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-
-             <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Label ID="lblClass" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-
-
+         
         </Columns>
     </asp:GridView>
     <br />
