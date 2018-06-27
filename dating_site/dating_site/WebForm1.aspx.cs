@@ -37,11 +37,15 @@ namespace dating_site
 
             da.Fill(ds);
             cmd.ExecuteNonQuery();
-          //  DepartmentsListView.DataSource = ds;
-          //  DepartmentsListView.DataBind();
+            DepartmentsListView.DataSource = ds;
+            DepartmentsListView.DataBind();
   
         }
-       
+        protected void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageLabel.Text = "The key value is " +
+              DepartmentsListView.SelectedValue.ToString() + ".";
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
            /* string Selected = "";
