@@ -20,8 +20,8 @@ namespace dating_site
         }
         protected void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageLabel.Text = "The key value is " +
-              DepartmentsListView.SelectedValue.ToString() + ".";
+            /*MessageLabel.Text = "The key value is " +
+              DepartmentsListView.SelectedValue.ToString() + ".";*/
         }
 
         private void populateData()
