@@ -125,7 +125,7 @@
 
 /* The Modal (background) */
 .modal {
-    display: block; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -211,6 +211,13 @@
         }
     }
     </script>
+    <script runat="server">
+
+        void ContactsGridView_RowCommand(Object sender, GridViewCommandEventArgs e)
+        {
+            lblResult.Text = "dfdfsdf";
+        }
+</script>
 
 <body style="background-color:	#BEBEBE;">
 <form runat="server">
@@ -237,42 +244,18 @@
     <span class="close">&times;</span>
     <p>Some text in the Modal..</p>
       <div class="new">
-         <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-        <Columns>
-            <asp:TemplateField >
-                <HeaderTemplate>                    
-                       &nbsp;&nbsp; <asp:CheckBox ID="chkCheckAll" runat="server" onclick="javascript:SelectAllCheckboxes(this)" />
-                </HeaderTemplate>
-                <ItemTemplate>
-                    &nbsp;&nbsp;<asp:CheckBox ID="chkCheck" runat="server" onclick="javascript:CheckedCheckboxes(this)" />
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Student Name">
-                <ItemTemplate>
-                    <asp:Label ID="lblStudentName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField  HeaderText="Class">
-                <ItemTemplate>
-                    <asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField  HeaderText="Class">
-                <ItemTemplate>
-                    <asp:Label ID="lblRollNo" runat="server" Text='<%#Eval("pic") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-              <asp:ImageField>
-              </asp:ImageField>
-        </Columns>
-        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-        <SortedDescendingHeaderStyle BackColor="#242121" />
+         <asp:GridView ID="GridView1"  Width="500px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand">
+        <columns>
+                <asp:buttonfield buttontype="Link" 
+                  commandname="Add" 
+                  text="Add"/>
+                <asp:boundfield datafield="name" 
+                  headertext="Contact ID"/>
+                <asp:boundfield datafield="gender" 
+                  headertext="First Name"/> 
+                <asp:boundfield datafield="pic" 
+                  headertext="Last Name"/>
+              </columns>
     </asp:GridView>
     <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get Selected" />

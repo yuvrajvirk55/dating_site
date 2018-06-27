@@ -65,9 +65,32 @@ namespace dating_site
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        void ContactsGridView_RowCommand(Object sender, GridViewCommandEventArgs e)
         {
-            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
+            // If multiple buttons are used in a GridView control, use the
+            // CommandName property to determine which button was clicked.
+            if (e.CommandName == "Add")
+            {
+                // Convert the row index stored in the CommandArgument
+                // property to an Integer.
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                // Retrieve the row that contains the button clicked 
+                // by the user from the Rows collection.
+                GridViewRow row = GridView1.Rows[index];
+
+                // Create a new ListItem object for the contact in the row.     
+                ListItem item = new ListItem();
+                item.Text = Server.HtmlDecode(row.Cells[2].Text) + " " +
+                  Server.HtmlDecode(row.Cells[3].Text);
+
+                // If the contact is not already in the ListBox, add the ListItem 
+                // object to the Items collection of the ListBox control. 
+               // if (!GridView1.Items.Contains(item))
+                {
+              //      GridView1.Items.Add(item);
+                }
+            }
         }
     }
     }
