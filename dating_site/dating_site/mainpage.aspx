@@ -255,7 +255,7 @@ li {
 
 .card_profile {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 200px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -269,13 +269,11 @@ li {
 .button_profile {
   border: none;
   outline: 0;
-  display: inline-block;
   padding: 8px;
   color: white;
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
   font-size: 18px;
 }
 
@@ -339,18 +337,33 @@ li {
   </a>
 </div>
 
+
+
+
+
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
   <div class="card_profile">
- <asp:Image ID="Image2" runat="server" Width="100%" />
-  <h1>John Doe</h1>
-  <p class="title_profile">CEO & Founder, Example</p>
-  <p>Harvard University</p>   
- <p><button class="button_profile">Contact</button></p>
+<div style="overflow-x:auto;width:300px">
+ <asp:GridView ID="GridView2"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
+ <Columns>  
+ <asp:TemplateField >
+ <ItemTemplate>  
+ <asp:Image ID="Image2" runat="server" Width="100px" ImageUrl="~/images/profile_pic.png" />
+  <h1><asp:Label ID="Label3" runat="server" Text='<%#Eval("name") %>'></asp:Label></h1>
+  <p class="title_profile"><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label></p>
+  <p><asp:Label ID="Label4" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></p>   
+     </ItemTemplate>      
+     </asp:TemplateField>
+     <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />            
+     </Columns>
+     </asp:GridView>
+      </div>
 </div>
+      </div>
 
-    </div>
+
     <div class="card">
       <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>
@@ -384,10 +397,9 @@ li {
       <br />
       <div class="new">
          <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
-
               <Columns>  
                  <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
-                    
+                
                 <asp:TemplateField >
                 <ItemTemplate>  
                     <div>
@@ -400,8 +412,7 @@ li {
                       </ul>
                     </div>
             </ItemTemplate>
-            </asp:TemplateField>
-         
+            </asp:TemplateField>       
         </Columns>
     </asp:GridView>
     <br />
