@@ -224,15 +224,15 @@
       <br />
       <div class="new">
          <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
-        <columns>
-           
+      
+           <img src="img_avatar.png" alt="Avatar" class="avatar">
                 <asp:buttonfield commandname="Add" buttontype="Link"  text="Add Friend"/>
               <asp:ImageField DataImageUrlField="pic"></asp:ImageField>
                 <asp:boundfield datafield="name" headertext="Contact ID"/>
                 <asp:boundfield datafield="gender" headertext="First Name"/> 
                 <asp:boundfield datafield="pic"  headertext="Last Name"/>             
 
-              </columns>
+              
     </asp:GridView>
     <br />
   
