@@ -24,12 +24,10 @@
   <body>
     <form id="form1" runat="server">
 
-      <h3>ListView SelectedValue Example</h3>
-
       <asp:ListView runat="server" 
         ID="DepartmentsListView"
         DataKeyNames="email" 
-        OnSelectedIndexChanged="DepartmentsListView_SelectedIndexChanged">
+     onselectedindexchanging="ListView1_SelectedIndexChanging">
         <LayoutTemplate>
           <b>Department List</b>
           <br />

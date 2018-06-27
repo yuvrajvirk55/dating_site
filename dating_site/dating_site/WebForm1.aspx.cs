@@ -13,14 +13,6 @@ namespace dating_site
     {
 
         protected void Page_Load(object sender, EventArgs e)
-        { 
-      
-            {
-                populateData();
-            }
-        }
-
-        private void populateData()
         {
 
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
@@ -36,13 +28,13 @@ namespace dating_site
             cmd.ExecuteNonQuery();
             DepartmentsListView.DataSource = ds;
             DepartmentsListView.DataBind();
-  
         }
 
-        public void DepartmentsListView_SelectedIndexChanged(object sender, EventArgs e)
+
+        protected void ListView1_SelectedIndexChanging(object sender, ListViewSelectEventArgs e)
         {
             MessageLabel.Text = "The key value is " +
-              DepartmentsListView.SelectedValue.ToString() + ".";
+        DepartmentsListView.SelectedValue.ToString() + ".";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
