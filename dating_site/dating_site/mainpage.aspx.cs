@@ -41,6 +41,8 @@ namespace dating_site
                 GridView1.DataBind();
                 GridView2.DataSource = ds;
                 GridView2.DataBind();
+             DetailsView1.DataSource = ds;
+              DetailsView1.DataBind();
 
             }
             catch

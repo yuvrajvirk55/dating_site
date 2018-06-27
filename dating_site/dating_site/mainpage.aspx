@@ -340,29 +340,17 @@ li {
 
 
 
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-  <div class="card_profile">
-<div style="overflow-x:auto;width:300px">
- <asp:GridView ID="GridView2"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
- <Columns>  
- <asp:TemplateField >
- <ItemTemplate>  
- <asp:Image ID="Image2" runat="server" Width="100px" ImageUrl="~/images/profile_pic.png" />
-  <h1><asp:Label ID="Label3" runat="server" Text='<%#Eval("name") %>'></asp:Label></h1>
-  <p class="title_profile"><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label></p>
-  <p><asp:Label ID="Label4" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></p>   
-     </ItemTemplate>      
-     </asp:TemplateField>
-     <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />            
-     </Columns>
-     </asp:GridView>
-      </div>
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email"   EnableViewState="False">
+    <Fields>
+        <asp:ImageField DataImageUrlField="pic"></asp:ImageField>
+        <asp:BoundField DataField="name" />
+        <asp:BoundField DataField="gender" ReadOnly="True"  />
+        <asp:BoundField DataField="hobbies" ReadOnly="True"  />
+        <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />    
+    </Fields>
+</asp:DetailsView>
 </div>
-      </div>
-
+    
 
     <div class="card">
       <h2>TITLE HEADING</h2>
