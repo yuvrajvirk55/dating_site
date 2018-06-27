@@ -304,6 +304,10 @@ window.onclick = function(event) {
 </script>
 
          
+    <asp:GridView ID="GridView2" runat="server">
+    </asp:GridView>
+
+         
 </form>
 
 </body>

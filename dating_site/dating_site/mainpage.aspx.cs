@@ -34,6 +34,8 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
                 GridView1.DataSource = ds;
                 GridView1.DataBind();
+                GridView2.DataSource = ds;
+                GridView2.DataBind();
             }
             catch
             {
