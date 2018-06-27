@@ -11,11 +11,15 @@ namespace dating_site
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        int x = 1;
+
         protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
+        { 
+      
+            if (x==1)
             {
                 populateData();
+                x++;
             }
         }
 
@@ -33,8 +37,8 @@ namespace dating_site
 
             da.Fill(ds);
             cmd.ExecuteNonQuery();
-        // ListView1.DataSource = ds;
-         //  ListView1.DataBind();
+          //  DepartmentsListView.DataSource = ds;
+          //  DepartmentsListView.DataBind();
   
         }
        
