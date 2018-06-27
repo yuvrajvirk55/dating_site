@@ -340,14 +340,27 @@ li {
 
 
 
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email"   EnableViewState="False">
+
+<div class="row">
+  <div class="leftcolumn">
+ <div class="card">
+   <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email"   EnableViewState="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+       <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
     <Fields>
-        <asp:ImageField DataImageUrlField="pic"></asp:ImageField>
+        <asp:ImageField DataImageUrlField="pic" ControlStyle-Width="100px">
+<ControlStyle Width="100px"></ControlStyle>
+        </asp:ImageField>
         <asp:BoundField DataField="name" />
-        <asp:BoundField DataField="gender" ReadOnly="True"  />
-        <asp:BoundField DataField="hobbies" ReadOnly="True"  />
-        <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />    
+        <asp:BoundField DataField="gender" />
+        <asp:BoundField DataField="hobbies" />
+        <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" >    
+<ControlStyle CssClass="button button1"></ControlStyle>
+        </asp:buttonfield>
     </Fields>
+       <FooterStyle BackColor="White" ForeColor="#333333" />
+       <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+       <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+       <RowStyle BackColor="White" ForeColor="#333333" />
 </asp:DetailsView>
 </div>
     
