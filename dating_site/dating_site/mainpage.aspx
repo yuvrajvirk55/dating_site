@@ -342,11 +342,14 @@ li {
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  <div class="card_profile">
+ <asp:Image ID="Image2" runat="server" Width="100%" />
+  <h1>John Doe</h1>
+  <p class="title_profile">CEO & Founder, Example</p>
+  <p>Harvard University</p>   
+ <p><button class="button_profile">Contact</button></p>
+</div>
+
     </div>
     <div class="card">
       <h2>TITLE HEADING</h2>
