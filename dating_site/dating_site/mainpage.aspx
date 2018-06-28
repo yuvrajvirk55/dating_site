@@ -222,9 +222,7 @@ li {
   }
 }
 
-
 /*places*/
-
 
 
 
@@ -278,7 +276,10 @@ li {
     right: 35px;
   }
 }
+
 </style>
+
+
 
 
 </head>
@@ -328,10 +329,10 @@ li {
 <form runat="server">
 
 <div class="topnav" id="myTopnav">
-  <a class="extra"  style="padding:3px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
+  <a href="#about"" class="extra" style="padding:3px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
   <a href="#about"" class="extra" style="padding-right:2px;padding-left:16px;border-left: 1px groove white;"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
-  <span onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">openexplore</i></span>
-  <a  onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
+  <a onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
+  <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
    <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>
     <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
    <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
