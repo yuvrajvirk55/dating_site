@@ -417,7 +417,7 @@ li {
 <form runat="server">
 
 <div class="topnav" id="myTopnav">
-  <a href="#myPopup" class="extra" style="padding:3px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
+  <a href="#myPopup" class="extra" style="padding:3px;"><asp:Image id="myImg" src="img_snow.jpg" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
   <a href="profile.aspx"" class="extra" style="padding-right:2px;padding-left:16px;border-left: 1px groove white;"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
@@ -527,6 +527,39 @@ li {
   </div>
 </div>
 
+
+    <!-- Profile Pic-->
+
+    <!-- The Modal -->
+<div id="myModal_pic" class="modal_pic">
+  <span class="close_pic">&times;</span>
+  <img class="modal-content_pic" id="img01">
+  <div id="caption_pic"></div>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal_pic');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption_pic");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close_pic")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
 
  <script>
 var slideIndex = 1;

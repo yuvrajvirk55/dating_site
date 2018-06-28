@@ -13,13 +13,13 @@ namespace dating_site {
     public partial class mainpage {
         
         /// <summary>
-        /// Image1 control.
+        /// myImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Image myImg;
         
         /// <summary>
         /// Label1 control.
