@@ -364,6 +364,32 @@ li {
   </div>
 </div>
 
+
+<!-- Places -->
+
+  <div id="myNav_places" class="overlay_places">
+  <a href="javascript:void(0)" class="closebtn_places" onclick="closeNav_places()">&times;</a>
+  <div class="overlay-content_places">
+    <a href="#">Places</a>
+    <a href="#"><p>fggfhgfhgfhgfffffffffffffffffffffffffffffffffffffff</p></a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav_places()">&#9776; open</span>
+
+<script>
+function openNav_places() {
+    document.getElementById("myNav_places").style.height = "100%";
+}
+
+function closeNav_places() {
+    document.getElementById("myNav_places").style.height = "0%";
+}
+</script>
+
          
 <script>
     function popWin() {
