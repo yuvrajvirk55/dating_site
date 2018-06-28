@@ -344,7 +344,7 @@ li {
 <div class="row">
   <div class="leftcolumn">
  <div class="card">
-   <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email"   EnableViewState="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+   <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email" AllowPaging="True" EnableViewState="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
        <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
     <Fields>
         <asp:ImageField DataImageUrlField="pic" ControlStyle-Width="100px">
