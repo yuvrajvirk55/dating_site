@@ -222,6 +222,62 @@ li {
   }
 }
 
+
+/*places*/
+
+
+
+
+.overlay_places {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content_places {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay_places a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay_places a:hover, .overlay_places a:focus {
+    color: #f1f1f1;
+}
+
+.overlay_places .closebtn_places {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay_places {overflow-y: auto;}
+  .overlay_places a {font-size: 20px}
+  .overlay_places .closebtn_places {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 </style>
 
 
@@ -272,10 +328,10 @@ li {
 <form runat="server">
 
 <div class="topnav" id="myTopnav">
-  <a href="#about"" class="extra" style="padding:3px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
+  <a class="extra"  style="padding:3px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
   <a href="#about"" class="extra" style="padding-right:2px;padding-left:16px;border-left: 1px groove white;"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
-  <a href="#news" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
-  <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
+  <span onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">openexplore</i></span>
+  <a  onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
    <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>
     <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
    <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
@@ -285,6 +341,7 @@ li {
 </div>
 
 
+    
 
 
 
@@ -378,7 +435,6 @@ li {
 </div>
 
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav_places()">&#9776; open</span>
 
 <script>
 function openNav_places() {
