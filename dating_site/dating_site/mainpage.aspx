@@ -534,7 +534,6 @@ li {
 <div id="myModal_pic" class="modal_pic">
   <span class="close_pic">&times;</span>
   <img class="modal-content_pic" id="img01">
-  <div id="caption_pic"></div>
 </div>
 
 
