@@ -14,7 +14,7 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-         
+            loaddata();
         }
 
         protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
@@ -81,6 +81,8 @@ namespace dating_site
                
 
             }
-        }
+       
+
+    }
     }
      

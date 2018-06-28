@@ -319,6 +319,11 @@ li {
             loaddata();
           
         }
+         protected void gridView_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
+            DetailsView1.PageIndex = e.NewPageIndex;
+            DetailsView1.DataBind();
+        }
 </script>
 
 <body style="background-color:	#BEBEBE;">
@@ -342,9 +347,27 @@ li {
 
 
 <div class="row">
+
   <div class="leftcolumn">
  <div class="card">
-   <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email" AllowPaging="True" EnableViewState="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+</div>
+    
+
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Suggestion Box</h2>
+        <br />
+         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email"  BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" AllowPaging="True"  OnPageIndexChanging="gridView_PageIndexChanging" EnableModelValidation="False" Height="168px" Width="212px">
        <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
     <Fields>
         <asp:ImageField DataImageUrlField="pic" ControlStyle-Width="100px">
@@ -359,25 +382,10 @@ li {
     </Fields>
        <FooterStyle BackColor="White" ForeColor="#333333" />
        <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+             <PagerSettings Mode="NumericFirstLast" />
        <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
        <RowStyle BackColor="White" ForeColor="#333333" />
 </asp:DetailsView>
-</div>
-    
-
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
     </div>  
   </div>
 </div>
