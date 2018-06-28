@@ -14,16 +14,16 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            loaddata();
+            loaddatasuggestion();
         }
 
         protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
         {
-            loaddata();
+            loaddatasearch();
        
         }
 
-        public void loaddata()
+        public void loaddatasearch()
         {
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
@@ -39,11 +39,6 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
                 GridView1.DataSource = ds;
                 GridView1.DataBind();
-          //      GridView2.DataSource = ds;
-            //    GridView2.DataBind();
-             DetailsView1.DataSource = ds;
-              DetailsView1.DataBind();
-
             }
             catch
             {
@@ -53,7 +48,33 @@ namespace dating_site
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
 
-       public void sendrequest(string name)
+        public void loaddatasearch()
+        {
+            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            con.Open();
+
+            SqlCommand cmd;
+
+            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%'", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            try
+            {
+                da.Fill(ds);
+                cmd.ExecuteNonQuery();
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
+            }
+            catch
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
+            }
+
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+        }
+
+
+        public void sendrequest(string name)
         {
             string email = "uvnemk@gmail.com";
 
