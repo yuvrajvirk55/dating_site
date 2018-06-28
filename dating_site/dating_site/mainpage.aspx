@@ -240,7 +240,7 @@ li {
 
 .overlay-content_places {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -436,8 +436,6 @@ li {
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> 
 </div>
     </a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
   </div>
 </div>
 
