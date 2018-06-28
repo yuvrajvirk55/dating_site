@@ -67,7 +67,7 @@
     <div>
     
 <div id="myNav_places" class="overlay_places">
-  <a href="javascript:void(0)" class="closebtn_places aa" onclick="">&times;</a>
+  <a href="javascript:void(0)" class="closebtn_places aa" onclick="closeNav_places()">&times;</a>
   <div class="overlay-content_places">
     <a class="aa">Places</a>
 
@@ -80,7 +80,7 @@
     <script>
 
 function closeNav_places() {
-    document.getElementById("myNav_places").style.height = "0%";
+    window.location.replace("http://stackoverflow.com");
 }
 </script>
 </body>
