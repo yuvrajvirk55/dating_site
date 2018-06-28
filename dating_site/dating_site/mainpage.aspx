@@ -316,7 +316,13 @@ li {
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
 
             sendrequest(StdID);
-            loaddata();
+            loaddatasearch();
+          
+        }
+         void Contactsdetails_RowCommand(Object sender, GridViewCommandEventArgs e)
+        {
+
+          Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
           
         }
          protected void gridView_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
@@ -367,7 +373,7 @@ li {
     <div class="card">
       <h2>Suggestion Box</h2>
         <br />
-         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email"  BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" AllowPaging="True"  OnPageIndexChanging="gridView_PageIndexChanging" EnableModelValidation="False" Height="168px" Width="212px">
+         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email" onrowcommand="Contactsdetails_RowCommand" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" AllowPaging="True"  OnPageIndexChanging="gridView_PageIndexChanging" EnableModelValidation="False" Height="168px" Width="212px">
        <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
     <Fields>
         <asp:ImageField DataImageUrlField="pic" ControlStyle-Width="100px">
