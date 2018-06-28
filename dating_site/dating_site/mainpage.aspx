@@ -127,7 +127,7 @@
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -325,11 +325,7 @@ li {
           Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
           
         }
-         protected void gridView_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
-        {
-            DetailsView1.PageIndex = e.NewPageIndex;
-            DetailsView1.DataBind();
-        }
+
 </script>
 
 <body style="background-color:	#BEBEBE;">
@@ -373,28 +369,31 @@ li {
     <div class="card">
       <h2>Suggestion Box</h2>
         <br />
-         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="email" onrowcommand="Contactsdetails_RowCommand" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" AllowPaging="True"  OnPageIndexChanging="gridView_PageIndexChanging" EnableModelValidation="False" Height="168px" Width="212px">
-       <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
-    <Fields>
-        <asp:ImageField DataImageUrlField="pic" ControlStyle-Width="100px">
-<ControlStyle Width="100px"></ControlStyle>
-        </asp:ImageField>
-        <asp:BoundField DataField="name" />
-        <asp:BoundField DataField="gender" />
-        <asp:BoundField DataField="hobbies" />
-        <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" >    
-<ControlStyle CssClass="button button1"></ControlStyle>
-        </asp:buttonfield>
-    </Fields>
-       <FooterStyle BackColor="White" ForeColor="#333333" />
-       <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
-             <PagerSettings Mode="NumericFirstLast" />
-       <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
-       <RowStyle BackColor="White" ForeColor="#333333" />
-</asp:DetailsView>
-    </div>  
+        <div style="overflow-x:auto;width:100px">
+        <asp:GridView ID="GridView2"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="124px">
+              <Columns>  
+                 <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
+                
+                <asp:TemplateField >
+                <ItemTemplate>  
+                    <div>
+                      <ul>
+                        <li>
+                         <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />
+                          <h2><asp:Label ID="Label3" runat="server" Text='<%#Eval("name") %>'></asp:Label></h2>
+                          <p><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label><br />Hobbies: <asp:Label ID="Label2" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></p>
+                        </li>
+                      </ul>
+                    </div>
+            </ItemTemplate>
+            </asp:TemplateField>       
+        </Columns>
+    </asp:GridView>
+            </div>
   </div>
 </div>
+    </div>
+    
 
 
 
