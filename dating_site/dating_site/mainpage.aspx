@@ -251,35 +251,23 @@ li {
 }
 
 
-/*Adding for profile grid */
-
-.card_profile {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 200px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
+.main_body {
+  float:left;
+  width:60%;
+  padding:0 20px;
 }
+.right_body {
+  background-color:#e5e5e5;
+  float:left;
+  width:40%;
+  padding:15px;
+  margin-top:7px;}
 
-.title_profile {
-  color: grey;
-  font-size: 18px;
-}
-
-.button_profile {
-  border: none;
-  outline: 0;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-
-.button_profile:hover{
-  opacity: 0.7;
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .main_body, .right_body {
+    width:100%;
+  }
 }
 
 </style>
@@ -348,28 +336,19 @@ li {
 
 
 
-<div class="row">
+ <div style="overflow:auto">
+ 
 
-  <div class="leftcolumn">
- <div class="card">
-</div>
-    
-
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-
+  <div class="main_body">
+    <h2>Lorum Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
   </div>
+ 
 
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>Suggestion Box</h2>
+  <div class="right_body">
+         <h2>Suggestion Box</h2>
         <br />
-        <div style="overflow-x:auto;width:100px">
+        <div style="overflow-x:auto;width:520px">
         <asp:GridView ID="GridView2"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="124px">
               <Columns>  
                  <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
@@ -391,12 +370,9 @@ li {
     </asp:GridView>
             </div>
   </div>
-</div>
-    </div>
-    
 
 
-
+</div> 
 
 
 
