@@ -429,7 +429,7 @@ li {
   <a href="javascript:void(0)" class="closebtn_places" onclick="closeNav_places()">&times;</a>
   <div class="overlay-content_places">
     <a href="#">Places</a>
-    <a href="#"><p>fggfhgfhgfhgfffffffffffffffffffffffffffffffffffffff</p></a>
+    <a href="#"><div id="map" style="width:400px;height:400px;background:yellow"></div></a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
   </div>
