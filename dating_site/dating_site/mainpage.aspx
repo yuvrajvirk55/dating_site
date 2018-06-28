@@ -246,7 +246,7 @@ li {
     margin-top: 30px;
 }
 
-.overlay_places a {
+.overlay_places .aa {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -255,7 +255,7 @@ li {
     transition: 0.3s;
 }
 
-.overlay_places a:hover, .overlay_places a:focus {
+.overlay_places .aa:hover, .overlay_places .aa:focus {
     color: #f1f1f1;
 }
 
@@ -268,7 +268,7 @@ li {
 
 @media screen and (max-height: 450px) {
   .overlay_places {overflow-y: auto;}
-  .overlay_places a {font-size: 20px}
+  .overlay_places .aa {font-size: 20px}
   .overlay_places .closebtn_places {
     font-size: 40px;
     top: 15px;
@@ -425,17 +425,16 @@ li {
 <!-- Places -->
 
   <div id="myNav_places" class="overlay_places">
-  <a href="javascript:void(0)" class="closebtn_places" onclick="closeNav_places()">&times;</a>
+  <a href="javascript:void(0)" class="closebtn_places aa" onclick="closeNav_places()">&times;</a>
   <div class="overlay-content_places">
-    <a href="#">Places</a>
-    <a>  
-<div class="w3-content w3-display-container">
-<iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26290.95125859216!2d-122.89084871952053!3d49.17413421406467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d3427ff474d5ed1!2sStarbucks!5e0!3m2!1sen!2sca!4v1530218526086" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-<iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83468.60604796765!2d-122.93882792198856!3d49.17411093515579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d90ce86bce6f%3A0xa3ae60553b040e35!2sTasty+Indian+Bistro!5e0!3m2!1sen!2sca!4v1530218611814" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <a class="aa">Places</a>
+ 
+<div style="align-content:center; align-items:center;align-self:center;" class="w3-content w3-display-container aa">
+<iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26290.95125859216!2d-122.89084871952053!3d49.17413421406467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d3427ff474d5ed1!2sStarbucks!5e0!3m2!1sen!2sca!4v1530218526086" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83468.60604796765!2d-122.93882792198856!3d49.17411093515579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d90ce86bce6f%3A0xa3ae60553b040e35!2sTasty+Indian+Bistro!5e0!3m2!1sen!2sca!4v1530218611814" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> 
 </div>
-    </a>
   </div>
 </div>
 
