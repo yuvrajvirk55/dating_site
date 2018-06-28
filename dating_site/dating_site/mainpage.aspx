@@ -25,7 +25,6 @@
 <link href="https://fonts.googleapis.com/css?family=Eater|Indie+Flower" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="progress-circle.js"></script>
 
@@ -429,35 +428,21 @@ li {
   <a href="javascript:void(0)" class="closebtn_places" onclick="closeNav_places()">&times;</a>
   <div class="overlay-content_places">
     <a href="#">Places</a>
-    <a href="#">
+    <a>  
 <div class="w3-content w3-display-container">
-  <div class="mySlides" id="googleMap" style="width:100%;height:400px;"></div> 
-
- <iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41733.443074055074!2d-122.90907936509996!3d49.175130924830015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9b6025f3f89%3A0x8d3427ff474d5ed1!2sStarbucks!5e0!3m2!1sen!2sca!4v1530217919244" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26290.95125859216!2d-122.89084871952053!3d49.17413421406467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d3427ff474d5ed1!2sStarbucks!5e0!3m2!1sen!2sca!4v1530218526086" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83468.60604796765!2d-122.93882792198856!3d49.17411093515579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d90ce86bce6f%3A0xa3ae60553b040e35!2sTasty+Indian+Bistro!5e0!3m2!1sen!2sca!4v1530218611814" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
- 
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> 
 </div>
-
     </a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
   </div>
 </div>
 
-<script>
-function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-};
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-</script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-
-<script>
+ <script>
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -476,9 +461,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 </script>
-
-
-
 <script>
 function openNav_places() {
     document.getElementById("myNav_places").style.height = "100%";
