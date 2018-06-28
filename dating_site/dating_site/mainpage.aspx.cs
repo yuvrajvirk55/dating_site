@@ -42,13 +42,13 @@ namespace dating_site
             }
             catch
             {
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
             }
 
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
 
-        public void loaddatasearch()
+        public void loaddatasuggestion()
         {
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
@@ -62,15 +62,14 @@ namespace dating_site
             {
                 da.Fill(ds);
                 cmd.ExecuteNonQuery();
-                GridView1.DataSource = ds;
-                GridView1.DataBind();
+              DetailsView1.DataSource = ds;
+               DetailsView1.DataBind();
             }
             catch
             {
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Grid!')", true);
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
 
-            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
 
 
