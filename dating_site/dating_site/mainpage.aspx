@@ -429,11 +429,53 @@ li {
   <a href="javascript:void(0)" class="closebtn_places" onclick="closeNav_places()">&times;</a>
   <div class="overlay-content_places">
     <a href="#">Places</a>
-    <a href="#"><div id="map" style="width:400px;height:400px;background:yellow"></div></a>
+    <a href="#">
+<div class="w3-content w3-display-container">
+  <div class="mySlides" id="googleMap" style="width:100%;height:400px;"></div> 
+
+ <iframe class="mySlides" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41733.443074055074!2d-122.90907936509996!3d49.175130924830015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9b6025f3f89%3A0x8d3427ff474d5ed1!2sStarbucks!5e0!3m2!1sen!2sca!4v1530217919244" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+ 
+</div>
+
+    </a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
   </div>
 </div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 
 
