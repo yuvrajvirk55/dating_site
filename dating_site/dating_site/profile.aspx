@@ -23,7 +23,7 @@
 
 .overlay-content_places {
     position: relative;
-    top: 10%;
+    top: 20%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -69,7 +69,14 @@
 <div id="myNav_places" class="overlay_places">
   <a href="mainpage.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
-    <a class="aa">Places</a>
+    <a class="aa" style="font-size:80px !important;"><asp:Label ID="Label1" runat="server" Text="Yuvraj Singh"></asp:Label></a>
+      <br />
+      <br />
+      <br />
+      <a class="aa">Edit Information</a>
+        <a class="aa">Edit Interests</a>
+        <a class="aa">Change Password</a>
+
 
   </div>
 </div>
