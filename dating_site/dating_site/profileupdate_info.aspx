@@ -119,7 +119,7 @@
 </table>
 </div></a>
       <br />
-     <a class="aa"><div align="center"><asp:Button ID="register_register" runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;color:black;" Text="Submit" />	</div></a>
+     <a class="aa"><div align="center"><asp:Button ID="register_register" runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;color:black;" Text="Submit" OnClick="register_register_Click" />	</div></a>
   </div>
 </div>
 
