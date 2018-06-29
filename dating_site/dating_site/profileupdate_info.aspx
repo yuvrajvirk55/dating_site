@@ -94,8 +94,8 @@
      <a class="aa"><div align="center">
       <table align="center">
       <tr>
-    <td width="250px"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" Width="450px" runat="server"  placeholder="First name"></asp:TextBox></td>
-    <td width="250px"> <asp:TextBox ID="TextBox2" class="input100" BackColor="#E1E1E1" Width="450px" runat="server"  placeholder="Last name"></asp:TextBox></td>
+    <td width="250px"> <asp:TextBox ID="register_fname" class="input100" BackColor="#E1E1E1" Width="450px" runat="server"  placeholder="First name"></asp:TextBox></td>
+    <td width="250px"> <asp:TextBox ID="register_lname" class="input100" BackColor="#E1E1E1" Width="450px" runat="server"  placeholder="Last name"></asp:TextBox></td>
     <td></td>
      </tr>
 

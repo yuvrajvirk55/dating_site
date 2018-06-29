@@ -23,8 +23,15 @@ namespace dating_site
                 int index = filtered_email.IndexOf('@');
                 filtered_email = filtered_email.Substring(0, index);
 
-                //encrpting pass
-                string pass = Encrypt.EncryptString(register_password.Text, register_password.Text);
+              
+                string strname = FileUpload1.FileName.ToString();
+                var result = strname.Substring(strname.Length - 4);
+
+                string filtered_name = filtered_email + result; ;
+
+                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + filtered_name);
+
+                filtered_name = "~/upload/" + filtered_name.Trim(); ;
 
 
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
@@ -38,6 +45,11 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
 
                 sqlConnection1.Close();
+
+         
+                Session["fname"] = register_fname.Text;
+                Session["lname"] = register_lname.Text;
+                Session["img"] = filtered_name.ToString();
                 Response.Redirect("profile.aspx");
 
 
