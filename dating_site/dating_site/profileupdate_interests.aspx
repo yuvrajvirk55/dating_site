@@ -192,7 +192,14 @@ button:hover {
 
 <body>
     <form id="form1" runat="server">
-  
+  <div id="myNav_places" class="overlay_places">
+  <a href="profile.aspx" class="closebtn_places aa">&times;</a>
+  <div class="overlay-content_places">
+    <a class="aa" style="font-size:80px !important;">Interests</a>
+      <br />
+      <br />
+      <br />
+
   <div class="tab" ><b><span style="font-size:large;"> &ensp; &ensp;&ensp;   &emsp; &emsp;  &emsp;Interested In. . . . .</span></b><br /> 
     <div  align="center"> <p><asp:RadioButtonList ID="form_gender"  Font-Bold="True" width="150px"  RepeatDirection="Horizontal" runat="server" >
        <asp:ListItem Value="male">male</asp:ListItem>         <asp:ListItem Value="female">female</asp:ListItem>
@@ -241,17 +248,12 @@ button:hover {
          <br />
         <div align="center"> <asp:Button ID="form_form"  runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" />			
             </div>			
-
      </div> 
     
     
-    <div style="overflow:auto;float:right;">
-        
+    <div style="overflow:auto;float:right;">   
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
-       <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-   
-        
-   
+       <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> 
      </div> 
     
     
@@ -268,7 +270,7 @@ button:hover {
         <span class="step">    
         </span>
     </div> 
-
+      </div></div>
 </form> 
     
  <script>
