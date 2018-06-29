@@ -79,56 +79,173 @@
 </head>
 
   
-
-
 <body>
     <form id="form1" runat="server">
-    <div>
     
 <div id="myNav_places" class="overlay_places">
   <a href="profile.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
-    <a class="aa" style="font-size:80px !important;">Edit Info</a>
+    <a class="aa" style="font-size:80px !important;">Interests</a>
       <br />
       <br />
       <br />
+
      <a class="aa"><div align="center">
-      <table align="center">
-      <tr>
-    <td width="250px"> <asp:TextBox ID="TextBox1" class="input100" BackColor="#E1E1E1" Width="450px" runat="server"  placeholder="First name"></asp:TextBox></td>
-    <td width="250px"> <asp:TextBox ID="TextBox2" class="input100" BackColor="#E1E1E1" Width="450px" runat="server"  placeholder="Last name"></asp:TextBox></td>
-    <td></td>
-     </tr>
-
-    <tr>
-    <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="450px" class="input100" TextMode="Date"  placeholder="Dob"></asp:TextBox></td>
-    <td></td>
-    <td></td>
-  </tr>
-              
-  <tr>
-    <td Width="250px"> <asp:RadioButtonList ID="register_gender" runat="server" > <asp:ListItem Value="male"><span style="font-size:32px;font-weight:bold;" class="rainbow">male</span></asp:ListItem><asp:ListItem Value="female"><span style="font-size:32px;font-weight:bold;" class="rainbow">female</span></asp:ListItem> </asp:RadioButtonList></td>
-    <td><asp:ImageButton ID="ImageButton1" runat="server" Height="87px" Width="127px" ImageUrl="~/images/profile_pic.png" OnClientClick="browse()" /><asp:FileUpload ID="FileUpload1" runat="server" /></td>
-    <td></td>
-  </tr>
-
-  <tr style="height: 30px;" >
-    <td></td>
-    <td>Upload Image</td> 
-    <td></td>
-  </tr>
-</table>
-</div></a>
-      <br />
-     <a class="aa"><div align="center"><asp:Button ID="register_register" runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;color:black;" Text="Submit" />	</div></a>
+     
+  <div class="tab" ><b><span style="font-size:large;"> &ensp; &ensp;&ensp;   &emsp; &emsp;  &emsp;Interested In. . . . .</span></b><br /> 
+    <div  align="center"> <p><asp:RadioButtonList ID="form_gender"  Font-Bold="True" width="150px"  RepeatDirection="Horizontal" runat="server" >
+       <asp:ListItem Value="male">male</asp:ListItem>         <asp:ListItem Value="female">female</asp:ListItem>
+        </asp:RadioButtonList></p>
+        </div>
+    <br />
   </div>
-</div>
 
+
+  <div class="tab"><b><span style="font-size:large;">Age group . . . . .</span></b><br />
+      <br />
+    <div align="center">
+         <p> 
+              <asp:DropDownList BackColor="#E1E1E1" align="center" class="input100" ID="form_agegroup" runat="server">
+            <asp:ListItem Value="18">18-25</asp:ListItem>
+            <asp:ListItem Value="26">26-38</asp:ListItem>
+            <asp:ListItem Value="39">39-50</asp:ListItem>
+            <asp:ListItem Value="50">50-60</asp:ListItem>
+            <asp:ListItem Value="60 ">60 +</asp:ListItem>
+        </asp:DropDownList></p>
+        </div>
+       <br />
+  </div> 
+    
+    
+    <div class="tab"><b><span style="font-size:large;">Nationality. . . . .</span></b><br />
+        <br />     
+     <p>
+             <asp:DropDownList ID="form_nationality" BackColor="#E1E1E1"  class="input100" runat="server">
+            <asp:ListItem Value="india">india</asp:ListItem>
+            <asp:ListItem Value="america">america</asp:ListItem>
+            <asp:ListItem Value="canada">canada</asp:ListItem>
+            <asp:ListItem Value="china">china</asp:ListItem>
+            <asp:ListItem Value="japan">japan</asp:ListItem>
+            <asp:ListItem Value="australia">australia</asp:ListItem>
+            <asp:ListItem Value="new_zealand">new zealand</asp:ListItem>
+        </asp:DropDownList>
+        </p>
+     <br />
     </div>
-    </form>
+    
+     <div class="tab"><b><span style="font-size:large;">Hobbies. . . . .</span></b><br />
+         <br />
+      <p><asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1"  class="input100"  placeholder="Seprate hobbies with comma..">
+       </asp:TextBox></p> <br /> 
+         <br />
+        <div align="center"> <asp:Button ID="form_form" runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" />			
+            </div>			
+     </div> 
+    
+    
+    <div style="overflow:auto;float:right;">
+        
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
+       <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+   
+        
+   
+     </div> 
+    
+    
+    <!-- Circles which indicates the steps of the form: --> 
+    
+    <div style="text-align:center;margin-top:40px;"> 
+   
+        <span class="step">
+        </span> 
+        <span class="step">   
+        </span>
+        <span class="step">   
+        </span>
+        <span class="step">    
+        </span>
+    </div> 
+         </a></div></div>
 
-    <script>
+</form> 
 
+    
+ <script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the crurrent tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+      //document.getElementById("nextBtn").innerHTML = "Submit";
+      document.getElementById("nextBtn").style.display = "none";
+  } else {
+      document.getElementById("nextBtn").style.display = "inline";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
 </script>
+ 
 </body>
 </html>
