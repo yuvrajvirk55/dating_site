@@ -96,7 +96,7 @@
       <a class="aa"><div align="center"><asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="450px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></div></a>
 
       <br />
-     <a class="aa"><div align="center"><asp:Button ID="register_register" runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;color:black;" Text="Submit" />	</div></a>
+     <a class="aa"><div align="center"><asp:Button ID="register_register" runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;color:black;" Text="Submit" OnClick="register_register_Click" />	</div></a>
   </div>
 </div>
 
