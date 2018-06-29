@@ -51,6 +51,11 @@ namespace dating_site
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Upload image')", true);
             }
 
+            else if (FileUpload1.FileName.ToString().Contains(".jpeg")) 
+                {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Upload Different Format')", true);
+            }
+
             else
             {
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
