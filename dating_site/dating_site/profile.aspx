@@ -69,7 +69,7 @@
 <div id="myNav_places" class="overlay_places">
   <a href="mainpage.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
-    <a class="aa" style="font-size:80px !important;"><asp:Label ID="Label1" runat="server" Text="Yuvraj Singh"></asp:Label></a>
+    <a class="aa" style="font-size:80px !important;"><asp:Label ID="Label1" runat="server"></asp:Label></a>
       <br />
       <br />
       <br />

@@ -75,9 +75,9 @@ namespace dating_site
         }
 
 
-        public void sendrequest(string name)
+        public void sendrequest(string other_email)
         {
-            string email = "uvnemk@gmail.com";
+            string email = Session["email"].ToString(); ;
 
             string filtered_email = email.ToString();
             int index = filtered_email.IndexOf('@');
@@ -87,14 +87,14 @@ namespace dating_site
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, ',"+name+"') where email LIKE '" + filtered_email + "%' and sendrequests Not LIKE '%" + name + "%'";
+                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, ',"+other_email+"') where email LIKE '" + filtered_email + "%' and sendrequests Not LIKE '%" + other_email + "%'";
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, ',"+name+"') where email LIKE '" + filtered_email + "%' and requests Not LIKE '%" + name + "%'";
+                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, ',"+email+"') where email LIKE '" + other_email + "%' and requests Not LIKE '%" + email + "%'";
                 cmd.Connection = sqlConnection1;
 
                 cmd.ExecuteNonQuery();
