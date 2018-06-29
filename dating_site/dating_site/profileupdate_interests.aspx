@@ -23,7 +23,7 @@
 
 .overlay-content_places {
     position: relative;
-    top: 20%;
+    top: 4%;
     width: 100%;
     text-align: center;
     align-content:center;
@@ -69,45 +69,15 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f1f1f1;
-}
-.rainbow {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-family: Bradley Hand ITC;
-}
-
-.bg { 
-    /* The image used */
-    background-image: url('images/background.jpg');
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 
 #regForm {
- background: rgba(0, 0, 0, 0.3);
-    filter: alpha(opacity=50);
+ 
   margin: 100px auto;
-  font-family: Raleway;
+  
   padding: 40px;
   width: 70%;
   min-width: 300px;
-  color: white;
-}
 
-h1 {
-  text-align: center;  
 }
 
 input {
@@ -191,29 +161,29 @@ button:hover {
 
 
 <body>
-    <form id="form1" runat="server">
+   
+     <form id="regForm" runat="server">
+
+
   <div id="myNav_places" class="overlay_places">
   <a href="profile.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
     <a class="aa" style="font-size:80px !important;">Interests</a>
-      <br />
-      <br />
-      <br />
+<br />
 
-  <div class="tab" ><b><span style="font-size:large;"> &ensp; &ensp;&ensp;   &emsp; &emsp;  &emsp;Interested In. . . . .</span></b><br /> 
-    <div  align="center"> <p><asp:RadioButtonList ID="form_gender"  Font-Bold="True" width="150px"  RepeatDirection="Horizontal" runat="server" >
+    <a class="aa">
+  <div class="tab" style="font-size:large;font-weight:bold" ><span style="font-size:28px">Interested In</span><br /> 
+    <div  align="center"><asp:RadioButtonList ID="form_gender" width="150px"  RepeatDirection="Horizontal" runat="server" >
        <asp:ListItem Value="male">male</asp:ListItem>         <asp:ListItem Value="female">female</asp:ListItem>
-        </asp:RadioButtonList></p>
-        </div>
-    <br />
-  </div>
+        </asp:RadioButtonList>
+        </div></div></a>
 
 
-  <div class="tab"><b><span style="font-size:large;">Age group . . . . .</span></b><br />
-      <br />
+     <a class="aa">
+  <div class="tab"><b><span style="font-size:large;">Age group</span></b><br />
     <div align="center">
          <p> 
-              <asp:DropDownList BackColor="#E1E1E1" align="center" class="input100" ID="form_agegroup" runat="server">
+              <asp:DropDownList BackColor="#E1E1E1" align="center" width="450px" class="input100" ID="form_agegroup" runat="server">
             <asp:ListItem Value="18">18-25</asp:ListItem>
             <asp:ListItem Value="26">26-38</asp:ListItem>
             <asp:ListItem Value="39">39-50</asp:ListItem>
@@ -221,14 +191,12 @@ button:hover {
             <asp:ListItem Value="60 ">60 +</asp:ListItem>
         </asp:DropDownList></p>
         </div>
-       <br />
-  </div> 
+  </div> </a>
     
-    
-    <div class="tab"><b><span style="font-size:large;">Nationality. . . . .</span></b><br />
-        <br />     
-     <p>
-             <asp:DropDownList ID="form_nationality" BackColor="#E1E1E1"  class="input100" runat="server">
+     <a class="aa">
+    <div class="tab"><b><span style="font-size:large;">Nationality</span></b><br />   
+    <div align="center">
+             <asp:DropDownList ID="form_nationality" BackColor="#E1E1E1" Width="450px"  class="input100" runat="server">
             <asp:ListItem Value="india">india</asp:ListItem>
             <asp:ListItem Value="america">america</asp:ListItem>
             <asp:ListItem Value="canada">canada</asp:ListItem>
@@ -237,24 +205,19 @@ button:hover {
             <asp:ListItem Value="australia">australia</asp:ListItem>
             <asp:ListItem Value="new_zealand">new zealand</asp:ListItem>
         </asp:DropDownList>
-        </p>
-     <br />
-    </div>
+       </div>
+    </div></a>
     
-     <div class="tab"><b><span style="font-size:large;">Hobbies. . . . .</span></b><br />
-         <br />
-      <p><asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1"  class="input100"  placeholder="Seprate hobbies with comma..">
-       </asp:TextBox></p> <br /> 
-         <br />
-        <div align="center"> <asp:Button ID="form_form"  runat="server"  BackColor="Black"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" />			
-            </div>			
-     </div> 
-    
-    
-    <div style="overflow:auto;float:right;">   
+       <a class="aa">
+     <div class="tab"><b><span style="font-size:large;">Hobbies</span></b><br />
+       <div align="center"><asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1" width="450px" class="input100"  placeholder="Seprate hobbies with comma.."></asp:TextBox><br /> 
+        <asp:Button ID="form_form"   runat="server"  BackColor="Black"  Width="100px" class="input100" style="font-weight:bold;font-size:20px;" Text="Submit" /> </div>			
+     </div> </a>
+
+    <div style="overflow:auto;">   
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> 
        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> 
-     </div> 
+     </div>
     
     
     <!-- Circles which indicates the steps of the form: --> 
@@ -271,8 +234,8 @@ button:hover {
         </span>
     </div> 
       </div></div>
-</form> 
-    
+
+ </form>    
  <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
