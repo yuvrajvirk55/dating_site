@@ -299,6 +299,6 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
-</script> </body> </html> </div>
+</script> </body> </html>
 
 
