@@ -57,7 +57,7 @@ namespace dating_site
 
             SqlCommand cmd;
 
-            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email'", con);
+            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
