@@ -23,7 +23,7 @@
 
 .overlay-content_places {
     position: relative;
-    top: 20%;
+    top: 10%;
     width: 100%;
     text-align: center;
     align-content:center;
@@ -90,9 +90,7 @@
   <div class="overlay-content_places">
     <a class="aa" style="font-size:80px !important;">Password Change</a>
       <br />
-      <br />
-      <br />
-
+  
       <a class="aa"><div align="center" style="color:red;"><asp:CompareValidator ID="CompareValidator2" runat="server" ControlToCompare="register_password" ControlToValidate="register_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator></div></a>
       <a class="aa"><div align="center"><asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="450px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </div></a>
       <a class="aa"><div align="center"><asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="450px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></div></a>

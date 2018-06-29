@@ -23,7 +23,7 @@
 
 .overlay-content_places {
     position: relative;
-    top: 20%;
+    top: 10%;
     width: 100%;
     text-align: center;
     align-content:center;
@@ -90,8 +90,7 @@
   <div class="overlay-content_places">
     <a class="aa" style="font-size:80px !important;">Edit Info</a>
       <br />
-      <br />
-      <br />
+
      <a class="aa"><div align="center">
       <table align="center">
       <tr>

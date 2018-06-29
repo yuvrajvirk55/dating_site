@@ -73,9 +73,9 @@
       <br />
       <br />
       <br />
-      <a class="aa">Edit Information</a>
-        <a class="aa">Edit Interests</a>
-        <a class="aa">Change Password</a>
+      <a class="aa" href="profileupdate_info.aspx">Edit Information</a>
+        <a class="aa" href="profileupdate_interests.aspx">Edit Interests</a>
+        <a class="aa" href="profileupdate_changepassword.aspx">Change Password</a>
 
 
   </div>
