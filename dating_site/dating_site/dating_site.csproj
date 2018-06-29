@@ -115,6 +115,7 @@
     <None Include="scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="profile.aspx" />
     <Content Include="profileupdate_changepassword.aspx" />
+    <Content Include="profileupdate_info.aspx" />
     <Content Include="progress-circle.js" />
     <Content Include="query.aspx" />
     <Content Include="scripts\jquery-1.7.1.js" />
@@ -192,6 +193,13 @@
     </Compile>
     <Compile Include="profileupdate_changepassword.aspx.designer.cs">
       <DependentUpon>profileupdate_changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profileupdate_info.aspx.cs">
+      <DependentUpon>profileupdate_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profileupdate_info.aspx.designer.cs">
+      <DependentUpon>profileupdate_info.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="query.aspx.cs">
