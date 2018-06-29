@@ -12,9 +12,9 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Label1.Text = Session["fname"] + " " + Session["lname"];
-            Image1.ImageUrl= Session["img"].ToString();
-
+          //  Label1.Text = Session["fname"] + " " + Session["lname"];
+          //  Image1.ImageUrl= Session["img"].ToString();
+            Response.AppendHeader("Refresh", "10;url=mainpage.aspx");
         }
     }
 }
