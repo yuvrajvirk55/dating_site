@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 
-        <style>
+<style>
         
 .overlay_places {
     height: 100%;
@@ -23,7 +23,7 @@
 
 .overlay-content_places {
     position: relative;
-    top: 4%;
+    top: 10%;
     width: 100%;
     text-align: center;
     align-content:center;
@@ -73,7 +73,6 @@
 #regForm {
  
   margin: 100px auto;
-  
   padding: 40px;
   width: 70%;
   min-width: 300px;
@@ -156,19 +155,13 @@ button:hover {
 <!--===============================================================================================-->
 
 </head>
-
-  
-
-
 <body>
    
      <form id="regForm" runat="server">
-
-
   <div id="myNav_places" class="overlay_places">
   <a href="profile.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
-    <a class="aa" style="font-size:80px !important;">Interests</a>
+    <a class="aa" style="font-size:60px !important;">Interests</a>
 <br />
 
     <a class="aa">
