@@ -243,13 +243,13 @@ li {
     top: 10%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .overlay_places .aa {
-    padding: 8px;
+    padding: 5px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
