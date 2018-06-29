@@ -57,9 +57,9 @@ namespace dating_site
 
             if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
               {
-                 
-                Label1.Text = "successfully logged in";
-              }
+
+                Response.Redirect("mainpage.aspx");
+            }
 
               else if (string.IsNullOrEmpty(db_email))
               {
