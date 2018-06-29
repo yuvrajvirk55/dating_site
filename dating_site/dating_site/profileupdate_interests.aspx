@@ -158,7 +158,7 @@ button:hover {
 <body>
    
      <form id="regForm" runat="server">
-          <asp:Button ID="form_form"   runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-size:20px;color:white;" Text="Submit" OnClick="form_form_Click" />
+     
   <div id="myNav_places" class="overlay_places">
   <a href="profile.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
@@ -205,7 +205,7 @@ button:hover {
        <a class="aa">
      <div class="tab"><b><span style="font-size:large;">Hobbies</span></b><br />
        <div align="center"><asp:TextBox ID="form_hobbies" runat="server" BackColor="#E1E1E1" width="450px" class="input100"  placeholder="Seprate hobbies with comma.."></asp:TextBox><br /> 
-        </div>			
+             <asp:Button ID="form_form"   runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-size:20px;color:white;" Text="Submit" OnClick="form_form_Click" /></div>			
      </div> </a>
 
     <div style="overflow:auto;">   

@@ -404,12 +404,7 @@ li {
             loaddatasearch();
           
         }
-         void Contactsdetails_RowCommand(Object sender, GridViewCommandEventArgs e)
-        {
-
-          Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
-          
-        }
+      
 
 </script>
 

@@ -22,15 +22,6 @@ namespace dating_site {
         protected global::System.Web.UI.HtmlControls.HtmlForm regForm;
         
         /// <summary>
-        /// form_form control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button form_form;
-        
-        /// <summary>
         /// form_gender control.
         /// </summary>
         /// <remarks>
@@ -65,5 +56,14 @@ namespace dating_site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox form_hobbies;
+        
+        /// <summary>
+        /// form_form control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button form_form;
     }
 }

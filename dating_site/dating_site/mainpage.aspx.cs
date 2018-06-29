@@ -82,27 +82,28 @@ namespace dating_site
             string filtered_email = email.ToString();
             int index = filtered_email.IndexOf('@');
             filtered_email = filtered_email.Substring(0, index);
-            {
+            
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
+         
+                sqlConnection1.Open();
+                cmd.ExecuteNonQuery();
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, ',"+other_email+"') where email LIKE '" + filtered_email + "%' and sendrequests Not LIKE '%" + other_email + "%'";
                 cmd.Connection = sqlConnection1;
-
-                sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
+
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, ',"+email+"') where email LIKE '" + other_email + "%' and requests Not LIKE '%" + email + "%'";
                 cmd.Connection = sqlConnection1;
-
                 cmd.ExecuteNonQuery();
                 sqlConnection1.Close();
-            }
-               
 
-            }
+            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
+
+        }
        
 
     }
