@@ -11,7 +11,8 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            register_fname.Text = Session["fname"].ToString();
+            register_lname.Text = Session["lname"].ToString();
         }
 
         protected void register_register_Click(object sender, EventArgs e)
@@ -38,9 +39,9 @@ namespace dating_site
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET password = '" + pass + "' where email LIKE '" + filtered_email + "%'";
+                cmd.CommandText = "UPDATE usertable SET first_name = '"+ register_fname + "', last_name = '" + register_lname + "', dob = '" + register_dob + "', sex = '" + register_gender + "', pic = '" +filtered_name + "' where email LIKE '" + filtered_email + "%'";
                 cmd.Connection = sqlConnection1;
-
+                
                 sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
 
