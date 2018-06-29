@@ -26,6 +26,8 @@
     top: 20%;
     width: 100%;
     text-align: center;
+    align-content:center;
+    align-items:center;
     margin-top: 30px;
 }
 
@@ -84,29 +86,19 @@
     <div>
     
 <div id="myNav_places" class="overlay_places">
-  <a href="mainpage.aspx" class="closebtn_places aa">&times;</a>
+  <a href="profile.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
     <a class="aa" style="font-size:80px !important;">Password Change</a>
       <br />
       <br />
       <br />
-      <a class="aa">
-<table>
-    <tr>
-    <td Width="250px">  <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </td>
-    <td  Width="250px"> <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></td>
-    <td> <div  style="color:red;"><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="register_password" ControlToValidate="register_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator></div></td>
-  </tr >
 
-     <tr">
-    <td ></td>
-    <td>
-         <asp:ImageButton ID="ImageButton1" runat="server" Height="87px" Width="127px" ImageUrl="~/images/profile_pic.png" OnClientClick="browse()" /><asp:FileUpload ID="FileUpload1" runat="server" /></td>
-    <td></td>
-  </tr>
-</table>
-      </a>
-      
+      <a class="aa"><div align="center" style="color:red;"><asp:CompareValidator ID="CompareValidator2" runat="server" ControlToCompare="register_password" ControlToValidate="register_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator></div></a>
+      <a class="aa"><div align="center"><asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="450px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </div></a>
+      <a class="aa"><div align="center"><asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="450px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></div></a>
+
+      <br />
+     <a class="aa"><div align="center"><asp:Button ID="register_register" runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-weight:bold;font-size:20px;color:black;" Text="Submit" />	</div></a>
   </div>
 </div>
 
