@@ -13,7 +13,9 @@ namespace dating_site
     public partial class mainpage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        { myImg.ImageUrl = Session["img"].ToString();
+            Label1.Text= Session["fname"] + " " + Session["lname"];
+
             loaddatasuggestion();
         }
 
@@ -55,7 +57,7 @@ namespace dating_site
 
             SqlCommand cmd;
 
-            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%'", con);
+            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, int_sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
