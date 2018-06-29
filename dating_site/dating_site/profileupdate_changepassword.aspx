@@ -60,7 +60,24 @@
 }
     </style>
 
+
+     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
 </head>
+
+  
+
 
 <body>
     <form id="form1" runat="server">
@@ -69,15 +86,27 @@
 <div id="myNav_places" class="overlay_places">
   <a href="mainpage.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
-    <a class="aa" style="font-size:80px !important;"><asp:Label ID="Label1" runat="server" Text="Yuvraj Singh"></asp:Label></a>
+    <a class="aa" style="font-size:80px !important;">Password Change</a>
       <br />
       <br />
       <br />
-      <a class="aa">Edit Information</a>
-        <a class="aa">Edit Interests</a>
-        <a class="aa">Change Password</a>
+      <a class="aa">
+<table>
+    <tr>
+    <td Width="250px">  <asp:TextBox ID="register_password" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Password"></asp:TextBox> </td>
+    <td  Width="250px"> <asp:TextBox ID="register_cpassword" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox></td>
+    <td> <div  style="color:red;"><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="register_password" ControlToValidate="register_cpassword" ErrorMessage=" Passwords doesn't match"></asp:CompareValidator></div></td>
+  </tr >
 
-
+     <tr">
+    <td ></td>
+    <td>
+         <asp:ImageButton ID="ImageButton1" runat="server" Height="87px" Width="127px" ImageUrl="~/images/profile_pic.png" OnClientClick="browse()" /><asp:FileUpload ID="FileUpload1" runat="server" /></td>
+    <td></td>
+  </tr>
+</table>
+      </a>
+      
   </div>
 </div>
 
