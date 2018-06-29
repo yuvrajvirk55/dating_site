@@ -158,7 +158,7 @@ button:hover {
 <body>
    
      <form id="regForm" runat="server">
-          <asp:Button ID="form_form"   runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-size:20px;color:white;" Text="Submit" OnClick="form_form_Click" />
+          <asp:Button ID="form_form"   runat="server"  BackColor="#818181"  Width="250px" class="input100" style="font-size:20px;color:white;" Text="Submit" />
   <div id="myNav_places" class="overlay_places">
   <a href="profile.aspx" class="closebtn_places aa">&times;</a>
   <div class="overlay-content_places">
