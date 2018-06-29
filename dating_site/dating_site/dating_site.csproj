@@ -114,6 +114,7 @@
     <Content Include="bower.json" />
     <None Include="scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="profile.aspx" />
+    <Content Include="profileupdate_changepassword.aspx" />
     <Content Include="progress-circle.js" />
     <Content Include="query.aspx" />
     <Content Include="scripts\jquery-1.7.1.js" />
@@ -184,6 +185,13 @@
     </Compile>
     <Compile Include="profile.aspx.designer.cs">
       <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profileupdate_changepassword.aspx.cs">
+      <DependentUpon>profileupdate_changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profileupdate_changepassword.aspx.designer.cs">
+      <DependentUpon>profileupdate_changepassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="query.aspx.cs">
