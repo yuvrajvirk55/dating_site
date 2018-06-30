@@ -372,20 +372,15 @@ li {
 
 
 .dropdown {
-    float: left;
+    float: right;
     overflow: hidden;
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;    
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+ }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: red;
@@ -479,10 +474,9 @@ li {
   <a href="profile.aspx"" class="extra" style="padding-right:2px;padding-left:16px;border-left: 1px groove white;"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
-   <a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>
+   
     <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
+    <button class="dropbtn"><a href="#home"  class="extra"><i class="fa fa-caret-down"></i><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
     </button>
     <div class="dropdown-content">
       <a href="#">Link 1</a>
