@@ -520,7 +520,7 @@ li {
   <h1>Friend List</h1>
         <br />
         <div style="overflow-x:auto;width:840px">
-        <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand_remove" Height="124px">
+        <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
               <Columns>  
                   <asp:TemplateField>
                       <ItemTemplate></ItemTemplate>
@@ -545,12 +545,17 @@ li {
     </asp:GridView>
             </div>
     <br />
-    <bt />
+    <br />
+    <br />
      <h1>Friend Requests</h1>
         <br />
         <div style="overflow-x:auto;width:840px">
-        <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand_requests" Height="124px">
-              <Columns>  
+        <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
+              <Columns>
+                   <asp:TemplateField>
+                      <ItemTemplate></ItemTemplate>
+                  </asp:TemplateField>
+                  
                  <asp:buttonfield commandname="Add" buttontype="button"  text="Accept"  ControlStyle-CssClass="button button2" />
                 
                 <asp:TemplateField >
