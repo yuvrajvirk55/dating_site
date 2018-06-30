@@ -126,11 +126,7 @@ namespace dating_site
         protected void friends_dropdownlist()
         {
 
-            string[] pic = new string[2];
-            string[] names = new string[2];
-            int cont = 0;
-
-
+            
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             SqlCommand cmd = new SqlCommand();
 
@@ -143,6 +139,18 @@ namespace dating_site
             DataTable dt = new DataTable();
             da.Fill(dt);
 
+            
+          
+            int j = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                j++;
+            }
+
+            string[] pic = new string[j];
+            string[] names = new string[j];
+
+            int cont = 0;
             foreach (DataRow row in dt.Rows)
             {
                 names[cont] = row.Field<string>(0);
@@ -150,8 +158,9 @@ namespace dating_site
                 cont++;
             }
 
+            friends_dropdown.InnerHtml = "";
 
-            for (int i = 0; i < names.Length; i++)
+            for (int i = 0; i < j; i++)
             {
                friends_dropdown.InnerHtml += "<a  class='tablinks' onclick="+"\""+"openCity(event, 'Paris')"+"\""+" ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
 
