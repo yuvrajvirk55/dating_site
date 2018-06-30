@@ -41,7 +41,7 @@ namespace dating_site
 
             for (int i = 0; i < names.Length; i++)
                 {
-                    myDropdown.InnerHtml += "<a href='friend'><img src='"+pic[i].Replace("~","")+ "' width='42' height='42' />   " + names[i] + "</a>";
+                   // myDropdown.InnerHtml += "<a href='friend'><img src='"+pic[i].Replace("~","")+ "' width='42' height='42' />   " + names[i] + "</a>";
 
                 }
 
