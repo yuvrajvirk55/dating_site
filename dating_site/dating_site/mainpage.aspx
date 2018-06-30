@@ -476,12 +476,9 @@ li {
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
    
     <div class="dropdown">
-    <button class="dropbtn"><a href="#home"  class="extra"><i class="fa fa-caret-down"></i><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
+    <button class="dropbtn"><a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
     </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <div class="dropdown-content" id="friends_dropdown" runat="server">
     </div>
   </div> 
     <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
