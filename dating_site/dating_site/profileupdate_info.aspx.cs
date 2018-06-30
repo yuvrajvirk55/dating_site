@@ -11,14 +11,13 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            register_fname.Text = Session["fname"].ToString();
-            register_lname.Text = Session["lname"].ToString();
+         
         }
 
         protected void register_register_Click(object sender, EventArgs e)
         {
 
-          //  try
+            try
             {
                 int my_id = (int)Session["id"];
 
@@ -58,10 +57,10 @@ namespace dating_site
 
             }
 
-        //    catch
+            catch
             {
 
-               // Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Info Change Failed!')", true);
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Info Change Failed!')", true);
             }
         }
     }

@@ -16,7 +16,7 @@ namespace dating_site
 
         protected void form_form_Click(object sender, EventArgs e)
         {
-           // try
+            try
             {
                 int my_id = (int)Session["id"];
                 my_id = my_id - 2;
@@ -42,10 +42,10 @@ namespace dating_site
 
             }
 
-        //    catch
+           catch
             {
 
-              //  Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Info changing Failed!')", true);
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Interest changing Failed!')", true);
             }
         }
     }
