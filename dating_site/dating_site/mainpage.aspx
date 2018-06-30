@@ -394,7 +394,7 @@ li {
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = GridView1.Rows[index];
 
-            string StdID = GridView1.DataKeys[row.DataItemIndex].Values["email"].ToString();
+            string StdID = GridView1.DataKeys[row.DataItemIndex].Values["id"].ToString();
             Selected += "email : " + StdID + "<br/>";
 
             lblResult.Text = Selected;
@@ -402,6 +402,26 @@ li {
 
             sendrequest(StdID);
             loaddatasearch();
+          
+        }
+
+        void ContactsGridView_RowCommand2(Object sender, GridViewCommandEventArgs e)
+        {
+
+            string Selected = "";
+
+
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = GridView2.Rows[index];
+
+            string StdID = GridView2.DataKeys[row.DataItemIndex].Values["id"].ToString();
+            Selected += "email : " + StdID + "<br/>";
+
+            lblResult.Text = Selected;
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+
+            sendrequest(StdID);
+            loaddatasuggestion();
           
         }
       
