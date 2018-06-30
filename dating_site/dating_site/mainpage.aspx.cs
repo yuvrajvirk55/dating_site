@@ -14,8 +14,8 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            myImg.ImageUrl = Session["img"].ToString();
-            Label1.Text= Session["fname"] + " " + Session["lname"];
+            //myImg.ImageUrl = Session["img"].ToString();
+           // Label1.Text= Session["fname"] + " " + Session["lname"];
 
             loaddatasuggestion();
             friends_dropdownlist();
@@ -149,7 +149,7 @@ namespace dating_site
 
             for (int i = 0; i < names.Length; i++)
             {
-               friends_dropdown.InnerHtml += "<a href='friend'><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
+               friends_dropdown.InnerHtml += "<a href='friend' class='tablinks' onclick='openCity(event, 'Paris')' ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
 
             }
 

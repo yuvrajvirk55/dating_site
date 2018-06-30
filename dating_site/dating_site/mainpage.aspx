@@ -411,6 +411,15 @@ li {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+/* Style the tab content */
+.tabcontent_main {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
 </style>
 
 
@@ -481,7 +490,7 @@ li {
     <div class="dropdown-content" id="friends_dropdown" runat="server">
     </div>
   </div> 
-    <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
+    <a class="tablinks extra_left " onclick="openCity(event, 'London')" id="defaultOpen"  style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
    <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -494,8 +503,15 @@ li {
  
 
   <div class="main_body">
-    <h2>Lorum Ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+   <div id="London" class="tabcontent_main">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent_main">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
   </div>
  
 
