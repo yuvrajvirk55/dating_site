@@ -18,8 +18,10 @@ namespace dating_site
         protected void register_register_Click(object sender, EventArgs e)
         {
 
-            try
+          //  try
             {
+                int my_id = (int)Session["id"];
+
                 string filtered_email = Session["email"].ToString();
                 int index = filtered_email.IndexOf('@');
                 filtered_email = filtered_email.Substring(0, index);
@@ -39,7 +41,7 @@ namespace dating_site
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET first_name = '"+ register_fname + "', last_name = '" + register_lname + "', dob = '" + register_dob + "', sex = '" + register_gender + "', pic = '" +filtered_name + "' where id = '" + filtered_email + "%'";
+                cmd.CommandText = "UPDATE usertable SET first_name = '"+ register_fname + "', last_name = '" + register_lname + "', dob = " + register_dob + ", sex = '" + register_gender + "', pic = '" +filtered_name + "' where id = " +my_id + "";
                 cmd.Connection = sqlConnection1;
                 
                 sqlConnection1.Open();
@@ -56,10 +58,10 @@ namespace dating_site
 
             }
 
-            catch
+        //    catch
             {
 
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Info Change Failed!')", true);
+               // Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Info Change Failed!')", true);
             }
         }
     }
