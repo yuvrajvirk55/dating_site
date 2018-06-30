@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -25,11 +26,14 @@ namespace dating_site
                 int index = filtered_email.IndexOf('@');
                 filtered_email = filtered_email.Substring(0, index);
 
+
               
                 string strname = FileUpload1.FileName.ToString();
                 var result = strname.Substring(strname.Length - 4);
 
                 string filtered_name = filtered_email + result; ;
+
+                File.Delete(Server.MapPath("~/upload/") + filtered_name);
 
                 FileUpload1.PostedFile.SaveAs(Server.MapPath("~/upload/") + filtered_name);
 
