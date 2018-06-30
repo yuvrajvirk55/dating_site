@@ -111,8 +111,6 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
 
 
-
-
                 sqlConnection1.Close();
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
