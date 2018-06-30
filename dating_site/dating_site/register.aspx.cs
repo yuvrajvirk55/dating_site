@@ -89,8 +89,20 @@ namespace dating_site
 
                 sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
+               
+
+                string checkid = "select id from usertable WHERE email LIKE '" + filtered_email + "%'";
+                SqlCommand command_id = new SqlCommand(checkid, sqlConnection1);
+
+              
+
+                //database values
+                int db_id = (int)command_id.ExecuteScalar();
+
                 sqlConnection1.Close();
 
+
+                Session["id"] = db_id;
                 Session["email"] = register_email.Text;
                 Session["fname"] = register_fname.Text;
                 Session["lname"] = register_lname.Text;
