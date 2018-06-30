@@ -394,7 +394,7 @@ li {
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = GridView1.Rows[index];
 
-            string StdID = GridView1.DataKeys[row.DataItemIndex].Values["id"].ToString();
+            int StdID = (int)GridView1.DataKeys[row.DataItemIndex].Values["id"];
             Selected += "email : " + StdID + "<br/>";
 
             lblResult.Text = Selected;
@@ -402,7 +402,7 @@ li {
 
             sendrequest(StdID);
             loaddatasearch();
-          
+
         }
 
         void ContactsGridView_RowCommand2(Object sender, GridViewCommandEventArgs e)
@@ -414,17 +414,17 @@ li {
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = GridView2.Rows[index];
 
-            string StdID = GridView2.DataKeys[row.DataItemIndex].Values["id"].ToString();
-            Selected += "email : " + StdID + "<br/>";
+            int StdID = (int)GridView2.DataKeys[row.DataItemIndex].Values["id"];
+            Selected += "id : " + StdID + "<br/>";
 
             lblResult.Text = Selected;
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
 
             sendrequest(StdID);
             loaddatasuggestion();
-          
+
         }
-      
+
 
 </script>
 
@@ -459,7 +459,7 @@ li {
          <h2>Suggestion Box</h2>
         <br />
         <div style="overflow-x:auto;width:520px">
-        <asp:GridView ID="GridView2"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="124px">
+        <asp:GridView ID="GridView2"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="124px">
               <Columns>  
                  <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
                 
@@ -496,7 +496,7 @@ li {
     <h2>People</h2>
       <br />
       <div class="new">
-         <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="email" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
+         <asp:GridView ID="GridView1"  Width="858px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="192px">
               <Columns>  
                  <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
                 

@@ -32,7 +32,7 @@ namespace dating_site
 
             SqlCommand cmd;
 
-            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%'", con);
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -57,7 +57,7 @@ namespace dating_site
 
             SqlCommand cmd;
 
-            cmd = new SqlCommand("SELECT userinterest.email as email, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -75,30 +75,44 @@ namespace dating_site
         }
 
 
-        public void sendrequest(string other_email)
+        public void sendrequest(int other_id)
         {
-            string email = Session["email"].ToString(); ;
+            int my_id = (int)Session["id"];
 
-            string filtered_email = email.ToString();
-            int index = filtered_email.IndexOf('@');
-            filtered_email = filtered_email.Substring(0, index);
             
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
          
                 sqlConnection1.Open();
-                cmd.ExecuteNonQuery();
+
+            // adding to my send requests
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, ',"+other_email+"') where email LIKE '" + filtered_email + "%' and sendrequests Not LIKE '%" + other_email + "%'";
+                cmd.CommandText = "UPDATE usertable SET sendrequests = " + other_id + " where id = " + my_id + " and sendrequests is null";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequestss Not LIKE '%" + other_id + "%'";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+
+            //adding to other users received requests
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET requests = " + my_id + " where id = " + other_id + " and requests is null";
                 cmd.Connection = sqlConnection1;
                 cmd.ExecuteNonQuery();
 
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, ',"+email+"') where email LIKE '" + other_email + "%' and requests Not LIKE '%" + email + "%'";
+                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requestss Not LIKE '%" + my_id + "%'";
                 cmd.Connection = sqlConnection1;
                 cmd.ExecuteNonQuery();
+
+
+
+
                 sqlConnection1.Close();
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
