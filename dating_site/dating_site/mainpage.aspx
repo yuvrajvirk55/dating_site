@@ -518,7 +518,7 @@ li {
 <div id="Paris" class="tabcontent_main">
     <br />
     <br />
-  <h1>Friend List</h1>
+  <h1 style="font-family:'Wendy One', sans-serif; color:#E5E5E5; font-size:70px">Friend List</h1>
         <br />
         <div style="overflow-x:auto;width:840px">
         <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
@@ -548,7 +548,7 @@ li {
     <br />
     <br />
     <br />
-     <h1>Friend Requests</h1>
+     <h1 style="font-family:'Wendy One', sans-serif; color:#E5E5E5; font-size:70px">Friend Requests</h1>
         <br />
         <div style="overflow-x:auto;width:840px">
         <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
