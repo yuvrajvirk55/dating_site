@@ -175,7 +175,8 @@
 }
 
 .button1 {font-size: 16px;}
-
+.button2 {background-color: #008CBA;} 
+.button3 {background-color: #f44336;}
 
 .friendlist {
   margin: 20px;
@@ -525,7 +526,7 @@ li {
                       <ItemTemplate></ItemTemplate>
                   </asp:TemplateField>
                 
-                 <asp:buttonfield commandname="Add" buttontype="button"  text="Remove"  ControlStyle-CssClass="button button1" />
+                 <asp:buttonfield commandname="Add" buttontype="button"  text="Remove"  ControlStyle-CssClass="button button3" />
                 
                 <asp:TemplateField >
                 <ItemTemplate>  
@@ -550,7 +551,7 @@ li {
         <div style="overflow-x:auto;width:840px">
         <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand_requests" Height="124px">
               <Columns>  
-                 <asp:buttonfield commandname="Add" buttontype="button"  text="Accept"  ControlStyle-CssClass="button button1" />
+                 <asp:buttonfield commandname="Add" buttontype="button"  text="Accept"  ControlStyle-CssClass="button button2" />
                 
                 <asp:TemplateField >
                 <ItemTemplate>  
