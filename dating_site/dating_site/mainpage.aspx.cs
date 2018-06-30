@@ -149,7 +149,7 @@ namespace dating_site
 
             for (int i = 0; i < names.Length; i++)
             {
-               friends_dropdown.InnerHtml += "<a href='friend' class='tablinks' onclick='openCity(event, 'Paris')' ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
+               friends_dropdown.InnerHtml += "<a id ='defaultOpen'  class='tablinks' onclick="+"\""+"openCity(event, 'Paris')"+"\""+" ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
 
             }
 
