@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -12,40 +13,44 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
+            
+                string[] pic = new string[4];
+                string[] names = new string[4];
+                int cont = 0;
+
 
                 SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+                SqlCommand cmd = new SqlCommand();
 
-
-                SqlCommand comm = new SqlCommand("SELECT first_name + ' ' + last_name AS name from usertable", connection);
+                cmd.Connection = connection;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,pic from usertable";
                 connection.Open();
 
-                SqlDataReader reader = comm.ExecuteReader();
-                List<string> str = new List<string>();
-                int i = 0;
-                while (reader.Read())
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                foreach (DataRow row in dt.Rows)
                 {
-                    str.Add(reader.GetValue(0).ToString());
+                    names[cont] = row.Field<string>(0);
+                    pic[cont] = row.Field<string>(1);
+                    cont++;
                 }
-                reader.Close();
-                connection.Close();
-                foreach (string o in str)
-                {
-                    myDropdown.InnerHtml += "<a href='friend'>"+o+"</a><br/>";
-                        
-                }
-             
-            }
-            catch (Exception)
+            for (int i = 0; i < pic.Length; i++)
             {
-                throw;
-            }
-            finally
-            {
-                
+                string a = pic[i];
+                a.Replace("~", "");
+                pic[i] = a;
             }
 
-        }
+            for (int i = 0; i < names.Length; i++)
+                {
+                    myDropdown.InnerHtml += "<a href='friend'><img src='"+pic[i]+ "' width='42' height='42' />" + names[i] + "</a>";
+
+                }
+
+       
+            }
     }
 }

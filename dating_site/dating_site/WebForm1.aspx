@@ -70,6 +70,7 @@
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
   </div>
 </div>
+     
 
 <script>
 /* When the user clicks on the button,
