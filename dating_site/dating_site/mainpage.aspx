@@ -388,16 +388,12 @@ li {
         void ContactsGridView_RowCommand(Object sender, GridViewCommandEventArgs e)
         {
 
-            string Selected = "";
-
 
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = GridView1.Rows[index];
 
             int StdID = (int)GridView1.DataKeys[row.DataItemIndex].Values["id"];
-            Selected += "email : " + StdID + "<br/>";
-
-            lblResult.Text = Selected;
+            
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
 
             sendrequest(StdID);
@@ -407,18 +403,14 @@ li {
 
         void ContactsGridView_RowCommand2(Object sender, GridViewCommandEventArgs e)
         {
-
-            string Selected = "";
-
+            
 
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = GridView2.Rows[index];
 
             int StdID = (int)GridView2.DataKeys[row.DataItemIndex].Values["id"];
-            Selected += "id : " + StdID + "<br/>";
-
-            lblResult.Text = Selected;
-            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+            
+           
 
             sendrequest(StdID);
             loaddatasuggestion();
