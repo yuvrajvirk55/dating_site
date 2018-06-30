@@ -13,8 +13,8 @@ namespace dating_site
     public partial class mainpage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        { myImg.ImageUrl = Session["img"].ToString();
-            Label1.Text= Session["fname"] + " " + Session["lname"];
+        { //myImg.ImageUrl = Session["img"].ToString();
+            //Label1.Text= Session["fname"] + " " + Session["lname"];
 
             loaddatasuggestion();
         }
