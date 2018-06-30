@@ -504,13 +504,63 @@ li {
 
   <div class="main_body">
    <div id="London" class="tabcontent_main">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br/>
+   
+    Last name:<br/>
+    
+  </fieldset>
 </div>
 
 <div id="Paris" class="tabcontent_main">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <h2>Friend List</h2>
+        <br />
+        <div style="overflow-x:auto;width:520px">
+        <asp:GridView ID="GridView3"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand2" Height="124px">
+              <Columns>  
+                 <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
+                
+                <asp:TemplateField >
+                <ItemTemplate>  
+                    <div>
+                      <ul>
+                        <li>
+                         <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />
+                          <h2><asp:Label ID="Label3" runat="server" Text='<%#Eval("name") %>'></asp:Label></h2>
+                          <p><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label><br />Hobbies: <asp:Label ID="Label2" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></p>
+                        </li>
+                      </ul>
+                    </div>
+            </ItemTemplate>
+            </asp:TemplateField>       
+        </Columns>
+    </asp:GridView>
+            </div>
+
+     <h2>Friend Requests</h2>
+        <br />
+        <div style="overflow-x:auto;width:520px">
+        <asp:GridView ID="GridView4"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand2" Height="124px">
+              <Columns>  
+                 <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
+                
+                <asp:TemplateField >
+                <ItemTemplate>  
+                    <div>
+                      <ul>
+                        <li>
+                         <asp:Image runat="server" ImageUrl='<%#Eval("pic") %>' Height="90px" Width="90px" />
+                          <h2><asp:Label ID="Label3" runat="server" Text='<%#Eval("name") %>'></asp:Label></h2>
+                          <p><asp:Label ID="lblClass" runat="server" Text='<%#Eval("gender") %>'></asp:Label><br />Hobbies: <asp:Label ID="Label2" runat="server" Text='<%#Eval("hobbies") %>'></asp:Label></p>
+                        </li>
+                      </ul>
+                    </div>
+            </ItemTemplate>
+            </asp:TemplateField>       
+        </Columns>
+    </asp:GridView>
+            </div>
 </div>
   </div>
  
