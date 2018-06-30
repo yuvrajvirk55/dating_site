@@ -93,7 +93,7 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequestss Not LIKE '%" + other_id + "%'";
+                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequests Not LIKE '%" + other_id + "%'";
                 cmd.Connection = sqlConnection1;
                 cmd.ExecuteNonQuery();
 
@@ -106,7 +106,7 @@ namespace dating_site
 
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requestss Not LIKE '%" + my_id + "%'";
+                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requests Not LIKE '%" + my_id + "%'";
                 cmd.Connection = sqlConnection1;
                 cmd.ExecuteNonQuery();
 

@@ -459,7 +459,7 @@ li {
          <h2>Suggestion Box</h2>
         <br />
         <div style="overflow-x:auto;width:520px">
-        <asp:GridView ID="GridView2"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand" Height="124px">
+        <asp:GridView ID="GridView2"  Width="16px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommand2" Height="124px">
               <Columns>  
                  <asp:buttonfield commandname="Add" buttontype="button"  text="Add Friend"  ControlStyle-CssClass="button button1" />
                 

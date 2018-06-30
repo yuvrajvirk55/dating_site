@@ -39,7 +39,7 @@ namespace dating_site
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET first_name = '"+ register_fname + "', last_name = '" + register_lname + "', dob = '" + register_dob + "', sex = '" + register_gender + "', pic = '" +filtered_name + "' where email LIKE '" + filtered_email + "%'";
+                cmd.CommandText = "UPDATE usertable SET first_name = '"+ register_fname + "', last_name = '" + register_lname + "', dob = '" + register_dob + "', sex = '" + register_gender + "', pic = '" +filtered_name + "' where id = '" + filtered_email + "%'";
                 cmd.Connection = sqlConnection1;
                 
                 sqlConnection1.Open();
@@ -59,7 +59,7 @@ namespace dating_site
             catch
             {
 
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Password Change Failed!')", true);
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Info Change Failed!')", true);
             }
         }
     }
