@@ -68,6 +68,10 @@ namespace dating_site
                 cmd.ExecuteNonQuery();
               GridView2.DataSource = ds;
                GridView2.DataBind();
+                GridView3.DataSource = ds;
+                GridView3.DataBind();
+                GridView4.DataSource = ds;
+                GridView4.DataBind();
             }
             catch
             {
