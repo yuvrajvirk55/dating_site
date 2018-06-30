@@ -387,6 +387,10 @@ li {
     margin: 0;
 }
 
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
