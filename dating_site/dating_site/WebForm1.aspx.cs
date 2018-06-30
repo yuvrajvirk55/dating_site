@@ -14,8 +14,8 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
             
-                string[] pic = new string[4];
-                string[] names = new string[4];
+                string[] pic = new string[2];
+                string[] names = new string[2];
                 int cont = 0;
 
 
@@ -37,16 +37,11 @@ namespace dating_site
                     pic[cont] = row.Field<string>(1);
                     cont++;
                 }
-            for (int i = 0; i < pic.Length; i++)
-            {
-                string a = pic[i];
-                a.Replace("~", "");
-                pic[i] = a;
-            }
+          
 
             for (int i = 0; i < names.Length; i++)
                 {
-                    myDropdown.InnerHtml += "<a href='friend'><img src='"+pic[i]+ "' width='42' height='42' />" + names[i] + "</a>";
+                    myDropdown.InnerHtml += "<a href='friend'><img src='"+pic[i].Replace("~","")+ "' width='42' height='42' />   " + names[i] + "</a>";
 
                 }
 

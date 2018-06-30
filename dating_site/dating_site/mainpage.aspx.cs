@@ -17,6 +17,7 @@ namespace dating_site
             Label1.Text= Session["fname"] + " " + Session["lname"];
 
             loaddatasuggestion();
+            populateDropdown();
         }
 
         protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
@@ -116,7 +117,44 @@ namespace dating_site
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
 
         }
-       
+
+        protected void populateDropdown()
+        {
+
+            string[] pic = new string[2];
+            string[] names = new string[2];
+            int cont = 0;
+
+
+            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,pic from usertable";
+            connection.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                names[cont] = row.Field<string>(0);
+                pic[cont] = row.Field<string>(1);
+                cont++;
+            }
+
+
+            for (int i = 0; i < names.Length; i++)
+            {
+                myDropdown.InnerHtml += "<a href='friend'><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
+
+            }
+
+
+        }
+
 
     }
     }
