@@ -41,7 +41,7 @@ namespace dating_site
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET first_name = '"+ register_fname.Text + "', last_name = '" + register_lname.Text + "', dob = " + register_dob.Text + ", sex = '" + register_gender.Text + "', pic = '" +filtered_name + "' where id = " +my_id + "";
+                cmd.CommandText = "UPDATE usertable SET first_name = '"+ register_fname.Text + "', last_name = '" + register_lname.Text + "', dob = '" + register_dob.Text + "', sex = '" + register_gender.Text + "', pic = '" +filtered_name + "' where id = " +my_id + "";
                 cmd.Connection = sqlConnection1;
                 
                 sqlConnection1.Open();

@@ -19,6 +19,7 @@ namespace dating_site
            // try
             {
                 int my_id = (int)Session["id"];
+                my_id = my_id - 2;
 
                 string filtered_email = Session["email"].ToString();
                 int index = filtered_email.IndexOf('@');
@@ -29,7 +30,7 @@ namespace dating_site
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE userinterest SET int_sex = '" + form_gender.Text + "',int_nationality = '" + form_nationality.Text + "',int_agegroup = '" + form_agegroup.Text + "',in_hobbies = '" + form_hobbies + "' where id = " + my_id + "";
+                cmd.CommandText = "UPDATE userinterest SET int_sex = '" + form_gender.Text + "',int_nationality = '" + form_nationality.Text + "',int_agegroup = '" + form_agegroup.Text + "',in_hobbies = '" + form_hobbies.Text + "' where id = " + my_id + "";
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();
