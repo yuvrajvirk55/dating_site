@@ -21,6 +21,8 @@ namespace dating_site
             friends_dropdownlist();
         }
 
+
+
         protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
         {
             loaddatasearch();
@@ -80,48 +82,56 @@ namespace dating_site
 
         }
 
-
-        public void sendrequest(int other_id)
+        public void loaddatafriends()
         {
-            int my_id = (int)Session["id"];
+            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            con.Open();
 
-            
-                System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            SqlCommand cmd;
 
-         
-                sqlConnection1.Open();
-
-            // adding to my send requests
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET sendrequests = " + other_id + " where id = " + my_id + " and sendrequests is null";
-                cmd.Connection = sqlConnection1;
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            try
+            {
+                da.Fill(ds);
                 cmd.ExecuteNonQuery();
-
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequests Not LIKE '%" + other_id + "%'";
-                cmd.Connection = sqlConnection1;
-                cmd.ExecuteNonQuery();
-
-            //adding to other users received requests
-
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET requests = " + my_id + " where id = " + other_id + " and requests is null";
-                cmd.Connection = sqlConnection1;
-                cmd.ExecuteNonQuery();
-
-
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requests Not LIKE '%" + my_id + "%'";
-                cmd.Connection = sqlConnection1;
-                cmd.ExecuteNonQuery();
-
-
-                sqlConnection1.Close();
-
-            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
+                GridView3.DataSource = ds;
+                GridView3.DataBind();
+        
+            }
+            catch
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Friends!')", true);
+            }
 
         }
+
+        public void loaddatarequests()
+        {
+            SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            con.Open();
+
+            SqlCommand cmd;
+
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            try
+            {
+                da.Fill(ds);
+                cmd.ExecuteNonQuery();
+                GridView4.DataSource = ds;
+                GridView4.DataBind();
+            }
+            catch
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Requests!')", true);
+            }
+
+        }
+
+
 
         protected void friends_dropdownlist()
         {
@@ -170,6 +180,47 @@ namespace dating_site
         }
 
 
+        public void sendrequest(int other_id)
+        {
+            int my_id = (int)Session["id"];
+
+
+            System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+
+
+            sqlConnection1.Open();
+
+            // adding to my send requests
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET sendrequests = " + other_id + " where id = " + my_id + " and sendrequests is null";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequests Not LIKE '%" + other_id + "%'";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+            //adding to other users received requests
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET requests = " + my_id + " where id = " + other_id + " and requests is null";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requests Not LIKE '%" + my_id + "%'";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+
+            sqlConnection1.Close();
+
+            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
+
+        }
 
 
     }
