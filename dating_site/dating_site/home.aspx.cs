@@ -84,7 +84,7 @@ namespace dating_site
 
                 connection.Close();
 
-                if (db_email.Equals("admin"))
+                if (db_email.Equals("admin@gmail.com"))
                     {
                     Response.Redirect("admin.aspx");
                 }
