@@ -536,7 +536,7 @@ li {
     <br />
      <div style="background-color:#E5E5E5; padding:15px">
          <br />
-  <h2 >Friend List</h2>
+             <h2>Friend List</h2>
         <br />
         <div style="overflow-x:hidden;width:800px">
         <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
@@ -624,7 +624,7 @@ li {
             </asp:TemplateField>       
         </Columns>
     </asp:GridView>
-            </div>
+    </div>
   </div>
 
 
