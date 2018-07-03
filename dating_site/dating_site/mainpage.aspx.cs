@@ -14,9 +14,12 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           // myImg.ImageUrl = Session["img"].ToString();
-          // Label1.Text= Session["fname"] + " " + Session["lname"];
-
+            // myImg.ImageUrl = Session["img"].ToString();
+            // Label1.Text= Session["fname"] + " " + Session["lname"];
+            Session["id"] =1;
+            Session["email"] = "uvnemk@gmail.com";
+            Session["fname"] = "Yuvraj";
+            Session["lname"] = "Singh";
             loaddatasuggestion();
             friends_dropdownlist();
         }
