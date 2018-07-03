@@ -34,9 +34,50 @@ namespace dating_site
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
-            SqlCommand cmd;
+            // getting list of friends
+            string checksrequests = "select sendrequests from usertable WHERE id =1";
+            SqlCommand srequests = new SqlCommand(checksrequests, con);
+            string srequests_output;
+            try
+            {
+                srequests_output = (string)srequests.ExecuteScalar();
+            }
+            catch
+            {
+                srequests_output = "1000";
+            }
 
-            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%'", con);
+            string checkrequests = "select requests from usertable WHERE id =1";
+            SqlCommand requests = new SqlCommand(checkrequests, con);
+            string requests_output;
+            try
+            {
+                requests_output = (string)requests.ExecuteScalar();
+            }
+            catch
+            {
+                requests_output = "1000";
+            }
+
+            string checkfriends = "select friends from usertable WHERE id =1";
+            SqlCommand friends = new SqlCommand(checkfriends, con);
+            string friends_output;
+            try
+            {
+                friends_output = (string)friends.ExecuteScalar();
+            }
+            catch
+            {
+                friends_output = "1000";
+            }
+
+            string total_friends = srequests_output + "," + requests_output + "," + friends_output;
+
+
+
+            // filling gridview
+            SqlCommand cmd;
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%' and usertable.id not in (" + total_friends + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -59,9 +100,50 @@ namespace dating_site
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
-            SqlCommand cmd;
+            // getting list of friends
+            string checksrequests = "select sendrequests from usertable WHERE id =1";
+            SqlCommand srequests = new SqlCommand(checksrequests, con);
+            string srequests_output;
+            try
+            {
+                srequests_output = (string)srequests.ExecuteScalar();
+            }
+            catch
+            {
+                srequests_output = "1000";
+            }
 
-            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
+            string checkrequests = "select requests from usertable WHERE id =1";
+            SqlCommand requests = new SqlCommand(checkrequests, con);
+            string requests_output;
+            try
+            {
+                requests_output = (string)requests.ExecuteScalar();
+            }
+            catch
+            {
+                requests_output = "1000";
+            }
+
+            string checkfriends = "select friends from usertable WHERE id =1";
+            SqlCommand friends = new SqlCommand(checkfriends, con);
+            string friends_output;
+            try
+            {
+                friends_output = (string)friends.ExecuteScalar();
+            }
+            catch
+            {
+                friends_output = "1000";
+            }
+
+            string total_friends = srequests_output + "," + requests_output + "," + friends_output;
+
+
+
+            // filling gridview
+            SqlCommand cmd;
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where usertable.id not in (" + total_friends + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -84,12 +166,26 @@ namespace dating_site
 
         public void loaddatafriends()
         {
+            int my_id = (int)Session["id"];
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
-            SqlCommand cmd;
+            // getting number of friends
+            string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
+            SqlCommand friends = new SqlCommand(checkfriends, con);
+            string friends_output;
+            try
+            {
+                friends_output = (string)friends.ExecuteScalar();
+            }
+            catch
+            {
+                friends_output = "1000";
+            }
 
-            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
+            // filling gridview
+            SqlCommand cmd;
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where usertable.id in (" + friends_output + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -129,7 +225,7 @@ namespace dating_site
 
             // filling gridview
             SqlCommand cmd;
-            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where id in (" + requests_output + ")", con);
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where usertable.id in (" + requests_output + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
