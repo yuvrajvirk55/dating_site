@@ -82,7 +82,7 @@ namespace dating_site
 
             string total_friends = srequests_output + "," + requests_output + "," + friends_output;
 
-
+            total_friends += "," + my_id;
 
             // filling gridview
             SqlCommand cmd;
@@ -149,7 +149,7 @@ namespace dating_site
 
             string total_friends = srequests_output + "," + requests_output + "," + friends_output;
 
-
+            total_friends += "," + my_id;
 
             // filling gridview
             SqlCommand cmd;
