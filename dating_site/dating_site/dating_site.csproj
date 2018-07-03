@@ -136,10 +136,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\userdata.mdf" />
-    <Content Include="App_Data\userdata_log.ldf">
-      <DependentUpon>userdata.mdf</DependentUpon>
-    </Content>
     <Content Include="home.aspx" />
     <Content Include="images\login.jpg" />
     <Content Include="images\signUp.png" />
