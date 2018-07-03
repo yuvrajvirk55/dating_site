@@ -84,7 +84,12 @@ namespace dating_site
 
                 connection.Close();
 
-                Response.Redirect("mainpage.aspx");
+                if (db_email.Equals("admin"))
+                    {
+                    Response.Redirect("admin.aspx");
+                }
+                else
+                    Response.Redirect("mainpage.aspx");
             }
 
               else if (string.IsNullOrEmpty(db_email))
