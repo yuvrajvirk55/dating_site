@@ -34,11 +34,12 @@ namespace dating_site
 
         public void loaddatasearch()
         {
+            int my_id = (int)Session["id"];
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
             // getting list of friends
-            string checksrequests = "select sendrequests from usertable WHERE id =1";
+            string checksrequests = "select sendrequests from usertable WHERE id ="+my_id+"";
             SqlCommand srequests = new SqlCommand(checksrequests, con);
             string srequests_output;
             try
@@ -50,7 +51,7 @@ namespace dating_site
                 srequests_output = "1000";
             }
 
-            string checkrequests = "select requests from usertable WHERE id =1";
+            string checkrequests = "select requests from usertable WHERE id =" + my_id + "";
             SqlCommand requests = new SqlCommand(checkrequests, con);
             string requests_output;
             try
@@ -62,7 +63,7 @@ namespace dating_site
                 requests_output = "1000";
             }
 
-            string checkfriends = "select friends from usertable WHERE id =1";
+            string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
             SqlCommand friends = new SqlCommand(checkfriends, con);
             string friends_output;
             try
@@ -100,11 +101,12 @@ namespace dating_site
 
         public void loaddatasuggestion()
         {
+            int my_id = (int)Session["id"];
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
             // getting list of friends
-            string checksrequests = "select sendrequests from usertable WHERE id =1";
+            string checksrequests = "select sendrequests from usertable WHERE id =" + my_id + "";
             SqlCommand srequests = new SqlCommand(checksrequests, con);
             string srequests_output;
             try
@@ -116,7 +118,7 @@ namespace dating_site
                 srequests_output = "1000";
             }
 
-            string checkrequests = "select requests from usertable WHERE id =1";
+            string checkrequests = "select requests from usertable WHERE id =" + my_id + "";
             SqlCommand requests = new SqlCommand(checkrequests, con);
             string requests_output;
             try
@@ -128,7 +130,7 @@ namespace dating_site
                 requests_output = "1000";
             }
 
-            string checkfriends = "select friends from usertable WHERE id =1";
+            string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
             SqlCommand friends = new SqlCommand(checkfriends, con);
             string friends_output;
             try
