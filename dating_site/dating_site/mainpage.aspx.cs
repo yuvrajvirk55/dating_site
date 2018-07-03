@@ -180,6 +180,11 @@ namespace dating_site
         }
 
 
+
+
+
+        // sending, receiving and removind friends functions
+
         public void sendrequest(int other_id)
         {
             int my_id = (int)Session["id"];
