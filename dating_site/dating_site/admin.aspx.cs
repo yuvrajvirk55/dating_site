@@ -23,8 +23,9 @@ namespace dating_site
             connection.Close();
 
             percent.Text = db_user.ToString();
-            Image1.ImageUrl = Session["img"].ToString();
-            Label1.Text = Session["fname"] + " " + Session["lname"];
+
+            //Image1.ImageUrl = Session["img"].ToString();
+         //   Label1.Text = Session["fname"] + " " + Session["lname"];
         }
 
 
@@ -93,10 +94,6 @@ namespace dating_site
             Response.Redirect("query.aspx");
         }
 
-        protected void submit_Click(object sender, EventArgs e)
-        {
-
-        }
     }
   }
                 

@@ -248,7 +248,7 @@
      <h1>Database load: </h1>
           <span id="circle"></span>
           <br />
-          <div align="center"><asp:Button ID="submit" runat="server" class="button button1" Text="Check" OnClick="submit_Click" /></div>
+          <div align="center"><a ID="submit" runat="server" class="button button1" >check</a></div>
      </div>
 
       <div class="right">
