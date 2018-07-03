@@ -661,9 +661,7 @@ li {
             </asp:TemplateField>       
         </Columns>
     </asp:GridView>
-    <br />
-  
-    <asp:Label ID="lblResult" runat="server" />  
+    <br /> 
       </div>
   </div>
 </div>
