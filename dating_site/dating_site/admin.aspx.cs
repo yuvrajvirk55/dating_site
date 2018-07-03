@@ -23,8 +23,8 @@ namespace dating_site
             connection.Close();
 
             percent.Text = db_user.ToString();
-            Label1.Text = "Yuvraj Singh";
-            Image1.ImageUrl = "~/images/login.jpg";
+            Image1.ImageUrl = Session["img"].ToString();
+            Label1.Text = Session["fname"] + " " + Session["lname"];
         }
 
 
