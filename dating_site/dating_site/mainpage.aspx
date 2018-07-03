@@ -503,7 +503,7 @@ li {
   <a href="#contact" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">public</i></a>
    
     <div class="dropdown">
-    <button class="dropbtn"><a href="#home"  class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
+    <button class="dropbtn"><a href="#home" onclick="openCity(event, 'Paris')" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
     </button>
     <div class="dropdown-content" id="friends_dropdown" runat="server" style="max-height:300px;overflow-y:scroll" >
     </div>
