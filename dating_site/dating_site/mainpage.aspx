@@ -705,8 +705,8 @@ li {
         var input, filter, ul, li, a, i;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
-        div = document.getElementById("dropdown");
-        a = div.getElementsByTagName("a");
+        div = document.getElementById("friends_dropdown");
+        a = div.getElementsByClassName("tablinks");
         for (i = 0; i < a.length; i++) {
             if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
                 a[i].style.display = "";
