@@ -109,12 +109,27 @@ namespace dating_site
 
         public void loaddatarequests()
         {
+            int my_id = (int)Session["id"];
+
             SqlConnection con = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             con.Open();
 
-            SqlCommand cmd;
+            // getting number of received requests
+            string checkrequests = "select requests from usertable WHERE id ="+my_id+"";
+            SqlCommand requests = new SqlCommand(checkrequests, con);
+            string requests_output;
+            try
+            {
+                requests_output = (string)requests.ExecuteScalar();
+            }
+            catch
+            {
+                requests_output = "1000";
+            }
 
-            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email", con);
+            // filling gridview
+            SqlCommand cmd;
+            cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where id in (" + requests_output + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -135,21 +150,34 @@ namespace dating_site
 
         protected void friends_dropdownlist()
         {
+            int my_id = (int)Session["id"];
 
-            
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             SqlCommand cmd = new SqlCommand();
-
-            cmd.Connection = connection;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,pic from usertable";
             connection.Open();
 
+            // getting id of friends
+            string checkfriends = "select friends from usertable WHERE id ="+my_id+"";
+            SqlCommand friends = new SqlCommand(checkfriends, connection);
+            string friends_output;
+            try
+            {
+                friends_output = (string)friends.ExecuteScalar();
+            }
+            catch
+            {
+                friends_output = "1000";
+            }
+
+
+            // filling list
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,pic from usertable where id in (" + friends_output + ")";
+           
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            
+            da.Fill(dt);       
           
             int j = 0;
             foreach (DataRow row in dt.Rows)
@@ -169,15 +197,29 @@ namespace dating_site
             }
 
             friends_dropdown.InnerHtml = "";
-
             for (int i = 0; i < j; i++)
             {
                friends_dropdown.InnerHtml += "<a  class='tablinks' onclick="+"\""+"openCity(event, 'Paris')"+"\""+" ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
 
             }
-
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
