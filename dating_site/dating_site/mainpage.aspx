@@ -534,10 +534,11 @@ li {
 <div id="Paris" class="tabcontent_main">
     <br />
     <br />
-     <div style="background-color:#E5E5E5">
-  <h2 style="font-family:'Wendy One', sans-serif;">Friend List</h2>
+     <div style="background-color:#E5E5E5; padding:15px">
+         <br />
+  <h2 >Friend List</h2>
         <br />
-        <div style="overflow-x:hidden;width:840px">
+        <div style="overflow-x:hidden;width:800px">
         <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
               <Columns>  
                   <asp:TemplateField>
@@ -566,11 +567,11 @@ li {
     <br />
     <br />
     <br />
-   <div style="background-color:#E5E5E5">
-     <h2 style="font-family:'Wendy One', sans-serif;">Friend Requests</h2>
-       <h1>Freind Requests</h1>
+   <div style="background-color:#E5E5E5;padding:15px">
+       <br />
+     <h2>Friend Requests</h2>
         <br />
-        <div style="overflow-x:auto;width:840px">
+        <div style="overflow-x:hidden;width:800px">
         <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
               <Columns>
                    <asp:TemplateField>
