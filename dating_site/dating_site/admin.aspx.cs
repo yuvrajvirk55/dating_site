@@ -23,7 +23,7 @@ namespace dating_site
             connection.Close();
 
             percent.Text = db_user.ToString();
-
+                    
             //Image1.ImageUrl = Session["img"].ToString();
          //   Label1.Text = Session["fname"] + " " + Session["lname"];
         }
