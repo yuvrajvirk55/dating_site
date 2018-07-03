@@ -548,7 +548,9 @@ li {
     <br />
     <br />
     <br />
+   <div style="background-color:#E5E5E5">
      <h1 style="font-family:'Wendy One', sans-serif; color:#E5E5E5; font-size:40px">Friend Requests</h1>
+       <h1>Freind Requests</h1>
         <br />
         <div style="overflow-x:auto;width:840px">
         <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
@@ -575,6 +577,7 @@ li {
         </Columns>
     </asp:GridView>
             </div>
+       </div>
 </div>
   </div>
  
