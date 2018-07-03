@@ -14,8 +14,8 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            myImg.ImageUrl = Session["img"].ToString();
-           Label1.Text= Session["fname"] + " " + Session["lname"];
+           // myImg.ImageUrl = Session["img"].ToString();
+          // Label1.Text= Session["fname"] + " " + Session["lname"];
 
             loaddatasuggestion();
             friends_dropdownlist();
