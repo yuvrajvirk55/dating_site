@@ -92,6 +92,11 @@ namespace dating_site
             Session["text_query"] = TextBox1.Text.ToString();
             Response.Redirect("query.aspx");
         }
+
+        protected void submit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
   }
                 
