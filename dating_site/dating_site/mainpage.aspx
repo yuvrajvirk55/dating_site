@@ -422,6 +422,22 @@ li {
     border: 1px solid #ccc;
     border-top: none;
 }
+
+/* style for search bar in dropdown*/
+
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
 </style>
 
 
@@ -518,9 +534,10 @@ li {
 <div id="Paris" class="tabcontent_main">
     <br />
     <br />
-  <h1 style="font-family:'Wendy One', sans-serif; color:#E5E5E5; font-size:40px">Friend List</h1>
+     <div style="background-color:#E5E5E5">
+  <h2 style="font-family:'Wendy One', sans-serif;">Friend List</h2>
         <br />
-        <div style="overflow-x:auto;width:840px">
+        <div style="overflow-x:hidden;width:840px">
         <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
               <Columns>  
                   <asp:TemplateField>
@@ -543,13 +560,14 @@ li {
             </ItemTemplate>
             </asp:TemplateField>       
         </Columns>
-    </asp:GridView>
+             </asp:GridView>
             </div>
+         </div>
     <br />
     <br />
     <br />
    <div style="background-color:#E5E5E5">
-     <h1 style="font-family:'Wendy One', sans-serif; color:#E5E5E5; font-size:40px">Friend Requests</h1>
+     <h2 style="font-family:'Wendy One', sans-serif;">Friend Requests</h2>
        <h1>Freind Requests</h1>
         <br />
         <div style="overflow-x:auto;width:840px">
@@ -680,6 +698,26 @@ li {
 
 
 <script>
+
+    // search bar in dropdown
+    function filterFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("dropdown");
+        a = div.getElementsByTagName("a");
+        for (i = 0; i < a.length; i++) {
+            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+    }
+
+    //
+
+
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent_main");

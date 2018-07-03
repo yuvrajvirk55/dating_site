@@ -298,7 +298,7 @@ namespace dating_site
                 cont++;
             }
 
-            friends_dropdown.InnerHtml = "";
+            friends_dropdown.InnerHtml = "<input type='text' placeholder='Search..' id='myInput' onkeyup='filterFunction()'>";
             for (int i = 0; i < j; i++)
             {
                friends_dropdown.InnerHtml += "<a  class='tablinks' onclick="+"\""+"openCity(event, 'Paris')"+"\""+" ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
