@@ -309,17 +309,7 @@ namespace dating_site
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
@@ -376,41 +366,99 @@ namespace dating_site
         {
             int my_id = (int)Session["id"];
 
-            /*
+            
                         System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                         System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
 
                         sqlConnection1.Open();
 
-                        // adding to my send requests
+                        // adding to my friends
                         cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET sendrequests = " + other_id + " where id = " + my_id + " and sendrequests is null";
+                        cmd.CommandText = "UPDATE usertable SET friends = " + other_id + " where id = " + my_id + " and friends is null";
                         cmd.Connection = sqlConnection1;
                         cmd.ExecuteNonQuery();
 
                         cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequests Not LIKE '%" + other_id + "%'";
+                        cmd.CommandText = "UPDATE usertable SET friends = CONCAT(friends, '," + other_id + "') where id = " + my_id + " and friends Not LIKE '%" + other_id + "%'";
                         cmd.Connection = sqlConnection1;
                         cmd.ExecuteNonQuery();
 
-                        //adding to other users received requests
+                        //adding to other users friends
 
                         cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET requests = " + my_id + " where id = " + other_id + " and requests is null";
+                        cmd.CommandText = "UPDATE usertable SET friends = " + my_id + " where id = " + other_id + " and friends is null";
                         cmd.Connection = sqlConnection1;
                         cmd.ExecuteNonQuery();
 
 
                         cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requests Not LIKE '%" + my_id + "%'";
+                        cmd.CommandText = "UPDATE usertable SET friends = CONCAT(friends, '," + my_id + "') where id = " + other_id + " and friends Not LIKE '%" + my_id + "%'";
                         cmd.Connection = sqlConnection1;
                         cmd.ExecuteNonQuery();
 
 
-                        sqlConnection1.Close();
 
-                        Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);*/
+            // removing from my requests
+
+           
+
+            string checkrequests = "select requests from usertable WHERE id =" + my_id + "";
+            SqlCommand requests = new SqlCommand(checkrequests, sqlConnection1);
+            string requests_output;
+            try
+            {
+                requests_output = (string)requests.ExecuteScalar();
+            }
+            catch
+            {
+                requests_output = "1000";
+            }
+
+
+
+            // removving  from other users send requests
+
+            string checksrequests = "select sendrequests from usertable WHERE id =" + my_id + "";
+            SqlCommand srequests = new SqlCommand(checksrequests, sqlConnection1);
+            string srequests_output;
+            try
+            {
+                srequests_output = (string)srequests.ExecuteScalar();
+            }
+            catch
+            {
+                srequests_output = "1000";
+            }
+
+
+
+
+
+          
+
+
+
+
+
+            // filtering system
+            a = a.Replace(",,", ",");
+                    if (a[0] == ',')
+                    {
+                        a = a.Remove(0, 1);
+                    }
+
+                    if (a[a.Length - 1] == ',')
+                    {
+                        Console.WriteLine(a);
+                        a = a.Remove(a.Length - 1, 1);
+                    }
+
+
+
+
+
+            sqlConnection1.Close();
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Added')", true);
         }
