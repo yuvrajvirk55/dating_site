@@ -507,13 +507,13 @@ li {
 
 
             int index = Convert.ToInt32(e.CommandArgument);
-            GridViewRow row = GridView2.Rows[index];
+            GridViewRow row = GridView3.Rows[index];
 
-            int StdID = (int)GridView2.DataKeys[row.DataItemIndex].Values["id"];
+            int StdID = (int)GridVie3.DataKeys[row.DataItemIndex].Values["id"];
 
 
 
-         //   sendrequest(StdID);
+            removefriend(StdID);
             loaddatafriends();
 
         }
