@@ -389,15 +389,18 @@ namespace dating_site
             // filtering system
             a = a.Replace(",,", ",");
 
-            if (a[0].ToString() == ",")
+            if (!string.IsNullOrEmpty(a))
             {
-                a = a.Remove(0, 1);
-            }
+                if (a[0].ToString() == ",")
+                {
+                    a = a.Remove(0, 1);
+                }
 
-            if (a[a.Length - 1] == ',')
-            {
-                Console.WriteLine(a);
-                a = a.Remove(a.Length - 1, 1);
+                if (a[a.Length - 1] == ',')
+                {
+                    Console.WriteLine(a);
+                    a = a.Remove(a.Length - 1, 1);
+                }
             }
 
             cmd.CommandType = System.Data.CommandType.Text;
@@ -420,17 +423,19 @@ namespace dating_site
             a = a.Replace(my_id.ToString(),"");
             // filtering system
             a = a.Replace(",,", ",");
-            if (a[0] == ',')
+            if (!string.IsNullOrEmpty(a))
             {
-                a = a.Remove(0, 1);
-            }
+                if (a[0] == ',')
+                {
+                    a = a.Remove(0, 1);
+                }
 
-            if (a[a.Length - 1] == ',')
-            {
-                Console.WriteLine(a);
-                a = a.Remove(a.Length - 1, 1);
+                if (a[a.Length - 1] == ',')
+                {
+                    Console.WriteLine(a);
+                    a = a.Remove(a.Length - 1, 1);
+                }
             }
-
 
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = "UPDATE usertable SET sendrequests = " + a + " where id = " + other_id + "";
