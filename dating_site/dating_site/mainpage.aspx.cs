@@ -373,29 +373,6 @@ namespace dating_site
 
                         sqlConnection1.Open();
 
-                        // adding to my friends
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET friends = " + other_id + " where id = " + my_id + " and friends is null";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
-
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET friends = CONCAT(friends, '," + other_id + "') where id = " + my_id + " and friends Not LIKE '%" + other_id + "%'";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
-
-                        //adding to other users friends
-
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET friends = " + my_id + " where id = " + other_id + " and friends is null";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
-
-
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET friends = CONCAT(friends, '," + my_id + "') where id = " + other_id + " and friends Not LIKE '%" + my_id + "%'";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
 
 
 
@@ -411,7 +388,8 @@ namespace dating_site
 
             // filtering system
             a = a.Replace(",,", ",");
-            if (a[0] == ',')
+
+            if (a[0].ToString() == ",")
             {
                 a = a.Remove(0, 1);
             }
@@ -460,6 +438,33 @@ namespace dating_site
             cmd.ExecuteNonQuery();
 
 
+
+            //adding friends
+
+
+            // adding to my friends
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET friends = " + other_id + " where id = " + my_id + " and friends is null";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET friends = CONCAT(friends, '," + other_id + "') where id = " + my_id + " and friends Not LIKE '%" + other_id + "%'";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+            //adding to other users friends
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET friends = " + my_id + " where id = " + other_id + " and friends is null";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET friends = CONCAT(friends, '," + my_id + "') where id = " + other_id + " and friends Not LIKE '%" + my_id + "%'";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
 
 
             sqlConnection1.Close();
