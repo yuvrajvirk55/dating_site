@@ -404,7 +404,7 @@ namespace dating_site
             }
 
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET requests = " + a + " where id = " + my_id + "";
+            cmd.CommandText = "UPDATE usertable SET requests = '" + a + "' where id = " + my_id+"";
             cmd.Connection = sqlConnection1;
             cmd.ExecuteNonQuery();
 
@@ -412,7 +412,7 @@ namespace dating_site
 
 
             // removving  from other users send requests
-            string checksrequests = "select sendrequests from usertable WHERE id =" + other_id + "";
+            string checksrequests = "select sendrequests from usertable WHERE id =" + other_id+"";
             SqlCommand srequests = new SqlCommand(checksrequests, sqlConnection1);
             string srequests_output;
           
@@ -438,7 +438,7 @@ namespace dating_site
             }
 
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET sendrequests = " + a + " where id = " + other_id + "";
+            cmd.CommandText = "UPDATE usertable SET sendrequests = '" + a + "' where id = " + other_id + "";
             cmd.Connection = sqlConnection1;
             cmd.ExecuteNonQuery();
 
