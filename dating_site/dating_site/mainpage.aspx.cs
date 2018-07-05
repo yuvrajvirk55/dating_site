@@ -422,7 +422,10 @@ namespace dating_site
                 a = a.Remove(a.Length - 1, 1);
             }
 
-
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET requests = " + a + " where id = " + my_id + ";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
 
 
 
@@ -450,6 +453,11 @@ namespace dating_site
                 a = a.Remove(a.Length - 1, 1);
             }
 
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET sendrequests = " + a + " where id = " + other_id + "";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
 
 
 
