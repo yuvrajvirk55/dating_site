@@ -463,7 +463,7 @@ li {
             GridViewRow row = GridView1.Rows[index];
 
             int StdID = (int)GridView1.DataKeys[row.DataItemIndex].Values["id"];
-            
+
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
 
             sendrequest(StdID);
@@ -473,17 +473,48 @@ li {
 
         void ContactsGridView_RowCommand2(Object sender, GridViewCommandEventArgs e)
         {
-            
+
 
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = GridView2.Rows[index];
 
             int StdID = (int)GridView2.DataKeys[row.DataItemIndex].Values["id"];
-            
-           
+
+
 
             sendrequest(StdID);
             loaddatasuggestion();
+
+        }
+
+        void ContactsGridView_RowCommandaddfriend(Object sender, GridViewCommandEventArgs e)
+        {
+
+
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = GridView2.Rows[index];
+
+            int StdID = (int)GridView2.DataKeys[row.DataItemIndex].Values["id"];
+
+
+
+            sendrequest(StdID);
+            loaddatarequests();
+        }
+
+        void ContactsGridView_RowCommandremovefriend(Object sender, GridViewCommandEventArgs e)
+        {
+
+
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = GridView2.Rows[index];
+
+            int StdID = (int)GridView2.DataKeys[row.DataItemIndex].Values["id"];
+
+
+
+            sendrequest(StdID);
+            loaddatafriends();
 
         }
 
@@ -536,13 +567,13 @@ li {
              <h2>Friend List</h2>
         <br />
         <div style="overflow-x:hidden;width:800px">
-        <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
+        <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommandremovefriend"  Height="124px">
               <Columns>  
                   <asp:TemplateField>
                       <ItemTemplate></ItemTemplate>
                   </asp:TemplateField>
                 
-                 <asp:buttonfield commandname="Add" buttontype="button"  text="Remove"  ControlStyle-CssClass="button button3" />
+                 <asp:buttonfield commandname="remove" buttontype="button"  text="Remove"  ControlStyle-CssClass="button button3" />
                 
                 <asp:TemplateField >
                 <ItemTemplate>  
@@ -569,7 +600,7 @@ li {
      <h2>Friend Requests</h2>
         <br />
         <div style="overflow-x:hidden;width:800px">
-        <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"  Height="124px">
+        <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommandaddfriend"  Height="124px">
               <Columns>
                    <asp:TemplateField>
                       <ItemTemplate></ItemTemplate>
