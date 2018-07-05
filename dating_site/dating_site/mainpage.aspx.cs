@@ -400,59 +400,55 @@ namespace dating_site
 
 
             // removing from my requests
-
-           
-
             string checkrequests = "select requests from usertable WHERE id =" + my_id + "";
             SqlCommand requests = new SqlCommand(checkrequests, sqlConnection1);
             string requests_output;
-            try
+           
+            requests_output = (string)requests.ExecuteScalar();
+
+            string a = requests_output;
+            a = a.Replace(other_id.ToString(),"");
+
+            // filtering system
+            a = a.Replace(",,", ",");
+            if (a[0] == ',')
             {
-                requests_output = (string)requests.ExecuteScalar();
+                a = a.Remove(0, 1);
             }
-            catch
+
+            if (a[a.Length - 1] == ',')
             {
-                requests_output = "1000";
+                Console.WriteLine(a);
+                a = a.Remove(a.Length - 1, 1);
             }
+
+
+
 
 
 
             // removving  from other users send requests
-
-            string checksrequests = "select sendrequests from usertable WHERE id =" + my_id + "";
+            string checksrequests = "select sendrequests from usertable WHERE id =" + other_id + "";
             SqlCommand srequests = new SqlCommand(checksrequests, sqlConnection1);
             string srequests_output;
-            try
-            {
-                srequests_output = (string)srequests.ExecuteScalar();
-            }
-            catch
-            {
-                srequests_output = "1000";
-            }
-
-
-
-
-
           
+            srequests_output = (string)srequests.ExecuteScalar();
 
 
-
-
-
+            a = srequests_output;
+            a = a.Replace(my_id.ToString(),"");
             // filtering system
             a = a.Replace(",,", ",");
-                    if (a[0] == ',')
-                    {
-                        a = a.Remove(0, 1);
-                    }
+            if (a[0] == ',')
+            {
+                a = a.Remove(0, 1);
+            }
 
-                    if (a[a.Length - 1] == ',')
-                    {
-                        Console.WriteLine(a);
-                        a = a.Remove(a.Length - 1, 1);
-                    }
+            if (a[a.Length - 1] == ',')
+            {
+                Console.WriteLine(a);
+                a = a.Remove(a.Length - 1, 1);
+            }
 
 
 
