@@ -372,6 +372,49 @@ namespace dating_site
         }
 
 
+        public void addfriend(int other_id)
+        {
+            int my_id = (int)Session["id"];
+
+
+            System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+
+
+            sqlConnection1.Open();
+
+            // adding to my send requests
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET sendrequests = " + other_id + " where id = " + my_id + " and sendrequests is null";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequests Not LIKE '%" + other_id + "%'";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+            //adding to other users received requests
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET requests = " + my_id + " where id = " + other_id + " and requests is null";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requests Not LIKE '%" + my_id + "%'";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+
+            sqlConnection1.Close();
+
+            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
+
+        }
+
+
     }
     }
      
