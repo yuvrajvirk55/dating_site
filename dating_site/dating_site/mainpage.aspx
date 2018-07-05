@@ -509,7 +509,7 @@ li {
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = GridView3.Rows[index];
 
-            int StdID = (int)GridVie3.DataKeys[row.DataItemIndex].Values["id"];
+            int StdID = (int)GridView3.DataKeys[row.DataItemIndex].Values["id"];
 
 
 
