@@ -423,7 +423,7 @@ namespace dating_site
             }
 
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET requests = " + a + " where id = " + my_id + ";
+            cmd.CommandText = "UPDATE usertable SET requests = " + a + " where id = " + my_id + "";
             cmd.Connection = sqlConnection1;
             cmd.ExecuteNonQuery();
 
@@ -466,6 +466,7 @@ namespace dating_site
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Added')", true);
         }
+
 
 
         public void removefriend(int other_id)
