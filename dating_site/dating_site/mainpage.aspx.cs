@@ -483,41 +483,79 @@ namespace dating_site
         {
             int my_id = (int)Session["id"];
 
-            /*
+           
                         System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                         System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
-
                         sqlConnection1.Open();
 
-                        // adding to my send requests
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET sendrequests = " + other_id + " where id = " + my_id + " and sendrequests is null";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
 
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET sendrequests = CONCAT(sendrequests, '," + other_id + "') where id = " + my_id + " and sendrequests Not LIKE '%" + other_id + "%'";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
+            // removving  from me account
+            string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
+            SqlCommand friends = new SqlCommand(checkfriends, sqlConnection1);
+            string friends_output;
 
-                        //adding to other users received requests
-
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET requests = " + my_id + " where id = " + other_id + " and requests is null";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
+            friends_output = (string)friends.ExecuteScalar();
 
 
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.CommandText = "UPDATE usertable SET requests = CONCAT(requests, '," + my_id + "') where id = " + other_id + " and requests Not LIKE '%" + my_id + "%'";
-                        cmd.Connection = sqlConnection1;
-                        cmd.ExecuteNonQuery();
+           string a = friends_output;
+            a = a.Replace(other_id.ToString(), "");
+            // filtering system
+            a = a.Replace(",,", ",");
+            if (!string.IsNullOrEmpty(a))
+            {
+                if (a[0] == ',')
+                {
+                    a = a.Remove(0, 1);
+                }
+
+                if (a[a.Length - 1] == ',')
+                {
+                    Console.WriteLine(a);
+                    a = a.Remove(a.Length - 1, 1);
+                }
+            }
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET friends = '" + a + "' where id = " + my_id + "";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
 
 
-                        sqlConnection1.Close();
+            // removving  from otheraccount
+           checkfriends = "select friends from usertable WHERE id =" + other_id + "";
 
-                        Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);*/
+            friends = new SqlCommand(checkfriends, sqlConnection1);
+       
+            friends_output = (string)friends.ExecuteScalar();
+
+
+           a = friends_output;
+            a = a.Replace(my_id.ToString(), "");
+            // filtering system
+            a = a.Replace(",,", ",");
+            if (!string.IsNullOrEmpty(a))
+            {
+                if (a[0] == ',')
+                {
+                    a = a.Remove(0, 1);
+                }
+
+                if (a[a.Length - 1] == ',')
+                {
+                    Console.WriteLine(a);
+                    a = a.Remove(a.Length - 1, 1);
+                }
+            }
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "UPDATE usertable SET friends = '" + a + "' where id = " + other_id + "";
+            cmd.Connection = sqlConnection1;
+            cmd.ExecuteNonQuery();
+
+            sqlConnection1.Close();
+
+                 
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('removed')", true);
         }
