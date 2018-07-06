@@ -567,7 +567,7 @@ li {
              <h2>Friend List</h2>
         <br />
         <div style="overflow-x:hidden;width:800px">
-        <asp:GridView ID="GridView3"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommandremovefriend"  Height="124px">
+        <asp:GridView ID="GridView3"  Width="800px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommandremovefriend"  Height="124px">
               <Columns>  
                   <asp:TemplateField>
                       <ItemTemplate></ItemTemplate>
@@ -600,7 +600,7 @@ li {
      <h2>Friend Requests</h2>
         <br />
         <div style="overflow-x:hidden;width:800px">
-        <asp:GridView ID="GridView4"  Width="840px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommandaddfriend"  Height="124px">
+        <asp:GridView ID="GridView4"  Width="800px" runat="server" AutoGenerateColumns="False" DataKeyNames="id" BackColor="#E5E5E5" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" onrowcommand="ContactsGridView_RowCommandaddfriend"  Height="124px">
               <Columns>
                    <asp:TemplateField>
                       <ItemTemplate></ItemTemplate>
