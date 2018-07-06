@@ -284,11 +284,19 @@ namespace dating_site
             cmd.Connection = connection;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,pic from usertable where id in (" + friends_output + ")";
-           
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
-            da.Fill(dt);       
-          
+
+            try
+            { 
+                da.Fill(dt);
+            }
+
+            catch
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Freinds!')", true);
+            }
             int j = 0;
             foreach (DataRow row in dt.Rows)
             {
