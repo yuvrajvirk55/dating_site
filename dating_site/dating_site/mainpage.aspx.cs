@@ -161,16 +161,16 @@ namespace dating_site
             cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where usertable.id not in (" + total_friends + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            try
+           // try
             {
                 da.Fill(ds);
                 cmd.ExecuteNonQuery();
               GridView2.DataSource = ds;
                GridView2.DataBind();
             }
-            catch
+          //  catch
             {
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
+          //      Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
 
             con.Close();
