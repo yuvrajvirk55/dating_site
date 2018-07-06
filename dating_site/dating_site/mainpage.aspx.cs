@@ -22,13 +22,17 @@ namespace dating_site
 
            // myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
+            loadall();
+           
+        }
 
+        public void loadall()
+        {
             loaddatasuggestion();
             friends_dropdownlist();
             loaddatafriends();
             loaddatarequests();
         }
-
 
 
         protected void searchbar_button_Click(object sender, ImageClickEventArgs e)
@@ -100,6 +104,7 @@ namespace dating_site
             {
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
             }
+            con.Close();
 
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
@@ -168,6 +173,7 @@ namespace dating_site
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
 
+            con.Close();
         }
 
         public void loaddatafriends()
@@ -206,6 +212,7 @@ namespace dating_site
             {
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Friends!')", true);
             }
+            con.Close();
 
         }
 
@@ -245,6 +252,7 @@ namespace dating_site
             {
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Requests!')", true);
             }
+            con.Close();
 
         }
 
@@ -298,6 +306,8 @@ namespace dating_site
                 cont++;
             }
 
+            connection.Close();
+
             friends_dropdown.InnerHtml = "<input type='text' placeholder='Search..' id='myInput' onkeyup='filterFunction()'>";
             for (int i = 0; i < j; i++)
             {
@@ -305,14 +315,6 @@ namespace dating_site
 
             }
         }
-
-
-
-
-  
-
-
-
 
 
 
@@ -358,6 +360,8 @@ namespace dating_site
             sqlConnection1.Close();
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Request sent')", true);
+
+            loadall();
 
         }
 
@@ -475,6 +479,8 @@ namespace dating_site
             sqlConnection1.Close();
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Added')", true);
+
+            loadall();
         }
 
 
@@ -553,11 +559,11 @@ namespace dating_site
             cmd.Connection = sqlConnection1;
             cmd.ExecuteNonQuery();
 
-            sqlConnection1.Close();
-
-                 
+            sqlConnection1.Close();     
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('removed')", true);
+
+            loadall();
         }
 
 
