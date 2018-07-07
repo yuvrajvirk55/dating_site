@@ -73,7 +73,7 @@ namespace dating_site
                 SqlCommand command_id3 = new SqlCommand(checkpic, connection);
                 string db_pic = command_id3.ExecuteScalar().ToString();
 
-
+              
 
 
                 Session["id"] = db_id;
@@ -81,6 +81,15 @@ namespace dating_site
                 Session["fname"] = db_fname;
                 Session["lname"] = db_lname;
                 Session["img"] = db_pic;
+
+
+                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "update usertable set login='in' where id = "+db_id+"";
+                cmd.Connection = connection;
+                cmd.ExecuteNonQuery();
+
+
 
                 connection.Close();
 
