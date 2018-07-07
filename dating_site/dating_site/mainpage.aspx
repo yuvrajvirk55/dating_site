@@ -700,6 +700,19 @@ li {
 </div>
 
 
+
+
+    <!--Creditcard-->
+
+    <div id="myModalcredit" class="modalcredit">
+  <!-- Modal content -->
+  <div class="modal-contentcredit">
+    <span class="closecredit">&times;</span>
+    <h2>Premium</h2>
+   
+  </div>
+</div>
+
 <!-- Places -->
 
   <div id="myNav_places" class="overlay_places">
@@ -841,6 +854,7 @@ window.onclick = function(event) {
     }
 }
 </script>
+
          
 </form>
 </body>
