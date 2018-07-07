@@ -592,7 +592,26 @@ namespace dating_site
             loadall();
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+           
+            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            connection.Open();
 
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "update usertable set login='out' where id = " + Session["id"] + "";
+            cmd.Connection = connection;
+            cmd.ExecuteNonQuery();
+
+            Session["id"] = null;
+            Session["email"] = null;
+            Session["fname"] = null;
+            Session["lname"] = null;
+            Session["img"] = null;
+
+            Response.Redirect("home.aspx");
+        }
     }
     }
      

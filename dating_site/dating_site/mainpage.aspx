@@ -525,7 +525,7 @@ li {
 <form runat="server">
 
 <div class="topnav" id="myTopnav">
-    <a class="extra" style="padding-right:2px;padding-left:16px;color:red"><asp:Button ID="Button1" style="padding:13px" runat="server"  Text="Logout" /></a>
+    <a class="extra" style="padding-right:2px;padding-left:16px;color:red"><asp:Button ID="Button1" style="padding:13px" runat="server"  Text="Logout" OnClick="Button1_Click" /></a>
   <a href="#myPopup" class="extra" style="padding:3px;"><asp:Image id="myImg" runat="server" style="width:30px; height:30px; border-radius: 90%;" ImageUrl="~/images/profile_pic.png" /></a>
   <a href="profile.aspx"" class="extra" style="padding-right:2px;padding-left:16px;border-left: 1px groove white;"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
   <a onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
