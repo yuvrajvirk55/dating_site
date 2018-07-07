@@ -24,7 +24,7 @@ namespace dating_site
             // myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
-            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
+                  
         }
 
         public void loadall()
@@ -283,7 +283,7 @@ namespace dating_site
                output = "Trial";
             }
 
-            premium.Text = output;
+       Buttonpremium.Text = output;
             
             // getting id of friends
             string checkfriends = "select friends from usertable WHERE id ="+my_id+"";
@@ -612,6 +612,11 @@ namespace dating_site
             Session["img"] = null;
 
             Response.Redirect("home.aspx");
+        }
+
+        protected void Buttonpremium_Click(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
         }
     }
     }
