@@ -84,7 +84,7 @@ namespace dating_site
 
                 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex,pic) VALUES ('" + register_email.Text + "','" + pass + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text + "','" + filtered_name + "')";
+                cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex,pic,premium,login) VALUES ('" + register_email.Text + "','" + pass + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text + "','" + filtered_name + "','Trial','in')";
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();
