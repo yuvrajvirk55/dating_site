@@ -731,9 +731,10 @@ li {
 <!-- The Modal -->
 <div id="myModal1" class="modal">
   <!-- Modal content -->
-  <div class="modal-content">
+  <div class="modal-content" >
     <span class="close1">&times;</span>
-     <div class="credit-card">
+      <div id="textcard" runat="server">
+     <div  class="credit-card">
       <div class="form-header">
         <h4 class="title">Credit card detail</h4>
       </div>
@@ -790,7 +791,7 @@ li {
     <br /> 
       </div>
 </div>
-
+</div>
 
 <!-- Places -->
 

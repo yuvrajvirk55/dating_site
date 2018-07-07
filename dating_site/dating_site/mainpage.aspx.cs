@@ -611,6 +611,7 @@ namespace dating_site
             Session["lname"] = null;
             Session["img"] = null;
 
+            connection.Close();
             Response.Redirect("home.aspx");
         }
 
@@ -621,10 +622,30 @@ namespace dating_site
 
         protected void Buttonpremium_pay(object sender, EventArgs e)
         {
+            if(Buttonpremium.Text=="Trial")
+            {
+                textcard.InnerHtml = "<center><h1 style='color: green'>Thanks for Your Suscription</h1></center><br/><center><h3>Your pack is now valid for 1 Year</h3></center><br/> ";
+
+                SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+                connection.Open();
+
+                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "update usertable set premium ='Premium' where id = " + Session["id"] + "";
+                cmd.Connection = connection;
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            else
+
+            textcard.InnerHtml = "<center><h1 style='color: green'>You have already suscribed to premium.</h1></center><br/><center><h3>Enjoy</h3></center><br/> ";
+
+
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
+
         }
 
-
-    }
+        }
 }
      
