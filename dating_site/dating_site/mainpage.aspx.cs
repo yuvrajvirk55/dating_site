@@ -15,12 +15,12 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
            
-            Session["id"] =1;
-            Session["email"] = "uvnemk@gmail.com";
+            Session["id"] =2;
+            Session["email"] = "auvnemk@gmail.com";
             Session["fname"] = "Yuvraj";
             Session["lname"] = "Singh";
 
-           // myImg.ImageUrl = Session["img"].ToString();
+            // myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
            
@@ -153,7 +153,7 @@ namespace dating_site
             }
 
             string total_friends = srequests_output + "," + requests_output + "," + friends_output;
-
+            total_friends = total_friends.ToString();
             total_friends += "," + my_id;
 
             // filling gridview
@@ -161,14 +161,14 @@ namespace dating_site
             cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where usertable.id not in (" + total_friends + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-           // try
+          //  try
             {
                 da.Fill(ds);
                 cmd.ExecuteNonQuery();
               GridView2.DataSource = ds;
                GridView2.DataBind();
             }
-          //  catch
+           // catch
             {
           //      Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
