@@ -164,6 +164,21 @@
     cursor: pointer;
 }
 
+/* The Close Button */
+.close1 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -536,7 +551,7 @@ li {
     <div class="dropdown-content" id="friends_dropdown" runat="server" style="max-height:300px;overflow-y:scroll" >
     </div>
   </div> 
-     <a href="#contact" class="extra" style="background-color:green;height:47px !important" ><asp:Label ID="premium" runat="server" ></asp:Label></a>
+   <a class="extra" style="background-color:green;height:47px !important" > <button id="premiumbutton" runat="server" OnClick="searchbar_button_Click"><asp:Label ID="premium" runat="server" ></asp:Label></button></a>
     <a class="tablinks extra_left " id ='defaultOpen'  onclick="openCity(event, 'London')"  style="font-size:25px;font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
    <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -702,6 +717,24 @@ li {
 </div>
 
 
+
+    <!--premium-->
+    
+
+<!-- The Modal -->
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+    <h2>People</h2>
+      <br />
+      
+    <br /> 
+      </div>
+</div>
+
+
 <!-- Places -->
 
   <div id="myNav_places" class="overlay_places">
@@ -840,6 +873,27 @@ span.onclick = function() {
 window.onclick = function(event) {
     if (event.target == modal) {
         document.getElementById('myModal').style.display = "none";
+    }
+}
+</script>
+            
+<script>
+    function popWin() {
+        document.getElementById('myModal1').style.display = "block";
+    }
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close1")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    document.getElementById('myModal1').style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        document.getElementById('myModal1').style.display = "none";
     }
 }
 </script>

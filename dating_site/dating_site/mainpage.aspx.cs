@@ -15,6 +15,7 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
            button_friends.Attributes.Add("onclick", "return false;");
+        
             Session["id"] =2;
             Session["email"] = "auvnemk@gmail.com";
             Session["fname"] = "Yuvraj";
@@ -23,7 +24,7 @@ namespace dating_site
             // myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
-           
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
         }
 
         public void loadall()
@@ -283,7 +284,7 @@ namespace dating_site
             }
 
             premium.Text = output;
-
+            
             // getting id of friends
             string checkfriends = "select friends from usertable WHERE id ="+my_id+"";
             SqlCommand friends = new SqlCommand(checkfriends, connection);
