@@ -513,6 +513,7 @@ li {
 
 
 
+
             removefriend(StdID);
             loaddatafriends();
 
