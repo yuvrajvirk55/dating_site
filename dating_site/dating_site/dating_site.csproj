@@ -99,6 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin.aspx" />
+    <Content Include="caret.png" />
+    <Content Include="css-1.png" />
+    <Content Include="css-2.png" />
+    <Content Include="css-3.png" />
     <Content Include="css\circle.css" />
     <Content Include="form.aspx" />
     <Content Include="images\background.jpg" />
@@ -113,6 +117,7 @@
     </Content>
     <Content Include="bower.json" />
     <None Include="scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="paypal-logo.svg" />
     <Content Include="profile.aspx" />
     <Content Include="profileupdate_changepassword.aspx" />
     <Content Include="profileupdate_info.aspx" />
@@ -125,6 +130,7 @@
     <Content Include="scripts\jquery-ui-1.8.20.min.js" />
     <Content Include="scripts\modernizr-2.5.3.js" />
     <None Include="scripts\_references.js" />
+    <Content Include="style.css" />
     <Content Include="welcome.aspx" />
     <None Include="Properties\PublishProfiles\lets_date.pubxml" />
     <None Include="Properties\PublishProfiles\uv_dates.pubxml" />

@@ -616,7 +616,7 @@ namespace dating_site
 
         protected void Buttonpremium_Click(object sender, EventArgs e)
         {
-            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal').style.display = 'block';", true);
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
         }
     }
     }
