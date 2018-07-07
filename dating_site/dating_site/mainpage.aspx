@@ -784,9 +784,7 @@ li {
             <p>3 or 4 digits usually found <br> on the signature strip</p>
           </div>
         </div>
-
-        <!-- Buttons -->
-        <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
+          <asp:Button ID="Button2" type="submit" class="proceed-btn" runat="server" Text="Suscribe" onclick="Buttonpremium_pay"/>
       </div>
     </div>
     <br /> 

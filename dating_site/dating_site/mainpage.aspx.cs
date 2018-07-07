@@ -618,6 +618,13 @@ namespace dating_site
         {
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
         }
+
+        protected void Buttonpremium_pay(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
+        }
+
+
     }
-    }
+}
      
