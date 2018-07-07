@@ -260,11 +260,29 @@ namespace dating_site
 
         protected void friends_dropdownlist()
         {
+
             int my_id = (int)Session["id"];
 
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             SqlCommand cmd = new SqlCommand();
             connection.Open();
+
+
+            // premium
+
+            string pre = "select premium from usertable WHERE id =" + my_id + "";
+            SqlCommand p = new SqlCommand(pre, connection);
+            string output;
+            try
+            {
+               output = (string)p.ExecuteScalar();
+            }
+            catch
+            {
+               output = "Trial";
+            }
+
+            premium.Text = output;
 
             // getting id of friends
             string checkfriends = "select friends from usertable WHERE id ="+my_id+"";

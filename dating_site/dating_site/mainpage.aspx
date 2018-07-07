@@ -534,7 +534,7 @@ li {
     <div class="dropdown-content" id="friends_dropdown" runat="server" style="max-height:300px;overflow-y:scroll" >
     </div>
   </div> 
-     <a href="#contact" class="extra" style="background-color:green;height:47px !important" >Go Primium</a>
+     <a href="#contact" class="extra" style="background-color:green;height:47px !important" ><asp:Label ID="premium" runat="server" ></asp:Label></a>
     <a class="tablinks extra_left " id ='defaultOpen'  onclick="openCity(event, 'London')"  style="font-size:25px;font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
    <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -699,19 +699,6 @@ li {
   </div>
 </div>
 
-
-
-
-    <!--Creditcard-->
-
-    <div id="myModalcredit" class="modalcredit">
-  <!-- Modal content -->
-  <div class="modal-contentcredit">
-    <span class="closecredit">&times;</span>
-    <h2>Premium</h2>
-   
-  </div>
-</div>
 
 <!-- Places -->
 
