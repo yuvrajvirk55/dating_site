@@ -119,37 +119,37 @@ namespace dating_site
             string checksrequests = "select sendrequests from usertable WHERE id =" + my_id + "";
             SqlCommand srequests = new SqlCommand(checksrequests, con);
             string srequests_output;
-            try
+           try
             {
                 srequests_output = (string)srequests.ExecuteScalar();
             }
             catch
             {
-                srequests_output = "1000";
+               srequests_output = "1000";
             }
 
             string checkrequests = "select requests from usertable WHERE id =" + my_id + "";
             SqlCommand requests = new SqlCommand(checkrequests, con);
             string requests_output;
-            try
+          //  try
             {
                 requests_output = (string)requests.ExecuteScalar();
             }
-            catch
+        //    catch
             {
-                requests_output = "1000";
+            //    requests_output = "1000";
             }
 
             string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
             SqlCommand friends = new SqlCommand(checkfriends, con);
             string friends_output;
-            try
+        //    try
             {
                 friends_output = (string)friends.ExecuteScalar();
             }
-            catch
+        //    catch
             {
-                friends_output = "1000";
+          //      friends_output = "1000";
             }
 
             string total_friends = srequests_output + "," + requests_output + "," + friends_output;
@@ -161,14 +161,14 @@ namespace dating_site
             cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where usertable.id not in (" + total_friends + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-          //  try
+            try
             {
                 da.Fill(ds);
                 cmd.ExecuteNonQuery();
               GridView2.DataSource = ds;
                GridView2.DataBind();
             }
-           // catch
+            catch
             {
           //      Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
