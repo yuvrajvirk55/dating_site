@@ -31,6 +31,15 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
+        /// button_friends control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton button_friends;
+        
+        /// <summary>
         /// friends_dropdown control.
         /// </summary>
         /// <remarks>

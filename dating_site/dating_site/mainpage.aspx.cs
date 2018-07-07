@@ -14,7 +14,7 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+           button_friends.Attributes.Add("onclick", "return false;");
             Session["id"] =2;
             Session["email"] = "auvnemk@gmail.com";
             Session["fname"] = "Yuvraj";
