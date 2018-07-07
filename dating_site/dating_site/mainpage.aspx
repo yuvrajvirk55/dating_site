@@ -147,6 +147,8 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+
+
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -155,6 +157,7 @@
     border: 1px solid #888;
     width: 80%;
 }
+
 
 /* The Close Button */
 .close {
@@ -723,8 +726,6 @@ li {
   </div>
 </div>
 
-
-
     <!--premium-->
    
 <!-- The Modal -->
@@ -739,7 +740,7 @@ li {
 
       <div class="form-body">
         <!-- Card Number -->
-        <input type="text" class="card-number" placeholder="Card Number">
+        <input type="text" class="card-number" placeholder="Card Number" />
 
         <!-- Date Field -->
         <div class="date-field">
@@ -777,7 +778,7 @@ li {
         <!-- Card Verification Field -->
         <div class="card-verification">
           <div class="cvv-input">
-            <input type="text" placeholder="CVV">
+            <input type="text" placeholder="CVV" />
           </div>
           <div class="cvv-details">
             <p>3 or 4 digits usually found <br> on the signature strip</p>
@@ -786,7 +787,6 @@ li {
 
         <!-- Buttons -->
         <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
-        <button type="submit" class="paypal-btn"><a href="#">Pay With</a></button>
       </div>
     </div>
     <br /> 
