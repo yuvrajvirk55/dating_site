@@ -38,52 +38,54 @@ namespace dating_site
             SqlCommand cmd = new SqlCommand();
             connection.Open();
 
-            cmd.Connection = connection;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,status from usertable";
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-
+            string checkstatus = " select count(status) from usertable where status is not null";
+            SqlCommand requests = new SqlCommand(checkstatus, connection);
+            int status_number=0;
             try
             {
-                da.Fill(dt);
-            }
+                status_number = (int)requests.ExecuteScalar();
 
+                cmd.Connection = connection;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,status from usertable";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+                int j = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    j++;
+                }
+
+                string[] status1 = new string[j];
+                string[] names = new string[j];
+
+                int cont = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    names[cont] = row.Field<string>(0);
+                    status1[cont] = row.Field<string>(1);
+                    cont++;
+                }
+
+                connection.Close();
+
+                status.InnerHtml = "";
+                for (int i = 0; i < status_number; i++)
+                {
+                    status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>" + names[i] + "</h2><br /><div style='overflow-x:hidden;width:600px'>" + status1[i] + "</div></div><br /><br />";
+
+                }
+
+            }
             catch
             {
                 status.InnerHtml = "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Lets Date</h2><br /><div style='overflow-x:hidden;width:600px'>Be the First to upload a status. Enter whats in your mind in the above textbox and hit the button. Cheers!</div></div><br /><br />";
-            }
+            }  
 
-            int j = 0;
-            foreach (DataRow row in dt.Rows)
-            {
-                j++;
-            }
-
-            string[] status1 = new string[j];
-            string[] names = new string[j];
-
-            int cont = 0;
-            foreach (DataRow row in dt.Rows)
-            {
-                names[cont] = row.Field<string>(0);
-               status1[cont] = row.Field<string>(1);
-                cont++;
-            }
-
-            connection.Close();
-
-             status.InnerHtml = "";
-             for (int i = 0; i < j; i++)
-            {
-             status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>"+names[i]+"</h2><br /><div style='overflow-x:hidden;width:600px'>"+status1[i]+"</div></div><br /><br />";
-
-            }
-
-  
-
-        }
+         }
 
         protected void upload_status(object sender, ImageClickEventArgs e)
         {
@@ -103,6 +105,7 @@ namespace dating_site
             sqlConnection1.Close();
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Status Uploaded')", true);
+            statusload();
         }
 
 
