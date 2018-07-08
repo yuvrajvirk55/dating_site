@@ -578,7 +578,9 @@ li {
 
   <div class="main_body">
    <div id="London" class="tabcontent_main">
-       
+  
+  <asp:TextBox ID="status_text" runat="server"></asp:TextBox><asp:Button ID="status_button" runat="server" Text="Button" />
+            
 <div id="status" runat="server">
 
      
