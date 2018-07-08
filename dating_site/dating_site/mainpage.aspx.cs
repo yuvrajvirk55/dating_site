@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace dating_site
 {
-    public partial class mainpage : System.Web.UI.Page
+    public partial class mainpage : System.Web.UI.Page-
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -103,7 +103,9 @@ namespace dating_site
             }
             catch
             {
+                GridView1.DataSource = null;
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
+                
             }
             con.Close();
 
@@ -171,6 +173,7 @@ namespace dating_site
             }
             catch
             {
+                GridView2.DataSource = null;
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
 
@@ -211,6 +214,7 @@ namespace dating_site
             }
             catch
             {
+               GridView3.DataSource = null;
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Friends!')", true);
             }
             con.Close();
@@ -251,6 +255,7 @@ namespace dating_site
             }
             catch
             {
+               GridView4.DataSource = null;
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Requests!')", true);
             }
             con.Close();
