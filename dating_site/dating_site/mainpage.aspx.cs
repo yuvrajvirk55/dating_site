@@ -25,12 +25,14 @@ namespace dating_site
            //  myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
-            
-           // statusload();
+
+            status.InnerHtml = "";
+
+           // adding status to the page
 
         }
 
-        public void statusload(object sender, EventArgs e)
+        public void statusload()
         {
 
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
@@ -73,10 +75,10 @@ namespace dating_site
 
             connection.Close();
 
-           // status.InnerHtml = "";
+             status.InnerHtml = "";
              for (int i = 0; i < j; i++)
             {
-               // status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
+             status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
 
             }
 
