@@ -233,13 +233,14 @@ li {
   float:left;
   width:60%;
   padding:0 20px;
+   margin-top:70px;
 }
 .right_body {
   background-color:#e5e5e5;
   float:right;
   width:40%;
   padding:15px;
-  margin-top:7px;
+  margin-top:70px;
 }
 
 @media only screen and (max-width:620px) {
@@ -577,8 +578,7 @@ li {
 
   <div class="main_body">
    <div id="London" class="tabcontent_main">
-       <br />
-       <br />
+       
 <div id="status" runat="server">
 
      
