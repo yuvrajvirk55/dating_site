@@ -241,6 +241,8 @@ li {
   width:40%;
   padding:15px;
   margin-top:70px;
+ position: -webkit-sticky;
+  position: sticky;
 }
 
 @media only screen and (max-width:620px) {
