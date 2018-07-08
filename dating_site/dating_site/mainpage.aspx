@@ -575,7 +575,6 @@ li {
 
  <div style="overflow:auto">
  
-
   <div class="main_body">
    <div id="London" class="tabcontent_main">
   
@@ -588,16 +587,9 @@ li {
             
 <div id="status" runat="server">
 
-     
-
-
-</div>
 </div>
 
-
-
-
-
+</div>
 
 
 <div id="Paris" class="tabcontent_main">

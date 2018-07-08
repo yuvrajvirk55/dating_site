@@ -25,12 +25,12 @@ namespace dating_site
            //  myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
-
+            
             statusload();
 
         }
 
-        public void statusload()
+        public void statusload(object sender, EventArgs e)
         {
 
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
@@ -74,16 +74,13 @@ namespace dating_site
             connection.Close();
 
             status.InnerHtml = "";
-            for (int i = 0; i < j; i++)
+             for (int i = 0; i < j; i++)
             {
-                friends_dropdown.InnerHtml += "<a  class='tablinks' onclick=" + "\"" + "openCity(event, 'Paris')" + "\"" + " ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
+                status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
 
             }
 
-          
-            for (int i = 0; i < 10; i++)
-                status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
-
+  
 
         }
 
