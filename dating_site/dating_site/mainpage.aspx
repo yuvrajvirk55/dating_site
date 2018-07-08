@@ -47,6 +47,8 @@
         overflow: hidden;
         background-color: black;
         color:white;
+        width:100%;
+        position:fixed;
        
     }
 
