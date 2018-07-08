@@ -579,7 +579,12 @@ li {
   <div class="main_body">
    <div id="London" class="tabcontent_main">
   
-  <asp:TextBox ID="status_text" runat="server"></asp:TextBox><asp:Button ID="status_button" runat="server" Text="Button" />
+  <asp:TextBox ID="status_text" runat="server" CssClass="searchbar"  placeholder="Upload Status. . ."></asp:TextBox><asp:ImageButton ID="ImageButton1" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" />
+       <br />
+       <br />
+        <br />
+       <br />
+
             
 <div id="status" runat="server">
 

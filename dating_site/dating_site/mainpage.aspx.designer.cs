@@ -94,13 +94,13 @@ namespace dating_site {
         protected global::System.Web.UI.WebControls.TextBox status_text;
         
         /// <summary>
-        /// status_button control.
+        /// ImageButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button status_button;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
         
         /// <summary>
         /// status control.
