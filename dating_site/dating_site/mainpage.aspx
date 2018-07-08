@@ -727,13 +727,13 @@ li {
     <!--premium-->
    
 <!-- The Modal -->
-<div id="myModal1" class="modal1">
+<div id="myModal1" class="modal">
   <!-- Modal content -->
-  <div class="modal-content1" >
+  <div class="modal-content" >
     <span class="close1">&times;</span>
       <div id="textcard" runat="server">
      
-        <h2 style="align-content:center" class="title">Credit card detail</h2>
+       <div align="center"><h1 style="font-size:40px" class="title">Credit card detail</h1></div>
       </div>
 
       <div class="form-body">
