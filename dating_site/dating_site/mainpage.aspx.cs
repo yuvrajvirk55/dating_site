@@ -30,7 +30,7 @@ namespace dating_site
 
         public void loadall()
         {
-          //  loaddatasuggestion();
+            loaddatasuggestion();
             friends_dropdownlist();
             loaddatafriends();
             loaddatarequests();
@@ -86,30 +86,11 @@ namespace dating_site
                 friends_output = "1000";
             }
 
-            if (srequests_output.Length<1)
-            {
-                srequests_output = "500";
-            }
-            if (requests_output.Length < 1)
-            {
-                requests_output = "500";
-            }
-
-            if (friends_output.Length < 1)
-            {
-               friends_output = "500";
-            }
-
-
-
-            string total_friends = srequests_output + "," + requests_output + "," + friends_output;
+           string total_friends = srequests_output + "," + requests_output + "," + friends_output;
 
             total_friends += "," + my_id;
-            string path = @"d:\MyTests.txt";
-            File.WriteAllText(path,total_friends);
-
-            total_friends = "100,100,100";
-
+           // string path = @"d:\MyTests.txt";
+            //File.WriteAllText(path,total_friends);   
             // filling gridview
             SqlCommand cmd;
             cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%' and usertable.id not in (" + total_friends + ")", con);
@@ -464,12 +445,21 @@ namespace dating_site
                 }
             }
 
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET requests = '" + a + "' where id = " + my_id+"";
-            cmd.Connection = sqlConnection1;
-            cmd.ExecuteNonQuery();
+            if (a.Length < 1)
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET requests = null where id = " + my_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
 
-
+            }
+            else
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET requests = '" + a + "' where id = " + my_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+            }
 
 
             // removving  from other users send requests
@@ -498,11 +488,20 @@ namespace dating_site
                 }
             }
 
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET sendrequests = '" + a + "' where id = " + other_id + "";
-            cmd.Connection = sqlConnection1;
-            cmd.ExecuteNonQuery();
-
+            if (a.Length < 1)
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET sendrequests = null where id = " + other_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET sendrequests = '" + a + "' where id = " + other_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+            }
 
 
             //adding friends
@@ -579,11 +578,20 @@ namespace dating_site
                 }
             }
 
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET friends = '" + a + "' where id = " + my_id + "";
-            cmd.Connection = sqlConnection1;
-            cmd.ExecuteNonQuery();
-
+            if (a.Length < 1)
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET friends = null where id = " + my_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET friends = '" + a + "' where id = " + my_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+            }
 
             // removving  from otheraccount
            checkfriends = "select friends from usertable WHERE id =" + other_id + "";
@@ -611,10 +619,20 @@ namespace dating_site
                 }
             }
 
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "UPDATE usertable SET friends = '" + a + "' where id = " + other_id + "";
-            cmd.Connection = sqlConnection1;
-            cmd.ExecuteNonQuery();
+            if (a.Length < 1)
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET friends = null where id = " + other_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE usertable SET friends = '" + a + "' where id = " + other_id + "";
+                cmd.Connection = sqlConnection1;
+                cmd.ExecuteNonQuery();
+            }
 
             sqlConnection1.Close();     
 
@@ -645,10 +663,12 @@ namespace dating_site
             Response.Redirect("home.aspx");
         }
 
+
         protected void Buttonpremium_Click(object sender, EventArgs e)
         {
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
         }
+
 
         protected void Buttonpremium_pay(object sender, EventArgs e)
         {
