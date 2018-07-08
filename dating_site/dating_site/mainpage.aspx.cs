@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,18 +11,18 @@ using System.Xml.Linq;
 
 namespace dating_site
 {
-    public partial class mainpage : System.Web.UI.Page-
+    public partial class mainpage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             button_friends.Attributes.Add("onclick", "return false;");
-        
-           /* Session["id"] =1;
+        /*
+            Session["id"] =1;
             Session["email"] = "auvnemk@gmail.com";
             Session["fname"] = "Yuvraj";
             Session["lname"] = "Singh";*/
             
-             myImg.ImageUrl = Session["img"].ToString();
+           //  myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
                   
@@ -29,7 +30,7 @@ namespace dating_site
 
         public void loadall()
         {
-            loaddatasuggestion();
+          //  loaddatasuggestion();
             friends_dropdownlist();
             loaddatafriends();
             loaddatarequests();
@@ -85,26 +86,47 @@ namespace dating_site
                 friends_output = "1000";
             }
 
+            if (srequests_output.Length<1)
+            {
+                srequests_output = "500";
+            }
+            if (requests_output.Length < 1)
+            {
+                requests_output = "500";
+            }
+
+            if (friends_output.Length < 1)
+            {
+               friends_output = "500";
+            }
+
+
+
             string total_friends = srequests_output + "," + requests_output + "," + friends_output;
 
             total_friends += "," + my_id;
+            string path = @"d:\MyTests.txt";
+            File.WriteAllText(path,total_friends);
+
+            total_friends = "100,100,100";
 
             // filling gridview
             SqlCommand cmd;
             cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%' and usertable.id not in (" + total_friends + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            try
+           // try
             {
                 da.Fill(ds);
                 cmd.ExecuteNonQuery();
                 GridView1.DataSource = ds;
                 GridView1.DataBind();
             }
-            catch
+           // catch
             {
-                GridView1.DataSource = null;
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
+            //    GridView1.DataSource = null;
+            //    GridView1.DataBind();
+             //   Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
                 
             }
             con.Close();
@@ -174,6 +196,7 @@ namespace dating_site
             catch
             {
                 GridView2.DataSource = null;
+                GridView2.DataBind();
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
 
@@ -215,7 +238,8 @@ namespace dating_site
             catch
             {
                GridView3.DataSource = null;
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Friends!')", true);
+                GridView3.DataBind();
+               // Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Friends!')", true);
             }
             con.Close();
 
@@ -256,7 +280,8 @@ namespace dating_site
             catch
             {
                GridView4.DataSource = null;
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Requests!')", true);
+                GridView4.DataBind();
+             //   Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Requests!')", true);
             }
             con.Close();
 
@@ -319,7 +344,7 @@ namespace dating_site
 
             catch
             {
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Freinds!')", true);
+               // Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Freinds!')", true);
             }
             int j = 0;
             foreach (DataRow row in dt.Rows)
