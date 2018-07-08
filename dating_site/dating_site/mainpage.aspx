@@ -144,10 +144,8 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
 }
-
-
 
 /* Modal Content */
 .modal-content {
@@ -729,19 +727,19 @@ li {
     <!--premium-->
    
 <!-- The Modal -->
-<div id="myModal1" class="modal">
+<div id="myModal1" class="modal1">
   <!-- Modal content -->
-  <div class="modal-content" >
+  <div class="modal-content1" >
     <span class="close1">&times;</span>
       <div id="textcard" runat="server">
      
-        <h4 class="title">Credit card detail</h4>
+        <h2 style="align-content:center" class="title">Credit card detail</h2>
       </div>
 
       <div class="form-body">
         <!-- Card Number -->
         <input type="text" class="card-number" placeholder="Card Number" />
-
+          <br />
         <!-- Date Field -->
         <div class="date-field">
           <div class="month">
@@ -784,6 +782,8 @@ li {
             <p>3 or 4 digits usually found <br> on the signature strip</p>
           </div>
         </div>
+          <br />
+          <br />
           <asp:Button ID="Button2" type="submit" class="proceed-btn" runat="server" Text="Suscribe" onclick="Buttonpremium_pay"/>
       </div>
     </div>
