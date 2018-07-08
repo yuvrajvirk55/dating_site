@@ -585,9 +585,8 @@ li {
        <br />
 
             
-<div id="status" runat="server">
-
-</div>
+       <div id="status" runat="server">
+       </div>
 
 </div>
 

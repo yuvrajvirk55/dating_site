@@ -26,9 +26,8 @@ namespace dating_site
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
 
-            status.InnerHtml = "";
-
-           // adding status to the page
+            // adding status to the page
+            statusload();
 
         }
 
@@ -53,7 +52,7 @@ namespace dating_site
 
             catch
             {
-                // Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Freinds!')", true);
+                status.InnerHtml = "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Lets Date</h2><br /><div style='overflow-x:hidden;width:600px'>Be the First to upload a status. Enter whats in your mind in the above textbox and hit the button. Cheers!</div></div><br /><br />";
             }
 
             int j = 0;
@@ -62,14 +61,14 @@ namespace dating_site
                 j++;
             }
 
-            string[] status = new string[j];
+            string[] status1 = new string[j];
             string[] names = new string[j];
 
             int cont = 0;
             foreach (DataRow row in dt.Rows)
             {
                 names[cont] = row.Field<string>(0);
-               status[cont] = row.Field<string>(1);
+               status1[cont] = row.Field<string>(1);
                 cont++;
             }
 
@@ -78,7 +77,7 @@ namespace dating_site
              status.InnerHtml = "";
              for (int i = 0; i < j; i++)
             {
-             status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
+             status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>"+names[i]+"</h2><br /><div style='overflow-x:hidden;width:600px'>"+status1[i]+"</div></div><br /><br />";
 
             }
 
