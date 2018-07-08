@@ -26,7 +26,7 @@ namespace dating_site
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
             
-            statusload();
+           // statusload();
 
         }
 
@@ -73,10 +73,10 @@ namespace dating_site
 
             connection.Close();
 
-            status.InnerHtml = "";
+           // status.InnerHtml = "";
              for (int i = 0; i < j; i++)
             {
-                status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
+               // status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
 
             }
 
