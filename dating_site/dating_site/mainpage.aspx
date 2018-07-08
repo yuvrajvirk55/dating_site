@@ -734,7 +734,7 @@ li {
       <div id="textcard" runat="server">
      
        <div align="center"><h1 style="font-size:40px" class="title">Credit card detail</h1></div>
-      </div>
+     
 
       <div class="form-body">
         <!-- Card Number -->
@@ -787,8 +787,11 @@ li {
           <asp:Button ID="Button2" type="submit" class="proceed-btn" runat="server" Text="Suscribe" onclick="Buttonpremium_pay"/>
       </div>
     </div>
-    <br /> 
-      </div>
+    <br />
+    </div>
+    </div>
+     
+  
 
 
 <!-- Places -->

@@ -72,8 +72,8 @@ body {
 .cvv-input input,
 .month select,
 .year select {
-  color   : #86939e;
-  opacity : .7;
+  color   : black;
+  opacity : .2;
 }
 
 /* Card Number */
@@ -82,7 +82,7 @@ body {
   width         : 100%;
   margin-bottom : 20px;
   padding-left  : 20px;
-  border        : 2px solid #e1e8ee;
+  border        : 2px solid black;
   border-radius : 6px;
 }
 
@@ -95,7 +95,7 @@ body {
   width               : 145px;
   margin-bottom       : 20px;
   padding-left        : 20px;
-  border              : 2px solid #e1e8ee;
+  border              : 2px solid black;
   border-radius       : 6px;
   background          : url('caret.png') no-repeat;
   background-position : 85% 50%;
@@ -115,7 +115,7 @@ body {
   width         : 145px;
   float         : left;
   padding-left  : 20px;
-  border        : 2px solid #e1e8ee;
+  border        : 2px solid black;
   border-radius : 6px;
   background    : #fff;
 }
@@ -138,7 +138,7 @@ body {
 .proceed-btn {
   cursor: pointer;
   width         : 100%;
-  border-color  : transparent;
+ 
   border-radius : 6px;
   font-size     : 16px;
 }
@@ -158,11 +158,3 @@ body {
   color : #fff;
 }
 
-.paypal-btn a {
-  color : rgba(242, 242, 242, 0.7);
-}
-
-.paypal-btn {
-  padding-right : 95px;
-  background    : url('paypal-logo.svg') no-repeat 65% 56% #009cde;
-}
