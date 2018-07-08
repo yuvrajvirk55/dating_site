@@ -241,14 +241,18 @@ li {
   width:40%;
   padding:15px;
   margin-top:70px;
- position: -webkit-sticky;
-  position: sticky;
+  position:fixed;
+  margin-left:60%;
 }
 
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
   .main_body, .right_body {
     width:100%;
+  }
+  .right_body{
+      margin-left:0;
+      position:unset;
   }
 }
 
