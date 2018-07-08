@@ -35,6 +35,20 @@ namespace dating_site
 
         protected void upload_status(object sender, ImageClickEventArgs e)
         {
+            int my_id = (int)Session["id"];
+
+            System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+
+           
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "update usertable set status='"+status_text.Text+"' where id="+my_id+"";
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection1.Close();
 
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Status Uploaded')", true);
         }
