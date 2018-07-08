@@ -16,12 +16,12 @@ namespace dating_site
         {
             button_friends.Attributes.Add("onclick", "return false;");
         
-          /*  Session["id"] =2;
+            Session["id"] =1;
             Session["email"] = "auvnemk@gmail.com";
             Session["fname"] = "Yuvraj";
             Session["lname"] = "Singh";
-            */
-             myImg.ImageUrl = Session["img"].ToString();
+            
+          //   myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
                   
@@ -132,25 +132,25 @@ namespace dating_site
             string checkrequests = "select requests from usertable WHERE id =" + my_id + "";
             SqlCommand requests = new SqlCommand(checkrequests, con);
             string requests_output;
-          //  try
+            try
             {
                 requests_output = (string)requests.ExecuteScalar();
             }
-        //    catch
+            catch
             {
-            //    requests_output = "1000";
+                requests_output = "1000";
             }
 
             string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
             SqlCommand friends = new SqlCommand(checkfriends, con);
             string friends_output;
-        //    try
+            try
             {
                 friends_output = (string)friends.ExecuteScalar();
             }
-        //    catch
+           catch
             {
-          //      friends_output = "1000";
+                friends_output = "1000";
             }
 
             string total_friends = srequests_output + "," + requests_output + "," + friends_output;
@@ -171,7 +171,7 @@ namespace dating_site
             }
             catch
             {
-          //      Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
 
             con.Close();
@@ -283,7 +283,7 @@ namespace dating_site
                output = "Trial";
             }
 
-       Buttonpremium.Text = output;
+             Buttonpremium.Text = output;
             
             // getting id of friends
             string checkfriends = "select friends from usertable WHERE id ="+my_id+"";
@@ -644,6 +644,7 @@ namespace dating_site
 
             ClientScript.RegisterStartupScript(GetType(), "hwa", "document.getElementById('myModal1').style.display = 'block';", true);
 
+            friends_dropdownlist();
         }
 
         }
