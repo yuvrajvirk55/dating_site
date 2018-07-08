@@ -234,10 +234,11 @@ li {
 }
 .right_body {
   background-color:#e5e5e5;
-  float:left;
+  float:right;
   width:40%;
   padding:15px;
-  margin-top:7px;}
+  margin-top:7px;
+}
 
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
@@ -574,13 +575,14 @@ li {
 
   <div class="main_body">
    <div id="London" class="tabcontent_main">
-  <fieldset>
-    <legend>Personal information:</legend>
-    First name:<br/>
-   
-    Last name:<br/>
-    
-  </fieldset>
+       <br />
+       <br />
+<div id="status" runat="server">
+
+     
+
+
+</div>
 </div>
 
 
