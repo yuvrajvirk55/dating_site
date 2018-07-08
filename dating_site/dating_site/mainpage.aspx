@@ -582,7 +582,7 @@ li {
   <asp:TextBox ID="status_text" runat="server" CssClass="searchbar"  placeholder="Upload Status. . ."></asp:TextBox><asp:ImageButton ID="ImageButton1" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/upload_status2.png" Width="42px" OnClick="upload_status" />
        <br />
        <br />
-        <br />
+       <br />
        <br />
 
             

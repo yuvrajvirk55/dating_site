@@ -32,7 +32,55 @@ namespace dating_site
 
         public void statusload()
         {
+
+            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            SqlCommand cmd = new SqlCommand();
+            connection.Open();
+
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,status from usertable";
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                da.Fill(dt);
+            }
+
+            catch
+            {
+                // Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Freinds!')", true);
+            }
+
+            int j = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                j++;
+            }
+
+            string[] status = new string[j];
+            string[] names = new string[j];
+
+            int cont = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                names[cont] = row.Field<string>(0);
+               status[cont] = row.Field<string>(1);
+                cont++;
+            }
+
+            connection.Close();
+
             status.InnerHtml = "";
+            for (int i = 0; i < j; i++)
+            {
+                friends_dropdown.InnerHtml += "<a  class='tablinks' onclick=" + "\"" + "openCity(event, 'Paris')" + "\"" + " ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
+
+            }
+
+          
             for (int i = 0; i < 10; i++)
                 status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
 
