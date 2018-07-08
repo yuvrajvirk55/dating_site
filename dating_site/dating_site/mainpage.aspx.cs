@@ -16,13 +16,13 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
             button_friends.Attributes.Add("onclick", "return false;");
-        
+        /*
             Session["id"] =1;
             Session["email"] = "auvnemk@gmail.com";
             Session["fname"] = "Yuvraj";
-            Session["lname"] = "Singh";
+            Session["lname"] = "Singh";*/
             
-           //  myImg.ImageUrl = Session["img"].ToString();
+             myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
 
