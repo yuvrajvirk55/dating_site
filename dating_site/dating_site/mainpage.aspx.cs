@@ -26,9 +26,15 @@ namespace dating_site
             Label1.Text = Session["fname"] + " " + Session["lname"];
             loadall();
 
+            statusload();
+
+        }
+
+        public void statusload()
+        {
             status.InnerHtml = "";
-            for(int i=0;i<10;i++)
-            status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
+            for (int i = 0; i < 10; i++)
+                status.InnerHtml += "<div style='background-color:#E5E5E5; padding:15px;'><br /><h2>Friend List</h2><br /><div style='overflow-x:hidden;width:600px'>sdfndsnfdlfkdsfsd</div></div><br /><br />";
 
 
         }
