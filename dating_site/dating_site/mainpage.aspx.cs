@@ -33,6 +33,15 @@ namespace dating_site
 
         }
 
+        protected void upload_status(object sender, ImageClickEventArgs e)
+        {
+
+            Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Status Uploaded')", true);
+        }
+
+
+
+
         public void loadall()
         {
             loaddatasuggestion();

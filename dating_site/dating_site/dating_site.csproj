@@ -110,6 +110,7 @@
     <Content Include="images\profile_pic.png" />
     <Content Include="images\searchbutton.png" />
     <Content Include="images\searchbutton2.png" />
+    <Content Include="images\upload_status.jpg" />
     <Content Include="mainpage.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
