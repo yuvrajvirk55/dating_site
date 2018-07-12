@@ -99,7 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin.aspx" />
+    <Content Include="Chat.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min.js" />
     <Content Include="css\circle.css" />
+    <Content Include="css\jquery.js" />
+    <Content Include="css\messsages.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="form.aspx" />
     <Content Include="images\background.jpg" />
     <Content Include="images\icons\favicon.ico" />
@@ -108,14 +114,18 @@
     <Content Include="images\searchbutton2.png" />
     <Content Include="images\upload_status.jpg" />
     <Content Include="images\upload_status2.png" />
+    <Content Include="jQuery-2.1.4.min.js" />
     <Content Include="mainpage.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="bower.json" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regulard41d.eot" />
     <None Include="scripts\jquery-1.7.1.intellisense.js" />
-    <Content Include="paypal-logo.svg" />
     <Content Include="profile.aspx" />
     <Content Include="profileupdate_changepassword.aspx" />
     <Content Include="profileupdate_info.aspx" />
@@ -158,6 +168,13 @@
     </Compile>
     <Compile Include="admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Encrypt.cs" />
     <Compile Include="form.aspx.cs">
@@ -254,7 +271,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="fonts\" />
+    <Folder Include="fonts\font-awesome\" />
     <Folder Include="scripts\WebForms\" />
     <Folder Include="upload\" />
   </ItemGroup>

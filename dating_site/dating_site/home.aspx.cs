@@ -57,13 +57,10 @@ namespace dating_site
             if ((!string.IsNullOrEmpty(db_email) & !string.IsNullOrEmpty(db_password)) && (db_email.Equals(textbox_email.Text.ToString()) & db_password.Equals(textbox_password.Text.ToString())))
               {
 
-                string checkfname = "select first_name from usertable WHERE email LIKE '" + filtered_email + "%'";
+                string checkfname = "select Name from usertable WHERE email LIKE '" + filtered_email + "%'";
                 SqlCommand command_id = new SqlCommand(checkfname, connection);
-                string db_fname = command_id.ExecuteScalar().ToString();
-
-                string checklname = "select last_name from usertable WHERE email LIKE '" + filtered_email + "%'";
-                SqlCommand command_id1 = new SqlCommand(checklname, connection);
-                string db_lname = command_id1.ExecuteScalar().ToString();
+                string db_name = command_id.ExecuteScalar().ToString();
+;
 
                 string checkid = "select id from usertable WHERE email LIKE '" + filtered_email + "%'";
                 SqlCommand command_id2 = new SqlCommand(checkid, connection);
@@ -78,8 +75,7 @@ namespace dating_site
 
                 Session["id"] = db_id;
                 Session["email"] =textbox_email.Text;
-                Session["fname"] = db_fname;
-                Session["lname"] = db_lname;
+                Session["Name"] = db_name;
                 Session["img"] = db_pic;
 
 

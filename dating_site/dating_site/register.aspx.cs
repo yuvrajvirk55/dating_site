@@ -84,7 +84,7 @@ namespace dating_site
 
                 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex,pic,premium,login) VALUES ('" + register_email.Text + "','" + pass + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text + "','" + filtered_name + "','Trial','in')";
+                cmd.CommandText = "INSERT usertable (email,password,first_name,last_name,dob,sex,pic,premium,login,Name) VALUES ('" + register_email.Text + "','" + pass + "','" + register_fname.Text + "','" + register_lname.Text + "','" + register_dob.Text + "','" + register_gender.Text + "','" + filtered_name + "','Trial','in','"+ register_fname.Text + " " + register_lname.Text +"')";
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();
@@ -104,8 +104,7 @@ namespace dating_site
 
                 Session["id"] = db_id;
                 Session["email"] = register_email.Text;
-                Session["fname"] = register_fname.Text;
-                Session["lname"] = register_lname.Text;
+                Session["Name"] = register_fname.Text+" "+ register_lname.Text;
                 Session["img"] = filtered_name.ToString();
                 Response.Redirect("form.aspx");
             }

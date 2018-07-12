@@ -19,11 +19,10 @@ namespace dating_site
         
            /* Session["id"] =1;
             Session["email"] = "auvnemk@gmail.com";
-            Session["fname"] = "Yuvraj";
-            Session["lname"] = "Singh";*/
-            
-             myImg.ImageUrl = Session["img"].ToString();
-            Label1.Text = Session["fname"] + " " + Session["lname"];
+            Session["Name"] = "Yuvraj Singh";*/
+ 
+              myImg.ImageUrl = Session["img"].ToString();
+            Label1.Text = Session["Name"].ToString();
             loadall();
 
             // adding status to the page
@@ -738,8 +737,7 @@ namespace dating_site
 
             Session["id"] = null;
             Session["email"] = null;
-            Session["fname"] = null;
-            Session["lname"] = null;
+            Session["Name"] = null;
             Session["img"] = null;
 
             connection.Close();
