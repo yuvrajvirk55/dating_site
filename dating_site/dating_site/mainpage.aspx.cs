@@ -17,11 +17,11 @@ namespace dating_site
         {
             button_friends.Attributes.Add("onclick", "return false;");
         
-           /* Session["id"] =1;
+            Session["id"] =1;
             Session["email"] = "auvnemk@gmail.com";
-            Session["Name"] = "Yuvraj Singh";*/
+            Session["Name"] = "Yuvraj Singh";
  
-              myImg.ImageUrl = Session["img"].ToString();
+            //  myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["Name"].ToString();
             loadall();
 
