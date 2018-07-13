@@ -228,6 +228,7 @@
 <body style="background-color:	#BEBEBE;">
 
 <div class="topnav" id="myTopnav">
+  <a class="extra" style="padding-right:2px;padding-left:16px;color:red"><asp:Button ID="Button2" style="padding:13px" runat="server"  Text="Logout" OnClick="Button1_Click" /></a>
   <a href="#about"" class="extra" style="padding:5px;"><asp:Image ID="Image1" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
   <a href="#about"" class="extra" style="padding-right:2px;padding-left:16px;  border-left: 1px groove white;"><asp:Label ID="Label1" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
    <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
