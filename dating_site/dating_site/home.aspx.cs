@@ -120,11 +120,6 @@ namespace dating_site
               
             
             }
-        
 
-        protected void textbox_email_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
