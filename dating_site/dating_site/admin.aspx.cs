@@ -94,7 +94,7 @@ namespace dating_site
             Response.Redirect("query.aspx");
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click2(object sender, EventArgs e)
         {
 
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
