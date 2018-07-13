@@ -30,6 +30,31 @@
      </head> 
      <body> 
          <form runat="server">
+
+
+<div class="topnav" id="myTopnav">
+    <a class="extra" style="padding-right:2px;padding-left:16px;color:red"><asp:Button ID="Button1" style="padding:13px" runat="server"  Text="Logout" OnClick="Button1_Click" /></a>
+  <a href="#myPopup" class="extra" style="padding:3px;"><asp:Image id="myImg" runat="server" style="width:30px; height:30px; border-radius: 90%;" ImageUrl="~/images/profile_pic.png" /></a>
+  <a href="profile.aspx"" class="extra" style="padding-right:2px;padding-left:16px;border-left: 1px groove white;"><asp:Label ID="Label3" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
+  <a onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
+     <a href="Chat.aspx" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">&#xe0cb;</i></a>
+    <div class="dropdown">
+    <button class="dropbtn" id="button_friends" runat="server"><a href="#home" onclick="openCity(event, 'Paris')" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
+    </button>
+    <div class="dropdown-content" id="friends_dropdown" runat="server" style="max-height:300px;overflow-y:scroll" >
+    </div>
+  </div> 
+   <a class="extra" style="background-color:green;height:47px !important" > <asp:Button ID="Buttonpremium" style="background-color:green; font-size: 17px;height:47px !important" runat="server" Text="Button" OnClick="Buttonpremium_Click" /></a>
+    <a class="tablinks extra_left " id ='defaultOpen'  onclick="openCity(event, 'London')"  style="font-size:25px;font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
+   <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+
              <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
              <div class="container-fluid"> 
                  <div class="container ng-scope"> 
