@@ -16,8 +16,8 @@ namespace dating_site
         SqlConnection conn = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Image1.ImageUrl = Session["img"].ToString();
-            // Label1.Text = Session["Name"].ToString();
+           //  Image1.ImageUrl = Session["img"].ToString();
+             Label1.Text = Session["Name"].ToString();
 
             LoadChatbox();
             get_User();
