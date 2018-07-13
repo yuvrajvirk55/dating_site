@@ -12,7 +12,7 @@ namespace dating_site
     public partial class admin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {  
+        {
             string checkuser = "select Count(*) from usertable";
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             SqlCommand command_email = new SqlCommand(checkuser, connection);
@@ -23,9 +23,9 @@ namespace dating_site
             connection.Close();
 
             percent.Text = db_user.ToString();
-                    
-           // Image1.ImageUrl = Session["img"].ToString();
-          // Label1.Text = Session["fname"] + " " + Session["lname"];
+
+            // Image1.ImageUrl = Session["img"].ToString();
+           // Label1.Text = Session["Name"].ToString();
         }
 
 
