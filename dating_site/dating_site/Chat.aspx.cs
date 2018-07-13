@@ -33,8 +33,6 @@ namespace dating_site
             {
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                //DataList2.DataSource = ds;
-                //DataList2.DataBind();
                 DataList3.DataSource = ds;
                 DataList3.DataBind();
             }
@@ -43,12 +41,13 @@ namespace dating_site
 
             }
             conn.Close();
-            //ScriptManager.RegisterStartupScript(this.Page, typeof(Panel), "PanelChatContent", ";ScrollToBottom();", true);
         }
         public void get_User()
         {
 
-            Image1.ImageUrl = Session["img"].ToString();
+            // Image1.ImageUrl = Session["img"].ToString();
+            Session["Name"] = "Yuvraj singh";
+            Session["id"] = 1;
             Label1.Text = Session["Name"].ToString(); ;
         }
         protected void Unnamed_ServerClick(object sender, EventArgs e)
@@ -76,15 +75,38 @@ namespace dating_site
         public void Load_Frends()
         {
             conn.Open();
-            string str = "select DISTINCT Name,pic as Image from [usertable] where first_name !='" + Label1.Text + "'";
+           
+            int my_id = (int)Session["id"];
+           
+            // getting number of friends
+            string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
+            SqlCommand friends = new SqlCommand(checkfriends, conn);
+            string friends_output;
+            try
+            {
+                friends_output = (string)friends.ExecuteScalar();
+            }
+            catch
+            {
+                friends_output = "1000";
+            }
+
+           
+            string str = "select DISTINCT Name,pic as Image from [usertable] where id in (" + friends_output + ")";
             SqlCommand cmd = new SqlCommand(str, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            da.Fill(ds);
-            //DataList2.DataSource = ds;
-            //DataList2.DataBind();
-            DataList1.DataSource = ds;
-            DataList1.DataBind();
+            try
+            {
+                da.Fill(ds);
+
+                DataList1.DataSource = ds;
+                DataList1.DataBind();
+            }
+            catch
+            {
+
+            }
             conn.Close();
         }
 

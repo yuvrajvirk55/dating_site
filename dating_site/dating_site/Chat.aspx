@@ -44,6 +44,7 @@
                                         <%--<img src="./images/avatar.jpg" alt=""> --%>
                                        <asp:Image ID="Image1" runat="server" />
                                   <h5 class="q-title" align="center">
+                                      <a href="mainpage.aspx" align="left">Back</a><br /><br />
                                       <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br/><b>0</b> New Messages</h5>
                                    </div>
                               </div>
