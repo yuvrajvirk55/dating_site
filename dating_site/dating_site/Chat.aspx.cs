@@ -57,11 +57,6 @@ namespace dating_site
             string time = date.ToString("HH:mm:ss");
             conn.Open();
 
-            string FilePath = @"D:\MyTests.txt";
-            using (var file = new StreamWriter(File.Create(FilePath)))
-            {
-                file.Write("1" + Label1.Text + "', 2'" + Label2.Text + "', 3'" + TextBox1.Text + "',4 '" + date3 + "',5 '" + time + "', 6'" + Image3.ImageUrl.ToString() + "");
-            }
             string query = "insert into Chatbox values('" + Label1.Text + "','" + Label2.Text + "','" + TextBox1.Text + "','" + date3 + "','" + time + "','" + Image3.ImageUrl.ToString() + "')";
             SqlCommand cmd = new SqlCommand(query, conn);
             int i = cmd.ExecuteNonQuery();
