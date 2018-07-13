@@ -16,6 +16,9 @@ namespace dating_site
         SqlConnection conn = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Image1.ImageUrl = Session["img"].ToString();
+            // Label1.Text = Session["Name"].ToString();
+
             LoadChatbox();
             get_User();
             Load_Frends();
@@ -123,5 +126,28 @@ namespace dating_site
         {
             LoadChatbox();
         }
+
+        protected void Button1_Click2(object sender, EventArgs e)
+        {
+
+            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+            connection.Open();
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "update usertable set login='out' where id = " + Session["id"] + "";
+            cmd.Connection = connection;
+            cmd.ExecuteNonQuery();
+
+            Session["id"] = null;
+            Session["email"] = null;
+            Session["Name"] = null;
+            Session["img"] = null;
+
+            connection.Close();
+            Response.Redirect("home.aspx");
+        }
+
+
     }
 }

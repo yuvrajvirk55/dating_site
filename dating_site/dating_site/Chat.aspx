@@ -112,9 +112,10 @@
 <form runat="server">
 
 <div class="topnav" id="myTopnav">
-  <a class="extra" style="padding-right:2px;padding-left:16px;color:black;font-size:13px"><asp:Button ID="Button2" style="padding:13px" runat="server"  Text="Logout" /></a>
+   <a class="extra" style="padding-right:2px;padding-left:16px;color:black;font-size:13px"><asp:Button ID="Button1" style="padding:9px" runat="server" OnClick="Button1_Click2" Text="Logout" /></a>
   <a href="#about" class="extra" style="padding:5px"><asp:Image ID="Image5" runat="server" style="width:30px; height:30px; border-radius: 90%;" /></a>
   <a href="#about" class="extra" style="padding-right:2px;padding-left:16px;  border-left: 1px groove white;"><asp:Label ID="Label3" runat="server" style="font-size:20px;" Text="Label"></asp:Label></a>
+     <a href="mainpage.aspx" class="extra" style="padding:10px;padding-right:16px; "><asp:Label ID="Label4" runat="server" Text="Go Back"></asp:Label></a>
    <a class="extra_left" style="font-size:25px; font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -136,8 +137,7 @@
                                         <%--<img src="./images/avatar.jpg" alt=""> --%>
                                        <asp:Image ID="Image1" runat="server" />
                                   <h5 class="q-title" align="center">
-                                      <a href="mainpage.aspx" align="left">Back</a><br /><br />
-                                      <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br/><b>0</b> New Messages</h5>
+                                   <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br/><b>0</b> New Messages</h5>
                                    </div>
                               </div>
                               <div class="ms-block">
