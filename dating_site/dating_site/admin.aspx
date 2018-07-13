@@ -210,8 +210,6 @@
 
 
 </style>
-
-
 </head>
        
 <script>
@@ -223,7 +221,7 @@
             x.className = "topnav";
         }
     }
-    </script>
+</script>
 
 <body style="background-color:	#BEBEBE;">
 
