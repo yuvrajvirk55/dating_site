@@ -124,7 +124,7 @@
 
 
              <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-             <div class="container-fluid"> 
+             <div class="container-fluid" style="height:50%"> 
                  <div class="container ng-scope"> 
                      <div class="block-header"> 
                          <h2> </h2>
