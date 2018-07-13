@@ -28,12 +28,11 @@
         };
     </script>
 
-   <style>
-    body {
-        margin: 0;
-        font-family: 'Indie Flower', cursive;
-    }
 
+
+
+   <style>
+  
     .topnav {
         overflow: hidden;
         background-color: black;
@@ -103,111 +102,6 @@
         margin: auto;
         border: 3px solid #73AD21;
     }
-
-.left{ float:left;
-        padding: 5px;
-        margin: 8px;
-       
-        width: 40% !important;
-        height: 200px !important;
-        display:block;
-        opacity:0.4;
-        background: rgba(0, 0, 0, 0.7);
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-    color:white; 
-    text-align:center;   
-}
-
-.left2{ float:left;
-        padding: 5px;
-        margin: 8px;
-       
-        width: 32% !important;
-        height: 200px !important;
-        display:block;
-        opacity:0.4;
-        background: rgba(0, 0, 0, 0.7);
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-    color:white; 
-    text-align:center;
-}
-
-.right{ float:right;
-        padding: 5px;
-        margin:8px;
-        width: 24% !important;
-        height: 400px !important;
-        display:block;
-        opacity:0.4;
-        background: rgba(0, 0, 0, 0.7);
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-    color:white; 
-    text-align:center !important;
-}
-
-.down{ float:left;
-        padding:5px;
-        margin:8px;
-        width: 73% !important;
-        height: 330px !important;
-        display:block;
-        opacity:0.4;
-        background: rgba(0, 0, 0, 0.7);
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-    color:white; 
-    text-align:center !important;   
-   font-family: 'Indie Flower', cursive;
-}
-
-
-
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-
-.button2:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-.button3 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #f44336;
-}
-
-.button3:hover {
-    background-color: #f44336;
-    color: white;
-}
 
 
 </style>
