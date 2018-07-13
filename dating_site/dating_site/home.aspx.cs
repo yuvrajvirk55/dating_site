@@ -60,7 +60,7 @@ namespace dating_site
                 string checkfname = "select Name from usertable WHERE email LIKE '" + filtered_email + "%'";
                 SqlCommand command_id = new SqlCommand(checkfname, connection);
                 string db_name = command_id.ExecuteScalar().ToString();
-;
+
 
                 string checkid = "select id from usertable WHERE email LIKE '" + filtered_email + "%'";
                 SqlCommand command_id2 = new SqlCommand(checkid, connection);
