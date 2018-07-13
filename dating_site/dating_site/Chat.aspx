@@ -100,12 +100,10 @@
         border: 3px solid #73AD21;
     }
 
-
          </style>
      </head> 
      <body> 
          <form runat="server">
-
 
 
 <div class="topnav" id="myTopnav">
@@ -117,8 +115,6 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
-
 
 
              <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
