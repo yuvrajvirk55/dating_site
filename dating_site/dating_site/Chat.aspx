@@ -136,13 +136,10 @@
                                    <div class="ms-user">
                                         <%--<img src="./images/avatar.jpg" alt=""> --%>
                                        <asp:Image ID="Image1" runat="server" />
-                                  <h5 class="q-title" align="center">
-                                   <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br/><b>0</b> New Messages</h5>
+                                 
                                    </div>
                               </div>
-                              <div class="ms-block">
-                                   <a class="btn btn-primary btn-block ms-new" href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp; New Message</a> 
-                              </div><hr/> 
+                            <hr/> 
                               <div class="listview lv-user m-t-20">
                                   <asp:DataList ID="DataList1" runat="server">
                                       <ItemTemplate>
@@ -199,7 +196,7 @@
                                                                  <span class="glyphicon glyphicon-triangle-left" style="color:#000000;"></span> 
                                                                  <asp:Label ID="Message" runat="server" Text='<%# Bind("Message") %>'></asp:Label>
                                                              </div>
-                                                             <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; <asp:Label ID="Date" runat="server" Text='<%# Bind("Time") %>'></asp:Label></small> 
+                                                         <!--    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; <asp:Label ID="Date" runat="server" Text='></asp:Label></small> -->
                                                          </div>
                                                      </div>
                                                    </ItemTemplate>

@@ -29,7 +29,7 @@ namespace dating_site
             string date3 = date.ToString("dd-MM-yyyy");
             //string agent = Session["Admin"].ToString();
             conn.Open();
-            string str = "select * from Chatbox where Sender='" + Label1.Text + "' and Reciever='" + Label2.Text + "' or Sender='" + Label2.Text + "' and Reciever='" + Label1.Text + "' and Date='" + date3 + "' ORDER BY ID";
+            string str = "select * from Chatbox where Sender='" + Label1.Text + "' and Reciever='" + Label2.Text + "' or Sender='" + Label2.Text + "' and Reciever='" + Label1.Text + "' ORDER BY ID";
             SqlCommand cmd = new SqlCommand(str, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             try
@@ -57,11 +57,11 @@ namespace dating_site
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {
             DateTime date = DateTime.Now;
-            string date3 = date.ToString("dd-MM-yy");
+            string date3 = date.ToString("dd-MM-yyyy");
             string time = date.ToString("HH:mm:ss");
             conn.Open();
 
-            string query = "insert into Chatbox values('" + Label1.Text + "','" + Label2.Text + "','" + TextBox1.Text + "','" + date3 + "','" + time + "','" + Image3.ImageUrl.ToString() + "')";
+            string query = "insert into Chatbox values('" + Label1.Text + "','" + Label2.Text + "','" + TextBox1.Text + "','"  + Image3.ImageUrl.ToString() + "')";
 
             System.IO.File.WriteAllText(@"D:\MyTests.txt", query);
 
