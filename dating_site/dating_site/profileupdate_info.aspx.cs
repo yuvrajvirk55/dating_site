@@ -53,8 +53,7 @@ namespace dating_site
                 sqlConnection1.Close();
 
          
-                Session["fname"] = register_fname.Text;
-                Session["lname"] = register_lname.Text;
+                Session["Name"] = register_fname.Text+ " "+ register_lname.Text;
                 Session["img"] = filtered_name.ToString();
                 Response.Redirect("profile.aspx");
 
