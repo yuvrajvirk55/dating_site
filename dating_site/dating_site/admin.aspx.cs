@@ -24,8 +24,8 @@ namespace dating_site
 
             percent.Text = db_user.ToString();
 
-            // Image1.ImageUrl = Session["img"].ToString();
-           // Label1.Text = Session["Name"].ToString();
+             Image1.ImageUrl = Session["img"].ToString();
+             Label1.Text = Session["Name"].ToString();
         }
 
 
