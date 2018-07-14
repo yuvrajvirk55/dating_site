@@ -174,24 +174,22 @@ namespace dating_site
            string total_friends = srequests_output + "," + requests_output + "," + friends_output;
 
             total_friends += "," + my_id;
-           // string path = @"d:\MyTests.txt";
-            //File.WriteAllText(path,total_friends);   
-            // filling gridview
+
             SqlCommand cmd;
             cmd = new SqlCommand("SELECT userinterest.email as email,usertable.id as id, first_name + ' ' + last_name AS name, sex as gender,in_hobbies as hobbies,pic FROM usertable INNER JOIN userinterest ON usertable.email=userinterest.email where first_name + ' ' + last_name LIKE '%" + searchbar_text.Text.ToString() + "%' and usertable.id not in (" + total_friends + ")", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-           // try
+            try
             {
                 da.Fill(ds);
                 cmd.ExecuteNonQuery();
                 GridView1.DataSource = ds;
                 GridView1.DataBind();
             }
-           // catch
+            catch
             {
-            //    GridView1.DataSource = null;
-            //    GridView1.DataBind();
+                GridView1.DataSource = null;
+                GridView1.DataBind();
              //   Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Searchbar!')", true);
                 
             }
@@ -263,7 +261,7 @@ namespace dating_site
             {
                 GridView2.DataSource = null;
                 GridView2.DataBind();
-                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
+                //Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in Suggestion!')", true);
             }
 
             con.Close();
