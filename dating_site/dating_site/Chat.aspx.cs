@@ -26,10 +26,9 @@ namespace dating_site
         public void LoadChatbox()
         {
             DateTime date = DateTime.Now;
-            string date3 = date.ToString("dd-MM-yyyy");
-            //string agent = Session["Admin"].ToString();
+       
             conn.Open();
-            string str = "select * from Chatbox where Sender='" + Label1.Text + "' and Reciever='" + Label2.Text + "' or Sender='" + Label2.Text + "' and Reciever='" + Label1.Text + "' ORDER BY ID";
+            string str = "select * from Chatbox where Sender='" + Label1.Text + "' and Reciever='" + Label2.Text + "' or Sender='" + Label2.Text + "' and Reciever='" + Label1.Text + "' and Date='" + date + "' ORDER BY ID";
             SqlCommand cmd = new SqlCommand(str, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             try
@@ -57,11 +56,10 @@ namespace dating_site
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {
             DateTime date = DateTime.Now;
-            string date3 = date.ToString("dd-MM-yyyy");
-            string time = date.ToString("HH:mm:ss");
+            
             conn.Open();
 
-            string query = "insert into Chatbox values('" + Label1.Text + "','" + Label2.Text + "','" + TextBox1.Text + "','"  + Image3.ImageUrl.ToString() + "')";
+            string query = "insert into Chatbox values('" + Label1.Text + "','" + Label2.Text + "','" + TextBox1.Text + "','" + date + "','" + date + "','" + Image3.ImageUrl.ToString() + "')";
 
             System.IO.File.WriteAllText(@"D:\MyTests.txt", query);
 
@@ -123,7 +121,7 @@ namespace dating_site
             DataListItem item = (DataListItem)lBtn.NamingContainer;
             Image NameLabel = (Image)item.FindControl("Image2");
             string url = NameLabel.ImageUrl.ToString();
-            Image3.ImageUrl = url;
+            Image3.ImageUrl = Image1.ImageUrl;
             LoadChatbox();
         }
 
