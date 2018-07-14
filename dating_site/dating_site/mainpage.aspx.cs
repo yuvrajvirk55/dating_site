@@ -492,11 +492,11 @@ namespace dating_site
             int my_id = (int)Session["id"];
 
             
-                        System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-                        System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+        System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+        System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
 
-                        sqlConnection1.Open();
+        sqlConnection1.Open();
 
 
 
