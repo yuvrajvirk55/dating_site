@@ -57,11 +57,12 @@ namespace dating_site
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {
             DateTime date = DateTime.Now;
-            string date3 = date.ToString("dd-MM-yyyy");
+            string date3 = date.ToString("dd-MM-yy");
             string time = date.ToString("HH:mm:ss");
             conn.Open();
 
             string query = "insert into Chatbox values('" + Label1.Text + "','" + Label2.Text + "','" + TextBox1.Text + "','" + date3 + "','" + time + "','" + Image3.ImageUrl.ToString() + "')";
+
             System.IO.File.WriteAllText(@"D:\MyTests.txt", query);
 
 
