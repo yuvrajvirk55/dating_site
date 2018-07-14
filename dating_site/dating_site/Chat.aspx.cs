@@ -62,6 +62,9 @@ namespace dating_site
             conn.Open();
 
             string query = "insert into Chatbox values('" + Label1.Text + "','" + Label2.Text + "','" + TextBox1.Text + "','" + date3 + "','" + time + "','" + Image3.ImageUrl.ToString() + "')";
+            System.IO.File.WriteAllText(@"D:\MyTests.txt", query);
+
+
             SqlCommand cmd = new SqlCommand(query, conn);
             int i = cmd.ExecuteNonQuery();
             conn.Close();
