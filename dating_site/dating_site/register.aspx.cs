@@ -20,6 +20,9 @@ namespace dating_site
         [System.Web.Services.WebMethod]
         public static string CheckEmail(string useroremail)
         {
+            //checking if the email already exists
+
+
             if (useroremail.Length >0)
             {
                 string retval = "";
@@ -60,8 +63,6 @@ namespace dating_site
             {
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
-
-                //checking if the email already exists
 
                 // saving image
 
