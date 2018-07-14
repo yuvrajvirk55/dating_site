@@ -48,7 +48,7 @@ namespace dating_site
         public void get_User()
         {
 
-            // Image1.ImageUrl = Session["img"].ToString();
+            Image1.ImageUrl = "/images/login.jpg";
             Session["Name"] = "Yuvraj singh";
             Session["id"] = 1;
 
