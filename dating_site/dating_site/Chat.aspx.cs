@@ -17,7 +17,7 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
            //  Image5.ImageUrl = Session["img"].ToString();
-             Label3.Text = Session["Name"].ToString();
+            // Label3.Text = Session["Name"].ToString();
 
             LoadChatbox();
             get_User();
@@ -51,6 +51,7 @@ namespace dating_site
             // Image1.ImageUrl = Session["img"].ToString();
             Session["Name"] = "Yuvraj singh";
             Session["id"] = 1;
+
             Label1.Text = Session["Name"].ToString(); ;
         }
         protected void Unnamed_ServerClick(object sender, EventArgs e)
