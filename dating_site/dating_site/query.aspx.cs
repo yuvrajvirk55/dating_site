@@ -34,7 +34,7 @@ namespace dating_site
                 }
                 catch
                 {
-                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in the table !')", true);
                 }
             }
             else
@@ -52,7 +52,7 @@ namespace dating_site
                 }
                 catch
                 {
-                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data !')", true);
+                    Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('No Data in the table !')", true);
                 }
             }
         }
