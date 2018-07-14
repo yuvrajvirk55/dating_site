@@ -138,9 +138,7 @@
                                       <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br/></h5>
                                    </div>
                               </div>
-                              <div class="ms-block">
-                                   <a class="btn btn-primary btn-block ms-new" href="#mainpage.aspx">&nbsp;Go Back</a> 
-                              </div><hr/> 
+                             <hr/> 
                               <div class="listview lv-user m-t-20">
                                   <asp:DataList ID="DataList1" runat="server">
                                       <ItemTemplate>
