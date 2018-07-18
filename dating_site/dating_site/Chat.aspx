@@ -212,7 +212,7 @@
                                      <asp:TextBox CssClass="textarea" ID="TextBox1"  placeholder="Write messages..." runat="server" onKeyPress="return disableEnterKey(event)"></asp:TextBox>
                                      <%--<button class=""><span class="glyphicon glyphicon-send"></span></button>--%>
                                      <%--<asp:LinkButton ID="Button1" CssClass="button" runat="server" ><span class="glyphicon glyphicon-send"></span></asp:LinkButton>--%>
-                                         <button runat="server" class="button" onserverclick="Unnamed_ServerClick" height="" width="">
+                                         <button runat="server" class="button" id="send_message" onserverclick="Unnamed_ServerClick" height="" width="">
                                             <span class="glyphicon glyphicon-send"></span>
                                         </button>
                                      <%--</form>--%>
@@ -234,8 +234,12 @@
                  else
                      key = e.which;     //firefox
 
-                 if (key == 13)
+                 if (key == 13) {
+                     document.getElementById("send_message").focus();
+                     document.getElementById("send_message").click();
+                     
                      return false;
+                 }
                  else
                      return true;
              }
