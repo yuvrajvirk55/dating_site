@@ -16,12 +16,14 @@ namespace dating_site
         protected void Page_Load(object sender, EventArgs e)
         {
             button_friends.Attributes.Add("onclick", "return false;");
-
+/*
             Session["Name"] = "Yuvraj Singh";
             Session["id"] = 1;
             Session["img"] = "fff.ggg";
             Session["email"] = "uvnemk@gmail.com";
-            Session["sex"] = "male";
+            Session["sex"] = "male";*/
+
+
             myImg.ImageUrl = Session["img"].ToString();
             Label1.Text = Session["Name"].ToString();
             loadall();
