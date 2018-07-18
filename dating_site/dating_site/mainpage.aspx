@@ -565,7 +565,7 @@ li {
   <a onclick="openNav_places()" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">explore</i></a>
      <a href="Chat.aspx" class="extra"><i class="material-icons" style="font-size:25px; padding-top:5px;">&#xe0cb;</i></a>
     <div class="dropdown">
-    <button class="dropbtn" id="button_friends" runat="server"><a href="#home" onclick="openCity(event, 'Paris')" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
+    <button class="dropbtn" id="button_friends" runat="server"><a onclick="openCity(event, 'Paris')" class="extra"><i class="material-icons" style="font-size:25px;padding-top:5px;">group_add</i></a>      
     </button>
     <div class="dropdown-content" id="friends_dropdown" runat="server" style="max-height:300px;overflow-y:scroll" >
     </div>
