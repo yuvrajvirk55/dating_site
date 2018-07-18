@@ -384,21 +384,6 @@ namespace dating_site
             connection.Open();
 
 
-            // premium
-
-            string pre = "select premium from usertable WHERE id =" + my_id + "";
-            SqlCommand p = new SqlCommand(pre, connection);
-            string output;
-            try
-            {
-               output = (string)p.ExecuteScalar();
-            }
-            catch
-            {
-               output = "Trial";
-            }
-
-             Buttonpremium.Text = output;
             
             // getting id of friends
             string checkfriends = "select friends from usertable WHERE id ="+my_id+"";
@@ -456,6 +441,23 @@ namespace dating_site
                friends_dropdown.InnerHtml += "<a  class='tablinks' onclick="+"\""+"openCity(event, 'Paris')"+"\""+" ><img src='" + pic[i].Replace("~", "") + "' width='42' height='42' />   " + names[i] + "</a>";
 
             }
+
+            
+            // premium
+
+            string pre = "select premium from usertable WHERE id =" + my_id + "";
+            SqlCommand p = new SqlCommand(pre, connection);
+            string output;
+            try
+            {
+               output = (string)p.ExecuteScalar();
+            }
+            catch
+            {
+               output = "Trial";
+            }
+
+             Buttonpremium.Text = output;
         }
 
 
