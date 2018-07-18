@@ -70,13 +70,18 @@ namespace dating_site
                 SqlCommand command_id3 = new SqlCommand(checkpic, connection);
                 string db_pic = command_id3.ExecuteScalar().ToString();
 
-              
+                string checksex = "select sex from usertable WHERE email LIKE '" + filtered_email + "%'";
+                SqlCommand command_sex = new SqlCommand(checksex, connection);
+                string db_sex = command_sex.ExecuteScalar().ToString();
+
+
 
 
                 Session["id"] = db_id;
                 Session["email"] =textbox_email.Text;
                 Session["Name"] = db_name;
                 Session["img"] = db_pic;
+                Session["sex"] = db_sex;
 
 
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
