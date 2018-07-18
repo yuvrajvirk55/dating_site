@@ -755,22 +755,14 @@ namespace dating_site
 
         protected void Buttonpremium_pay(object sender, EventArgs e)
         {
-            if (card_text.i)
+            if (cvv_text.Text=="")
             {
-                textcard.InnerHtml = "<center><h1 style='color: green'>Thanks for Your Suscription</h1></center><br/><center><h3>Your pack is now valid for 1 Year</h3></center><br/> ";
+                textcard.InnerHtml = "<center><h1 style='color: Red'>Please enter valid card information</h1></center><br/><center><h3>Enter a 16 numbered card number, CVV, and expiry date</h3></center><br/> ";
 
-                SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-                connection.Open();
-
-                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "update usertable set premium ='Premium' where id = " + Session["id"] + "";
-                cmd.Connection = connection;
-                cmd.ExecuteNonQuery();
-                connection.Close();
+                
 
             }
-            if (Buttonpremium.Text=="Trial")
+            else if (Buttonpremium.Text=="Trial")
             {
                 textcard.InnerHtml = "<center><h1 style='color: green'>Thanks for Your Suscription</h1></center><br/><center><h3>Your pack is now valid for 1 Year</h3></center><br/> ";
 
