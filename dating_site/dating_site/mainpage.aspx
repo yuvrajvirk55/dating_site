@@ -747,7 +747,7 @@ li {
 
       <div class="form-body">
         <!-- Card Number -->
-        <input type="text" class="card-number" placeholder="Card Number" />
+        <input type="text" runat="server" id="card_text" class="card-number" placeholder="Card Number" />
           <br />
         <!-- Date Field -->
         <div class="date-field">
@@ -785,7 +785,7 @@ li {
         <!-- Card Verification Field -->
         <div class="card-verification">
           <div class="cvv-input">
-            <input type="text" placeholder="CVV" />
+              <asp:TextBox ID="cvv_text" placeholder="CVV" runat="server"></asp:TextBox>
           </div>
           <div class="cvv-details">
             <p>3 or 4 digits usually found <br> on the signature strip</p>
