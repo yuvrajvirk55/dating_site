@@ -572,7 +572,7 @@ li {
   </div> 
    <a class="extra" style="background-color:green;height:47px !important" > <asp:Button ID="Buttonpremium" style="background-color:green; font-size: 17px;height:47px !important" runat="server" Text="Button" OnClick="Buttonpremium_Click" /></a>
     <a class="tablinks extra_left " id ='defaultOpen'  onclick="openCity(event, 'London')"  style="font-size:25px;font-weight:bold;font-family:Bradley Hand ITC;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" >Let's date!</a>
-   <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
+   <a ><asp:TextBox ID="searchbar_text" CssClass="searchbar"  placeholder="Search" runat="server" onKeyPress="return disableEnterKey(event)"></asp:TextBox><asp:ImageButton ID="searchbar_button" style="float:left; padding:0px;"  runat="server" Height="42px" ImageUrl="~/images/searchbutton.png" Width="42px" OnClick="searchbar_button_Click" /></a>   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -905,6 +905,7 @@ function plusDivs(n) {
   showDivs(slideIndex += n);
 }
 
+
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -923,6 +924,21 @@ function openNav_places() {
 
 function closeNav_places() {
     document.getElementById("myNav_places").style.height = "0%";
+}
+
+function disableEnterKey(e) {
+    var key;
+
+
+    if (window.event)
+        key = window.event.keyCode;     //IE
+    else
+        key = e.which;     //firefox
+
+    if (key == 13)
+        return false;
+    else
+        return true;
 }
 </script>
 
