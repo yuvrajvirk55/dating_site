@@ -224,6 +224,22 @@
              </div><%--</div></div></section>--%> 
          </form>
          <script type="text/javascript" src="./css/jquery.js"></script> 
+         <script>
+             function disableEnterKey(e) {
+                 var key;
+
+
+                 if (window.event)
+                     key = window.event.keyCode;     //IE
+                 else
+                     key = e.which;     //firefox
+
+                 if (key == 13)
+                     return false;
+                 else
+                     return true;
+             }
+         </script>
          <script src="./css/bootstrap.min.js"></script> 
      </body>
  </html>
