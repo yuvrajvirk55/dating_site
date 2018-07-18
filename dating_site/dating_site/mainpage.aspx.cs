@@ -34,11 +34,31 @@ namespace dating_site
         public void statusload()
         {
 
+            int my_id = (int)Session["id"];
+
             SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
             SqlCommand cmd = new SqlCommand();
             connection.Open();
 
-            string checkstatus = " select count(status) from usertable where status is not null";
+            // getting list of friends
+           
+            string checkfriends = "select friends from usertable WHERE id =" + my_id + "";
+            SqlCommand friends = new SqlCommand(checkfriends, connection);
+            string friends_output;
+            try
+            {
+                friends_output = (string)friends.ExecuteScalar();
+            }
+            catch
+            {
+                friends_output = "1000";
+            }
+
+            string total_friends =friends_output;
+
+            total_friends += "," + my_id;
+
+            string checkstatus = " select count(status) from usertable where id in (" + total_friends + ")and status is not null";
             SqlCommand requests = new SqlCommand(checkstatus, connection);
             int status_number=0;
             try
@@ -47,7 +67,7 @@ namespace dating_site
 
                 cmd.Connection = connection;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,status from usertable";
+                cmd.CommandText = "SELECT first_name + ' ' + last_name AS name,status from usertable where usertable.id in (" + total_friends + ")";
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
