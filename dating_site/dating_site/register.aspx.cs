@@ -111,6 +111,7 @@ namespace dating_site
                 Session["email"] = register_email.Text;
                 Session["Name"] = register_fname.Text+" "+ register_lname.Text;
                 Session["img"] = filtered_name.ToString();
+                Session["sex"] = register_gender.Text;
                 Response.Redirect("form.aspx");
             }
             
