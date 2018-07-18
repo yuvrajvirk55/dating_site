@@ -58,6 +58,10 @@ namespace dating_site
                 {
                 Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Upload Different Format')", true);
             }
+            else if (!FileUpload1.FileName.ToString().Contains(".png") & !FileUpload1.FileName.ToString().Contains(".jpg") & !FileUpload1.FileName.ToString().Contains(".gif"))
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "Alert", "alert('Upload an image. We accept .jpg, .png, .gif formats')", true);
+            }
 
             else
             {

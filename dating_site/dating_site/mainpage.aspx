@@ -733,6 +733,7 @@ li {
   </div>
 </div>
 
+    
     <!--premium-->
    
 <!-- The Modal -->
@@ -741,7 +742,6 @@ li {
   <div class="modal-content" >
     <span class="close1">&times;</span>
       <div id="textcard" runat="server">
-     
        <div align="center"><h1 style="font-size:40px" class="title">Credit card detail</h1></div>
      
 
@@ -752,7 +752,7 @@ li {
         <!-- Date Field -->
         <div class="date-field">
           <div class="month">
-            <select name="Month">
+            <select name="Month" data-validate = "Username is required">
               <option value="january">January</option>
               <option value="february">February</option>
               <option value="march">March</option>
@@ -795,12 +795,13 @@ li {
           <br />
           <asp:Button ID="Button2" type="submit" class="proceed-btn" runat="server" Text="Suscribe" onclick="Buttonpremium_pay"/>
       </div>
+
     </div>
     <br />
     </div>
     </div>
      
-  
+ 
 
 
 <!-- Places -->
