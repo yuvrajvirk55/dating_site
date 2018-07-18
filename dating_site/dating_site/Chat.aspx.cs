@@ -19,6 +19,11 @@ namespace dating_site
              Image5.ImageUrl = Session["img"].ToString();
              Label3.Text = Session["Name"].ToString();
 
+            this.TextBox1.Attributes.Add(
+            "onkeypress", "button_click(this,'" + this.Button1.ClientID + "')");
+
+            
+
             LoadChatbox();
             get_User();
             Load_Frends();
