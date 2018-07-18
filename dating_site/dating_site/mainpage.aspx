@@ -419,7 +419,7 @@ li {
 }
 
 .dropdown-content {
-    display: block;
+    display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
