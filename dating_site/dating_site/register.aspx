@@ -154,7 +154,7 @@ button:hover {
 
  
   <tr>
-    <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Date"  max="2018-01-01" min="2000-01-01" placeholder="Dob"></asp:TextBox></td>
+    <td Width="250px"> <asp:TextBox ID="register_dob" runat="server" BackColor="#E1E1E1"  Width="250px" class="input100" TextMode="Date"  max="2018-01-01"  placeholder="Dob"></asp:TextBox></td>
     <td></td>
     <td></td>
   </tr>
