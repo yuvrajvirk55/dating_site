@@ -160,7 +160,7 @@ button:hover {
     <div ><b><span style="font-size:large;">Enter your password again. . . . .</span></b><br />
         <br />     
      <p>
-             <asp:TextBox ID="resetpassword_cpassword" runat="server" BackColor="#E1E1E1"  class="input100" TextMode="Password"  placeholder="Comform Password"></asp:TextBox>
+             <asp:TextBox ID="resetpassword_cpassword" runat="server" BackColor="#E1E1E1"  class="input100" TextMode="Password"  placeholder="Comfirm Password"></asp:TextBox>
         </p>
         </div>
      <br />
