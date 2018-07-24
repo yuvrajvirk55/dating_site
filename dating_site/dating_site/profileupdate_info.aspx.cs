@@ -76,8 +76,6 @@ namespace dating_site
                     Session["Name"] = register_fname.Text + " " + register_lname.Text;
                     Session["img"] = filtered_name.ToString();
                     Response.Redirect("profile.aspx");
-
-
                 }
 
                 catch
