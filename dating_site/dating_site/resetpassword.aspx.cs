@@ -23,32 +23,47 @@ namespace dating_site
             int index = filtered_email.IndexOf('@');
             filtered_email = filtered_email.Substring(0, index);
 
+
+            string checknation = "";
             //queries
-            string checknation = "select int_nationality from userinterest WHERE email LIKE '" + filtered_email + "%'";
-           
-
-            SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
-
-            SqlCommand command_nation = new SqlCommand(checknation, connection);
-         
-
-            connection.Open();
-
-            //database values
-            string db_nation = (string)command_nation.ExecuteScalar();
-
-            if (!(db_nation == null) && (db_nation.Equals(resetpassword_nationality.Text)))
+            try
             {
-                Session["reset_email"] = resetpassword_email.Text;
-                Response.Redirect("resetpassword2.aspx");
+                checknation = "select int_nationality from userinterest WHERE email ='" + resetpassword_email.Text.ToString()+"'";
+
+                SqlConnection connection = new SqlConnection("Data Source = uvuserdata.mssql.somee.com; Initial Catalog = uvuserdata; Persist Security Info = True; User ID = yuvrajvirk55_SQLLogin_1; Password = nm6ecevlt8");
+
+                SqlCommand command_nation = new SqlCommand(checknation, connection);
+
+
+                connection.Open();
+
+                //database values
+                string db_nation = (string)command_nation.ExecuteScalar();
+
+                if (!(db_nation == null) && (db_nation.Equals(resetpassword_nationality.Text)))
+                {
+                    Session["reset_email"] = resetpassword_email.Text;
+                    Response.Redirect("resetpassword2.aspx");
+                }
+
+                else if(db_nation == null)
+                {
+                    Label1.Text = "Incorrect email ! ! !  ";
+                }
+
+                else
+                {
+                    Label1.Text = "Incorrect answer ! ! !  ";
+
+                }
             }
 
-
-            else
+            catch
             {
-                Label1.Text = "Incorrect answer ! ! !  ";
-
+                
             }
+
+            
         }
     }
 }
