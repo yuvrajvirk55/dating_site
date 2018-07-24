@@ -15,15 +15,23 @@ namespace dating_site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            button_friends.Attributes.Add("onclick", "return false;");
+            if (Session["id"] == null)
+            {
+                Response.Redirect("home.aspx");
+            }
+
+             else
+            {
+                button_friends.Attributes.Add("onclick", "return false;");
 
 
-            myImg.ImageUrl = Session["img"].ToString();
-            Label1.Text = Session["Name"].ToString();
-            loadall();
+                myImg.ImageUrl = Session["img"].ToString();
+                Label1.Text = Session["Name"].ToString();
+                loadall();
 
-            // adding status to the page
-            statusload();
+                // adding status to the page
+                statusload();
+            }
 
         }
 
