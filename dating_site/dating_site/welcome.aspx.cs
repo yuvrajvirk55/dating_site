@@ -14,7 +14,7 @@ namespace dating_site
 
             Label1.Text = Session["Name"].ToString();
            Image1.ImageUrl= Session["img"].ToString();
-            Response.AppendHeader("Refresh", "6;url=mainpage.aspx");
+            Response.AppendHeader("Refresh", "2;url=mainpage.aspx");
         }
     }
 }
